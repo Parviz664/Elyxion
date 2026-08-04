@@ -12,6 +12,8 @@ relationship visible before adding another layer.
 - wake the friendly particle from dormancy into recognition;
 - end with a subtle connection, not a complete shield;
 - keep the encounter deterministic enough to replay and balance.
+- implement the canonical 31-second visual-audio-camera score in the selected
+  renderer without moving rules out of the domain core.
 
 ## Next membrane-system milestone
 

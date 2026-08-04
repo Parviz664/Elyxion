@@ -11,6 +11,9 @@
 | DefenseAction | Automatic membrane decision with strategy, mitigation rate, and energy cost. |
 | Outcome | Immutable record of impact, response, damage, world transition, and visual cues. |
 | VisualCue | Engine-independent description of a visible event for a future renderer. |
+| Experience Score | Deterministic 31-second presentation plan derived from first-contact outcomes. |
+| Experience Beat | One continuous emotional section of the first-contact timeline. |
+| ExperienceCue | Timed, normalized visual, audio, or camera instruction without engine-specific assets. |
 | Tick | Strictly increasing simulation step controlled by Elyxion Core. |
 
 ## Friendly particle states

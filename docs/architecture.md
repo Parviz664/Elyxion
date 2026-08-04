@@ -11,6 +11,8 @@ flowchart TD
     P --> F["Friendly Particle"]
     P --> M["Membrane"]
     P -->|Outcome + VisualCue| C
+    C -->|immutable history| S["Experience Score"]
+    S -->|timed sensory cues| R["Future Renderer"]
 ```
 
 ## System roles
@@ -22,7 +24,8 @@ flowchart TD
 | Membrane | Converts pressure and weak friendly support into mitigation, damage, energy cost, and visual response. |
 | Friendly Particle | Begins dormant, recognizes repeated pressure, then provides subtle support. |
 | Red Pressure Node | Emits a deterministic rhythm while preserving its three-core identity. |
-| Future renderer | Translates semantic cues into animation, sound, particles, lighting, and camera behavior. |
+| Experience Score | Converts immutable outcomes into ordered visual, audio, and camera cues without changing game state. |
+| Future renderer | Maps presentation cues to animation, sound, particles, lighting, and camera APIs. |
 
 ## Resolution order
 
@@ -54,7 +57,25 @@ Shared contracts live in `src/core/contracts.ts`:
   state, and visual cues.
 - `CoreSnapshot` exposes the Phase 1 topology and read-only world state.
 - `VisualCue` describes what happened semantically; timing curves, sprites,
-  shaders, and audio remain renderer concerns.
+  and shaders remain outside the domain core.
+- `FirstContactExperience` is a deterministic presentation score with seven
+  emotional beats and normalized timed cues.
+- `ExperienceCue` identifies modality, target, strength, timing, and the source
+  signal while remaining independent of engine assets and APIs.
+
+## Presentation boundary
+
+The domain core answers **what happened**. The presentation score answers
+**when and through which senses it should be expressed**. A renderer answers
+**which concrete asset or engine API performs it**.
+
+The canonical first-contact score lasts 31 seconds. It adds ambience, threat
+arrival, impact audio, local camera impulses, particle tones, and recovery
+rhythm around the domain's visual cues. It may amplify clarity but may not invent
+mitigation, damage, recognition, or support that is absent from the outcome.
+
+See `docs/first-contact-experience.md` for the authored timeline and sensory
+language.
 
 ## Invariants
 
@@ -67,6 +88,9 @@ Shared contracts live in `src/core/contracts.ts`:
 - The world contains exactly one proto planet, one membrane, one friendly
   particle, and one enemy node.
 - Given the same initial world and signal sequence, the result is identical.
+- Given the same encounter history, the ordered presentation score is identical.
+- Presentation cue strengths stay within 0-1 and cue timing stays inside the
+  31-second experience.
 
 ## External project boundary
 

@@ -13,7 +13,8 @@ flowchart TD
     C --> P["Proto Planet"]
     P --> M["Membrane"]
     P --> F["Friendly Particle"]
-    M -->|semantic visual cues| V["Future renderer"]
+    M -->|semantic visual cues| S["Experience score"]
+    S -->|visual + audio + camera cues| V["Future renderer"]
 ```
 
 The canonical first contact is a fragile membrane in a dark, ancient aquatic
@@ -31,6 +32,8 @@ does not create a complete shield in Phase 1.
 - one canonical Red Pressure Node with a repeatable pressure rhythm;
 - engine-independent visual cues for deformation, ripple, desaturation, and
   particle activation;
+- a deterministic 31-second presentation score for synchronized visual, audio,
+  and camera direction;
 - no dependency on a game engine, UI, database, or network.
 
 WhiteLine is a separate standalone project. Elyxion does not contain WhiteLine
@@ -45,6 +48,7 @@ Requires Node.js 20 or newer.
 npm install
 npm test
 npm run simulate
+npm run experience
 ```
 
 ## Repository map
@@ -55,6 +59,7 @@ src/core/                     contracts and deterministic orchestration
 src/world/                    proto-planet aggregate
 src/membrane/                 integrity, energy, and pressure response
 src/particles/                friendly internal particle
+src/presentation/             visual-audio-camera score derived from outcomes
 src/threats/red-pressure-node canonical Phase 1 enemy
 src/simulation/               executable first-contact scenario
 tests/unit/                   isolated rules
@@ -62,4 +67,6 @@ tests/scenarios/              complete world loops
 ```
 
 Start with [the vision](docs/vision.md), then read
-[the architecture](docs/architecture.md) and [the roadmap](docs/roadmap.md).
+[the architecture](docs/architecture.md), the
+[first-contact experience](docs/first-contact-experience.md), and the
+[roadmap](docs/roadmap.md).
