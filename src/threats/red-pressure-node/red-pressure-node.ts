@@ -20,9 +20,15 @@ const FIRST_CONTACT_PHASES = [
 
 export class RedPressureNode {
   public readonly id: string;
+  public readonly coreCount = 3 as const;
+  public readonly visualSignature = "translucent-crimson" as const;
   private readonly phases: readonly RedPressurePhase[];
 
   public constructor(options: RedPressureNodeOptions) {
+    if (options.phases.length === 0) {
+      throw new RangeError("Red Pressure Node requires at least one phase.");
+    }
+
     this.id = options.id ?? "red-pressure-node";
     this.phases = options.phases.map((phase) => {
       assertPercentage(phase.intensity, "Red Pressure phase intensity");
@@ -53,4 +59,3 @@ export class RedPressureNode {
     );
   }
 }
-

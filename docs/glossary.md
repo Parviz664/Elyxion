@@ -1,33 +1,31 @@
 # Glossary
 
-| Term | Meaning in Phase 1 |
+| Term | Meaning in Elyxion Phase 1 |
 | --- | --- |
-| Elyxion Core | Orchestrator that owns simulation time, resolution order, and immutable encounter history. |
-| Membrane | Protective boundary that converts a threat signal into an automatic defense action. |
-| WhiteLine | Maturity and learning system represented by a score from 0 to 100. |
-| Red Pressure Node | Canonical external threat source for Phase 1. It emits signals only. |
+| Elyxion Core | Deterministic orchestrator that owns time, fixed MVP topology, and encounter history. |
+| Proto Planet | The single living world aggregate at the `cell` evolutionary stage. |
+| Membrane | Gelatinous protective boundary with measurable integrity, energy, deformation, and recovery. |
+| Friendly Particle | Single muted green internal particle that wakes, recognizes pressure, and later provides weak support. |
+| Red Pressure Node | Canonical external enemy: translucent crimson body, three red-orange cores, and a distinctive pressure rhythm. |
 | ThreatSignal | Immutable observation of source, tick, pressure intensity, and pattern. |
-| DefenseAction | Membrane decision containing state, strategy, mitigation rate, and energy cost. |
-| Outcome | Resolved record of prevented pressure, residual pressure, cost, and maturity change. |
-| Tick | Monotonically increasing simulation step controlled by Elyxion Core. |
+| DefenseAction | Automatic membrane decision with strategy, mitigation rate, and energy cost. |
+| Outcome | Immutable record of impact, response, damage, world transition, and visual cues. |
+| VisualCue | Engine-independent description of a visible event for a future renderer. |
+| Tick | Strictly increasing simulation step controlled by Elyxion Core. |
 
-## WhiteLine maturity
+## Friendly particle states
 
-The initial thresholds are working defaults, not final lore or balance.
-
-| Tier | Score | Phase 1 interpretation |
-| --- | ---: | --- |
-| M0 | 0-24 | Reactive: recognizes pressure but has limited protection. |
-| M1 | 25-49 | Stabilizing: responds more consistently. |
-| M2 | 50-74 | Adaptive: can use learned defense strategies. |
-| M3 | 75-100 | Integrated: strong mitigation with lower relative cost. |
+| State | Meaning |
+| --- | --- |
+| `dormant` | Weak and inactive; ordinary noise produces no response. |
+| `recognizing` | Meaningful pressure has been detected, but protection is still minimal. |
+| `supporting` | Repeated exposure creates a subtle stabilizing connection to the membrane. |
 
 ## Membrane states
 
 | State | Meaning |
 | --- | --- |
-| `stable` | Pressure is below the alert threshold. |
-| `alert` | Pressure is meaningful; the Membrane braces. |
-| `defense` | Pressure is severe; active mitigation is required. |
-| `recovery` | The response was resolved and the system is integrating the outcome. |
-
+| `stable` | Pressure is low enough to observe without active bracing. |
+| `alert` | The membrane braces against meaningful pressure. |
+| `defense` | Severe pressure triggers selective dampening. |
+| `recovery` | The impact resolved and the membrane is integrating the cost. |

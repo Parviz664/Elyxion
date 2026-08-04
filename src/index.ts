@@ -3,16 +3,20 @@ export type {
   DefenseAction,
   DefenseStrategy,
   EncounterOutcome,
-  MaturityTier,
+  FriendlyParticleObservation,
+  FriendlyParticleSnapshot,
+  FriendlyParticleState,
+  MembraneSnapshot,
   MembraneState,
+  PlanetSnapshot,
   ThreatPattern,
   ThreatSignal,
-  WhiteLineSnapshot,
+  VisualCue,
+  VisualCueType,
 } from "./core/contracts.js";
 export { ElyxionCore } from "./core/elyxion-core.js";
 export { Membrane } from "./membrane/membrane.js";
+export { FriendlyParticle } from "./particles/friendly-particle.js";
 export { runFirstContact } from "./simulation/first-contact.js";
 export { RedPressureNode } from "./threats/red-pressure-node/red-pressure-node.js";
-export { MATURITY_BANDS, maturityTierFor } from "./whiteline/maturity.js";
-export { WhiteLine } from "./whiteline/white-line.js";
-
+export { ProtoPlanet } from "./world/proto-planet.js";

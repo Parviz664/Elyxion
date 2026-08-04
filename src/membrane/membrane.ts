@@ -1,66 +1,67 @@
 import type {
   DefenseAction,
-  MaturityTier,
+  MembraneSnapshot,
   MembraneState,
   ThreatSignal,
-  WhiteLineSnapshot,
+  VisualCue,
 } from "../core/contracts.js";
-import { assertPercentage, round } from "../core/numbers.js";
+import { assertPercentage, clamp, round } from "../core/numbers.js";
 
-interface DefenseProfile {
-  readonly alertMitigation: number;
-  readonly defenseMitigation: number;
-  readonly costRate: number;
+export interface MembraneResolution {
+  readonly action: DefenseAction;
+  readonly preventedPressure: number;
+  readonly residualPressure: number;
+  readonly damage: number;
+  readonly visualCues: readonly VisualCue[];
 }
-
-const DEFENSE_PROFILES: Readonly<Record<MaturityTier, DefenseProfile>> = {
-  M0: { alertMitigation: 0.15, defenseMitigation: 0.25, costRate: 0.08 },
-  M1: { alertMitigation: 0.25, defenseMitigation: 0.4, costRate: 0.07 },
-  M2: { alertMitigation: 0.4, defenseMitigation: 0.58, costRate: 0.06 },
-  M3: { alertMitigation: 0.55, defenseMitigation: 0.75, costRate: 0.05 },
-};
 
 export class Membrane {
   private currentState: MembraneState = "stable";
+  private integrity = 100;
+  private energy = 100;
 
-  public get state(): MembraneState {
-    return this.currentState;
+  public snapshot(): MembraneSnapshot {
+    return Object.freeze({
+      state: this.currentState,
+      integrity: this.integrity,
+      energy: this.energy,
+    });
   }
 
   public respond(
     signal: ThreatSignal,
-    maturity: WhiteLineSnapshot,
-  ): DefenseAction {
+    friendlySupportRate: number,
+  ): MembraneResolution {
     assertPercentage(signal.intensity, "Threat intensity");
-    const profile = DEFENSE_PROFILES[maturity.tier];
+    assertPercentage(friendlySupportRate * 100, "Friendly support rate");
 
-    if (signal.intensity < 20) {
-      this.currentState = "stable";
-      return Object.freeze({
-        state: "stable",
-        strategy: "observe",
-        mitigationRate: 0.05,
-        energyCost: 0,
-      });
-    }
+    const response = this.responseProfileFor(signal.intensity);
+    const mitigationRate = round(
+      clamp(response.baseMitigation + friendlySupportRate, 0, 0.25),
+      3,
+    );
+    const energyCost = round(signal.intensity * response.costRate);
+    const preventedPressure = round(signal.intensity * mitigationRate);
+    const residualPressure = round(signal.intensity - preventedPressure);
+    const damage = round(residualPressure * 0.1);
 
-    if (signal.intensity < 50) {
-      this.currentState = "alert";
-      return Object.freeze({
-        state: "alert",
-        strategy: "brace",
-        mitigationRate: profile.alertMitigation,
-        energyCost: round(signal.intensity * profile.costRate),
-      });
-    }
+    this.currentState = response.state;
+    this.energy = round(clamp(this.energy - energyCost, 0, 100));
+    this.integrity = round(clamp(this.integrity - damage, 0, 100));
 
-    this.currentState = "defense";
+    const action: DefenseAction = Object.freeze({
+      state: response.state,
+      strategy: response.strategy,
+      mitigationRate,
+      energyCost,
+    });
+
     return Object.freeze({
-      state: "defense",
-      strategy:
-        maturity.tier === "M2" || maturity.tier === "M3" ? "adapt" : "absorb",
-      mitigationRate: profile.defenseMitigation,
-      energyCost: round(signal.intensity * profile.costRate * 1.5),
+      action,
+      preventedPressure,
+      residualPressure,
+      damage,
+      visualCues: this.visualCuesFor(signal.intensity, residualPressure),
     });
   }
 
@@ -73,5 +74,63 @@ export class Membrane {
   public stabilize(): void {
     this.currentState = "stable";
   }
-}
 
+  private responseProfileFor(intensity: number): {
+    readonly state: Exclude<MembraneState, "recovery">;
+    readonly strategy: DefenseAction["strategy"];
+    readonly baseMitigation: number;
+    readonly costRate: number;
+  } {
+    if (intensity < 20) {
+      return {
+        state: "stable",
+        strategy: "observe",
+        baseMitigation: 0.03,
+        costRate: 0,
+      };
+    }
+
+    if (intensity < 50) {
+      return {
+        state: "alert",
+        strategy: "brace",
+        baseMitigation: 0.07,
+        costRate: 0.025,
+      };
+    }
+
+    return {
+      state: "defense",
+      strategy: "selective-dampen",
+      baseMitigation: 0.12,
+      costRate: 0.05,
+    };
+  }
+
+  private visualCuesFor(
+    intensity: number,
+    residualPressure: number,
+  ): readonly VisualCue[] {
+    const cues: VisualCue[] = [
+      Object.freeze({
+        type: "pressure-ripple",
+        strength: round(intensity / 100, 3),
+      }),
+      Object.freeze({
+        type: "membrane-deformation",
+        strength: round(residualPressure / 100, 3),
+      }),
+    ];
+
+    if (intensity >= 50) {
+      cues.push(
+        Object.freeze({
+          type: "brief-desaturation",
+          strength: round(residualPressure / 100, 3),
+        }),
+      );
+    }
+
+    return Object.freeze(cues);
+  }
+}

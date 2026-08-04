@@ -1,40 +1,53 @@
 # Vision
 
-Elyxion explores a living protective system: it perceives external pressure,
-chooses a response without manual control, records the cost of survival, and
-becomes more capable through experience.
+Elyxion is an emotional-visual evolutionary game universe about life forming
+systems under pressure. The player should first feel fragility, impact,
+recognition, and the beginning of adaptation before seeing large-scale growth.
 
-## Phase 1 question
+Its long evolutionary arc is:
 
-Can one deterministic encounter demonstrate the complete Elyxion loop without
-depending on a visual engine?
+`cell -> organism -> pack -> tribe -> civilization -> cosmos`
 
-The first answer is built from four collaborating systems:
+Each later scale should emerge from systems learned at the previous one rather
+than appearing as an unrelated mode.
 
-1. **Elyxion Core** owns time, ordering, resolution, and history.
-2. **Membrane** detects pressure and selects an automatic defense.
-3. **WhiteLine** expresses maturity as 0-100 and tiers M0-M3.
-4. **Red Pressure Node** produces pressure patterns but never controls the
-   Membrane directly.
+## Phase 1 world
+
+Phase 1 deliberately contains only:
+
+1. one proto planet at the `cell` stage;
+2. one gelatinous, semi-transparent membrane;
+3. one muted green friendly particle inside;
+4. one translucent crimson Red Pressure Node outside.
+
+The environment is dark blue-gray, aquatic, prebiotic, chemically active, and
+only barely supportive of life. There is no visible horizon. Light is diffuse
+and broken; suspended matter makes the space feel ancient and indifferent.
+
+The Red Pressure Node is stable inside and harmful outside. Its three rotating
+red-orange cores and distinctive attack rhythm are its canonical identity. On
+impact, the membrane deforms, a pressure ripple travels across it, its color
+briefly desaturates, and its breathing becomes disturbed.
+
+The friendly particle starts dormant. Meaningful repeated pressure wakes
+recognition and then creates a weak stabilizing connection. Phase 1 must not
+jump directly to a complete shield.
 
 ## Phase 1 success criteria
 
-- The Red Pressure Node emits valid, repeatable threat signals.
-- The Membrane responds using the current WhiteLine maturity.
-- Every response produces measurable prevention, residual pressure, and cost.
-- WhiteLine learns from the resolved outcome and never leaves the 0-100 range.
-- A full encounter can be replayed in tests with the same result.
-- A future visual layer can consume the contracts without owning domain logic.
+- One repeatable encounter produces the full loop:
+  `pressure -> impact -> recognition -> subtle response -> damage -> recovery`.
+- The one-planet, one-membrane, one-friendly, one-enemy topology is explicit.
+- Membrane integrity and energy make survival cost measurable.
+- The renderer can consume semantic visual cues without owning game rules.
+- The Red Pressure Node preserves its three-core code and attack rhythm.
+- The same initial world and signal sequence always produce the same result.
+- The architecture leaves room for evolutionary stages without implementing
+  them prematurely.
 
-## Outside the current boundary
+## Project boundary
 
-- rendering and animation;
-- player controls;
-- persistence and accounts;
-- networking and multiplayer;
-- procedural or AI-generated threats;
-- final balance values.
-
-These are postponed intentionally. Phase 1 establishes the language and the
-causal loop that later systems will build upon.
-
+WhiteLine is a separate intellectual system. Elyxion is the emotional-visual
+system. Neither is a module of the other. A future AI layer may amplify or
+translate between them through explicit external contracts, but Elyxion must
+remain complete and playable on its own.

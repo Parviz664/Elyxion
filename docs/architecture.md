@@ -1,60 +1,76 @@
 # Architecture
 
-Elyxion Phase 1 uses a deterministic, event-driven domain core. Dependencies
-point inward toward shared contracts; no module reaches into another module's
-private state.
+Elyxion Phase 1 is a deterministic domain core that emits semantic visual cues.
+It owns game rules but not rendering. Dependencies point inward toward shared
+contracts; no entity reaches into another entity's private state.
 
 ```mermaid
 flowchart TD
-    T["Threat producer"] -->|ThreatSignal| C["Elyxion Core"]
-    C -->|signal + maturity| M["Membrane"]
-    M -->|DefenseAction| C
-    C -->|resolved pressure| W["WhiteLine"]
-    W -->|new maturity| C
-    C --> H["Outcome history"]
+    T["Red Pressure Node"] -->|ThreatSignal| C["Elyxion Core"]
+    C -->|ordered impact| P["Proto Planet"]
+    P --> F["Friendly Particle"]
+    P --> M["Membrane"]
+    P -->|Outcome + VisualCue| C
 ```
+
+## System roles
+
+| System | Phase 1 responsibility |
+| --- | --- |
+| Elyxion Core | Owns simulation time, order, fixed MVP topology, and immutable history. |
+| Proto Planet | Owns the membrane and the single friendly particle at the `cell` stage. |
+| Membrane | Converts pressure and weak friendly support into mitigation, damage, energy cost, and visual response. |
+| Friendly Particle | Begins dormant, recognizes repeated pressure, then provides subtle support. |
+| Red Pressure Node | Emits a deterministic rhythm while preserving its three-core identity. |
+| Future renderer | Translates semantic cues into animation, sound, particles, lighting, and camera behavior. |
 
 ## Resolution order
 
-For every signal, the Core performs one transaction:
+For every threat signal, the Core completes one transaction:
 
 1. Validate that the signal tick moves time forward.
-2. Snapshot WhiteLine maturity.
-3. Ask the Membrane for an automatic response.
-4. Resolve prevented pressure, residual pressure, and defense cost.
-5. Feed the resolved values to WhiteLine learning.
-6. Append one complete outcome to history.
-7. Move an activated Membrane into recovery.
+2. Snapshot the proto planet before impact.
+3. Let the friendly particle observe the pressure.
+4. Resolve the membrane response using only support already learned before the
+   current impact; recognition never becomes an instant shield.
+5. Apply energy cost and integrity damage.
+6. Emit semantic visual cues for ripple, deformation, brief desaturation, and
+   particle-state transitions.
+7. Move an activated membrane into recovery.
+8. Append one immutable encounter outcome to history.
 
-This order is part of the architecture. Visual effects may observe it, but may
-not reorder or partially apply it.
+This order is part of the architecture. A renderer may observe it but may not
+reorder or partially apply it.
 
 ## Contracts
 
 Shared contracts live in `src/core/contracts.ts`:
 
-- `ThreatSignal` is input from any future threat producer.
-- `DefenseAction` is the Membrane's decision.
-- `EncounterOutcome` is the durable result consumed by history and UI layers.
-- `CoreSnapshot` exposes read-only system state without leaking module internals.
-
-The Red Pressure Node knows only how to emit `ThreatSignal`. It has no reference
-to Elyxion Core, Membrane, or WhiteLine. This prevents enemies from bypassing the
-system's causal loop.
+- `ThreatSignal` is immutable input from a threat producer.
+- `FriendlyParticleObservation` records recognition and support without hiding
+  the previous state.
+- `DefenseAction` is the membrane's automatic choice.
+- `EncounterOutcome` records pressure, mitigation, damage, before/after world
+  state, and visual cues.
+- `CoreSnapshot` exposes the Phase 1 topology and read-only world state.
+- `VisualCue` describes what happened semantically; timing curves, sprites,
+  shaders, and audio remain renderer concerns.
 
 ## Invariants
 
-- Signal intensity and WhiteLine score remain in the inclusive range 0-100.
+- Threat intensity, membrane integrity, and membrane energy stay within 0-100.
 - Signal ticks strictly increase within a Core instance.
-- Prevention plus residual pressure equals incoming intensity.
-- Outcome history is append-only from the public API.
-- One signal produces exactly one defense action and one outcome.
-- Given the same initial score and signal sequence, the result is identical.
+- Prevented pressure plus residual pressure equals incoming intensity.
+- One signal produces exactly one response and one immutable outcome.
+- The friendly particle cannot provide support on the impact that first wakes it.
+- Phase 1 support is capped and cannot become a complete shield.
+- The world contains exactly one proto planet, one membrane, one friendly
+  particle, and one enemy node.
+- Given the same initial world and signal sequence, the result is identical.
 
-## Extension points
+## External project boundary
 
-New threats implement the same signal contract. A renderer can subscribe to
-returned outcomes or snapshots. Persistence can serialize outcome history.
-Balance changes remain internal to Membrane and WhiteLine until a dedicated
-configuration contract is justified.
-
+WhiteLine scores and M0-M3 tiers do not belong to this core. If Elyxion and
+WhiteLine are connected later, an adapter outside both domain cores may exchange
+explicit events. Elyxion gameplay, adaptation, and progression may never depend
+on WhiteLine being available.

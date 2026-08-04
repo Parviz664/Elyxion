@@ -1,33 +1,41 @@
 # Elyxion
 
-Elyxion is an engine-agnostic simulation core for a system that detects pressure,
-responds automatically, survives the outcome, and learns from it.
+Elyxion is an emotional-visual evolutionary game universe. Its long arc moves
+from cell to organism, pack, tribe, civilization, and eventually cosmos.
 
-Phase 1 focuses on one complete loop:
+Phase 1 begins with the smallest living scene:
+
+`1 planet -> 1 membrane -> 1 friendly particle -> 1 enemy node`
 
 ```mermaid
-flowchart LR
-    R["Red Pressure Node"] -->|ThreatSignal| C["Elyxion Core"]
-    C --> M["Membrane"]
-    W["WhiteLine"] -->|maturity| M
-    M -->|DefenseAction| C
-    C -->|Outcome| W
+flowchart TD
+    R["Red Pressure Node"] -->|pressure rhythm| C["Elyxion Core"]
+    C --> P["Proto Planet"]
+    P --> M["Membrane"]
+    P --> F["Friendly Particle"]
+    M -->|semantic visual cues| V["Future renderer"]
 ```
 
-`pressure -> signal -> evaluation -> defense -> outcome -> learning`
+The canonical first contact is a fragile membrane in a dark, ancient aquatic
+environment. A translucent crimson Red Pressure Node, recognizable by three
+internal cores, strikes from outside. One muted green internal particle wakes,
+begins recognizing danger, and forms only a subtle stabilizing connection. It
+does not create a complete shield in Phase 1.
 
 ## Current scope
 
-- deterministic simulation clock and event history;
-- automatic Membrane response (`stable`, `alert`, `defense`, `recovery`);
-- WhiteLine maturity score from 0 to 100 with tiers M0-M3;
-- canonical Red Pressure Node threat generator;
-- first-contact scenario and executable tests;
+- deterministic simulation time and encounter history;
+- one proto planet at the `cell` evolutionary stage;
+- membrane integrity, energy, automatic response, and recovery;
+- one friendly particle moving from `dormant` to `recognizing` to `supporting`;
+- one canonical Red Pressure Node with a repeatable pressure rhythm;
+- engine-independent visual cues for deformation, ripple, desaturation, and
+  particle activation;
 - no dependency on a game engine, UI, database, or network.
 
-The maturity thresholds and defense balance are provisional Phase 1 values. They
-are centralized in the WhiteLine and Membrane modules so the model can evolve
-without changing its contracts.
+WhiteLine is a separate standalone project. Elyxion does not contain WhiteLine
+scores, tiers, or learning rules. Any future connection must be made through an
+external adapter without making either project a module of the other.
 
 ## Run locally
 
@@ -42,16 +50,16 @@ npm run simulate
 ## Repository map
 
 ```text
-docs/                         vision, glossary, architecture, decisions
-src/core/                     contracts and orchestration
-src/membrane/                 threat evaluation and automatic defense
-src/whiteline/                maturity and learning
-src/threats/red-pressure-node canonical Phase 1 threat
-src/simulation/               executable scenarios
+docs/                         vision, architecture, roadmap, glossary, decisions
+src/core/                     contracts and deterministic orchestration
+src/world/                    proto-planet aggregate
+src/membrane/                 integrity, energy, and pressure response
+src/particles/                friendly internal particle
+src/threats/red-pressure-node canonical Phase 1 enemy
+src/simulation/               executable first-contact scenario
 tests/unit/                   isolated rules
-tests/scenarios/              complete system loops
+tests/scenarios/              complete world loops
 ```
 
 Start with [the vision](docs/vision.md), then read
-[the architecture](docs/architecture.md) and [the glossary](docs/glossary.md).
-
+[the architecture](docs/architecture.md) and [the roadmap](docs/roadmap.md).

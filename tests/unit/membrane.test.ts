@@ -12,23 +12,32 @@ const severeSignal: ThreatSignal = {
   pattern: "surge",
 };
 
-test("maturity makes severe automatic defense more effective", () => {
-  const early = new Membrane().respond(severeSignal, { score: 10, tier: "M0" });
-  const mature = new Membrane().respond(severeSignal, { score: 90, tier: "M3" });
+test("friendly support improves mitigation without becoming a full shield", () => {
+  const unsupported = new Membrane().respond(severeSignal, 0);
+  const supported = new Membrane().respond(severeSignal, 0.08);
 
-  assert.equal(early.strategy, "absorb");
-  assert.equal(mature.strategy, "adapt");
-  assert.ok(mature.mitigationRate > early.mitigationRate);
-  assert.ok(mature.energyCost < early.energyCost);
+  assert.equal(unsupported.action.strategy, "selective-dampen");
+  assert.ok(supported.action.mitigationRate > unsupported.action.mitigationRate);
+  assert.ok(supported.action.mitigationRate <= 0.25);
+  assert.ok(supported.damage < unsupported.damage);
+});
+
+test("an impact consumes energy and membrane integrity", () => {
+  const membrane = new Membrane();
+  const resolution = membrane.respond(severeSignal, 0);
+  const snapshot = membrane.snapshot();
+
+  assert.ok(resolution.damage > 0);
+  assert.ok(snapshot.integrity < 100);
+  assert.ok(snapshot.energy < 100);
 });
 
 test("Membrane enters recovery after an active response", () => {
   const membrane = new Membrane();
 
-  membrane.respond(severeSignal, { score: 10, tier: "M0" });
-  assert.equal(membrane.state, "defense");
+  membrane.respond(severeSignal, 0);
+  assert.equal(membrane.snapshot().state, "defense");
 
   membrane.completeResponse();
-  assert.equal(membrane.state, "recovery");
+  assert.equal(membrane.snapshot().state, "recovery");
 });
-
