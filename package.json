@@ -1,0 +1,21 @@
+{
+  "name": "elyxion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Engine-agnostic simulation core for Elyxion Phase 1",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --pretty false",
+    "test": "npm run build && node --test dist/tests/unit/*.test.js dist/tests/scenarios/*.test.js",
+    "simulate": "npm run build && node dist/src/simulation/run-first-contact.js",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2"
+  }
+}
+
