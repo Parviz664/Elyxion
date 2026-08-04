@@ -8,6 +8,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "start": "npm run build && node dist/src/prototype/server.js",
     "build": "tsc --pretty false",
     "test": "npm run build && node --test dist/tests/unit/*.test.js dist/tests/scenarios/*.test.js",
     "simulate": "npm run build && node dist/src/simulation/run-first-contact.js",

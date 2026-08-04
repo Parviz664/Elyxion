@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elyxion Phase 1 Friendly Points threshold prototype"
+    />
+    <title>Elyxion — Friendly Points Prototype</title>
+    <link rel="stylesheet" href="/prototype.css" />
+  </head>
+  <body>
+    <main class="prototype-shell">
+      <header class="prototype-header">
+        <p class="eyebrow">ELYXION · PHASE 1 · TASK 001</p>
+        <h1>Friendly Points</h1>
+        <p>Move five friendly points into the membrane.</p>
+      </header>
+
+      <section class="readout" aria-label="Prototype state">
+        <div>
+          <span>Absorbed</span>
+          <strong id="absorbed-count">0 / 5</strong>
+        </div>
+        <div>
+          <span>Scale</span>
+          <strong id="membrane-scale">2.0</strong>
+        </div>
+        <div>
+          <span>Breathing</span>
+          <strong id="breathing-interval">2s</strong>
+        </div>
+      </section>
+
+      <section
+        class="scene"
+        id="scene"
+        aria-label="Membrane and five friendly points"
+      >
+        <div class="membrane" id="membrane" aria-label="Membrane">
+          <div class="membrane-surface"></div>
+        </div>
+
+        <button
+          class="friendly-point point-one"
+          type="button"
+          aria-label="Absorb friendly point 1"
+        ></button>
+        <button
+          class="friendly-point point-two"
+          type="button"
+          aria-label="Absorb friendly point 2"
+        ></button>
+        <button
+          class="friendly-point point-three"
+          type="button"
+          aria-label="Absorb friendly point 3"
+        ></button>
+        <button
+          class="friendly-point point-four"
+          type="button"
+          aria-label="Absorb friendly point 4"
+        ></button>
+        <button
+          class="friendly-point point-five"
+          type="button"
+          aria-label="Absorb friendly point 5"
+        ></button>
+
+        <p class="instruction" id="instruction" aria-live="polite">
+          Click a Friendly Point to absorb it.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -51,6 +51,25 @@ npm run simulate
 npm run experience
 ```
 
+## Friendly Points prototype (TASK 001)
+
+Run the smallest playable browser scene:
+
+```bash
+npm start
+```
+
+Then open `http://localhost:4173` and click each visible Friendly Point to move
+it into the membrane. The debug readout shows the absorbed count, membrane
+scale, and breathing interval. This isolated prototype implements only these
+rules:
+
+- scale starts at `2.0`;
+- point 3 changes scale to `3.0`;
+- point 5 changes scale to `5.0` and breathing from `2s` to `3s`.
+
+It does not load enemies, damage, online features, or other gameplay systems.
+
 ## Repository map
 
 ```text
