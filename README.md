@@ -20,9 +20,11 @@ flowchart TD
     S -->|visual + audio + camera cues| V["Future renderer"]
 ```
 
-The repository currently contains two deliberately separate working layers:
+The repository currently contains deliberately separated working layers:
 
 - `USER_APPROVED_PROTOTYPE_RULE`: the playable Friendly Points TASK 001;
+- `USER_STATED_CANON` gesture order: a raw-measurement Manual Rhythm TASK 002,
+  whose screen geometry remains experimental;
 - `EXPERIMENTAL_CANDIDATE`: a deterministic Red/Crimson Pressure Node
   first-contact simulation and presentation score.
 
@@ -76,6 +78,23 @@ rules:
 
 It does not load enemies, damage, online features, or other gameplay systems.
 
+## Manual Rhythm prototype (TASK 002)
+
+Start the same local server, then open `http://localhost:4173/rhythm` on a
+touchscreen or pointer device.
+
+The isolated scene implements one creator-stated Elyxionpad cycle:
+
+1. drag the lower point upward into the center;
+2. press and hold the center, then release;
+3. drag the upper split downward into the center to exhale.
+
+The readout records the raw duration of both drags, the center hold, and the
+complete cycle in milliseconds. It deliberately has no target duration,
+accuracy score, reward, Friendly Point activation, overload, or automation.
+Its `78%` drag completion threshold is only a provisional geometric hit area,
+not a judgment of rhythm quality.
+
 ## Repository map
 
 ```text
@@ -85,6 +104,7 @@ src/world/                    proto-planet aggregate
 src/membrane/                 integrity, energy, and pressure response
 src/particles/                friendly internal particle
 src/presentation/             visual-audio-camera score derived from outcomes
+src/prototype/                isolated playable rules and browser interaction
 src/threats/red-pressure-node experimental pressure-source candidate
 src/simulation/               executable first-contact experiment
 tests/unit/                   isolated rules

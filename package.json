@@ -2,7 +2,7 @@
   "name": "elyxion",
   "version": "0.1.0",
   "private": true,
-  "description": "Friendly Points prototype and experimental first-contact core for Elyxion",
+  "description": "Phase 1 interaction prototypes and experimental first-contact core for Elyxion",
   "type": "module",
   "engines": {
     "node": ">=20"

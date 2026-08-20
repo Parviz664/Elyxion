@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elyxion Phase 1 manual rhythm input measurement prototype"
+    />
+    <title>Elyxion — Manual Rhythm Prototype</title>
+    <link rel="stylesheet" href="/rhythm.css" />
+  </head>
+  <body>
+    <main class="rhythm-shell">
+      <header class="rhythm-header">
+        <p class="eyebrow">ELYXION · PHASE 1 · TASK 002</p>
+        <h1>Manual Rhythm</h1>
+        <p>One Elyxionpad cycle. Your timing is measured, never graded.</p>
+      </header>
+
+      <section class="measurement-panel" aria-label="Raw cycle measurements">
+        <div class="stage-cell">
+          <span>Stage</span>
+          <strong id="rhythm-stage">Ready</strong>
+        </div>
+        <div>
+          <span>Inhale move</span>
+          <strong id="inhale-time">—</strong>
+        </div>
+        <div>
+          <span>Center hold</span>
+          <strong id="hold-time">—</strong>
+        </div>
+        <div>
+          <span>Exhale move</span>
+          <strong id="exhale-time">—</strong>
+        </div>
+        <div>
+          <span>Total cycle</span>
+          <strong id="total-time">—</strong>
+        </div>
+      </section>
+
+      <section
+        class="rhythm-scene"
+        id="rhythm-scene"
+        data-stage="awaiting-inhale"
+        aria-label="Elyxionpad manual rhythm controls"
+      >
+        <div
+          class="rhythm-membrane"
+          id="rhythm-membrane"
+          data-stage="awaiting-inhale"
+          aria-hidden="true"
+        >
+          <div class="membrane-shadow"></div>
+          <div class="membrane-body">
+            <div class="membrane-core"></div>
+          </div>
+        </div>
+
+        <div class="elyxionpad" aria-label="Elyxionpad">
+          <div class="pad-line" aria-hidden="true"></div>
+          <div class="pad-progress" aria-hidden="true"></div>
+
+          <button
+            class="pad-control upper-control"
+            id="upper-control"
+            type="button"
+            aria-label="Drag the upper split downward into the center"
+            disabled
+          >
+            <span class="split-lobe split-lobe-left" aria-hidden="true"></span>
+            <span class="split-lobe split-lobe-right" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="pad-control center-control"
+            id="center-control"
+            type="button"
+            aria-label="Press and hold the center"
+            disabled
+          >
+            <span class="center-pulse" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="pad-control lower-control"
+            id="lower-control"
+            type="button"
+            aria-label="Drag the lower point upward into the center"
+          >
+            <span class="lower-point" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="instruction-block">
+          <p class="step-sequence" aria-hidden="true">
+            LOWER ↑ <span>·</span> CENTER HOLD <span>·</span> UPPER ↓
+          </p>
+          <p class="instruction" id="rhythm-instruction" aria-live="polite">
+            Drag the lower point upward into the center.
+          </p>
+        </div>
+
+        <button class="reset-button" id="reset-cycle" type="button">
+          Reset cycle
+        </button>
+      </section>
+
+      <aside class="measurement-boundary" aria-label="Prototype boundary">
+        <strong>RAW MEASUREMENT</strong>
+        <span>No target seconds · no accuracy score · no automation</span>
+      </aside>
+    </main>
+
+    <script type="module" src="/rhythm.js"></script>
+  </body>
+</html>

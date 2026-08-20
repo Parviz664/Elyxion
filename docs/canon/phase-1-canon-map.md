@@ -50,6 +50,9 @@ immediate.
 
 - The player manually supports the membrane's breathing/rhythm before it can
   become partially automated.
+- One stated Elyxionpad rhythm cycle follows this input order: move the lower
+  point upward, hold the center, then move the upper split downward into the
+  exhale. The exact timing quality bands remain unresolved.
 - The player chooses when and how long to open the membrane to the particle
   flow.
 - Intake cannot be perfectly clean; the meaningful decision is how much risk
@@ -128,6 +131,11 @@ its pressure-like impact, a fragile semi-transparent membrane, disturbed
 breathing, and green particles beginning to recognize danger is preserved as a
 creator-confirmed scene direction. Exact timing, numbers, and phase placement
 remain outside canon.
+
+Manual Rhythm TASK 002 preserves the stated gesture order while measuring raw
+input times. Its visual layout, animation, and geometric drag-completion hit
+area are experimental implementation details. It does not define a target
+cadence or an accuracy score.
 
 ## UNRESOLVED
 
