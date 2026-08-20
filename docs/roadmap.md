@@ -3,17 +3,27 @@
 The roadmap protects Elyxion's scale: each milestone should make one new living
 relationship visible before adding another layer.
 
-## Phase 1: first contact
+## Phase 1: creator-stated causal spine
 
-`1 planet -> 1 membrane -> 1 friendly particle -> 1 Red Pressure Node`
+`manual rhythm -> intake -> mixed particles -> overload -> recovery -> delayed friendly activation -> partial automation`
 
-- establish the ancient aquatic atmosphere;
-- show membrane breathing, impact deformation, ripple, and desaturation;
-- wake the friendly particle from dormancy into recognition;
-- end with a subtle connection, not a complete shield;
-- keep the encounter deterministic enough to replay and balance.
-- implement the canonical 31-second visual-audio-camera score in the selected
-  renderer without moving rules out of the domain core.
+- prove manual breathing/rhythm before automation;
+- open particle intake only after sufficient stability;
+- make friendly and hostile particles enter through the same risk decision;
+- calculate overload from what entered and how the player opened the membrane;
+- recover through the same Elyxionpad language used for ordinary breathing;
+- activate friendly help only after rhythm has been restored;
+- carry the quality of Phase 1 into Phase 2.
+
+Exact cadence, intake windows, score weights, and overload thresholds remain
+provisional until instrumented playtests.
+
+## Preserved first-contact experiment
+
+The Red/Crimson Pressure Node simulation and 31-second presentation score remain
+available as an `EXPERIMENTAL_CANDIDATE`. They can supply visual, audio, and
+technical learning, but cannot set Phase 1 topology or phase order until the
+creator resolves their placement.
 
 ## Next membrane-system milestone
 

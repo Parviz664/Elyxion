@@ -41,3 +41,18 @@ test("Membrane enters recovery after an active response", () => {
   membrane.completeResponse();
   assert.equal(membrane.snapshot().state, "recovery");
 });
+
+test("pressure accounting preserves higher-precision incoming intensity", () => {
+  const preciseSignal: ThreatSignal = {
+    ...severeSignal,
+    id: "test:precise",
+    intensity: 42.123,
+  };
+
+  const resolution = new Membrane().respond(preciseSignal, 0);
+
+  assert.equal(
+    resolution.preventedPressure + resolution.residualPressure,
+    preciseSignal.intensity,
+  );
+});

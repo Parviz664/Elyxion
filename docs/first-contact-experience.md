@@ -1,8 +1,18 @@
-# First-contact experience score
+# Experimental first-contact experience candidate
 
-This document is the canonical visual-audio direction for Elyxion Phase 1. It
+- Status: EXPERIMENTAL_CANDIDATE
+- Canon authority: none
+- Exact duration and signal values: unconfirmed
+
+This document preserves a candidate visual-audio direction for Elyxion. It
 turns deterministic encounter outcomes into a 31-second experience without
 moving game rules into a renderer.
+
+The creator has confirmed important visual meaning around a fragile membrane,
+disturbed breathing, a translucent crimson three-core pressure node, impact,
+and green particles beginning to recognize danger. The exact `31s` structure,
+seven beats, four signal values, and placement inside Phase 1 remain
+experimental. See the [canon map](canon/phase-1-canon-map.md).
 
 The emotional arc is:
 
@@ -29,7 +39,7 @@ power-up, or complete shield.
   visible horizon.
 - Keep the membrane gelatinous and semi-transparent. Pressure must travel
   through it as deformation, not as a rigid-body collision.
-- Preserve the enemy's canonical translucent-crimson body and three red-orange
+- Preserve the confirmed translucent-crimson body and three red-orange
   cores. The core rhythm is the primary pre-attack tell.
 - Keep the friendly particle muted green. Awakening is a change in rhythm and
   internal luminance, not sudden scale or saturated glow.

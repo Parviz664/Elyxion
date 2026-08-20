@@ -60,6 +60,17 @@ test("the same initial world and signals produce the same history", () => {
   assert.deepEqual(first, second);
 });
 
+test("the returned first-contact history is immutable at runtime", () => {
+  const result = runFirstContact();
+
+  assert.ok(Object.isFrozen(result.outcomes));
+  assert.throws(
+    () => (result.outcomes as unknown as unknown[]).pop(),
+    TypeError,
+  );
+  assert.equal(result.outcomes.length, 4);
+});
+
 test("Core rejects signals that move simulation time backwards", () => {
   const core = new ElyxionCore();
   const [firstSignal] = RedPressureNode.firstContact().emitAll();
@@ -69,7 +80,7 @@ test("Core rejects signals that move simulation time backwards", () => {
   assert.throws(() => core.process(firstSignal), RangeError);
 });
 
-test("Red Pressure Node keeps its canonical three-core identity", () => {
+test("Red Pressure Node experiment keeps its confirmed three-core identity", () => {
   const threat = RedPressureNode.firstContact();
 
   assert.equal(threat.coreCount, 3);

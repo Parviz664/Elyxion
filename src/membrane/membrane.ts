@@ -42,7 +42,10 @@ export class Membrane {
     );
     const energyCost = round(signal.intensity * response.costRate);
     const preventedPressure = round(signal.intensity * mitigationRate);
-    const residualPressure = round(signal.intensity - preventedPressure);
+    // Keep the balancing remainder instead of rounding both sides separately.
+    // This preserves the documented accounting invariant for any valid input
+    // precision: prevented + residual === incoming intensity.
+    const residualPressure = signal.intensity - preventedPressure;
     const damage = round(residualPressure * 0.1);
 
     this.currentState = response.state;

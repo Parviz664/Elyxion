@@ -32,7 +32,9 @@ export class ElyxionCore {
   }
 
   public run(signals: Iterable<ThreatSignal>): readonly EncounterOutcome[] {
-    return Array.from(signals, (signal) => this.process(signal));
+    // Runtime immutability matters because presentation code consumes this
+    // exact collection. TypeScript's readonly annotation alone is not enough.
+    return Object.freeze(Array.from(signals, (signal) => this.process(signal)));
   }
 
   public history(): readonly EncounterOutcome[] {

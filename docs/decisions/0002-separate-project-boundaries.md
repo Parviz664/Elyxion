@@ -27,6 +27,7 @@ their own.
 
 - Elyxion can evolve and ship independently.
 - WhiteLine's meaning cannot accidentally become a game power score.
-- The Phase 1 loop now describes the actual living scene instead of borrowing
-  another project's maturity model.
+- Elyxion's experimental loop now uses biological game state instead of
+  borrowing another project's maturity model; the creator-stated Phase 1 loop
+  remains authoritative through the canon map.
 - A future AI amplifier can translate between projects without owning either.

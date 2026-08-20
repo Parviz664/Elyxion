@@ -3,9 +3,12 @@
 Elyxion is an emotional-visual evolutionary game universe. Its long arc moves
 from cell to organism, pack, tribe, civilization, and eventually cosmos.
 
-Phase 1 begins with the smallest living scene:
+The creator-stated Phase 1 causal spine is:
 
-`1 planet -> 1 membrane -> 1 friendly particle -> 1 enemy node`
+`manual rhythm -> intake -> mixed particles -> overload -> recovery -> delayed friendly activation -> partial automation -> Phase 2`
+
+Read the [Phase 1 canon map](docs/canon/phase-1-canon-map.md) before treating a
+prototype constant or authored scene as canon.
 
 ```mermaid
 flowchart TD
@@ -17,19 +20,22 @@ flowchart TD
     S -->|visual + audio + camera cues| V["Future renderer"]
 ```
 
-The canonical first contact is a fragile membrane in a dark, ancient aquatic
-environment. A translucent crimson Red Pressure Node, recognizable by three
-internal cores, strikes from outside. One muted green internal particle wakes,
-begins recognizing danger, and forms only a subtle stabilizing connection. It
-does not create a complete shield in Phase 1.
+The repository currently contains two deliberately separate working layers:
 
-## Current scope
+- `USER_APPROVED_PROTOTYPE_RULE`: the playable Friendly Points TASK 001;
+- `EXPERIMENTAL_CANDIDATE`: a deterministic Red/Crimson Pressure Node
+  first-contact simulation and presentation score.
+
+The experiment preserves useful visual direction, but its fixed topology,
+numbers, timing, and phase placement do not define Phase 1 canon.
+
+## Experimental first-contact scope
 
 - deterministic simulation time and encounter history;
 - one proto planet at the `cell` evolutionary stage;
 - membrane integrity, energy, automatic response, and recovery;
 - one friendly particle moving from `dormant` to `recognizing` to `supporting`;
-- one canonical Red Pressure Node with a repeatable pressure rhythm;
+- one candidate Red Pressure Node with a repeatable pressure rhythm;
 - engine-independent visual cues for deformation, ripple, desaturation, and
   particle activation;
 - a deterministic 31-second presentation score for synchronized visual, audio,
@@ -79,13 +85,14 @@ src/world/                    proto-planet aggregate
 src/membrane/                 integrity, energy, and pressure response
 src/particles/                friendly internal particle
 src/presentation/             visual-audio-camera score derived from outcomes
-src/threats/red-pressure-node canonical Phase 1 enemy
-src/simulation/               executable first-contact scenario
+src/threats/red-pressure-node experimental pressure-source candidate
+src/simulation/               executable first-contact experiment
 tests/unit/                   isolated rules
 tests/scenarios/              complete world loops
 ```
 
-Start with [the vision](docs/vision.md), then read
-[the architecture](docs/architecture.md), the
-[first-contact experience](docs/first-contact-experience.md), and the
+Start with the [canon map](docs/canon/phase-1-canon-map.md) and
+[research boundary](docs/research/phase-1-evidence-notes.md). Then read the
+[vision](docs/vision.md), [experimental architecture](docs/architecture.md),
+[first-contact candidate](docs/first-contact-experience.md), and
 [roadmap](docs/roadmap.md).

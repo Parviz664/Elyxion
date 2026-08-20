@@ -79,7 +79,7 @@ export function scoreFirstContact(
 ): FirstContactExperience {
   if (result.outcomes.length !== IMPACT_TIMES_MS.length) {
     throw new RangeError(
-      `The canonical first-contact score requires ${IMPACT_TIMES_MS.length} outcomes.`,
+      `The experimental first-contact score requires ${IMPACT_TIMES_MS.length} outcomes.`,
     );
   }
 
