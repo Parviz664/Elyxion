@@ -18,40 +18,70 @@ channels:
     contract_status: HOLD_UNVERIFIED
     implementation_status: BLOCKED
     recovered_historical_role: "reality skeleton / causal continuity layer"
+    functional_overlap_with_P1: SUBSTANTIAL_BUT_NOT_IDENTITY
+    absorption_status: NOT_PROVED
     recovered_route_families:
       - "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
       - "P0 -> P1 -> P2 -> P3 -> P4"
     source_refs:
       - ELYXION_PRRS_RAW_0.0.0.2.md
+      - ELYXION_MASTER_RAW_MAP_PASS_1.md
       - HISTORICAL_CHAT_RECOVERY_2026_02_12_ELYX_MINUS_P1_INPUT_V1
       - HISTORICAL_CHAT_RECOVERY_2026_03_05_P0_V2_4_NO_MINUS_P1
       - HISTORICAL_CHAT_RECOVERY_2026_03_06_P0_V2_6_NO_MINUS_P1
     blockers:
       - MINUS_P1_ROUTING_AUTHORITY_UNRESOLVED
       - MISSING_SUPERSESSION_PROOF
+      - ABSORPTION_NOT_PROVED
       - ORIGINAL_MINUS_P1_ARTIFACT_NOT_YET_RECOVERED
       - ORIGINAL_P0_V2_4_V2_6_ARTIFACTS_NOT_YET_RECOVERED
-    next_action: WAIT_FOR_P0_ROUTE_RECOVERY
+    next_action: OWNER_STATUS_DECISION_GATE
 
   "P0":
-    role_status: PARTIALLY_RECOVERED_CONFLICTED
-    contract_status: HOLD_UNVERIFIED
+    role_status: HISTORICALLY_RECOVERED_VERSIONED
+    contract_status: HOLD_CURRENT_AUTHORITY_UNVERIFIED
     implementation_status: NOT_STARTED
+    recovered_route_history:
+      - version: ELYX_P0_OUTPUT_V2_3
+        route: "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
+      - version: ELYX_P0_CHANNEL_SPEC_V2_4
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1: true
+      - version: ELYX_P0_OUTPUT_V2_4
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1_enforced: true
+      - version: ELYX_P0_CHANNEL_SPEC_V2_6
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1_enforced: true
+    latest_recovered_route_candidate: "P0 -> P1 -> P2 -> P3 -> P4"
     source_refs:
       - ELYXION_PRRS_RAW_0.0.0.2.md
-      - HISTORICAL_CHAT_RECOVERY_P0_V2_4_V2_6
+      - HISTORICAL_CHAT_RECOVERY_P0_V2_3_V2_4_V2_6
     notes:
-      - "Recovered historical P0 variants disagree on whether -P1 is in the route."
-      - "Do not freeze P0 routing until minus-P1 supersession evidence is resolved."
-    next_action: WAIT_FOR_MINUS_P1_SOURCE_RECOVERY
+      - "A versioned route change away from -P1 is strongly recovered inside the P0 line."
+      - "No explicit global supersedes/superseded_by proof has been recovered."
+      - "Do not silently infer that -P1 was globally deleted."
+    next_action: WAIT_FOR_MINUS_P1_OWNER_STATUS_DECISION
 
   "P1":
-    role_status: UNVERIFIED
-    contract_status: UNVERIFIED
+    role_status: PARTIALLY_RECOVERED
+    contract_status: HOLD_UNVERIFIED
     implementation_status: NOT_STARTED
+    recovered_spec: ELYX_P1_SPEC_V3_2_2
+    recovered_role: "causal map + seed + linear order"
+    recovered_micro_stage_order: "conditions -> pressure -> trigger -> micro-transition -> stabilized state"
+    recovered_fields:
+      - pressure_axis
+      - trigger_type
+      - mechanism_class
+      - scope_entities_used
+      - felt_inevitability_hint
+    minus_p1_overlap_status: FUNCTIONAL_OVERLAP_RECOVERED
+    minus_p1_absorption_status: NOT_PROVED
     source_refs:
       - ELYXION_PRRS_RAW_0.0.0.2.md
-    next_action: WAIT
+      - HISTORICAL_CHAT_RECOVERY_ELYX_P1_SPEC_V3_2_2
+    next_action: WAIT_FOR_MINUS_P1_OWNER_STATUS_DECISION
 
   "P2":
     role_status: UNVERIFIED
@@ -81,6 +111,11 @@ channels:
       - "Later working material appears to associate P4 with potential/shortlist selection, but this is not admitted here as exact contract truth until authoritative recovery."
     next_action: WAIT
 
+domain_boundary:
+  p_channels_are_ai_work_architecture: true
+  not_automatically_gameplay_systems: true
+  translation_to_gameplay_requires_explicit_bridge: true
+
 admission_rules:
   contracted_requires_source_ref: true
   unknown_must_remain_unknown: true
@@ -89,6 +124,7 @@ admission_rules:
   append_only_correction_history: true
   lower_authority_may_not_overwrite_higher: true
   unresolved_route_conflict_blocks_implementation: true
+  similarity_does_not_prove_absorption_or_rename: true
 
 failure_classes:
   - UNSUPPORTED_CREATION
@@ -98,9 +134,12 @@ failure_classes:
   - ROLE_ESCAPE
   - ROUTING_AUTHORITY_CONFLICT
   - MISSING_SUPERSESSION_PROOF
+  - FALSE_ABSORPTION_INFERENCE
 
 recovery_artifacts:
   - "recovery/MINUS_P1_RECOVERY_PASS_V0_1.md"
   - "recovery/MINUS_P1_SOURCE_ARTIFACT_RECOVERY_V0_2.md"
+  - "recovery/P0_ROUTE_RECOVERY_PASS_V0_1.md"
+  - "recovery/P1_MINUS_P1_FUNCTION_ABSORPTION_CHECK_V0_1.md"
 
-next_object: "P0_ROUTE_RECOVERY_PASS_V0_1"
+next_object: "MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1"
