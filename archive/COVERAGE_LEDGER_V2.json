@@ -1,0 +1,112 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_COVERAGE_LEDGER_V2",
+  "status": "ARCHITECTURE_50_READY__RAW_0",
+  "supersedes": "archive/COVERAGE_LEDGER.json",
+  "target": "100_PERCENT_VERIFIED_RAW_TRANSCRIPT",
+  "progress_axes": {
+    "architecture_progress_pct": 50,
+    "raw_transcript_coverage_pct": 0,
+    "verified_recovery_pct": 0
+  },
+  "architecture_milestones": [
+    {
+      "percent": 10,
+      "state": "PASS",
+      "meaning": "archive laws/schema/manifest/privacy/source rules locked"
+    },
+    {
+      "percent": 20,
+      "state": "PASS",
+      "meaning": "authoritative RAW intake contract and ingest protocol ready"
+    },
+    {
+      "percent": 30,
+      "state": "PASS",
+      "meaning": "zero-mutation parser/chunking/completeness contracts ready"
+    },
+    {
+      "percent": 40,
+      "state": "PASS",
+      "meaning": "deterministic verifier/hash/receipt chain ready"
+    },
+    {
+      "percent": 50,
+      "state": "PASS",
+      "meaning": "coverage accounting + recovery proof + source blob preservation ready"
+    },
+    {
+      "percent": 60,
+      "state": "PENDING"
+    },
+    {
+      "percent": 70,
+      "state": "PENDING"
+    },
+    {
+      "percent": 80,
+      "state": "PENDING"
+    },
+    {
+      "percent": 90,
+      "state": "PENDING"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING"
+    }
+  ],
+  "raw_coverage_milestones": [
+    {
+      "percent": 10,
+      "state": "PENDING"
+    },
+    {
+      "percent": 20,
+      "state": "PENDING"
+    },
+    {
+      "percent": 30,
+      "state": "PENDING"
+    },
+    {
+      "percent": 40,
+      "state": "PENDING"
+    },
+    {
+      "percent": 50,
+      "state": "PENDING"
+    },
+    {
+      "percent": 60,
+      "state": "PENDING"
+    },
+    {
+      "percent": 70,
+      "state": "PENDING"
+    },
+    {
+      "percent": 80,
+      "state": "PENDING"
+    },
+    {
+      "percent": 90,
+      "state": "PENDING"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING"
+    }
+  ],
+  "invariants": {
+    "architecture_progress_must_not_be_reported_as_raw_coverage": true,
+    "no_raw_percent_without_verified_source_ranges": true,
+    "no_100_percent_without_full_source_blob_hash_and_message_completeness_proof": true
+  },
+  "counters": {
+    "verified_raw_messages": 0,
+    "inferred_message_count": 0,
+    "reconstructed_from_memory_count": 0,
+    "silently_rewritten_message_count": 0,
+    "p0_loss_count": 0
+  }
+}
