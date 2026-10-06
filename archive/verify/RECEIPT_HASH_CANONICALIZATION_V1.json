@@ -1,0 +1,35 @@
+{
+  "artifact_type": "EPRIME_IMPORT_RECEIPT_HASH_CANONICALIZATION_V1",
+  "status": "LOCKED",
+  "algorithm": "SHA-256",
+  "encoding": "UTF-8",
+  "bom": false,
+  "json_mode": "COMPACT_LOCKED_FIELD_ORDER",
+  "separators": {
+    "item": ",",
+    "key_value": ":"
+  },
+  "ensure_ascii": false,
+  "trailing_newline": false,
+  "included_fields_in_exact_order": [
+    "receipt_id",
+    "source_id",
+    "source_sha256",
+    "source_scope",
+    "source_message_count",
+    "imported_sequence_start",
+    "imported_sequence_end",
+    "imported_message_count",
+    "first_message_sha256",
+    "last_message_sha256",
+    "previous_receipt_sha256",
+    "verification_report_ref",
+    "verdict"
+  ],
+  "excluded_fields": [
+    "receipt_sha256"
+  ],
+  "digest_encoding": "lowercase_hex",
+  "genesis_previous_receipt_sha256": "GENESIS",
+  "noncanonical_action": "BLOCK"
+}
