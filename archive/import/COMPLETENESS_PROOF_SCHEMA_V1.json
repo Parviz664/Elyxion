@@ -1,0 +1,26 @@
+{
+  "artifact_type": "EPRIME_CHAT_COMPLETENESS_PROOF_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "PROVE_NO_SILENT_MESSAGE_LOSS",
+  "required_fields": [
+    "source_sha256",
+    "source_message_count",
+    "parsed_message_count",
+    "archived_message_count",
+    "first_source_message_ref",
+    "last_source_message_ref",
+    "sequence_gap_count",
+    "duplicate_sequence_count",
+    "role_boundary_mismatch_count",
+    "hash_mismatch_count",
+    "unresolved_record_count",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_COMPLETE",
+    "BLOCK_INCOMPLETE",
+    "BLOCK_AMBIGUOUS"
+  ],
+  "pass_rule": "source_message_count == parsed_message_count == archived_message_count AND all mismatch/gap/duplicate/unresolved counts == 0",
+  "hundred_percent_binding": "100_PERCENT_ARCHIVE_CLAIM_FORBIDDEN_UNLESS verdict == PASS_COMPLETE"
+}
