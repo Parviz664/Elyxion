@@ -91,10 +91,17 @@ channels:
     next_action: COMPLETE_HOLD_CONTINUE_TO_P2
 
   "P2":
-    role_status: UNVERIFIED
-    contract_status: UNVERIFIED
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_RECOVERED_VERSION_LINEAGE_PARTIAL
     implementation_status: NOT_STARTED
-    next_action: RECOVERY_PASS
+    recovered_role: "source-bound ladder builder over P1 causal map"
+    recovered_spec: "ELYX_P2_LADDER_BUILDER_v3.2.1"
+    recovered_output: "ELYX_P2_LADDER_PACKET_V3_2_1"
+    source_binding_status: STRONG
+    split_merge_status: BOUNDED_TRACE_REQUIRED
+    later_working_version: "ELYX_P2_LADDER_BUILDER_v3.5.0"
+    version_lineage_status: PARTIAL
+    next_action: COMPLETE_CONTINUE_TO_P3
 
   "P3":
     role_status: PARTIALLY_RECOVERED
@@ -164,10 +171,11 @@ recovery_artifacts:
   - "recovery/SOURCE_PROVENANCE_CORRECTION_V0_1.md"
   - "recovery/P0_CONTRACT_LINEAGE_PASS_V0_1.md"
   - "recovery/P1_CONTRACT_LINEAGE_PASS_V0_1.md"
+  - "recovery/P2_CONTRACT_RECOVERY_PASS_V0_1.md"
   - "P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md"
 
 decision_artifacts:
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1.md"
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
 
-next_object: "P2_CONTRACT_RECOVERY_PASS_V0_1"
+next_object: "P3_CONTRACT_RECOVERY_PASS_V0_1"
