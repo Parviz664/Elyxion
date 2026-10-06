@@ -1,0 +1,30 @@
+{
+  "artifact_type": "EPRIME_CHAT_COVERAGE_SEGMENT_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "PROVE_EXACTLY_WHICH_SOURCE_RANGE_IS_ARCHIVED_AND_VERIFIED",
+  "required_fields": [
+    "segment_id",
+    "source_id",
+    "source_sha256",
+    "source_sequence_start",
+    "source_sequence_end",
+    "expected_message_count",
+    "archived_message_count",
+    "verified_message_count",
+    "first_message_sha256",
+    "last_message_sha256",
+    "chunk_refs",
+    "verification_report_ref",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_RANGE_COMPLETE",
+    "BLOCK_RANGE_INCOMPLETE",
+    "BLOCK_RANGE_AMBIGUOUS"
+  ],
+  "expected_count_formula": "source_sequence_end - source_sequence_start + 1",
+  "pass_rule": "expected_message_count == archived_message_count == verified_message_count AND verifier report passes AND no gaps/duplicates/hash mismatches",
+  "overlap_policy": "ALLOWED_ONLY_IF_IDENTICAL_HASHES_FOR_OVERLAPPING_SEQUENCES",
+  "gap_policy": "BLOCK_GLOBAL_COMPLETENESS",
+  "merge_rule": "Adjacent PASS_RANGE_COMPLETE segments may form larger proven interval only when boundary chain links verify."
+}
