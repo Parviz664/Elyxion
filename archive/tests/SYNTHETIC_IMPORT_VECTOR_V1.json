@@ -1,0 +1,34 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_IMPORT_VECTOR_V1",
+  "status": "TEST_ONLY_NON_USER_DATA",
+  "synthetic_only": true,
+  "source_records": [
+    {
+      "sequence": 1,
+      "role": "user",
+      "raw_text": "Line 1\\nLine 2  ",
+      "expected_preservation": "EXACT"
+    },
+    {
+      "sequence": 2,
+      "role": "assistant",
+      "raw_text": "Markdown **must stay**. Emoji: 🌌",
+      "expected_preservation": "EXACT"
+    },
+    {
+      "sequence": 3,
+      "role": "user",
+      "raw_text": "Unicode: ё é NFC-sensitive",
+      "expected_preservation": "EXACT"
+    }
+  ],
+  "expected_results": {
+    "parsed_message_count": 3,
+    "sequence_gap_count": 0,
+    "duplicate_sequence_count": 0,
+    "semantic_mutation_count": 0,
+    "whitespace_mutation_count": 0,
+    "role_boundary_mismatch_count": 0
+  },
+  "note": "This file contains no real chat content."
+}
