@@ -1,0 +1,83 @@
+registry_id: P_CHANNEL_REGISTRY_V0_1
+status: PROVISIONAL_SOURCE_GROUNDED
+root_question: "Как собрано?"
+mutation_authority: NONE
+canonization_authority: NONE
+
+channel_order:
+  - "-P1"
+  - "P0"
+  - "P1"
+  - "P2"
+  - "P3"
+  - "P4"
+
+channels:
+  "-P1":
+    role_status: UNVERIFIED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    next_action: RECOVERY_PASS
+
+  "P0":
+    role_status: UNVERIFIED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    next_action: WAIT_FOR_MINUS_P1_RECOVERY
+
+  "P1":
+    role_status: UNVERIFIED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    next_action: WAIT
+
+  "P2":
+    role_status: UNVERIFIED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    next_action: WAIT
+
+  "P3":
+    role_status: PARTIALLY_RECOVERED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    notes:
+      - "Later working material appears to associate P3 with a rendered ladder, but this is not admitted here as exact contract truth until authoritative recovery."
+    next_action: WAIT
+
+  "P4":
+    role_status: PARTIALLY_RECOVERED
+    contract_status: UNVERIFIED
+    implementation_status: NOT_STARTED
+    source_refs:
+      - ELYXION_PRRS_RAW_0.0.0.2.md
+    notes:
+      - "Later working material appears to associate P4 with potential/shortlist selection, but this is not admitted here as exact contract truth until authoritative recovery."
+    next_action: WAIT
+
+admission_rules:
+  contracted_requires_source_ref: true
+  unknown_must_remain_unknown: true
+  silent_status_promotion_forbidden: true
+  silent_role_completion_forbidden: true
+  append_only_correction_history: true
+  lower_authority_may_not_overwrite_higher: true
+
+failure_classes:
+  - UNSUPPORTED_CREATION
+  - MATERIAL_LOSS
+  - SILENT_NORMALIZATION
+  - STATUS_PROMOTION_DRIFT
+  - ROLE_ESCAPE
+
+next_object: "-P1_RECOVERY_PASS_V0_1"
