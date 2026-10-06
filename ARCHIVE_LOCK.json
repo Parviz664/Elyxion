@@ -1,0 +1,11 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_LOCK_V1",
+  "status": "LOCKED_NO_TRANSCRIPT_COMMITTED",
+  "branch": "E-Prime",
+  "repository": "Parviz664/Elyxion",
+  "purpose": "CHAT_TRANSCRIPTS_ONLY",
+  "raw_transcript_required_for_100pct_claim": true,
+  "reconstruction_from_memory_forbidden": true,
+  "integrity_policy": "APPEND_ONLY_SHA256_MANIFEST",
+  "privacy_gate": "BLOCK_TRANSCRIPT_COMMIT_WHILE_REPOSITORY_PUBLIC"
+}
