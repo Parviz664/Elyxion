@@ -1,0 +1,27 @@
+{
+  "artifact_type": "EPRIME_RAW_PARSER_CONTRACT_V1",
+  "status": "LOCKED",
+  "parser_goal": "PARSE_WITHOUT_SEMANTIC_MUTATION",
+  "accepted_inputs": [
+    "CHATGPT_MACHINE_EXPORT",
+    "VERBATIM_TRANSCRIPT_TEXT",
+    "OTHER_MACHINE_READABLE_ORDERED_TRANSCRIPT"
+  ],
+  "parser_output": "EPRIME_CHAT_MESSAGE_RECORD_SCHEMA_V1",
+  "invariants": [
+    "preserve_source_order_exactly",
+    "preserve_role_boundaries_exactly",
+    "preserve_raw_text_exactly",
+    "preserve_unicode_codepoints",
+    "do_not_trim",
+    "do_not_normalize_whitespace",
+    "do_not_fix_spelling",
+    "do_not_reformat_markdown",
+    "do_not_replace_emoji",
+    "do_not_merge_messages",
+    "do_not_split_messages_unless_source_has_distinct_records"
+  ],
+  "ambiguity_policy": "BLOCK_AND_REQUIRE_SOURCE_REF",
+  "unsupported_record_policy": "PRESERVE_AS_OPAQUE_RECORD_REF__DO_NOT_DROP",
+  "zero_silent_drop_required": true
+}
