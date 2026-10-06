@@ -1,0 +1,34 @@
+{
+  "artifact_type": "EPRIME_CHAT_INGEST_PROTOCOL_V1",
+  "status": "LOCKED",
+  "objective": "VERBATIM_RAW_TRANSCRIPT_INGEST_WITH_ZERO_SILENT_REWRITE",
+  "steps": [
+    "LOAD_AUTHORITATIVE_SOURCE_BYTES",
+    "HASH_WHOLE_SOURCE_SHA256",
+    "PARSE_MESSAGES_WITHOUT_SEMANTIC_NORMALIZATION",
+    "PRESERVE_SOURCE_ORDER",
+    "PRESERVE_ROLE_BOUNDARIES",
+    "PRESERVE_RAW_TEXT_EXACTLY",
+    "CREATE_MESSAGE_RECORDS",
+    "CHAIN_MESSAGE_SHA256_WITH_PREVIOUS_HASH",
+    "WRITE_CHUNK_MANIFESTS",
+    "UPDATE_GLOBAL_MANIFEST",
+    "VERIFY_MESSAGE_COUNT_PARITY",
+    "VERIFY_RECONSTRUCTION_HASH_PARITY"
+  ],
+  "text_handling": {
+    "encoding_target": "UTF-8",
+    "semantic_normalization": false,
+    "whitespace_normalization": false,
+    "punctuation_normalization": false,
+    "spelling_correction": false,
+    "markdown_reformatting": false,
+    "emoji_replacement": false
+  },
+  "failure_policy": {
+    "missing_message": "BLOCK",
+    "unparseable_message": "BLOCK_AND_PRESERVE_RAW_SOURCE_REF",
+    "role_ambiguity": "BLOCK_NOT_INFER",
+    "source_truncation": "BLOCK_100_PERCENT_CLAIM"
+  }
+}
