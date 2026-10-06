@@ -1,0 +1,32 @@
+{
+  "artifact_type": "EPRIME_CHAT_CHAIN_VERIFICATION_CONTRACT_V1",
+  "status": "LOCKED",
+  "verification_order": [
+    "VERIFY_SOURCE_SHA256",
+    "VERIFY_SOURCE_MESSAGE_COUNT_IF_AVAILABLE",
+    "VERIFY_SEQUENCE_CONTIGUITY",
+    "VERIFY_ROLE_PRESERVATION",
+    "VERIFY_EACH_MESSAGE_SHA256",
+    "VERIFY_PREVIOUS_MESSAGE_SHA256_LINKS",
+    "VERIFY_CHUNK_HASHES",
+    "VERIFY_PREVIOUS_CHUNK_HASH_LINKS",
+    "VERIFY_IMPORT_RECEIPT_CHAIN",
+    "VERIFY_GLOBAL_MANIFEST_COUNTS",
+    "VERIFY_NO_UNRESOLVED_RECORDS"
+  ],
+  "hard_fail_conditions": [
+    "source_hash_mismatch",
+    "message_hash_mismatch",
+    "sequence_gap",
+    "duplicate_sequence",
+    "message_chain_break",
+    "chunk_chain_break",
+    "receipt_chain_break",
+    "role_boundary_mismatch",
+    "unresolved_record_present",
+    "silent_drop_detected"
+  ],
+  "success_condition": "ALL_CHECKS_PASS",
+  "failure_behavior": "BLOCK_AND_PRESERVE_EVIDENCE",
+  "partial_success_may_claim_100_percent": false
+}
