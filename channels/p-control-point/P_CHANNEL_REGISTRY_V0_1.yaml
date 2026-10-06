@@ -104,12 +104,23 @@ channels:
     next_action: COMPLETE_CONTINUE_TO_P3
 
   "P3":
-    role_status: PARTIALLY_RECOVERED
-    contract_status: UNVERIFIED
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_AND_INPUT_RECOVERED_OUTPUT_SCHEMA_PARTIAL
     implementation_status: NOT_STARTED
-    notes:
-      - "Later working material appears to associate P3 with a rendered ladder, but exact contract recovery is still required."
-    next_action: WAIT_FOR_P2_RECOVERY
+    recovered_role: "final_text_renderer_patch_safe"
+    recovered_input: "ELYX_P3_INPUT_V3"
+    recovered_render_mode: "final_text_patch_safe"
+    recovered_output_identity: "ELYX_P3_RENDERED_LADDER_PACKET_V3"
+    downstream_binding: "ELYX_P4_INPUT_V3 candidate_items_ref"
+    semantic_drift_forbidden: true
+    truth_first_required: true
+    anti_bloat_required: true
+    anti_premature_complexity_required: true
+    uncertainty_marking_required: true
+    output_schema_status: UNKNOWN
+    merge_split_rules_status: UNKNOWN
+    version_lineage_status: PARTIAL
+    next_action: COMPLETE_CONTINUE_TO_P4
 
   "P4":
     role_status: PARTIALLY_RECOVERED
@@ -172,10 +183,11 @@ recovery_artifacts:
   - "recovery/P0_CONTRACT_LINEAGE_PASS_V0_1.md"
   - "recovery/P1_CONTRACT_LINEAGE_PASS_V0_1.md"
   - "recovery/P2_CONTRACT_RECOVERY_PASS_V0_1.md"
+  - "recovery/P3_CONTRACT_RECOVERY_PASS_V0_1.md"
   - "P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md"
 
 decision_artifacts:
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1.md"
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
 
-next_object: "P3_CONTRACT_RECOVERY_PASS_V0_1"
+next_object: "P4_CONTRACT_RECOVERY_PASS_V0_1"
