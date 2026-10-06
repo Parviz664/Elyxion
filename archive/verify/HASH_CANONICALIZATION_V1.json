@@ -1,0 +1,49 @@
+{
+  "artifact_type": "EPRIME_CHAT_HASH_CANONICALIZATION_V1",
+  "status": "LOCKED",
+  "scope": "MESSAGE_RECORD_AND_CHUNK_HASHES",
+  "source_file_hash_rule": {
+    "algorithm": "SHA-256",
+    "input": "EXACT_SOURCE_BYTES",
+    "normalization": "NONE",
+    "digest_encoding": "lowercase_hex"
+  },
+  "message_record_hash_rule": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8",
+    "bom": false,
+    "json_mode": "COMPACT_LOCKED_FIELD_ORDER",
+    "separators": {
+      "item": ",",
+      "key_value": ":"
+    },
+    "ensure_ascii": false,
+    "trailing_newline": false,
+    "included_fields_in_exact_order": [
+      "sequence",
+      "role",
+      "timestamp",
+      "raw_text",
+      "attachments_refs",
+      "source_ref",
+      "previous_message_sha256"
+    ],
+    "excluded_fields": [
+      "message_sha256"
+    ],
+    "raw_text_normalization": "NONE",
+    "digest_encoding": "lowercase_hex"
+  },
+  "chunk_hash_rule": {
+    "algorithm": "SHA-256",
+    "input_definition": "UTF-8 bytes of lowercase message_sha256 values joined by exactly one LF character, no trailing LF",
+    "digest_encoding": "lowercase_hex"
+  },
+  "manifest_hash_rule": {
+    "algorithm": "SHA-256",
+    "input_definition": "UTF-8 compact JSON with manifest fields in schema-defined locked order, excluding manifest_sha256 itself",
+    "digest_encoding": "lowercase_hex"
+  },
+  "noncanonical_action": "BLOCK",
+  "ambiguity_action": "BLOCK_NOT_INFER"
+}
