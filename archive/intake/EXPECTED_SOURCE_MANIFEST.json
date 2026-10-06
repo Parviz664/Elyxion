@@ -1,0 +1,19 @@
+{
+  "artifact_type": "EPRIME_EXPECTED_RAW_SOURCE_MANIFEST_V1",
+  "status": "AWAITING_SOURCE",
+  "source_id": "UNASSIGNED",
+  "source_type": "UNASSIGNED",
+  "acquired_at_utc": null,
+  "source_sha256": null,
+  "source_size_bytes": null,
+  "declared_scope": null,
+  "total_messages": null,
+  "total_user_messages": null,
+  "total_assistant_messages": null,
+  "total_system_messages": null,
+  "total_tool_messages": null,
+  "total_attachments": null,
+  "parser_version": null,
+  "completeness_evidence_refs": [],
+  "notes": "No values may be guessed. Populate only from authoritative source."
+}
