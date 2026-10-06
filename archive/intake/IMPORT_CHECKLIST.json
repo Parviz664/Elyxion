@@ -1,0 +1,48 @@
+{
+  "artifact_type": "EPRIME_CHAT_IMPORT_CHECKLIST_V1",
+  "status": "READY",
+  "pre_ingest_checks": [
+    {
+      "id": "C01",
+      "check": "repository_visibility_is_private_before_raw_commit",
+      "required": true
+    },
+    {
+      "id": "C02",
+      "check": "authoritative_source_present",
+      "required": true
+    },
+    {
+      "id": "C03",
+      "check": "whole_source_sha256_computed",
+      "required": true
+    },
+    {
+      "id": "C04",
+      "check": "source_message_order_preserved",
+      "required": true
+    },
+    {
+      "id": "C05",
+      "check": "role_boundaries_preserved",
+      "required": true
+    },
+    {
+      "id": "C06",
+      "check": "attachments_referenced_or_marked_missing",
+      "required": true
+    },
+    {
+      "id": "C07",
+      "check": "no_memory_reconstruction_used",
+      "required": true
+    },
+    {
+      "id": "C08",
+      "check": "no_summary_substitution_used",
+      "required": true
+    }
+  ],
+  "pass_rule": "ALL_REQUIRED_CHECKS_TRUE",
+  "fail_rule": "ANY_REQUIRED_CHECK_FALSE_OR_UNKNOWN => BLOCK_RAW_INGEST"
+}
