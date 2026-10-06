@@ -1,0 +1,34 @@
+{
+  "artifact_type": "EPRIME_CHAT_VERIFICATION_REPORT_SCHEMA_V1",
+  "status": "LOCKED",
+  "required_fields": [
+    "report_id",
+    "source_id",
+    "source_sha256_expected",
+    "source_sha256_observed",
+    "source_message_count",
+    "parsed_message_count",
+    "archived_message_count",
+    "verified_message_hash_count",
+    "sequence_gap_count",
+    "duplicate_sequence_count",
+    "role_boundary_mismatch_count",
+    "message_hash_mismatch_count",
+    "message_chain_break_count",
+    "chunk_hash_mismatch_count",
+    "chunk_chain_break_count",
+    "receipt_chain_break_count",
+    "unresolved_record_count",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_COMPLETE",
+    "PASS_SCOPED_RANGE",
+    "BLOCK_INCOMPLETE",
+    "BLOCK_INTEGRITY",
+    "BLOCK_AMBIGUOUS"
+  ],
+  "pass_complete_rule": "All counts equal source scope; all mismatch/gap/break/unresolved counters are zero; source hash matches.",
+  "pass_scoped_range_rule": "Only an explicitly declared source subrange is proven; MUST NOT increase global 100% claim beyond proven coverage.",
+  "block_rule": "Any hash mismatch, chain break, gap, duplicate, unresolved record, or source ambiguity => BLOCK."
+}
