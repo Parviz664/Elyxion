@@ -123,12 +123,20 @@ channels:
     next_action: COMPLETE_CONTINUE_TO_P4
 
   "P4":
-    role_status: PARTIALLY_RECOVERED
-    contract_status: UNVERIFIED
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_RECOVERED_VERSION_LINEAGE_PARTIAL
     implementation_status: NOT_STARTED
-    notes:
-      - "Later working material appears to associate P4 with potential/shortlist selection, but exact contract recovery is still required."
-    next_action: WAIT_FOR_P3_RECOVERY
+    recovered_role: "feel_potential_sorter_final_cut"
+    recovered_channel: "ELYX_P4_FEEL_POTENTIAL_ENGINE_v3.2"
+    recovered_packet: "ELYX_P4_FILTER_SHORTLIST_PACKET_V3_2_2"
+    recovered_input: "ELYX_P4_INPUT_V3"
+    source_order_preservation: STRONG
+    dependency_preservation: STRONG
+    author_selection_mode: "author_selects_ids_only"
+    semantic_invention_forbidden: true
+    automatic_canonization_forbidden: true
+    version_lineage_status: PARTIAL
+    next_action: COMPLETE_READY_FOR_CHAIN_CROSSCHECK
 
 domain_boundary:
   p_channels_are_ai_work_architecture: true
@@ -184,10 +192,11 @@ recovery_artifacts:
   - "recovery/P1_CONTRACT_LINEAGE_PASS_V0_1.md"
   - "recovery/P2_CONTRACT_RECOVERY_PASS_V0_1.md"
   - "recovery/P3_CONTRACT_RECOVERY_PASS_V0_1.md"
+  - "recovery/P4_CONTRACT_RECOVERY_PASS_V0_1.md"
   - "P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md"
 
 decision_artifacts:
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1.md"
   - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
 
-next_object: "P4_CONTRACT_RECOVERY_PASS_V0_1"
+next_object: "P_CHAIN_ROLE_SPINE_CROSSCHECK_V0_1"
