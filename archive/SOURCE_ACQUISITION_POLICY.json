@@ -1,0 +1,23 @@
+{
+  "artifact_type": "EPRIME_CHAT_SOURCE_ACQUISITION_POLICY_V1",
+  "status": "LOCKED",
+  "accepted_authoritative_sources": [
+    "ChatGPT raw export containing the conversation",
+    "complete user-supplied transcript copied verbatim",
+    "machine-readable conversation export preserving message order"
+  ],
+  "non_authoritative_sources": [
+    "assistant memory",
+    "conversation summaries",
+    "project memory",
+    "reconstructed paraphrases",
+    "screenshots when raw text export exists"
+  ],
+  "source_priority": [
+    "RAW_MACHINE_EXPORT",
+    "RAW_VERBATIM_COPY",
+    "OTHER_SOURCE_BLOCKED_FOR_100_PERCENT_CLAIM"
+  ],
+  "rule": "NO_MESSAGE_IS_MARKED_ARCHIVED_UNTIL_ITS_RAW_SOURCE_BYTES_OR_VERBATIM_TEXT_ARE_AVAILABLE",
+  "privacy_rule": "NO_RAW_CHAT_CONTENT_COMMITTED_WHILE_REPOSITORY_VISIBILITY_IS_PUBLIC"
+}
