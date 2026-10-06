@@ -1,0 +1,32 @@
+{
+  "artifact_type": "EPRIME_RAW_SOURCE_INTAKE_SLOT_V1",
+  "status": "WAITING_FOR_AUTHORITATIVE_RAW_EXPORT",
+  "slot_id": "RAW-SOURCE-SLOT-0001",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "target_conversation_scope": "THIS_EPRIME_CHAT_TRANSCRIPT_ONLY",
+  "accepted_source_types": [
+    "CHATGPT_MACHINE_EXPORT",
+    "VERBATIM_COMPLETE_TRANSCRIPT",
+    "OTHER_MACHINE_READABLE_EXPORT_WITH_ORDER"
+  ],
+  "required_before_ingest": [
+    "source_file_available",
+    "source_is_complete_or_explicitly_scoped",
+    "source_order_preserved",
+    "source_role_boundaries_preserved"
+  ],
+  "forbidden_substitutes": [
+    "assistant_memory",
+    "summary",
+    "paraphrase",
+    "partial_reconstruction"
+  ],
+  "privacy_gate": "BLOCK_COMMIT_OF_RAW_CHAT_WHILE_REPOSITORY_PUBLIC",
+  "ingestion_state": "NOT_STARTED",
+  "source_sha256": null,
+  "source_size_bytes": null,
+  "source_message_count": null,
+  "verified_message_count": 0,
+  "missing_message_count": "UNKNOWN_UNTIL_SOURCE_LOADED"
+}
