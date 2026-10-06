@@ -1,0 +1,22 @@
+{
+  "artifact_type": "EPRIME_CHAT_CHUNKING_POLICY_V1",
+  "status": "LOCKED",
+  "chunking_goal": "BOUND_FILE_SIZE_WITHOUT_CHANGING_MESSAGE_BOUNDARIES",
+  "chunk_unit": "whole_messages_only",
+  "split_inside_message_forbidden": true,
+  "default_max_messages_per_chunk": 500,
+  "chunk_naming": "raw/chunks/chat_<start_seq>_<end_seq>.jsonl",
+  "chunk_manifest_required": true,
+  "chunk_manifest_fields": [
+    "chunk_id",
+    "start_sequence",
+    "end_sequence",
+    "message_count",
+    "first_message_sha256",
+    "last_message_sha256",
+    "chunk_sha256",
+    "previous_chunk_sha256"
+  ],
+  "chain_rule": "previous_chunk_sha256 == prior_chunk.chunk_sha256 OR GENESIS",
+  "missing_sequence_policy": "BLOCK"
+}
