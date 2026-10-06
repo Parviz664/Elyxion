@@ -1,0 +1,41 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-050",
+  "status": "PASS_ARCHITECTURE__COVERAGE_AND_RECOVERY_PROOF_READY__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 50,
+  "raw_transcript_coverage_pct": 0,
+  "verified_recovery_pct": 0,
+  "verified_raw_messages": 0,
+  "inferred_messages": 0,
+  "reconstructed_from_memory_messages": 0,
+  "silently_rewritten_messages": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "coverage_ledger_v2_separate_axes",
+    "coverage_segment_schema_v1",
+    "source_blob_preservation_policy_v1",
+    "recovery_proof_contract_v1",
+    "creative_non_interference_law_v1",
+    "deterministic_recovery_reference_tool",
+    "golden_synthetic_recovery_proof",
+    "golden_synthetic_coverage_segment"
+  ],
+  "strongest_current_claim": {
+    "architecture": "50_PERCENT_READY",
+    "raw_content": "0_PERCENT_ARCHIVED",
+    "source_blob": "NOT_ACQUIRED",
+    "exact_message_recovery": "NOT_YET_TESTED_ON_REAL_CHAT",
+    "byte_exact_source_recovery": "NOT_YET_AVAILABLE"
+  },
+  "golden_vector_expected": {
+    "synthetic_message_count": 3,
+    "recovered_archive_sha256": "9fae51c28f8715b7a96abba3675c01a0191e43d5c63d4eada8f1da7b180b08c9",
+    "terminal_message_sha256": "39c6fa103ee3120f52441a1ac184112cc40f167a8c10289a95894c22cd2e91f6",
+    "expected_verdict": "PASS_RECOVERY"
+  },
+  "privacy_gate": "ACTIVE__RAW_CHAT_AND_SOURCE_BLOB_COMMIT_BLOCKED_WHILE_REPOSITORY_PUBLIC",
+  "next_target_pct": 60,
+  "next_stage_requirement": "Build attachment/media reference preservation, multi-copy durability policy, and full-source acquisition workflow; do not ingest real chat until repository privacy is safe."
+}
