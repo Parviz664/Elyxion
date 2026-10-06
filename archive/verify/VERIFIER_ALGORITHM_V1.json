@@ -1,0 +1,25 @@
+{
+  "artifact_type": "EPRIME_CHAT_VERIFIER_ALGORITHM_V1",
+  "status": "LOCKED_REFERENCE_ALGORITHM",
+  "inputs": [
+    "authoritative_source",
+    "parsed_message_records",
+    "chunk_manifests",
+    "import_receipts",
+    "global_archive_manifest"
+  ],
+  "algorithm": [
+    "hash exact authoritative source bytes",
+    "recompute every message hash using HASH_CANONICALIZATION_V1",
+    "verify sequence starts at declared range start and increments by exactly 1",
+    "verify each previous_message_sha256 points to preceding verified record hash",
+    "recompute chunk hashes and chunk links",
+    "recompute import receipt hashes and previous receipt links",
+    "compare source/parsed/archived counts for declared scope",
+    "emit verification report without repairing any mismatch"
+  ],
+  "repair_behavior": "NONE",
+  "inference_behavior": "NONE",
+  "deterministic": true,
+  "same_inputs_same_report_required": true
+}
