@@ -1,0 +1,18 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_RECOVERY_PROOF_V1",
+  "status": "GOLDEN_EXPECTATION",
+  "synthetic_only": true,
+  "input_ref": "archive/tests/SYNTHETIC_RECORD_CHAIN_V1.json",
+  "recovery_contract_ref": "archive/recovery/RECOVERY_PROOF_CONTRACT_V1.json",
+  "expected_message_count": 3,
+  "expected_first_sequence": 1,
+  "expected_last_sequence": 3,
+  "expected_terminal_message_sha256": "39c6fa103ee3120f52441a1ac184112cc40f167a8c10289a95894c22cd2e91f6",
+  "expected_recovered_archive_sha256": "9fae51c28f8715b7a96abba3675c01a0191e43d5c63d4eada8f1da7b180b08c9",
+  "expected_sequence_gap_count": 0,
+  "expected_conflicting_overlap_count": 0,
+  "expected_hash_mismatch_count": 0,
+  "expected_chain_break_count": 0,
+  "expected_verdict": "PASS_RECOVERY",
+  "note": "No real user chat content."
+}
