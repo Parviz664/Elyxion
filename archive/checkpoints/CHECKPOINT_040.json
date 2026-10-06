@@ -1,0 +1,38 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-040",
+  "status": "PASS_ARCHITECTURE__DETERMINISTIC_VERIFIER_LAYER_READY__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 40,
+  "raw_transcript_coverage_pct": 0,
+  "verified_raw_messages": 0,
+  "inferred_messages": 0,
+  "reconstructed_messages": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "hash_canonicalization_v1",
+    "import_receipt_schema_v1",
+    "receipt_hash_canonicalization_v1",
+    "chain_verification_contract_v1",
+    "verification_report_schema_v1",
+    "verifier_algorithm_v1",
+    "deterministic_record_verifier_reference",
+    "golden_synthetic_record_chain",
+    "golden_synthetic_import_receipt"
+  ],
+  "golden_vector_expected": {
+    "verified_message_hash_count": 3,
+    "sequence_gap_count": 0,
+    "duplicate_sequence_count": 0,
+    "message_hash_mismatch_count": 0,
+    "message_chain_break_count": 0,
+    "chunk_sha256": "b001c419ee0a68c6b7efa8ce257fa8a50b6e2d8c2aef18c8092ca9075bffdd19",
+    "first_receipt_sha256": "fb40c38e29d54db008cffd0520b06e99cfe998936f1704161f350bed7e172922",
+    "verdict": "PASS_COMPLETE"
+  },
+  "privacy_gate": "ACTIVE__RAW_CHAT_COMMIT_BLOCKED_WHILE_REPOSITORY_PUBLIC",
+  "completeness_claim": "NOT_YET_AVAILABLE",
+  "next_target_pct": 50,
+  "next_stage_requirement": "Prepare first-half coverage accounting and recovery/reconstruction proof mechanics; real coverage remains blocked until authoritative RAW source exists and repository privacy is safe."
+}
