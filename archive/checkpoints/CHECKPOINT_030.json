@@ -1,0 +1,27 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-030",
+  "status": "PASS_ARCHITECTURE__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 30,
+  "raw_transcript_coverage_pct": 0,
+  "verified_raw_messages": 0,
+  "inferred_messages": 0,
+  "reconstructed_messages": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "raw_parser_contract_v1",
+    "chunking_policy_v1",
+    "completeness_proof_schema_v1",
+    "synthetic_import_vector_v1"
+  ],
+  "synthetic_validation_scope": {
+    "contains_real_chat_content": false,
+    "purpose": "verify no-mutation rules before any RAW import",
+    "expected_failure_on_any_mutation": true
+  },
+  "privacy_gate": "ACTIVE__RAW_COMMIT_BLOCKED_WHILE_REPOSITORY_PUBLIC",
+  "next_target_pct": 40,
+  "next_stage_requirement": "Build deterministic verifier/report schema and import receipt chain; still no real transcript until authoritative RAW source + private visibility."
+}
