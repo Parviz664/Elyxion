@@ -1,0 +1,21 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_COVERAGE_SEGMENT_V1",
+  "status": "GOLDEN_VECTOR",
+  "synthetic_only": true,
+  "segment_id": "SYNTHETIC-COVERAGE-0001",
+  "source_id": "SYNTHETIC_SOURCE_V1",
+  "source_sha256": "84af1ccd48ca5f3402e92c8977f4e772f801103c92847c8a864b42964c60d1af",
+  "source_sequence_start": 1,
+  "source_sequence_end": 3,
+  "expected_message_count": 3,
+  "archived_message_count": 3,
+  "verified_message_count": 3,
+  "first_message_sha256": "c0e276bdf0286354d49bad03bb48080333d28a831532f2ec7fc6815b4ec5c7b4",
+  "last_message_sha256": "39c6fa103ee3120f52441a1ac184112cc40f167a8c10289a95894c22cd2e91f6",
+  "chunk_refs": [
+    "archive/tests/SYNTHETIC_RECORD_CHAIN_V1.json"
+  ],
+  "verification_report_ref": "archive/tests/SYNTHETIC_VERIFICATION_EXPECTED_V1.json",
+  "verdict": "PASS_RANGE_COMPLETE",
+  "note": "No real user chat content."
+}
