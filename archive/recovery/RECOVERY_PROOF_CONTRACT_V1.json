@@ -1,0 +1,50 @@
+{
+  "artifact_type": "EPRIME_CHAT_RECOVERY_PROOF_CONTRACT_V1",
+  "status": "LOCKED",
+  "objective": "PROVE_ARCHIVE_CAN_RECONSTRUCT_THE_VERIFIED_MESSAGE_SEQUENCE_WITHOUT_INFERENCE",
+  "recovery_inputs": [
+    "archive manifest",
+    "coverage segments",
+    "message chunks",
+    "chunk manifests",
+    "import receipts",
+    "verification reports"
+  ],
+  "recovery_algorithm": [
+    "load only PASS-verified coverage segments",
+    "sort by source sequence",
+    "reject gaps",
+    "reject conflicting overlaps",
+    "verify message chain across chunk boundaries",
+    "emit canonical recovered JSONL in exact sequence order",
+    "recompute recovered_archive_sha256",
+    "compare message counts and terminal chain hash"
+  ],
+  "canonical_recovered_jsonl": {
+    "encoding": "UTF-8",
+    "one_compact_json_record_per_line": true,
+    "record_field_order": [
+      "sequence",
+      "role",
+      "timestamp",
+      "raw_text",
+      "attachments_refs",
+      "source_ref",
+      "previous_message_sha256",
+      "message_sha256"
+    ],
+    "ensure_ascii": false,
+    "line_separator": "LF",
+    "trailing_lf": false
+  },
+  "inference_allowed": false,
+  "repair_allowed": false,
+  "pass_requirements": [
+    "zero_sequence_gaps",
+    "zero_conflicting_overlaps",
+    "zero_hash_mismatches",
+    "zero_chain_breaks",
+    "recovered_count_equals_verified_archived_count"
+  ],
+  "note": "This proves archive-record recovery. Byte-identical original export recovery is separately governed by SOURCE_BLOB_PRESERVATION_POLICY_V1."
+}
