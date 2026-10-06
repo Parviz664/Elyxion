@@ -1,0 +1,62 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_COVERAGE_LEDGER_V1",
+  "status": "FOUNDATION_READY_NO_RAW_TRANSCRIPT",
+  "target": "100_PERCENT_VERIFIED_RAW_TRANSCRIPT",
+  "milestones": [
+    {
+      "percent": 10,
+      "state": "PASS",
+      "meaning": "archive laws, schema, manifest, privacy and source rules locked"
+    },
+    {
+      "percent": 20,
+      "state": "PENDING",
+      "meaning": "obtain authoritative raw transcript/export source"
+    },
+    {
+      "percent": 30,
+      "state": "PENDING",
+      "meaning": "ingest first verified transcript range"
+    },
+    {
+      "percent": 40,
+      "state": "PENDING",
+      "meaning": "continue ordered ingestion with hash chain"
+    },
+    {
+      "percent": 50,
+      "state": "PENDING",
+      "meaning": "half-range coverage proof"
+    },
+    {
+      "percent": 60,
+      "state": "PENDING",
+      "meaning": "continue ordered ingestion with attachment refs"
+    },
+    {
+      "percent": 70,
+      "state": "PENDING",
+      "meaning": "cross-check sequence and role parity"
+    },
+    {
+      "percent": 80,
+      "state": "PENDING",
+      "meaning": "complete remaining raw ranges"
+    },
+    {
+      "percent": 90,
+      "state": "PENDING",
+      "meaning": "full manifest and chain verification"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING",
+      "meaning": "independent reconstruction/hash verification; zero missing records"
+    }
+  ],
+  "raw_transcript_coverage_pct": 0,
+  "architecture_progress_pct": 10,
+  "p0_loss_count": 0,
+  "inferred_message_count": 0,
+  "silently_rewritten_message_count": 0
+}
