@@ -1,0 +1,25 @@
+{
+  "artifact_type": "EPRIME_CHAT_MESSAGE_RECORD_SCHEMA_V1",
+  "status": "LOCKED",
+  "required_fields": [
+    "sequence",
+    "role",
+    "raw_text",
+    "message_sha256",
+    "previous_message_sha256",
+    "source_ref"
+  ],
+  "schema": {
+    "sequence": "positive_integer",
+    "role": "user|assistant|system_if_exported|tool_if_exported",
+    "timestamp": "ISO-8601_or_null",
+    "raw_text": "UTF-8_EXACT_NO_NORMALIZATION",
+    "attachments_refs": "array",
+    "source_ref": "string",
+    "message_sha256": "sha256",
+    "previous_message_sha256": "sha256_or_GENESIS"
+  },
+  "hash_rule": "sha256(canonical_record_bytes_without_message_sha256)",
+  "mutation_policy": "FORBIDDEN_AFTER_COMMIT",
+  "missing_field_policy": "BLOCK_NOT_INFER"
+}
