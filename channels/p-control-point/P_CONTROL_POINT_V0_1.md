@@ -24,6 +24,12 @@ Root question:
 
 The exact duties of individual channels remain `UNVERIFIED` until recovered from authoritative sources.
 
+### 3.1 Domain boundary
+
+P-channels are an AI/work architecture for structuring Elyxion thought and source material. They are **not automatically gameplay systems inside Elyxion**.
+
+No P-channel may be silently converted into a mechanic, lore entity, player role, runtime component, or world object without a separate explicit bridge and authority.
+
 ## 4. Authority order
 
 1. Direct owner correction or confirmation.
@@ -155,10 +161,19 @@ No claim in this file should imply that those source files are already stored in
 
 ## 13. Next object
 
-`-P1_RECOVERY_PASS_V0_1`
+`P0_ROUTE_RECOVERY_PASS_V0_1`
 
-Required procedure:
+Completed recovery artifacts:
 
-`recover -> compare -> identify contradictions -> classify evidence -> draft contract -> falsify -> owner review -> freeze or reject`
+- `recovery/MINUS_P1_RECOVERY_PASS_V0_1.md`
+- `recovery/MINUS_P1_SOURCE_ARTIFACT_RECOVERY_V0_2.md`
 
-No implementation of `-P1` behavior should begin before the recovery pass is complete.
+Current blocking fact:
+
+`MINUS_P1_ROUTING_AUTHORITY_UNRESOLVED`
+
+Required next procedure:
+
+`recover P0 versions -> compare routes -> locate supersession evidence -> classify conflict -> draft current route decision -> falsify -> owner review`
+
+No implementation of `-P1` behavior should begin while the route conflict remains unresolved.
