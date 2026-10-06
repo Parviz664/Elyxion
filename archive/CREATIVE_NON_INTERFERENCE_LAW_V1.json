@@ -1,0 +1,17 @@
+{
+  "artifact_type": "ELYXION_CREATIVE_NON_INTERFERENCE_LAW_V1",
+  "status": "LOCKED",
+  "scope": "CHAT_ARCHIVE_AND_DREAM_CAPTURE",
+  "principle_ru": "Инфраструктура сохраняет след творчества, но не управляет самим потоком мечты.",
+  "laws": [
+    "capture_does_not_equal_interpretation",
+    "interpretation_does_not_equal_canonization",
+    "canonization_requires_explicit_author_authority",
+    "raw_capture_must_not_improve_or_rewrite_author_meaning",
+    "archive_must_preserve_chaotic_funny_strange_childlike_abstract_or_incomplete_expression_as_is",
+    "system_may_mark_RAW_or_RAW_CANDIDATE_but_must_not_silently_promote_to_CANON",
+    "author_may_return_to_free_dream_flow_immediately_after_a_minimal_capture_signal"
+  ],
+  "archive_binding": "RAW transcript always outranks summaries, inferred meaning, and later interpretation.",
+  "mutation_policy": "FORBIDDEN_FOR_RAW"
+}
