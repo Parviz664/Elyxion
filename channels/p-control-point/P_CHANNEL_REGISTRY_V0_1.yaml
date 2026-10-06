@@ -14,20 +14,36 @@ channel_order:
 
 channels:
   "-P1":
-    role_status: UNVERIFIED
-    contract_status: UNVERIFIED
-    implementation_status: NOT_STARTED
+    role_status: HISTORICALLY_RECOVERED_CONFLICTED
+    contract_status: HOLD_UNVERIFIED
+    implementation_status: BLOCKED
+    recovered_historical_role: "reality skeleton / causal continuity layer"
+    recovered_route_families:
+      - "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
+      - "P0 -> P1 -> P2 -> P3 -> P4"
     source_refs:
       - ELYXION_PRRS_RAW_0.0.0.2.md
-    next_action: RECOVERY_PASS
+      - HISTORICAL_CHAT_RECOVERY_2026_02_12_ELYX_MINUS_P1_INPUT_V1
+      - HISTORICAL_CHAT_RECOVERY_2026_03_05_P0_V2_4_NO_MINUS_P1
+      - HISTORICAL_CHAT_RECOVERY_2026_03_06_P0_V2_6_NO_MINUS_P1
+    blockers:
+      - MINUS_P1_ROUTING_AUTHORITY_UNRESOLVED
+      - MISSING_SUPERSESSION_PROOF
+      - ORIGINAL_MINUS_P1_ARTIFACT_NOT_YET_RECOVERED
+      - ORIGINAL_P0_V2_4_V2_6_ARTIFACTS_NOT_YET_RECOVERED
+    next_action: SOURCE_ARTIFACT_RECOVERY_V0_2
 
   "P0":
-    role_status: UNVERIFIED
-    contract_status: UNVERIFIED
+    role_status: PARTIALLY_RECOVERED_CONFLICTED
+    contract_status: HOLD_UNVERIFIED
     implementation_status: NOT_STARTED
     source_refs:
       - ELYXION_PRRS_RAW_0.0.0.2.md
-    next_action: WAIT_FOR_MINUS_P1_RECOVERY
+      - HISTORICAL_CHAT_RECOVERY_P0_V2_4_V2_6
+    notes:
+      - "Recovered historical P0 variants disagree on whether -P1 is in the route."
+      - "Do not freeze P0 routing until minus-P1 supersession evidence is resolved."
+    next_action: WAIT_FOR_MINUS_P1_SOURCE_RECOVERY
 
   "P1":
     role_status: UNVERIFIED
@@ -72,6 +88,7 @@ admission_rules:
   silent_role_completion_forbidden: true
   append_only_correction_history: true
   lower_authority_may_not_overwrite_higher: true
+  unresolved_route_conflict_blocks_implementation: true
 
 failure_classes:
   - UNSUPPORTED_CREATION
@@ -79,5 +96,10 @@ failure_classes:
   - SILENT_NORMALIZATION
   - STATUS_PROMOTION_DRIFT
   - ROLE_ESCAPE
+  - ROUTING_AUTHORITY_CONFLICT
+  - MISSING_SUPERSESSION_PROOF
 
-next_object: "-P1_RECOVERY_PASS_V0_1"
+recovery_artifacts:
+  - "recovery/MINUS_P1_RECOVERY_PASS_V0_1.md"
+
+next_object: "MINUS_P1_SOURCE_ARTIFACT_RECOVERY_V0_2"
