@@ -1,0 +1,22 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_MANIFEST_V1",
+  "status": "BOOTSTRAP_10_PERCENT",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "archive_scope": "THIS_EPRIME_CHAT_TRANSCRIPT_ONLY",
+  "source_of_truth": "RAW_CHAT_TRANSCRIPT",
+  "transcript_storage_mode": "APPEND_ONLY_CHUNKED",
+  "integrity_algorithm": "SHA-256",
+  "message_ordering": "SOURCE_ORDER_EXACT",
+  "normalization_allowed": false,
+  "reconstruction_from_memory_allowed": false,
+  "reconstruction_from_summary_allowed": false,
+  "raw_message_mutation_allowed": false,
+  "transcript_blocks_committed": 0,
+  "manifest_entries": [],
+  "chain_head_sha256": null,
+  "completeness_claim_pct": 0,
+  "architecture_progress_pct": 10,
+  "privacy_gate": "BLOCK_RAW_TRANSCRIPT_WHILE_REPOSITORY_PUBLIC",
+  "hundred_percent_claim_rule": "ALLOWED_ONLY_AFTER_RAW_SOURCE_COMPLETE_AND_HASH_VERIFIED"
+}
