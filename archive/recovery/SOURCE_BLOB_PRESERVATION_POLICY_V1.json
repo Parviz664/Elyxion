@@ -1,0 +1,20 @@
+{
+  "artifact_type": "EPRIME_CHAT_SOURCE_BLOB_PRESERVATION_POLICY_V1",
+  "status": "LOCKED",
+  "purpose": "PRESERVE_AUTHORITATIVE_EXPORT_BYTES_IN_ADDITION_TO_PARSED_MESSAGE_RECORDS",
+  "rule": "Parsed records are not a byte-for-byte substitute for the original export container. A 100% archive claim requires preservation of the authoritative source blob or an independently durable byte-identical copy.",
+  "source_blob_requirements": [
+    "exact bytes preserved",
+    "sha256 recorded before parse",
+    "size_bytes recorded",
+    "source_type recorded",
+    "no normalization",
+    "no recompression unless original blob is also retained or recompression is proven byte-identical",
+    "at least two independent durable copies required before strongest durability claim"
+  ],
+  "preferred_private_path": "raw/source/original_export.<ext>",
+  "parsed_records_path": "raw/chunks/",
+  "public_repository_rule": "BLOCK_SOURCE_BLOB_COMMIT",
+  "missing_source_blob_effect": "MESSAGE_CONTENT_MAY_BE_VERIFIED_BUT_BYTE_EXACT_SOURCE_RECOVERY_CANNOT_BE_CLAIMED",
+  "hundred_percent_rule": "FULL_100_PERCENT_REQUIRES_SOURCE_BLOB_SHA256_MATCH_PLUS_MESSAGE_COMPLETENESS_PASS"
+}
