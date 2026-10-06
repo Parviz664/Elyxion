@@ -1,0 +1,33 @@
+{
+  "artifact_type": "EPRIME_CHAT_IMPORT_RECEIPT_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "ONE_APPEND_ONLY_RECEIPT_PER_ACCEPTED_IMPORT_OPERATION",
+  "required_fields": [
+    "receipt_id",
+    "source_id",
+    "source_sha256",
+    "source_scope",
+    "source_message_count",
+    "imported_sequence_start",
+    "imported_sequence_end",
+    "imported_message_count",
+    "first_message_sha256",
+    "last_message_sha256",
+    "previous_receipt_sha256",
+    "receipt_sha256",
+    "verification_report_ref",
+    "verdict"
+  ],
+  "receipt_id_format": "EPRIME-IMPORT-RECEIPT-<000001+>",
+  "previous_receipt_sha256_genesis_value": "GENESIS",
+  "verdict_enum": [
+    "PASS_VERIFIED",
+    "BLOCK_HASH_MISMATCH",
+    "BLOCK_COUNT_MISMATCH",
+    "BLOCK_SEQUENCE_GAP",
+    "BLOCK_SOURCE_AMBIGUOUS"
+  ],
+  "append_only": true,
+  "mutation_after_commit": "FORBIDDEN",
+  "pass_rule": "PASS_VERIFIED allowed only after deterministic verifier report PASS"
+}
