@@ -1,0 +1,31 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-020",
+  "status": "PASS_ARCHITECTURE__BLOCKED_RAW_SOURCE",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 20,
+  "raw_transcript_coverage_pct": 0,
+  "verified_raw_messages": 0,
+  "inferred_messages": 0,
+  "reconstructed_messages": 0,
+  "p0_loss_count": 0,
+  "completed_controls": [
+    "archive_lock",
+    "archive_manifest",
+    "message_record_schema",
+    "coverage_ledger",
+    "authoritative_source_policy",
+    "raw_source_intake_slot",
+    "ingest_protocol",
+    "import_checklist",
+    "expected_source_manifest"
+  ],
+  "blocking_conditions": [
+    "AUTHORITATIVE_RAW_TRANSCRIPT_NOT_YET_AVAILABLE",
+    "REPOSITORY_VISIBILITY_PUBLIC"
+  ],
+  "next_required_input": "Complete ChatGPT raw export or complete verbatim machine-readable transcript for this conversation.",
+  "next_target_pct": 30,
+  "invariant": "NO_PERCENTAGE_MAY_CLAIM_RAW_COVERAGE_WITHOUT VERIFIED RAW SOURCE"
+}
