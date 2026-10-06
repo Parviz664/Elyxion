@@ -1,0 +1,41 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_RECORD_CHAIN_V1",
+  "status": "GOLDEN_VECTOR",
+  "synthetic_only": true,
+  "canonicalization_ref": "archive/verify/HASH_CANONICALIZATION_V1.json",
+  "records": [
+    {
+      "sequence": 1,
+      "role": "user",
+      "timestamp": null,
+      "raw_text": "Line 1\\nLine 2  ",
+      "attachments_refs": [],
+      "source_ref": "SYNTHETIC://vector/1",
+      "previous_message_sha256": "GENESIS",
+      "message_sha256": "c0e276bdf0286354d49bad03bb48080333d28a831532f2ec7fc6815b4ec5c7b4"
+    },
+    {
+      "sequence": 2,
+      "role": "assistant",
+      "timestamp": null,
+      "raw_text": "Markdown **must stay**. Emoji: 🌌",
+      "attachments_refs": [],
+      "source_ref": "SYNTHETIC://vector/2",
+      "previous_message_sha256": "c0e276bdf0286354d49bad03bb48080333d28a831532f2ec7fc6815b4ec5c7b4",
+      "message_sha256": "b48552df12639594dc5e9dc6c83ba53d305a2a7532a47291ef092ebb132ec3b3"
+    },
+    {
+      "sequence": 3,
+      "role": "user",
+      "timestamp": null,
+      "raw_text": "Unicode: ё é NFC-sensitive",
+      "attachments_refs": [],
+      "source_ref": "SYNTHETIC://vector/3",
+      "previous_message_sha256": "b48552df12639594dc5e9dc6c83ba53d305a2a7532a47291ef092ebb132ec3b3",
+      "message_sha256": "39c6fa103ee3120f52441a1ac184112cc40f167a8c10289a95894c22cd2e91f6"
+    }
+  ],
+  "expected_chunk_sha256": "b001c419ee0a68c6b7efa8ce257fa8a50b6e2d8c2aef18c8092ca9075bffdd19",
+  "expected_verdict": "PASS_COMPLETE",
+  "note": "No real user chat content."
+}
