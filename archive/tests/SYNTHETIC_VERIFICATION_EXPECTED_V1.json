@@ -1,0 +1,12 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_VERIFICATION_EXPECTED_V1",
+  "status": "GOLDEN_EXPECTATION",
+  "synthetic_only": true,
+  "verified_message_hash_count": 3,
+  "sequence_gap_count": 0,
+  "duplicate_sequence_count": 0,
+  "message_hash_mismatch_count": 0,
+  "message_chain_break_count": 0,
+  "expected_chunk_sha256": "b001c419ee0a68c6b7efa8ce257fa8a50b6e2d8c2aef18c8092ca9075bffdd19",
+  "verdict": "PASS_COMPLETE"
+}
