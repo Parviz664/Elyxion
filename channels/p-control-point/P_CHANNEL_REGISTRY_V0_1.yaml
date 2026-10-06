@@ -4,6 +4,13 @@ root_question: "Как собрано?"
 mutation_authority: NONE
 canonization_authority: NONE
 
+current_route_authority:
+  status: HOLD_UNRESOLVED
+  owner_decision: C
+  decision_date: "2026-10-06"
+  decision_ref: "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
+  implementation_boundary_blocked: true
+
 channel_order:
   - "-P1"
   - "P0"
@@ -18,29 +25,25 @@ channels:
     contract_status: HOLD_UNVERIFIED
     implementation_status: BLOCKED
     recovered_historical_role: "reality skeleton / causal continuity layer"
-    functional_overlap_with_P1: SUBSTANTIAL_BUT_NOT_IDENTITY
+    node_status: HISTORICALLY_PRESENT_CURRENTLY_UNRESOLVED
+    functional_migration_status: STRONGLY_SUPPORTED
+    bounded_no_drop_status: PASS_WITH_EVIDENCE_CEILING
     absorption_status: NOT_PROVED
     recovered_route_families:
       - "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
       - "P0 -> P1 -> P2 -> P3 -> P4"
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
-      - ELYXION_MASTER_RAW_MAP_PASS_1.md
-      - HISTORICAL_CHAT_RECOVERY_2026_02_12_ELYX_MINUS_P1_INPUT_V1
-      - HISTORICAL_CHAT_RECOVERY_2026_03_05_P0_V2_4_NO_MINUS_P1
-      - HISTORICAL_CHAT_RECOVERY_2026_03_06_P0_V2_6_NO_MINUS_P1
     blockers:
       - MINUS_P1_ROUTING_AUTHORITY_UNRESOLVED
-      - MISSING_SUPERSESSION_PROOF
-      - ABSORPTION_NOT_PROVED
-      - ORIGINAL_MINUS_P1_ARTIFACT_NOT_YET_RECOVERED
-      - ORIGINAL_P0_V2_4_V2_6_ARTIFACTS_NOT_YET_RECOVERED
-    next_action: OWNER_STATUS_DECISION_GATE
+      - MISSING_GLOBAL_SUPERSESSION_PROOF
+      - OWNER_RATIONALE_NOT_RECOVERED
+      - ORIGINAL_MINUS_P1_SOURCE_BYTES_NOT_RECOVERED
+    next_action: HOLD_WHILE_OTHER_CHANNELS_RECOVER
 
   "P0":
-    role_status: HISTORICALLY_RECOVERED_VERSIONED
-    contract_status: HOLD_CURRENT_AUTHORITY_UNVERIFIED
-    implementation_status: NOT_STARTED
+    role_status: STRONGLY_RECOVERED
+    contract_status: HISTORICAL_LINEAGE_RECOVERED_CURRENT_ROUTE_HOLD
+    implementation_status: BLOCKED_AT_DISPUTED_ROUTE_BOUNDARY
+    recovered_role: "front intent normalization / strict downstream routing"
     recovered_route_history:
       - version: ELYX_P0_OUTPUT_V2_3
         route: "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
@@ -53,68 +56,73 @@ channels:
       - version: ELYX_P0_CHANNEL_SPEC_V2_6
         route: "P0 -> P1 -> P2 -> P3 -> P4"
         no_minus_p1_enforced: true
-    latest_recovered_route_candidate: "P0 -> P1 -> P2 -> P3 -> P4"
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
-      - HISTORICAL_CHAT_RECOVERY_P0_V2_3_V2_4_V2_6
+        supersedes_semver:
+          - "2.5.0"
+    missing_versions:
+      - "P0 v2.5 exact artifact"
     notes:
-      - "A versioned route change away from -P1 is strongly recovered inside the P0 line."
-      - "No explicit global supersedes/superseded_by proof has been recovered."
-      - "Do not silently infer that -P1 was globally deleted."
-    next_action: WAIT_FOR_MINUS_P1_OWNER_STATUS_DECISION
+      - "Route change away from -P1 is strongly recovered inside the P0 lineage."
+      - "The direct owner rationale for NO_-P1 was not recovered."
+      - "Assistant-origin friction/efficiency explanations are quarantined."
+    next_action: HOLD_ROUTE_CONTINUE_CHANNEL_RECOVERY
 
   "P1":
-    role_status: PARTIALLY_RECOVERED
-    contract_status: HOLD_UNVERIFIED
-    implementation_status: NOT_STARTED
-    recovered_spec: ELYX_P1_SPEC_V3_2_2
+    role_status: STRONGLY_RECOVERED
+    contract_status: HISTORICAL_LINEAGE_RECOVERED_CURRENT_UPSTREAM_HOLD
+    implementation_status: BLOCKED_AT_DISPUTED_UPSTREAM_BOUNDARY
     recovered_role: "causal map + seed + linear order"
     recovered_micro_stage_order: "conditions -> pressure -> trigger -> micro-transition -> stabilized state"
-    recovered_fields:
-      - pressure_axis
-      - trigger_type
-      - mechanism_class
-      - scope_entities_used
+    lineage:
+      base: "v3.2.1"
+      patch: "v3.2.2"
+      patch_policy: APPEND_ONLY
+      id_freeze: true
+      backward_compatible_with_base: true
+    recovered_v3_2_2_additions:
       - felt_inevitability_hint
-    minus_p1_overlap_status: FUNCTIONAL_OVERLAP_RECOVERED
-    minus_p1_absorption_status: NOT_PROVED
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
-      - HISTORICAL_CHAT_RECOVERY_ELYX_P1_SPEC_V3_2_2
-    next_action: WAIT_FOR_MINUS_P1_OWNER_STATUS_DECISION
+      - topic_scope_entities_budget
+      - validated_scope_entities_used
+      - expanded_entity_binding_readiness
+      - handoff_packet_to_A
+    minus_p1_relation:
+      overlap_status: SUBSTANTIAL
+      functional_migration_signal: STRONG
+      formal_absorption_status: NOT_PROVED
+    next_action: COMPLETE_HOLD_CONTINUE_TO_P2
 
   "P2":
     role_status: UNVERIFIED
     contract_status: UNVERIFIED
     implementation_status: NOT_STARTED
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
-    next_action: WAIT
+    next_action: RECOVERY_PASS
 
   "P3":
     role_status: PARTIALLY_RECOVERED
     contract_status: UNVERIFIED
     implementation_status: NOT_STARTED
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
     notes:
-      - "Later working material appears to associate P3 with a rendered ladder, but this is not admitted here as exact contract truth until authoritative recovery."
-    next_action: WAIT
+      - "Later working material appears to associate P3 with a rendered ladder, but exact contract recovery is still required."
+    next_action: WAIT_FOR_P2_RECOVERY
 
   "P4":
     role_status: PARTIALLY_RECOVERED
     contract_status: UNVERIFIED
     implementation_status: NOT_STARTED
-    source_refs:
-      - ELYXION_PRRS_RAW_0.0.0.2.md
     notes:
-      - "Later working material appears to associate P4 with potential/shortlist selection, but this is not admitted here as exact contract truth until authoritative recovery."
-    next_action: WAIT
+      - "Later working material appears to associate P4 with potential/shortlist selection, but exact contract recovery is still required."
+    next_action: WAIT_FOR_P3_RECOVERY
 
 domain_boundary:
   p_channels_are_ai_work_architecture: true
   not_automatically_gameplay_systems: true
   translation_to_gameplay_requires_explicit_bridge: true
+
+provenance_model:
+  distinguish_supplied_by_from_authored_by: true
+  current_safe_chat_class: USER_SUPPLIED_CHAT_ARTIFACT
+  owner_explicit_decision_class: OWNER_EXPLICIT_DECISION
+  persistent_raw_class: PERSISTENT_RAW_FILE
+  assistant_interpretation_class: ASSISTANT_INTERPRETATION
 
 admission_rules:
   contracted_requires_source_ref: true
@@ -125,6 +133,9 @@ admission_rules:
   lower_authority_may_not_overwrite_higher: true
   unresolved_route_conflict_blocks_implementation: true
   similarity_does_not_prove_absorption_or_rename: true
+  node_absence_does_not_prove_function_absence: true
+  function_presence_does_not_prove_node_activity: true
+  provenance_must_not_be_overclaimed: true
 
 failure_classes:
   - UNSUPPORTED_CREATION
@@ -135,11 +146,28 @@ failure_classes:
   - ROUTING_AUTHORITY_CONFLICT
   - MISSING_SUPERSESSION_PROOF
   - FALSE_ABSORPTION_INFERENCE
+  - ASSISTANT_RATIONALE_PROMOTION
+  - FUNCTION_DISAPPEARANCE_ASSUMPTION
+  - FUNCTION_MIGRATION_EQUALS_RENAME
+  - PROVENANCE_OVERCLAIM
 
 recovery_artifacts:
   - "recovery/MINUS_P1_RECOVERY_PASS_V0_1.md"
   - "recovery/MINUS_P1_SOURCE_ARTIFACT_RECOVERY_V0_2.md"
   - "recovery/P0_ROUTE_RECOVERY_PASS_V0_1.md"
   - "recovery/P1_MINUS_P1_FUNCTION_ABSORPTION_CHECK_V0_1.md"
+  - "recovery/P0_P1_CONVERSATION_SOURCE_RECOVERY_V0_2.md"
+  - "recovery/MINUS_P1_RATIONALE_RECOVERY_PASS_V0_1.md"
+  - "recovery/P0_V2_3_TO_V2_4_DELTA_RECONSTRUCTION_V0_1.md"
+  - "recovery/MINUS_P1_FUNCTIONAL_MIGRATION_MATRIX_V0_1.md"
+  - "recovery/MINUS_P1_NO_DROP_COVERAGE_PROOF_V0_1.md"
+  - "recovery/SOURCE_PROVENANCE_CORRECTION_V0_1.md"
+  - "recovery/P0_CONTRACT_LINEAGE_PASS_V0_1.md"
+  - "recovery/P1_CONTRACT_LINEAGE_PASS_V0_1.md"
+  - "P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md"
 
-next_object: "MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1"
+decision_artifacts:
+  - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1.md"
+  - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
+
+next_object: "P2_CONTRACT_RECOVERY_PASS_V0_1"
