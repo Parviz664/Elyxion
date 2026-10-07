@@ -60,6 +60,7 @@ Current durable substrate includes:
 - 5 unresolved relation questions blocked from fact traversal;
 - collision radar with 1 open unresolved scope mismatch;
 - freshness/invalidation policy V0.2 with 18 dependency bindings;
+- self-hosting Navigator freshness uses `SELF_CURRENT_HEAD` rather than an impossible self-SHA pin;
 - progressive Global C0 recovery ladder L0→L5;
 - snapshot+delta recovery;
 - task-scoped context assembly;
