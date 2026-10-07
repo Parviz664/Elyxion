@@ -3,9 +3,11 @@
 Use this file as the clean activation entrypoint for a fresh chat.
 
 ## Repository
+
 `Parviz664/Elyxion`
 
 ## Navigator branch
+
 `channel/elyxion-ufo-navigator-v0.1`
 
 ## Non-negotiable Global C0 boundary
@@ -30,126 +32,289 @@ Read first:
 
 ## Fresh activation procedure
 
-Fresh-read current contracts:
+Fresh-read these current navigation contracts and checkpoints:
+
+### Core laws / schemas
 
 - `README.md`
 - `NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
 - `NAV_AUTHOR_DECLARATIONS_V0_1.json`
 - `NAV_OBJECT_SCHEMA_V0_4.json`
-- `NAV_OBJECT_REGISTRY_V0_4.json`
 - `NAV_RELATION_SCHEMA_V0_3.json`
-- `NAV_RELATION_REGISTRY_V0_3.json`
-- `NAV_COLLISION_REGISTRY_V0_1.json`
-- `NAV_FRESHNESS_POLICY_V0_3.json`
 - `NAV_EVIDENCE_SCHEMA_V0_1.json`
-- `NAV_EVIDENCE_INDEX_V0_2.json`
 - `NAV_CLAIM_SCHEMA_V0_1.json`
+
+### Current catalogs
+
+- `NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json`
+- `NAV_OBJECT_CATALOG_V0_1.json`
+- `NAV_RELATION_CATALOG_V0_1.json`
+- `NAV_EVIDENCE_CATALOG_V0_1.json`
+- `NAV_FRESHNESS_CATALOG_V0_1.json`
+- `NAV_DISCOVERY_LEDGER_V0_1.json`
+- `NAV_RECOVERY_SURFACE_MAPPING_V0_1.json`
+
+### Claim / verification substrate
+
 - `NAV_CLAIM_INDEX_V0_1.json`
-- `NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json`
-- `NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json`
-- `NAV_CONTEXT_PACK_INVALIDATION_POLICY_V0_1.json`
-- `NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1.json`
 - `NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_MATERIALIZATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1.json`
-- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_1.json`
-- `NAV_CONTEXT_PACK_SCHEMA_V0_3.json`
-- `NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_2.json`
-- `NAV_002B_MATERIALIZATION_VERIFICATION_REPAIR_CHECKPOINT_V0_3.md`
-- `NAV_002B_VERIFICATION_DEPENDENCY_HANDOFF_FALSIFICATION_CHECKPOINT_V0_4.md`
+- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_2.json`
+- `NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1.json`
+
+### Orientation / scale control
+
+- `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
+- `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
+- `NAV_SECTOR_CATALOG_V0_1.json`
+- `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
+- `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
+- `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
+- `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1.json`
+
+### Current checkpoint
+
+- `NAV_002B_SHARDED_ORIENTATION_DEPTH_CHECKPOINT_V0_5.md`
 
 Then:
 
-1. Fresh-recover current branch/source heads.
-2. Apply targeted freshness logic before trusting cached packs.
-3. Preserve lifecycle status, source-native labels, evidence state, authority, readiness, relation state, collision state, claim epistemics, verification state, and freshness as distinct axes.
+1. Fresh-recover current branch/source heads before high-confidence use.
+2. Load merged catalogs through the shard catalog, not only old monolithic core registries.
+3. Preserve lifecycle status, evidence state, authority, readiness, relation state, collision state, claim epistemics, semantic coverage, and freshness as separate axes.
 4. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
 5. Never traverse unresolved relations as facts.
-6. Never auto-resolve collisions.
-7. Never treat an author declaration as independent implementation evidence.
-8. Never promote an AUTHOR_DECLARED claim above `SUPPORTED_AT_DECLARED_LEVEL` without independent evidence.
-9. Never fill the existing Global C0 durable location without evidence.
-10. Never build Global C0.
+6. Never infer cross-channel routing from branch names, numbering, adjacency, or similar function.
+7. Never auto-resolve collisions.
+8. Never treat an author declaration as independent implementation evidence.
+9. Never promote an AUTHOR_DECLARED claim above `SUPPORTED_AT_DECLARED_LEVEL` without independent evidence.
+10. Never fill the existing Global C0 durable location without evidence.
+11. Never equate topology coverage with semantic completeness.
+12. Never build Global C0.
 
 ## Current frontier
 
 `NAV-002B — Evidence Index + Context Pack Assembly`
 
-Parent:
-
-`NAV-002 — Global Object / Authority / Provenance Spine`
-
 State:
 
-`ACTIVE_CANDIDATE / VERIFIED + REPAIRABLE + FALSIFIABLE HANDOFF SUBSTRATE`
+`ACTIVE_CANDIDATE / SHARDED TOPOLOGY READY CANDIDATE / SEMANTIC COVERAGE PARTIAL`
 
-## Current durable substrate
+## Current observed repository topology
 
-- objects = **7**
+Fresh exhaustive branch recovery observed:
+
+- branches = **31**
+- branches represented in Object Catalog = **31**
+- observed unmapped branches = **0**
+
+The old five-branch topology is historical and must not be presented as current.
+
+Current merged navigation substrate:
+
+- objects = **33**
 - discovery targets = **6**
-- confirmed relations = **8**
+- confirmed relations = **34**
 - unresolved relations = **5**
 - open collisions = **1**
-- freshness bindings = **21**
-- evidence identities = **20**
+- evidence identities = **46**
+- freshness sources = **31**
+- freshness dependencies = **73**
 - claims = **13**
-- materialization receipts = **6**
-- semantic verification receipts = **7**
+- materialization receipts = **8**
+- semantic verification receipts = **9**
 
-Implemented:
+## Recovery surfaces now observed
 
-- typed object / authority / provenance substrate;
-- confirmed vs unresolved relation graph;
-- collision radar;
-- targeted freshness invalidation;
-- Evidence Index;
-- claim-to-evidence index;
-- materialization ladder M0→M3;
-- context-pack risk policy;
-- bounded claim-aware context packs;
-- exact source snapshots;
-- SHA-256 pack fingerprint;
-- materialization receipt layer;
-- semantic claim verification receipts;
-- claim-specific evidence sufficiency policy;
-- targeted stale-pack invalidation;
-- targeted pack repair planner;
-- reverse verification-dependency index;
-- verification-aware existing Global C0 handoff V0.2;
-- cold-start export builder;
-- compact validators/regression tests;
-- GitHub Actions gate.
+The repository currently contains directly observed recovery surfaces for:
+
+- A0 / A1 / A2 / A3 / A-Ultra;
+- D0 / D1 / D2 / D3 / D4;
+- E0 / E1 / E2 / E3.5 / E3 / E4;
+- E-chain research;
+- E-Prime canonical-truth-kernel recovery;
+- P0 / P1 / P2 / P3 / P4 / P5;
+- Elyxion Dispatcher;
+- PAE Archaeology / History Navigator.
+
+Their presence is a fact of current GitHub topology.
+
+Their exact cross-channel relations, authority chains, supersession, and runtime routes are **not** inferred from their names.
+
+Current recovery relation law:
+
+`Navigator OBSERVES recovery surface`
+
+is confirmed.
+
+No automatic:
+
+- `ROUTES_TO`
+- `HANDS_OFF_TO`
+- `DEPENDS_ON`
+
+is created without evidence.
+
+## Discovery horizon
+
+### Now observed at repository-surface level
+
+`DISCOVERY_A_CHANNEL`
+
+→ multiple A recovery surfaces observed.
+
+`DISCOVERY_E_CHANNELS_BEYOND_E_PRIME`
+
+→ multiple E recovery surfaces observed.
+
+### Still unresolved
+
+`DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4`
+
+→ not located in current GitHub scan; existence elsewhere UNKNOWN.
+
+`DISCOVERY_GLOBAL_C0`
+
+→ AUTHOR_DECLARED_EXISTS; durable/repository location UNKNOWN.
+
+`DISCOVERY_TOOLS_UNDER_ELYXION`
+
+→ dedicated surface not located.
+
+`DISCOVERY_DREAM_RAW_SURFACE`
+
+→ dedicated durable surface not located.
+
+Specialist `raw-evidence/` folders do not automatically equal the global Dream/RAW durable surface.
+
+## Topology vs semantic readiness
+
+This distinction is mandatory.
+
+### Topology / identity coverage
+
+- branch mapping = **31/31**
+- observed objects = **33/33**
+- discovery horizon = **6/6**
+
+Candidate readiness:
+
+`READY_TOPOLOGY_ORIENTATION`
+
+subject to fresh execution checks.
+
+### Normalized semantic coverage
+
+Current OBJECT-level normalized claim coverage:
+
+- covered objects = **6**
+- total objects = **33**
+- uncovered = **27**
+- ratio ≈ **18.2%**
+
+Current semantic readiness:
+
+`PARTIAL_NORMALIZED_SEMANTIC_COVERAGE`
+
+Therefore:
+
+`topology ready != semantic comprehension complete`
+
+Also:
+
+`9/9 selected indexed claims verified != 33/33 objects semantically understood`
+
+## Hierarchical orientation depth
+
+Current law:
+
+`NAV_ORIENTATION_DEPTH_POLICY_V0_1`
+
+Use:
+
+`O0_TOPOLOGY_INDEX`
+
+→ global sector map only
+
+`O1_ROLE_BOUNDARY`
+
+→ selected surface role/status/non-authority capsule
+
+`O2_RELATION_AUTHORITY`
+
+→ verified cross-surface relation / handoff / authority semantics
+
+`O3_CLAIM_EVIDENCE`
+
+→ question-specific claims + receipts + sufficiency
+
+`O4_EXACT_SOURCE`
+
+→ targeted exact source bodies
+
+`O5_PRIMARY_RAW`
+
+→ primary RAW only when fidelity requires it
+
+Depth is not authority.
+
+## O0 cold-start rule
+
+Current O0 sectors:
+
+1. CORE
+2. A recovery
+3. D recovery
+4. E recovery
+5. P recovery
+6. meta recovery
+
+O0 payload preserves:
+
+- 31 branch visibility;
+- 33 object visibility through sector counts;
+- all 6 discovery targets;
+- unresolved/collision counts;
+- Global C0 existence/location boundary.
+
+O0 default pressure:
+
+- sector capsules = **6**
+- individual evidence identities loaded = **0**
+- exact source bodies loaded = **0**
+- full history replay = **false**
+
+Broad orientation still measures:
+
+- selected evidence identities = **42/46 ≈ 91.3%**
+- exact source bodies = **0**
+
+Therefore O0 is the preferred cold-start layer.
+
+It defers evidence depth; it does not delete evidence or create semantic completeness.
 
 ## Materialization / verification law
 
 `source retrieved != claim verified`
 
-Materialization proves the exact source identity/read.
+Materialization proves exact source identity/read.
 
 Semantic verification is a separate receipt.
 
-Current control verification:
+Current indexed claim controls include:
 
-### Eco one-hop
+- Global C0 exists → `SUPPORTED_AT_DECLARED_LEVEL`
+- Navigator must not build Global C0 → `SUPPORTED_AT_DECLARED_LEVEL`
+- Eco role → `SUPPORTED_WITH_LIMITS`
+- E-Prime chat-transcript-only role → `SUPPORTED_WITH_LIMITS`
+- Eco/E-Prime scope collision → `SUPPORTED_WITH_LIMITS`
+- Reality Stabilizer scope → `SUPPORTED_WITH_LIMITS`
+- P route hold → `SUPPORTED_WITH_LIMITS`
+- Phase1 experimental boundary → `SUPPORTED_WITH_LIMITS`
 
-- selected claims = 5
-- sufficient claims = 5
-- verification coverage = **1.0**
-- collision = `SUPPORTED_WITH_LIMITS`
-
-### Navigator zero-hop
-
-- selected claims = 4
-- sufficient claims = 4
-- verification coverage = **1.0**
-
-Global C0 claims remain:
-
-`SUPPORTED_AT_DECLARED_LEVEL`
-
-not independent FACT.
+Do not generalize these verified claims into full recovery-surface semantics.
 
 ## Targeted repair law
 
@@ -161,96 +326,63 @@ then:
 
 `REVALIDATED_UNCHANGED`
 
-No semantic recheck is required.
-
 If:
 
 `used evidence blob changed`
 
 then:
 
-`rematerialize changed evidence → reverify dependent claims → reuse fresh supporting evidence → new fingerprint`
+`rematerialize changed evidence → reverify dependent claims → reuse fresh support → new fingerprint`
 
 Do not replay unrelated Elyxion history.
 
-## Existing Global C0 handoff
-
-Handoff blocking falsification:
-
-- stale / unknown freshness → `BLOCKED_FRESHNESS`
-- critical claim insufficient → `BLOCKED_EVIDENCE`
-- fresh + critical claims sufficient → `READY_FOR_GLOBAL_C0_REVIEW`
-
-
-Handoff readiness values:
-
-- `READY_FOR_GLOBAL_C0_REVIEW`
-- `BLOCKED_FRESHNESS`
-- `BLOCKED_EVIDENCE`
-
-Critical claims require sufficient verification before readiness.
-
-Cold-start export contains:
-
-- consumer boundary;
-- pack fingerprint;
-- risk/materialization;
-- verification summary;
-- verified claims + limits;
-- unresolved/collision/discovery IDs;
-- targeted repair contract.
-
-It does not define Global C0 internals.
-
-## Important unresolved surfaces
-
-- 0.0.1.0 through 0.0.1.4 RAW/version surfaces;
-- A-channel repository surface;
-- E-channel repository surfaces beyond E-Prime;
-- existing Global C0 durable/repository surface;
-- Tools under Elyxion repository surface;
-- Dream / RAW durable surface;
-- exact P-to-implementation handoff.
+Freshness is sharded and targeted across current branch sources.
 
 ## Open collision
 
 `COL_ECOSYS_EPRIME_SCOPE_001`
 
-Current verification:
+Current verdict:
 
 `SUPPORTED_WITH_LIMITS`
 
-Observed mismatch:
+Observed terrain now includes both:
 
-- Eco-Systems gives E-Prime a broad durable-reality/recovery role;
-- E-Prime own lock says `CHAT_TRANSCRIPTS_ONLY`;
-- E-Prime manifest says `THIS_EPRIME_CHAT_TRANSCRIPT_ONLY`.
+- historical E-Prime chat-archive surface;
+- E-Prime canonical-truth-kernel recovery surface.
 
-Do not choose a winner automatically.
+This new terrain is relevant.
 
-## Latest evidence level
+It does not automatically resolve historical scope precedence.
 
-Current synchronous GitHub-state verification:
+## Current validation state
 
-`PASS`
+Synchronous structural checks currently support:
 
-Control verification coverage:
+- Object/branch topology: **PASS**
+- Relation integrity: **PASS**
+- Evidence/freshness integrity: **PASS**
 
-- Eco = **5/5**
-- Navigator zero-hop = **4/4**
+GitHub Actions workflow is configured for the sharded V0.4 substrate and current regression gates.
 
-GitHub Actions workflow is configured for the current substrate, but no execution PASS has yet been observed through the connector.
+Do **not** claim GitHub Actions PASS until an execution result is directly observed.
 
-Do not claim CI PASS until observed.
+## Immediate next candidate work
 
-## Next candidate work
+Build **O1 role/boundary capsules** for the 27 objects without normalized OBJECT-level claim coverage.
 
-- broader multi-surface cold-start benchmark;
-- evidence-budget / pack-size pressure tests;
-- materialize only high-value evidence on demand;
-- continue discovering missing durable Elyxion surfaces;
-- never construct Global C0.
+Rules:
+
+- use each surface's own recovered identity/boundary artifacts;
+- preserve provenance and evidence ceiling;
+- role != authority;
+- identity != canon;
+- do not infer P→A→E/D routes from numbering;
+- write small claim-addressable capsules;
+- verify high-value capsules before expanding deeper;
+- improve semantic coverage gradually;
+- keep O0 cold start small.
 
 ## Fresh-chat activation phrase
 
-> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md`, preserve the existing Global C0 non-duplication boundary, and continue from the current Navigator frontier without inventing missing state.
+> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md`, preserve the existing Global C0 non-duplication boundary, use the sharded catalogs and O0→O5 orientation-depth law, and continue from the current Navigator frontier without inventing missing state.
