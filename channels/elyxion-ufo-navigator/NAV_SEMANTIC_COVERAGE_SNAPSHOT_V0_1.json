@@ -1,0 +1,27 @@
+{
+  "snapshot_id": "ELYXION_NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "metric": "NORMALIZED_OBJECT_CLAIM_COVERAGE",
+  "objects_total": 33,
+  "objects_with_normalized_claims": 6,
+  "objects_without_normalized_claims": 27,
+  "coverage_ratio": 0.18181818181818182,
+  "covered_object_ids": [
+    "ELYX_CHANNEL_ECO_SYSTEMS",
+    "ELYX_GOV_CREATOR_REALITY_STABILIZER",
+    "ELYX_SURFACE_E_PRIME",
+    "ELYX_SURFACE_PHASE1_SCAFFOLD",
+    "ELYX_SURFACE_P_CONTROL_POINT",
+    "ELYX_SURFACE_UFO_NAVIGATOR"
+  ],
+  "interpretation": {
+    "topology_identity_coverage": "33/33 observed objects represented",
+    "normalized_semantic_claim_coverage": "6/33",
+    "global_semantic_completeness": "NOT_PROVEN",
+    "recovery_identity_artifacts_exist_for_new_surfaces": true,
+    "recovery_identity_artifact_alone_does_not_count_as_normalized_claim_coverage": true
+  },
+  "next_requirement": "Build O1 role/boundary capsules for unmapped semantic surfaces before claiming broad semantic comprehension."
+}
