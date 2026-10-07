@@ -1,0 +1,6 @@
+{
+  "schema_id": "ELYXION_NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION"
+}
