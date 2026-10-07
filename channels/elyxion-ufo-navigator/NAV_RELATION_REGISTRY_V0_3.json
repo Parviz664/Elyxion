@@ -1,0 +1,273 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_REGISTRY_V0_3",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "object_registry_ref": "NAV_OBJECT_REGISTRY_V0_4.json",
+  "schema_ref": "NAV_RELATION_SCHEMA_V0_3.json",
+  "supersedes_candidate": "ELYXION_NAV_RELATION_REGISTRY_V0_2",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_MAIN",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_SURFACE_MAIN",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_E_PRIME",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_SURFACE_E_PRIME",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_PHASE1_SCAFFOLD",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_SURFACE_PHASE1_SCAFFOLD",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_P_CONTROL",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_SURFACE_P_CONTROL_POINT",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "REL_MAIN_CONTAINS_ECO_SYSTEMS",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_MAIN",
+      "target_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "kind": "CONTAINS",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "main:README.md",
+        "main:docs/channels/ECO-SYSTEMS-ELYXION.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "head_sha": "01b97c8edd19fdd59f81de827fb5f4a99861048f",
+        "basis": "targeted main recovery"
+      }
+    },
+    {
+      "id": "REL_ECOSYS_DECLARES_INTERFACE_EPRIME",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "target_id": "ELYX_SURFACE_E_PRIME",
+      "kind": "DECLARES_INTERFACE_WITH",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "main:docs/channels/ECO-SYSTEMS-ELYXION.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "target acceptance/operational compatibility is not proven by the source declaration"
+      ],
+      "last_verified": {
+        "head_sha": "01b97c8edd19fdd59f81de827fb5f4a99861048f",
+        "basis": "targeted main recovery"
+      }
+    },
+    {
+      "id": "REL_MAIN_CONTAINS_REALITY_STABILIZER",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_MAIN",
+      "target_id": "ELYX_GOV_CREATOR_REALITY_STABILIZER",
+      "kind": "CONTAINS",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "main:README.md",
+        "main:docs/governance/CREATOR-REALITY-STABILIZER-LAW.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "head_sha": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+        "basis": "NAV-002B targeted main recovery"
+      }
+    },
+    {
+      "id": "REL_NAV_GOVERNED_BY_REALITY_STABILIZER",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_GOV_CREATOR_REALITY_STABILIZER",
+      "kind": "GOVERNED_BY",
+      "state": "CONFIRMED",
+      "origin": "DECLARED",
+      "evidence": [
+        "main:docs/governance/CREATOR-REALITY-STABILIZER-LAW.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [],
+      "last_verified": {
+        "head_sha": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+        "basis": "law scope = all AI-assisted Elyxion collaboration"
+      }
+    }
+  ],
+  "unresolved_relations": [
+    {
+      "id": "UREL_P_TO_PHASE1_HANDOFF",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_P_CONTROL_POINT",
+      "target_id": "ELYX_SURFACE_PHASE1_SCAFFOLD",
+      "state": "UNRESOLVED",
+      "question": "What is the exact P-output to implementation handoff, if any, between the P Control Point and the Phase 1 scaffold?",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md",
+        "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+      ],
+      "traversal": "BLOCKED_UNRESOLVED",
+      "unknowns": [
+        "relation kind",
+        "handoff contract",
+        "authority",
+        "directional runtime effect"
+      ],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "UREL_E_PRIME_TO_BROADER_E",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_E_PRIME",
+      "target_discovery_id": "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+      "state": "UNRESOLVED",
+      "question": "What relation, if any, does E-Prime have to Elyxion E-channel surfaces beyond its explicit chat-archive role?",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md",
+        "E-Prime:ARCHIVE_LOCK.json"
+      ],
+      "traversal": "BLOCKED_UNRESOLVED",
+      "unknowns": [
+        "target identity",
+        "relation kind",
+        "authority"
+      ],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      }
+    },
+    {
+      "id": "UREL_NAV_TO_GLOBAL_C0",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_discovery_id": "DISCOVERY_GLOBAL_C0",
+      "state": "UNRESOLVED",
+      "question": "Where is the already-existing Global C0 durable/repository surface, and what exact handoff contract connects Navigator evidence/topology/context packs to it?",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ACTIVATE.md"
+      ],
+      "traversal": "BLOCKED_UNRESOLVED",
+      "unknowns": [
+        "Global C0 repository/durable location",
+        "handoff contract",
+        "authority boundary"
+      ],
+      "last_verified": {
+        "basis": "NAV-002 relation recovery"
+      },
+      "author_declaration_ref": "AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07"
+    },
+    {
+      "id": "UREL_ECOSYS_TO_GLOBAL_C0",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "target_discovery_id": "DISCOVERY_GLOBAL_C0",
+      "state": "UNRESOLVED",
+      "question": "What operational handoff/verification contract, if any, implements Eco-Systems Elyxion's declared Global C0 interface?",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "main:docs/channels/ECO-SYSTEMS-ELYXION.md"
+      ],
+      "traversal": "BLOCKED_UNRESOLVED",
+      "unknowns": [
+        "Global C0 target identity",
+        "handoff contract",
+        "acceptance authority"
+      ],
+      "last_verified": {
+        "head_sha": "01b97c8edd19fdd59f81de827fb5f4a99861048f",
+        "basis": "targeted main recovery"
+      }
+    },
+    {
+      "id": "UREL_ECOSYS_TO_E_CHANNELS",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "target_discovery_id": "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+      "state": "UNRESOLVED",
+      "question": "Which E-channel surface receives verified Eco-Systems architecture, under what handoff and authority contract?",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "main:docs/channels/ECO-SYSTEMS-ELYXION.md"
+      ],
+      "traversal": "BLOCKED_UNRESOLVED",
+      "unknowns": [
+        "E-channel target identity",
+        "handoff contract",
+        "implementation authority"
+      ],
+      "last_verified": {
+        "head_sha": "01b97c8edd19fdd59f81de827fb5f4a99861048f",
+        "basis": "targeted main recovery"
+      }
+    }
+  ]
+}
