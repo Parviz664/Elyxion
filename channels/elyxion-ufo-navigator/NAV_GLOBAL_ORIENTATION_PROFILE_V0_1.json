@@ -13,7 +13,8 @@
   "coverage_requirements": {
     "observed_object_registry_coverage": 1,
     "discovery_horizon_coverage": 1,
-    "selected_claim_verification_coverage": 1
+    "selected_claim_verification_coverage": 1,
+    "branch_inventory_mapping_coverage": 1
   },
   "discovery_policy": {
     "include_connected_discovery_boundary": true,
@@ -29,6 +30,7 @@
   },
   "readiness_values": [
     "READY_GLOBAL_ORIENTATION",
+    "BLOCKED_TOPOLOGY_EXPANSION",
     "BLOCKED_FRESHNESS",
     "BLOCKED_OBSERVED_OBJECT_COVERAGE",
     "BLOCKED_DISCOVERY_HORIZON_COVERAGE",
@@ -40,6 +42,8 @@
     "unknowns_are_preserved_not_filled": true,
     "disconnected_discovery_targets_are_first_class": true,
     "full_selected_claim_verification_required": true,
-    "global_c0_is_not_built_or_defined": true
+    "global_c0_is_not_built_or_defined": true,
+    "observed_unmapped_branches_block_ready": true,
+    "branch_inventory_and_object_registry_are_separate_axes": true
   }
 }
