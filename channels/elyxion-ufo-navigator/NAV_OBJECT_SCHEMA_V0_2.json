@@ -1,0 +1,140 @@
+{
+  "schema_id": "ELYXION_NAV_OBJECT_SCHEMA_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_OBJECT_SCHEMA_V0_1",
+  "required": [
+    "id",
+    "project_scope",
+    "object_type",
+    "title",
+    "locations",
+    "semantic_status",
+    "evidence_state",
+    "authority",
+    "readiness",
+    "provenance",
+    "relations",
+    "blockers",
+    "conflicts",
+    "unknowns",
+    "evidence",
+    "last_verified"
+  ],
+  "object_types": [
+    "REPOSITORY",
+    "BRANCH",
+    "CHANNEL",
+    "ARTIFACT",
+    "CONTRACT",
+    "DECISION",
+    "HANDOFF",
+    "CONCEPT",
+    "IMPLEMENTATION_SURFACE",
+    "ARCHIVE_SURFACE",
+    "FRONTIER",
+    "TEST",
+    "UNKNOWN_OBJECT"
+  ],
+  "semantic_status_values": [
+    "RAW",
+    "CANDIDATE",
+    "CANON",
+    "EXPERIMENTAL",
+    "FROZEN",
+    "DEPRECATED",
+    "UNKNOWN"
+  ],
+  "classification_origin_values": [
+    "DECLARED",
+    "NAVIGATOR_ASSESSMENT",
+    "UNKNOWN"
+  ],
+  "evidence_state_values": [
+    "DIRECTLY_OBSERVED",
+    "REFERENCED_NOT_INSPECTED",
+    "NOT_OBSERVED",
+    "UNKNOWN"
+  ],
+  "readiness_values": [
+    "READY",
+    "PARTIAL",
+    "BLOCKED",
+    "HOLD",
+    "NOT_APPLICABLE",
+    "UNKNOWN"
+  ],
+  "authority_dimensions": [
+    "navigation",
+    "canon",
+    "execution",
+    "archive",
+    "routing",
+    "implementation",
+    "author_selection"
+  ],
+  "authority_state_values": [
+    "NONE",
+    "EXPLICIT",
+    "UNKNOWN",
+    "CONSTRAINED",
+    "OBSERVATION_ONLY"
+  ],
+  "relation_kinds": [
+    "CONTAINS",
+    "REFERENCES",
+    "DERIVED_FROM",
+    "IMPLEMENTS",
+    "ARCHIVES",
+    "ROUTES_TO",
+    "HANDS_OFF_TO",
+    "DEPENDS_ON",
+    "SUPERSEDES",
+    "CONFLICTS_WITH",
+    "UNKNOWN_RELATION"
+  ],
+  "field_contracts": {
+    "semantic_status": {
+      "shape": [
+        "value",
+        "origin",
+        "evidence"
+      ],
+      "law": "every non-UNKNOWN semantic classification must carry evidence"
+    },
+    "readiness": {
+      "shape": [
+        "value",
+        "origin",
+        "evidence"
+      ],
+      "law": "every non-UNKNOWN readiness classification must carry evidence"
+    },
+    "authority_dimension": {
+      "shape": [
+        "state",
+        "evidence"
+      ],
+      "optional": [
+        "constraint"
+      ],
+      "law": "every authority state other than UNKNOWN must carry evidence"
+    }
+  },
+  "laws": {
+    "raw_to_canon_requires_explicit_authority": true,
+    "candidate_to_canon_requires_explicit_authority": true,
+    "canon_requires_explicit_canon_authority_with_evidence": true,
+    "implemented_does_not_imply_canon": true,
+    "tested_does_not_imply_canon": true,
+    "implementation_presence_does_not_grant_implementation_authority": true,
+    "absence_does_not_imply_nonexistence": true,
+    "unknown_must_not_be_autofilled": true,
+    "authority_must_be_scoped_and_evidenced": true,
+    "evidence_required_for_material_classifications": true,
+    "summary_does_not_replace_primary_evidence": true,
+    "cross_project_import_requires_explicit_contract": true,
+    "task_context_should_be_relevance_scoped": true
+  }
+}
