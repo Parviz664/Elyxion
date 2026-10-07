@@ -3,7 +3,7 @@ import argparse, json
 from pathlib import Path
 
 B=Path(__file__).resolve().parents[1]
-CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_2.json").read_text())
+CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_3.json").read_text())
 MATS=json.loads((B/"NAV_MATERIALIZATION_RECEIPTS_V0_1.json").read_text())
 VERS=json.loads((B/"NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json").read_text())
 
