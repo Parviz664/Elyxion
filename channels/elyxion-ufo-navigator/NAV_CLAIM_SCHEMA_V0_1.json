@@ -1,0 +1,48 @@
+{
+  "schema_id": "ELYXION_NAV_CLAIM_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required": [
+    "claim_id",
+    "project_scope",
+    "statement",
+    "claim_class",
+    "epistemic_state",
+    "subject_refs",
+    "evidence_ids",
+    "limits",
+    "materialization_hint"
+  ],
+  "claim_classes": [
+    "EXISTENCE",
+    "ROLE",
+    "AUTHORITY",
+    "STATUS",
+    "RELATION",
+    "COLLISION",
+    "GOVERNANCE",
+    "NAVIGATION_CAPABILITY",
+    "UNKNOWN"
+  ],
+  "epistemic_states": [
+    "DIRECTLY_DOCUMENTED",
+    "AUTHOR_DECLARED",
+    "NAVIGATOR_ASSESSMENT",
+    "UNKNOWN"
+  ],
+  "materialization_hints": [
+    "M0_MANIFEST_ONLY",
+    "M1_EXACT_ARTIFACT",
+    "M2_CONFLICT_SET",
+    "M3_PRIMARY_RAW"
+  ],
+  "laws": {
+    "claim_without_evidence_for_non_unknown_state_forbidden": true,
+    "author_declared_claim_must_reference_author_declaration_evidence": true,
+    "navigator_assessment_must_not_present_as_directly_documented": true,
+    "collision_claim_requires_multi_source_evidence": true,
+    "claim_limits_must_preserve_known_unknowns": true,
+    "claim_id_is_stable_navigation_identity_not_canon_identity": true
+  }
+}
