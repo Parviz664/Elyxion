@@ -447,6 +447,210 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P0_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P0_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p0-intent-normalizer-recovery-v0.1",
+        "path": "channels/p0-intent-normalizer/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "9746203cbd4319a13bb0345ade135dd50c1c87d3"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1671,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P0_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P0_INTENT_NORMALIZER_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p0-intent-normalizer-recovery-v0.1",
+        "path": "channels/p0-intent-normalizer/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "9c25f3335c928713d8bc9937c54d024d7ad2dd62"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1799,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P1_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P1_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p1-map-planner-recovery-v0.1",
+        "path": "channels/p1-map-planner/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "a4e7fa4e9f84bff5f29e98dc387b930cc1f1a50e"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1145,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P1_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P1_MAP_PLANNER_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p1-map-planner-recovery-v0.1",
+        "path": "channels/p1-map-planner/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "45a26967f3eae3c4b6cc7dfd2ce344bd9aa43cb1"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1287,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P2_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P2_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p2-ladder-builder-recovery-v0.1",
+        "path": "channels/p2-ladder-builder/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "af2f04d467bfc390cc0e280f2b730fe8d7cac54d"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1410,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P2_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P2_LADDER_BUILDER_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p2-ladder-builder-recovery-v0.1",
+        "path": "channels/p2-ladder-builder/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "d1afd7e9795b4b5ba3bb4a283d6e5096361cf22e"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1432,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P3_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P3_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p3-final-text-renderer-recovery-v0.1",
+        "path": "channels/p3-final-text-renderer/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "4388e8639ee49126e0441504f9d73ba5039d1c58"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2725,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P3_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p3-final-text-renderer-recovery-v0.1",
+        "path": "channels/p3-final-text-renderer/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "48c33fc40e8f42ae41bc596b2bd2f9b72410f0e1"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2957,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P4_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P4_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p4-feel-potential-engine-recovery-v0.1",
+        "path": "channels/p4-feel-potential-engine/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "3d0929f2c9e786c57e36dcea4b68fbcf91733432"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2115,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P4_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p4-feel-potential-engine-recovery-v0.1",
+        "path": "channels/p4-feel-potential-engine/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "34dad282e94e8237a518d0cd9990ce8e8858087e"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2082,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P5_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_P5_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p5-feel-truth-compressor-recovery-v0.1",
+        "path": "channels/p5-feel-truth-compressor/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "ecc0e17a0d007de2150f1517e15fc775f5bee62b"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1249,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_P5_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_P5_FEEL_TRUTH_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p5-feel-truth-compressor-recovery-v0.1",
+        "path": "channels/p5-feel-truth-compressor/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "26a2dccf6c048315a8d6da665fa79177888e623b"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1315,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
