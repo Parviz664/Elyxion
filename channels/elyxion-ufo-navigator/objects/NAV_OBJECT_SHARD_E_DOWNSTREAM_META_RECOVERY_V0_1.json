@@ -1,0 +1,332 @@
+{
+  "registry_id": "ELYXION_NAV_OBJECT_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "objects": [
+    {
+      "id": "ELYX_REC_E3",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "E3",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/e3-self-recovery-v0.1",
+          "path": "channels/e3/CHANNEL_IDENTITY.md"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "E_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_E3"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/e3-self-recovery-v0.1:channels/e3/CHANNEL_IDENTITY.md"
+      ],
+      "last_verified": {
+        "head_sha": "bc26b919304377f5fbd51bd932989dd1b04118e8",
+        "identity_blob_sha": "b00d1083fdd7003e06eb77283abf39288bd9e1ef",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    },
+    {
+      "id": "ELYX_REC_E4",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "E4",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/e4-integration-route-compiler-recovery-v0.1",
+          "path": "channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_IDENTITY.md"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "E_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_E4"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/e4-integration-route-compiler-recovery-v0.1:channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_IDENTITY.md"
+      ],
+      "last_verified": {
+        "head_sha": "9d3f73b37498c657164de9f71a6671a82f41d693",
+        "identity_blob_sha": "c852ef139d794fe6b1fbe5a4937f74b2178f5fcc",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    },
+    {
+      "id": "ELYX_REC_E_CHAIN_RESEARCH",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "E_CHAIN_RESEARCH",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/e-chain-research-recovery-v0.1",
+          "path": "channels/e-chain-research/CHANNEL_IDENTITY.md"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "E_META_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_E_CHAIN_RESEARCH"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/e-chain-research-recovery-v0.1:channels/e-chain-research/CHANNEL_IDENTITY.md"
+      ],
+      "last_verified": {
+        "head_sha": "4e66c0f561ac2bbd29a74d34375d31753ce81fc2",
+        "identity_blob_sha": "a34e14ebda54749907f696c65b764f6aebe5f250",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    },
+    {
+      "id": "ELYX_REC_E_PRIME_KERNEL",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "E_PRIME_KERNEL",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/e-prime-canonical-truth-kernel-recovery-v0.1",
+          "path": "channels/e-prime-canonical-truth-kernel/CHANNEL_IDENTITY.md"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "E_PRIME_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_E_PRIME_KERNEL"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/e-prime-canonical-truth-kernel-recovery-v0.1:channels/e-prime-canonical-truth-kernel/CHANNEL_IDENTITY.md"
+      ],
+      "last_verified": {
+        "head_sha": "5b3aecefb7d8055268206f75f12b79d0e060dfe1",
+        "identity_blob_sha": "9890d9e6165665e22d18ea84a626872040947e15",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    }
+  ]
+}
