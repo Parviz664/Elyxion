@@ -1,0 +1,21 @@
+{
+  "artifact_type": "EPRIME_CHAT_ANTI_DUPLICATE_POLICY_V1",
+  "status": "LOCKED",
+  "duplicate_identity_dimensions": [
+    "source_id",
+    "source_sequence",
+    "source_record_id_when_available",
+    "message_sha256",
+    "source_ref"
+  ],
+  "rules": [
+    "Same source sequence may appear only once in active canonical archive coverage.",
+    "Overlapping coverage segments are allowed only when overlapping records are hash-identical.",
+    "Same message hash at different source sequences is not automatically a duplicate; repeated identical messages may be legitimate.",
+    "Never deduplicate by text similarity.",
+    "Never deduplicate by semantic similarity.",
+    "Never delete one of two records solely because their raw_text matches."
+  ],
+  "conflict_action": "BLOCK_AND_EMIT_DUPLICATE_CONFLICT_REPORT",
+  "auto_merge_duplicates": false
+}
