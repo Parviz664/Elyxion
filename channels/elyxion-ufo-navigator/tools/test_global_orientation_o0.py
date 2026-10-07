@@ -11,7 +11,7 @@ def main():
     if o["topology_totals"]!={
       "branches":31,"branches_mapped":31,"objects":33,"confirmed_relations":34,
       "unresolved_relations":5,"collisions":1,"discovery_targets":6,
-      "verified_o1_capsules":5,"normalized_object_claims_present":11
+      "verified_o1_capsules":9,"normalized_object_claims_present":15
     }:bad.append("totals")
     if o["pressure"]["individual_evidence_identities_loaded"]!=0:bad.append("evidence-load")
     if o["pressure"]["exact_source_bodies_loaded"]!=0:bad.append("body-load")
@@ -22,7 +22,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: O0 sectors=6 branches=31 objects=33 O1_verified=5 normalized_claim_objects=11 evidence_ids_loaded=0 bodies=0 semantic=PARTIAL")
+    print("PASS: O0 sectors=6 branches=31 objects=33 O1_verified=9 normalized_claim_objects=15 evidence_ids_loaded=0 bodies=0 semantic=PARTIAL")
     return 0
 
 if __name__=="__main__":
