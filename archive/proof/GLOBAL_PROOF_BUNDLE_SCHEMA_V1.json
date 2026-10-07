@@ -1,0 +1,29 @@
+{
+  "artifact_type": "EPRIME_CHAT_GLOBAL_PROOF_BUNDLE_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "ONE_REF_ONLY_BUNDLE_FOR_FINAL_ARCHIVE_VERDICT",
+  "required_refs": [
+    "source_identity_record_ref",
+    "source_blob_hash_record_ref",
+    "global_archive_manifest_ref",
+    "all_closed_range_refs",
+    "message_completeness_report_ref",
+    "source_parity_report_ref",
+    "attachment_manifest_ref",
+    "chain_verification_report_ref",
+    "recovery_report_ref",
+    "independent_copy_verification_refs",
+    "pre_100_barrier_report_ref",
+    "independent_preclose_audit_ref"
+  ],
+  "embedding_policy": "REF_ONLY_NO_LARGE_PAYLOAD_EMBEDDING",
+  "missing_ref_action": "BLOCK",
+  "unknown_ref_action": "BLOCK",
+  "bundle_hash_required": true,
+  "bundle_hash_algorithm": "SHA-256",
+  "final_verdict_enum": [
+    "READY_FOR_100_GATE",
+    "BLOCKED"
+  ],
+  "final_verdict_rule": "READY only when every referenced artifact exists, is trusted, and has its required PASS verdict."
+}
