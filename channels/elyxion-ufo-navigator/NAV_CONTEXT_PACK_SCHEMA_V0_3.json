@@ -1,0 +1,38 @@
+{
+  "schema_id": "ELYXION_NAV_CONTEXT_PACK_SCHEMA_V0_3",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_CONTEXT_PACK_SCHEMA_V0_2",
+  "required": [
+    "pack_version",
+    "project_scope",
+    "request",
+    "slice",
+    "discovery_boundary",
+    "unresolved_boundary",
+    "collisions",
+    "claims",
+    "evidence_manifest",
+    "risk",
+    "materialization_plan",
+    "source_snapshot",
+    "pack_fingerprint",
+    "freshness_contract",
+    "budget",
+    "laws"
+  ],
+  "laws": {
+    "pack_is_bounded_not_complete_world": true,
+    "claims_must_reference_indexed_evidence": true,
+    "evidence_manifest_is_deduplicated": true,
+    "unresolved_relations_are_visible_but_not_traversed": true,
+    "collisions_are_visible_and_not_auto_resolved": true,
+    "author_declared_facts_keep_source_kind": true,
+    "file_bodies_not_loaded_by_default": true,
+    "risk_controls_escalation_not_emotional_tone": true,
+    "source_snapshot_tracks_used_evidence_only": true,
+    "pack_fingerprint_is_integrity_identity_not_semantic_truth": true,
+    "missing_evidence_index_entry_is_pack_failure": true
+  }
+}
