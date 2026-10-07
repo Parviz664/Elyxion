@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import argparse, json, subprocess
 from pathlib import Path
+from nav_catalog import load_evidence
 
 B=Path(__file__).resolve().parents[1]
-INDEX=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
+INDEX=load_evidence()
 AUTHOR_PATH=B/"NAV_AUTHOR_DECLARATIONS_V0_1.json"
 AUTHOR=json.loads(AUTHOR_PATH.read_text())
 BY_ID={x["evidence_id"]:x for x in INDEX["entries"]}
