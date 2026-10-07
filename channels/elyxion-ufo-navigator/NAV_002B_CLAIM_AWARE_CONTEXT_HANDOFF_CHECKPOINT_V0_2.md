@@ -257,3 +257,39 @@ State:
 - stronger evidence sufficiency checks;
 - cold-start export samples for the existing Global C0 interface;
 - continue discovering missing Elyxion surfaces without constructing Global C0.
+
+## Materialization + semantic verification continuation (2026-10-07)
+
+Read-only exact-source materialization was executed for:
+
+- `EVID_ECO_SYSTEMS` — blob `e05e677f9a961d507812380e98002d7af2608304`
+- `EVID_EPRIME_LOCK` — blob `c34a95613b8d45324de0e75e15d6459badddc83f`
+- `EVID_EPRIME_MANIFEST` — blob `ee67e503591d2af3d9eacadcf1a4627da7906051`
+- `EVID_AUTHOR_GLOBAL_C0_EXISTS` — author registry blob `239d9b05da5f6c80b0bc696887b631ac14610b50`
+- `EVID_NAV_GLOBAL_C0_BOUNDARY` — blob `04e12e5cbaca729ab93e750f90180c7ab597fe60`
+
+Semantic verification results:
+
+- `CLAIM_ECOSYS_EPRIME_SCOPE_COLLISION_OPEN` → `SUPPORTED_WITH_LIMITS`
+- `CLAIM_GLOBAL_C0_EXISTS` → `SUPPORTED_AT_DECLARED_LEVEL`
+
+The Global C0 claim was deliberately **not promoted** beyond AUTHOR_DECLARED.
+
+Evidence-sufficiency falsification also behaved as intended:
+
+- full M2 collision set → sufficient;
+- one-sided collision evidence → insufficient;
+- Global C0 author claim with author-declaration source → sufficient at declared level;
+- same claim without author-declaration source → insufficient.
+
+A local staged receipt/repair bundle passed:
+
+`PASS receipts=5 verifications=2 targeted_repair_cases=2`
+
+Targeted repair law confirmed:
+
+- branch head changed + used blob unchanged → revalidate snapshot without semantic recheck;
+- used evidence blob changed → rematerialize only that evidence and reverify only dependent claims;
+- unrelated evidence changes do not trigger global replay.
+
+At the time of this continuation, GitHub read operations worked, while multiple write endpoints returned internal connector errors. Do not claim durable receipt files exist until a later successful write confirms them.
