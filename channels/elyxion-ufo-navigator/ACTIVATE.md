@@ -56,28 +56,32 @@ Fresh-read these current navigation contracts and checkpoints:
 
 ### Claim / verification substrate
 
-- `NAV_CLAIM_INDEX_V0_1.json`
+- `NAV_CLAIM_INDEX_V0_2.json`
 - `NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_MATERIALIZATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1.json`
-- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_2.json`
+- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_3.json`
 - `NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1.json`
 
 ### Orientation / scale control
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_1.json`
+- `NAV_SECTOR_CATALOG_V0_2.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
-- `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1.json`
+- `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_2.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json`
+- `NAV_O1_CAPSULE_COVERAGE_V0_1.json`
 
 ### Current checkpoint
 
 - `NAV_002B_SHARDED_ORIENTATION_DEPTH_CHECKPOINT_V0_5.md`
+- `NAV_002B_O1_BATCH_01_VERIFIED_CHECKPOINT_V0_6.md`
 
 Then:
 
@@ -119,12 +123,12 @@ Current merged navigation substrate:
 - confirmed relations = **34**
 - unresolved relations = **5**
 - open collisions = **1**
-- evidence identities = **46**
+- evidence identities = **51**
 - freshness sources = **31**
 - freshness dependencies = **73**
-- claims = **13**
-- materialization receipts = **8**
-- semantic verification receipts = **9**
+- claims = **18**
+- materialization receipts = **18**
+- semantic verification receipts = **14**
 
 ## Recovery surfaces now observed
 
@@ -209,10 +213,10 @@ subject to fresh execution checks.
 
 Current OBJECT-level normalized claim coverage:
 
-- covered objects = **6**
+- covered objects = **11**
 - total objects = **33**
-- uncovered = **27**
-- ratio ≈ **18.2%**
+- uncovered = **22**
+- ratio = **33.3%**
 
 Current semantic readiness:
 
@@ -288,12 +292,44 @@ O0 default pressure:
 
 Broad orientation still measures:
 
-- selected evidence identities = **42/46 ≈ 91.3%**
+- selected evidence identities = **47/51 ≈ 92.2%**
 - exact source bodies = **0**
 
 Therefore O0 is the preferred cold-start layer.
 
 It defers evidence depth; it does not delete evidence or create semantic completeness.
+
+## O1 Batch 01
+
+Verified-with-limits role/boundary capsules now exist for:
+
+- E-Prime canonical truth kernel;
+- E-chain research;
+- Elyxion Dispatcher;
+- PAE Archaeology / History Navigator;
+- A-Ultra.
+
+Batch 01 properties:
+
+- 5 capsules;
+- 10 exact M1 materialization receipts;
+- 5 DIRECTLY_DOCUMENTED O1 claims;
+- 5 semantic verification receipts;
+- all verdicts = `SUPPORTED_WITH_LIMITS`;
+- authority effect = `NONE`;
+- inferred cross-channel relation assertions = **0**.
+
+Normalized OBJECT-level semantic coverage advanced:
+
+`6/33 → 11/33`
+
+Current remaining gap:
+
+`22 objects`
+
+Next candidate batch:
+
+`A0 / A1 / A2 / A3`
 
 ## Materialization / verification law
 
