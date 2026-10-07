@@ -311,6 +311,142 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a0-orchestrator-recovery-v0.1",
+        "path": "channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "74ed132308a4ac2e423a208592a9419bb74b7f3c"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2736,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A0_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_A0_ORCHESTRATOR_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a0-orchestrator-recovery-v0.1",
+        "path": "channels/a0-orchestrator/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "ab8513702b587102e7c3307a60e49037e6e26592"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2068,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A1_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_A1_ARCHITECT_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a1-architect-recovery-v0.1",
+        "path": "channels/a1-architect/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "b58d07cfc49db7de7f6a789bf072334bab6d9c2e"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1860,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A1_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_A1_ARCHITECT_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a1-architect-recovery-v0.1",
+        "path": "channels/a1-architect/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "9ee3cd4347db36e7cbf7080f45f4ea672e44341f"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2078,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a2-systems-map-recovery-v0.1",
+        "path": "channels/a2-systems-map/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "c062d353dbf3d9d62e3adcd57deeb1de50e667da"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1859,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A2_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a2-systems-map-recovery-v0.1",
+        "path": "channels/a2-systems-map/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "426521558331b866340ee8339bd77fba5bdbb0fc"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2045,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a3-pre-e0-handoff-recovery-v0.1",
+        "path": "channels/a3-pre-e0-handoff/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "b992667fd120e1c1a2cd34833fad411098b73a67"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1690,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A3_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_A3_PRE_E0_HANDOFF_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a3-pre-e0-handoff-recovery-v0.1",
+        "path": "channels/a3-pre-e0-handoff/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "71fbe3817602820eb7fd2b36b0473253c125e8dc"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1341,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
