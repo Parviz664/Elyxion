@@ -1,0 +1,29 @@
+name: P Control Point Validate
+
+on:
+  pull_request:
+    paths:
+      - "channels/p-control-point/**"
+      - ".github/workflows/p-control-point-validate.yml"
+  push:
+    paths:
+      - "channels/p-control-point/**"
+      - ".github/workflows/p-control-point-validate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate P Control Point
+        run: python channels/p-control-point/tools/validate_p_control_point.py
