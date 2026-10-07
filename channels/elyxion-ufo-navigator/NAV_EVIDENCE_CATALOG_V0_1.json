@@ -63,9 +63,15 @@
       "path": "evidence/NAV_EVIDENCE_SHARD_O1_BOUNDARY_BATCH_04_V0_1.json",
       "entry_count": 6,
       "load_class": "ON_DEMAND_O1_BOUNDARY"
+    },
+    {
+      "id": "O1_BOUNDARY_BATCH_05",
+      "path": "evidence/NAV_EVIDENCE_SHARD_O1_BOUNDARY_BATCH_05_V0_1.json",
+      "entry_count": 5,
+      "load_class": "ON_DEMAND_O1_BOUNDARY"
     }
   ],
-  "total_evidence_identities": 67,
+  "total_evidence_identities": 72,
   "laws": {
     "evidence_ids_must_be_unique_across_all_indices": true,
     "locators_must_be_unique_across_all_indices": true,
