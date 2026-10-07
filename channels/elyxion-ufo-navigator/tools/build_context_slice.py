@@ -3,16 +3,15 @@ import argparse
 import json
 from collections import deque
 from pathlib import Path
+from nav_catalog import load_objects, load_relations
 
 BASE = Path(__file__).resolve().parents[1]
-OBJECTS = BASE / "NAV_OBJECT_REGISTRY_V0_4.json"
-RELATIONS = BASE / "NAV_RELATION_REGISTRY_V0_3.json"
 COLLISIONS = BASE / "NAV_COLLISION_REGISTRY_V0_1.json"
 
 def load_documents():
     return (
-        json.loads(OBJECTS.read_text(encoding="utf-8")),
-        json.loads(RELATIONS.read_text(encoding="utf-8")),
+        load_objects(),
+        load_relations(),
         json.loads(COLLISIONS.read_text(encoding="utf-8")),
     )
 
@@ -80,7 +79,7 @@ def build_slice(
     ]
 
     return {
-        "slice_version": "0.3",
+        "slice_version": "0.4",
         "project_scope": "ELYXION",
         "start_id": start_id,
         "max_hops": max_hops,
