@@ -90,6 +90,23 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_REALITY_STABILIZER_M1_2026_10_07",
+      "evidence_id": "EVID_REALITY_STABILIZER",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "main",
+        "path": "docs/governance/CREATOR-REALITY-STABILIZER-LAW.md",
+        "observed_blob_sha": "95226478ef8b259e7cc46ed08b782859f092cd0b"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 6808,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
