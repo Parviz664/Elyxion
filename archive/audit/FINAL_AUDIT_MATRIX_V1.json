@@ -1,0 +1,80 @@
+{
+  "artifact_type": "EPRIME_CHAT_FINAL_AUDIT_MATRIX_V1",
+  "status": "LOCKED",
+  "purpose": "ONE_CANONICAL_MATRIX_MAPPING_EVERY_FINAL_ARCHIVE_CLAIM_TO_REQUIRED_EVIDENCE",
+  "domains": [
+    {
+      "domain": "SOURCE_IDENTITY",
+      "required": [
+        "authoritative_source_present",
+        "source_blob_sha256_locked",
+        "source_size_recorded",
+        "source_scope_proven"
+      ]
+    },
+    {
+      "domain": "MESSAGE_COMPLETENESS",
+      "required": [
+        "source_count_equals_parsed_count",
+        "parsed_count_equals_archived_count",
+        "zero_sequence_gaps",
+        "zero_unresolved_records"
+      ]
+    },
+    {
+      "domain": "MESSAGE_INTEGRITY",
+      "required": [
+        "all_message_hashes_pass",
+        "message_chain_pass",
+        "chunk_chain_pass",
+        "receipt_chain_pass"
+      ]
+    },
+    {
+      "domain": "STRUCTURAL_PARITY",
+      "required": [
+        "order_parity_pass",
+        "role_parity_pass",
+        "boundary_parity_pass",
+        "timestamp_parity_pass",
+        "system_tool_parity_pass"
+      ]
+    },
+    {
+      "domain": "ATTACHMENTS",
+      "required": [
+        "declared_attachment_count_accounted",
+        "zero_missing_attachments",
+        "zero_unresolved_attachments",
+        "attachment_order_and_binding_pass"
+      ]
+    },
+    {
+      "domain": "RECOVERY",
+      "required": [
+        "archive_record_recovery_pass",
+        "terminal_chain_hash_match",
+        "recovered_count_match",
+        "byte_exact_source_blob_available"
+      ]
+    },
+    {
+      "domain": "DURABILITY",
+      "required": [
+        "minimum_independent_copy_count_met",
+        "all_required_copies_readback_hash_pass"
+      ]
+    },
+    {
+      "domain": "PRIVACY_AND_AUTHORITY",
+      "required": [
+        "raw_destination_private_or_explicitly_approved",
+        "no_public_raw_leak_detected",
+        "no_memory_or_summary_substitution",
+        "creative_non_interference_law_pass"
+      ]
+    }
+  ],
+  "final_rule": "Every required item in every domain must PASS; UNKNOWN is treated as FAIL for 100% closure.",
+  "machine_readable": true
+}
