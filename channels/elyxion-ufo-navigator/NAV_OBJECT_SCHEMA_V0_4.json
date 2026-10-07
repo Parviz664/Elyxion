@@ -1,0 +1,136 @@
+{
+  "schema_id": "ELYXION_NAV_OBJECT_SCHEMA_V0_4",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_OBJECT_SCHEMA_V0_3",
+  "required": [
+    "id",
+    "project_scope",
+    "object_type",
+    "title",
+    "locations",
+    "semantic_status",
+    "declared_status_labels",
+    "evidence_state",
+    "authority",
+    "additional_authority_claims",
+    "readiness",
+    "provenance",
+    "relations",
+    "blockers",
+    "conflicts",
+    "unknowns",
+    "evidence",
+    "last_verified"
+  ],
+  "object_types": [
+    "REPOSITORY",
+    "BRANCH",
+    "CHANNEL",
+    "ARTIFACT",
+    "CONTRACT",
+    "GOVERNANCE_ARTIFACT",
+    "DECISION",
+    "HANDOFF",
+    "CONCEPT",
+    "IMPLEMENTATION_SURFACE",
+    "ARCHIVE_SURFACE",
+    "FRONTIER",
+    "TEST",
+    "UNKNOWN_OBJECT"
+  ],
+  "semantic_status_values": [
+    "RAW",
+    "CANDIDATE",
+    "CANON",
+    "EXPERIMENTAL",
+    "FROZEN",
+    "DEPRECATED",
+    "UNKNOWN"
+  ],
+  "classification_origin_values": [
+    "DECLARED",
+    "NAVIGATOR_ASSESSMENT",
+    "UNKNOWN"
+  ],
+  "evidence_state_values": [
+    "DIRECTLY_OBSERVED",
+    "REFERENCED_NOT_INSPECTED",
+    "NOT_OBSERVED",
+    "AUTHOR_DECLARED",
+    "UNKNOWN"
+  ],
+  "readiness_values": [
+    "READY",
+    "PARTIAL",
+    "BLOCKED",
+    "HOLD",
+    "NOT_APPLICABLE",
+    "UNKNOWN"
+  ],
+  "baseline_authority_dimensions": [
+    "navigation",
+    "canon",
+    "execution",
+    "archive",
+    "routing",
+    "implementation",
+    "author_selection"
+  ],
+  "authority_state_values": [
+    "NONE",
+    "EXPLICIT",
+    "UNKNOWN",
+    "CONSTRAINED",
+    "OBSERVATION_ONLY"
+  ],
+  "relation_kinds": [
+    "CONTAINS",
+    "OBSERVES",
+    "REFERENCES",
+    "DECLARES_INTERFACE_WITH",
+    "GOVERNED_BY",
+    "DERIVED_FROM",
+    "IMPLEMENTS",
+    "ARCHIVES",
+    "ROUTES_TO",
+    "HANDS_OFF_TO",
+    "DEPENDS_ON",
+    "SUPERSEDES",
+    "CONFLICTS_WITH",
+    "PREPARES_FOR",
+    "UNKNOWN_RELATION"
+  ],
+  "field_contracts": {
+    "declared_status_labels": {
+      "shape": "list[string]",
+      "law": "preserve source-native status labels that do not map safely onto Navigator semantic lifecycle status"
+    },
+    "additional_authority_claim": {
+      "shape": [
+        "domain",
+        "state",
+        "scope",
+        "evidence"
+      ],
+      "law": "specialized authority must be named, scoped, and evidenced; it cannot grant canon or execution by implication"
+    }
+  },
+  "laws": {
+    "source_native_status_must_not_be_forced_into_semantic_axis": true,
+    "raw_to_canon_requires_explicit_authority": true,
+    "candidate_to_canon_requires_explicit_authority": true,
+    "canon_requires_explicit_canon_authority_with_evidence": true,
+    "implemented_does_not_imply_canon": true,
+    "implementation_presence_does_not_grant_implementation_authority": true,
+    "specialized_authority_does_not_expand_baseline_authority": true,
+    "absence_does_not_imply_nonexistence": true,
+    "author_declared_exists_does_not_imply_repository_location": true,
+    "unknown_must_not_be_autofilled": true,
+    "authority_must_be_scoped_and_evidenced": true,
+    "summary_does_not_replace_primary_evidence": true,
+    "cross_project_import_requires_explicit_contract": true,
+    "task_context_should_be_relevance_scoped": true
+  }
+}
