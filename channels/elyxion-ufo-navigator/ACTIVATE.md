@@ -76,12 +76,15 @@ Fresh-read these current navigation contracts and checkpoints:
 - `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_2.json`
 - `NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json`
 - `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_02_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_03_V0_1.json`
 - `NAV_O1_CAPSULE_COVERAGE_V0_1.json`
 
 ### Current checkpoint
 
 - `NAV_002B_SHARDED_ORIENTATION_DEPTH_CHECKPOINT_V0_5.md`
 - `NAV_002B_O1_BATCH_01_VERIFIED_CHECKPOINT_V0_6.md`
+- `NAV_002B_O1_P_SECTOR_COMPLETE_CHECKPOINT_V0_7.md`
 
 Then:
 
@@ -123,12 +126,12 @@ Current merged navigation substrate:
 - confirmed relations = **34**
 - unresolved relations = **5**
 - open collisions = **1**
-- evidence identities = **51**
+- evidence identities = **61**
 - freshness sources = **31**
 - freshness dependencies = **73**
-- claims = **18**
-- materialization receipts = **18**
-- semantic verification receipts = **14**
+- claims = **28**
+- materialization receipts = **38**
+- semantic verification receipts = **24**
 
 ## Recovery surfaces now observed
 
@@ -213,10 +216,10 @@ subject to fresh execution checks.
 
 Current OBJECT-level normalized claim coverage:
 
-- covered objects = **11**
+- covered objects = **21**
 - total objects = **33**
-- uncovered = **22**
-- ratio = **33.3%**
+- uncovered = **12**
+- ratio ≈ **63.6%**
 
 Current semantic readiness:
 
@@ -292,7 +295,7 @@ O0 default pressure:
 
 Broad orientation still measures:
 
-- selected evidence identities = **47/51 ≈ 92.2%**
+- selected evidence identities = **57/61 ≈ 93.4%**
 - exact source bodies = **0**
 
 Therefore O0 is the preferred cold-start layer.
@@ -330,6 +333,38 @@ Current remaining gap:
 Next candidate batch:
 
 `A0 / A1 / A2 / A3`
+
+## O1 Batch 03
+
+P-sector role/boundary coverage is now verified-with-limits for:
+
+- P0
+- P1
+- P2
+- P3
+- P4
+- P5
+
+Critical preserved constraints:
+
+- current global P route = `HOLD_UNRESOLVED`;
+- historical -P1 route is not silently deleted;
+- P1 PASS != CANON;
+- local `P2 -> P3 -> P4` seam does not establish global route authority;
+- P5 is `disabled_by_default=true`;
+- P5 is presentation-only and is not implementation-logic authority.
+
+Normalized OBJECT-level semantic coverage advanced:
+
+`15/33 -> 21/33`
+
+Remaining gap:
+
+`12 objects`
+
+Next candidate batch:
+
+`E0 / E1 / E2 / E3.5 / E3 / E4`
 
 ## Materialization / verification law
 
