@@ -1,0 +1,109 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_THREAT_AND_FAILURE_MODEL_V1",
+  "status": "LOCKED",
+  "purpose": "ENUMERATE_FAILURES_THAT_COULD_CREATE_FALSE_CONFIDENCE_OR_REAL_DATA_LOSS",
+  "threats": [
+    {
+      "id": "T01",
+      "name": "single_message_deleted",
+      "expected_detection": "sequence/count/hash/parity"
+    },
+    {
+      "id": "T02",
+      "name": "messages_reordered",
+      "expected_detection": "order/hash-chain/parity"
+    },
+    {
+      "id": "T03",
+      "name": "one_character_changed",
+      "expected_detection": "message_sha256/raw_text_parity"
+    },
+    {
+      "id": "T04",
+      "name": "role_changed",
+      "expected_detection": "role_parity"
+    },
+    {
+      "id": "T05",
+      "name": "timestamp_invented_or_changed",
+      "expected_detection": "timestamp_parity"
+    },
+    {
+      "id": "T06",
+      "name": "system_record_dropped",
+      "expected_detection": "system_record_drop_count"
+    },
+    {
+      "id": "T07",
+      "name": "tool_record_dropped",
+      "expected_detection": "tool_record_drop_count"
+    },
+    {
+      "id": "T08",
+      "name": "attachment_missing",
+      "expected_detection": "attachment_manifest"
+    },
+    {
+      "id": "T09",
+      "name": "attachment_rebound_to_wrong_message",
+      "expected_detection": "attachment parity"
+    },
+    {
+      "id": "T10",
+      "name": "same_range_imported_twice",
+      "expected_detection": "idempotency contract"
+    },
+    {
+      "id": "T11",
+      "name": "same_scope_different_source",
+      "expected_detection": "source-hash conflict"
+    },
+    {
+      "id": "T12",
+      "name": "manifest_closed_early",
+      "expected_detection": "pre-100 barrier"
+    },
+    {
+      "id": "T13",
+      "name": "receipt_chain_broken",
+      "expected_detection": "receipt chain verification"
+    },
+    {
+      "id": "T14",
+      "name": "chunk_chain_broken",
+      "expected_detection": "chunk chain verification"
+    },
+    {
+      "id": "T15",
+      "name": "source_blob_modified",
+      "expected_detection": "source_blob_sha256 mismatch"
+    },
+    {
+      "id": "T16",
+      "name": "memory_summary_used_as_raw",
+      "expected_detection": "source acquisition policy"
+    },
+    {
+      "id": "T17",
+      "name": "public_raw_destination",
+      "expected_detection": "privacy gate"
+    },
+    {
+      "id": "T18",
+      "name": "backup_copy_unreadable",
+      "expected_detection": "copy readback verification"
+    },
+    {
+      "id": "T19",
+      "name": "unknown_record_kind_silently_dropped",
+      "expected_detection": "opaque unresolved/system-tool parity"
+    },
+    {
+      "id": "T20",
+      "name": "same_text_legitimate_repeat_deduplicated",
+      "expected_detection": "anti-duplicate policy"
+    }
+  ],
+  "target_detection_rule": "Every listed threat must map to at least one fail-closed control and one auditable evidence output.",
+  "silent_failure_allowed": false
+}
