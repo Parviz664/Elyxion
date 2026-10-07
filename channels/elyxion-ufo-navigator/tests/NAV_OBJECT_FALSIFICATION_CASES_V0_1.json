@@ -1,0 +1,64 @@
+{
+  "fixture_id": "ELYXION_NAV_OBJECT_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "F01_CANON_WITHOUT_AUTHORITY",
+      "mutation": {
+        "target_object": "ELYX_SURFACE_MAIN",
+        "path": "semantic_status",
+        "value": {
+          "value": "CANON",
+          "origin": "NAVIGATOR_ASSESSMENT",
+          "evidence": [
+            "main:README.md"
+          ]
+        }
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "F02_STATUS_WITHOUT_EVIDENCE",
+      "mutation": {
+        "target_object": "ELYX_SURFACE_MAIN",
+        "path": "semantic_status",
+        "value": {
+          "value": "FROZEN",
+          "origin": "NAVIGATOR_ASSESSMENT",
+          "evidence": []
+        }
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "F03_AUTHORITY_WITHOUT_EVIDENCE",
+      "mutation": {
+        "target_object": "ELYX_SURFACE_PHASE1_SCAFFOLD",
+        "path": "authority.implementation",
+        "value": {
+          "state": "EXPLICIT",
+          "evidence": []
+        }
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "F04_ABSENCE_BECOMES_NONEXISTENCE",
+      "mutation": {
+        "target_discovery": "DISCOVERY_A_CHANNEL",
+        "path": "existence_elsewhere",
+        "value": "DOES_NOT_EXIST"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "F05_PROJECT_SCOPE_DRIFT",
+      "mutation": {
+        "target_object": "ELYX_SURFACE_MAIN",
+        "path": "project_scope",
+        "value": "OTHER_PROJECT"
+      },
+      "expected": "FAIL"
+    }
+  ]
+}
