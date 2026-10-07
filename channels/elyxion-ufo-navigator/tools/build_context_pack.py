@@ -5,7 +5,7 @@ from build_context_slice import build_slice, load_documents
 from nav_catalog import load_evidence
 
 BASE=Path(__file__).resolve().parents[1]
-CLAIM_INDEX=BASE/"NAV_CLAIM_INDEX_V0_3.json"
+CLAIM_INDEX=BASE/"NAV_CLAIM_INDEX_V0_4.json"
 FRESHNESS_POLICY=BASE/"NAV_FRESHNESS_CATALOG_V0_1.json"
 MATERIALIZATION_POLICY=BASE/"NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json"
 RISK_POLICY=BASE/"NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json"
