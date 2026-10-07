@@ -1,0 +1,66 @@
+{
+  "fixture_id": "ELYXION_NAV_RELATION_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "RF01_CONFIRMED_WITHOUT_EVIDENCE",
+      "target_collection": "confirmed_relations",
+      "target_id": "REL_NAV_OBSERVES_MAIN",
+      "mutation": {
+        "path": "evidence",
+        "value": []
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "RF02_CONFIRMED_UNKNOWN_ENDPOINT",
+      "target_collection": "confirmed_relations",
+      "target_id": "REL_NAV_OBSERVES_MAIN",
+      "mutation": {
+        "path": "target_id",
+        "value": "ELYX_DOES_NOT_EXIST"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "RF03_UNRESOLVED_BECOMES_TRAVERSABLE",
+      "target_collection": "unresolved_relations",
+      "target_id": "UREL_P_TO_PHASE1_HANDOFF",
+      "mutation": {
+        "path": "traversal",
+        "value": "ALLOWED_AS_FACT"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "RF04_UNRESOLVED_WITHOUT_QUESTION",
+      "target_collection": "unresolved_relations",
+      "target_id": "UREL_P_TO_PHASE1_HANDOFF",
+      "mutation": {
+        "path": "question",
+        "value": ""
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "RF05_UNRESOLVED_UNKNOWN_DISCOVERY_TARGET",
+      "target_collection": "unresolved_relations",
+      "target_id": "UREL_NAV_TO_GLOBAL_C0",
+      "mutation": {
+        "path": "target_discovery_id",
+        "value": "DISCOVERY_DOES_NOT_EXIST"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "RF06_RELATION_PROJECT_SCOPE_DRIFT",
+      "target_collection": "confirmed_relations",
+      "target_id": "REL_NAV_OBSERVES_E_PRIME",
+      "mutation": {
+        "path": "project_scope",
+        "value": "OTHER_PROJECT"
+      },
+      "expected": "FAIL"
+    }
+  ]
+}
