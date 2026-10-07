@@ -1,0 +1,71 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_P_EARLY_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_REC_P0",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P0",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p0-intent-normalizer-recovery-v0.1:channels/p0-intent-normalizer/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "b79258b64d22bf9889568540eb7d310610840e0a",
+        "identity_blob_sha": "9746203cbd4319a13bb0345ade135dd50c1c87d3",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_P1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P1",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p1-map-planner-recovery-v0.1:channels/p1-map-planner/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "594253aa9213265565ea5c201421d2fcfc0b20fb",
+        "identity_blob_sha": "a4e7fa4e9f84bff5f29e98dc387b930cc1f1a50e",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_P2",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P2",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p2-ladder-builder-recovery-v0.1:channels/p2-ladder-builder/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "8eba384e005baac1bade2ddd2927cddb09b7dd5e",
+        "identity_blob_sha": "af2f04d467bfc390cc0e280f2b730fe8d7cac54d",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    }
+  ]
+}
