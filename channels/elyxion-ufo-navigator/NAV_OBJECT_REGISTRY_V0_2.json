@@ -1,0 +1,438 @@
+{
+  "registry_id": "ELYXION_NAV_OBJECT_REGISTRY_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "repository": "Parviz664/Elyxion",
+  "branch": "channel/elyxion-ufo-navigator-v0.1",
+  "supersedes_candidate": "ELYXION_NAV_OBJECT_REGISTRY_V0_1",
+  "recovery_profile_ref": "NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json",
+  "cross_project_contract_refs": [],
+  "objects": [
+    {
+      "id": "ELYX_SURFACE_MAIN",
+      "project_scope": "ELYXION",
+      "object_type": "BRANCH",
+      "title": "main",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "main"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_BRANCH",
+        "direct_observation": true
+      },
+      "relations": [],
+      "blockers": [],
+      "conflicts": [],
+      "unknowns": [
+        "canon authority beyond observed files",
+        "implementation authority beyond observed files"
+      ],
+      "evidence": [
+        "main:README.md"
+      ],
+      "last_verified": {
+        "head_sha": "ed451eb878907c10ac697b34b1033ab6720aa858",
+        "basis": "NAV-001 V0.2 recovery"
+      }
+    },
+    {
+      "id": "ELYX_SURFACE_E_PRIME",
+      "project_scope": "ELYXION",
+      "object_type": "ARCHIVE_SURFACE",
+      "title": "E-Prime",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "E-Prime"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "EXPLICIT",
+          "evidence": [
+            "E-Prime:ARCHIVE_LOCK.json"
+          ]
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "readiness": {
+        "value": "BLOCKED",
+        "origin": "NAVIGATOR_ASSESSMENT",
+        "evidence": [
+          "E-Prime:ARCHIVE_LOCK.json",
+          "E-Prime:archive/intake/RAW_SOURCE_SLOT_0001.json"
+        ]
+      },
+      "provenance": {
+        "source_kind": "GITHUB_BRANCH",
+        "direct_observation": true
+      },
+      "relations": [],
+      "blockers": [
+        "PUBLIC_REPOSITORY_PRIVACY_GATE",
+        "AUTHORITATIVE_RAW_SOURCE_NOT_LOADED"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "broader E-channel relation beyond archive role"
+      ],
+      "evidence": [
+        "E-Prime:ARCHIVE_LOCK.json",
+        "E-Prime:archive/ARCHIVE_MANIFEST.json",
+        "E-Prime:archive/intake/EXPECTED_SOURCE_MANIFEST.json",
+        "E-Prime:archive/intake/RAW_SOURCE_SLOT_0001.json"
+      ],
+      "last_verified": {
+        "head_sha": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+        "basis": "NAV-001 V0.2 recovery"
+      }
+    },
+    {
+      "id": "ELYX_SURFACE_PHASE1_SCAFFOLD",
+      "project_scope": "ELYXION",
+      "object_type": "IMPLEMENTATION_SURFACE",
+      "title": "agent/phase1-scaffold",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "agent/phase1-scaffold"
+        }
+      ],
+      "semantic_status": {
+        "value": "EXPERIMENTAL",
+        "origin": "DECLARED",
+        "evidence": [
+          "agent/phase1-scaffold:README.md"
+        ]
+      },
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_BRANCH",
+        "direct_observation": true
+      },
+      "relations": [],
+      "blockers": [],
+      "conflicts": [],
+      "unknowns": [
+        "exact handoff from P-system",
+        "implementation authority is not proven by implementation presence"
+      ],
+      "evidence": [
+        "agent/phase1-scaffold:README.md"
+      ],
+      "last_verified": {
+        "head_sha": "4f3b5c53849a992e282f85a8345b637e4b06d9d1",
+        "basis": "NAV-001 V0.2 recovery"
+      }
+    },
+    {
+      "id": "ELYX_SURFACE_P_CONTROL_POINT",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "channel/p-control-point-v0.1",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/p-control-point-v0.1"
+        }
+      ],
+      "semantic_status": {
+        "value": "FROZEN",
+        "origin": "DECLARED",
+        "evidence": [
+          "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+        ]
+      },
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "NONE",
+          "evidence": [
+            "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+          ]
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "CONSTRAINED",
+          "evidence": [
+            "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+          ],
+          "constraint": "HOLD_UNRESOLVED"
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "readiness": {
+        "value": "HOLD",
+        "origin": "DECLARED",
+        "evidence": [
+          "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+        ]
+      },
+      "provenance": {
+        "source_kind": "GITHUB_BRANCH",
+        "direct_observation": true
+      },
+      "relations": [],
+      "blockers": [
+        "GAP-G0-001",
+        "MINUS_P1_ROUTE_AUTHORITY_UNRESOLVED"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "exact P-to-implementation handoff"
+      ],
+      "evidence": [
+        "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+      ],
+      "last_verified": {
+        "head_sha": "4c7183356699a53d081e40b3d5d28cb362d6dbcf",
+        "basis": "NAV-001 V0.2 recovery"
+      }
+    },
+    {
+      "id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "channel/elyxion-ufo-navigator-v0.1",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/elyxion-ufo-navigator-v0.1"
+        }
+      ],
+      "semantic_status": {
+        "value": "CANDIDATE",
+        "origin": "DECLARED",
+        "evidence": [
+          "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+        ]
+      },
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "EXPLICIT",
+          "evidence": [
+            "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+          ]
+        },
+        "canon": {
+          "state": "NONE",
+          "evidence": [
+            "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+          ]
+        },
+        "execution": {
+          "state": "NONE",
+          "evidence": [
+            "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+          ]
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "OBSERVATION_ONLY",
+          "evidence": [
+            "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+          ]
+        },
+        "implementation": {
+          "state": "NONE",
+          "evidence": [
+            "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md"
+          ]
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "readiness": {
+        "value": "PARTIAL",
+        "origin": "NAVIGATOR_ASSESSMENT",
+        "evidence": [
+          "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md"
+        ]
+      },
+      "provenance": {
+        "source_kind": "GITHUB_BRANCH",
+        "direct_observation": true
+      },
+      "relations": [],
+      "blockers": [],
+      "conflicts": [],
+      "unknowns": [
+        "future Global C0 handoff contract"
+      ],
+      "evidence": [
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ACTIVATE.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md",
+        "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md"
+      ],
+      "last_verified": {
+        "head_sha": "4a5415cdcc29ecd0264135873c2320ec640f1db4",
+        "basis": "NAV-002 active substrate"
+      }
+    }
+  ],
+  "discovery_targets": [
+    {
+      "id": "DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4",
+      "target": "0.0.1.0 through 0.0.1.4 RAW/version surfaces",
+      "evidence_state": "NOT_OBSERVED",
+      "existence_elsewhere": "UNKNOWN"
+    },
+    {
+      "id": "DISCOVERY_A_CHANNEL",
+      "target": "A-channel repository surface",
+      "evidence_state": "NOT_OBSERVED",
+      "existence_elsewhere": "UNKNOWN"
+    },
+    {
+      "id": "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+      "target": "E-channel repository surfaces beyond E-Prime",
+      "evidence_state": "NOT_OBSERVED",
+      "existence_elsewhere": "UNKNOWN"
+    },
+    {
+      "id": "DISCOVERY_GLOBAL_C0",
+      "target": "Global C0 repository surface",
+      "evidence_state": "NOT_OBSERVED",
+      "existence_elsewhere": "UNKNOWN"
+    }
+  ],
+  "frontier": {
+    "id": "NAV-002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE",
+    "state": "ACTIVE_CANDIDATE",
+    "goal": "build scalable evidence-linked recovery substrate for future Global C0"
+  }
+}
