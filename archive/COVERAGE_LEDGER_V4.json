@@ -1,0 +1,74 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_COVERAGE_LEDGER_V4",
+  "status": "ARCHITECTURE_80_READY__RAW_0",
+  "supersedes": "archive/COVERAGE_LEDGER_V3.json",
+  "target": "100_PERCENT_VERIFIED_FULL_CHAT_ARCHIVE",
+  "progress_axes": {
+    "architecture_progress_pct": 80,
+    "raw_transcript_coverage_pct": 0,
+    "verified_recovery_pct": 0,
+    "verified_attachment_coverage_pct": 0,
+    "verified_source_parity_pct": 0,
+    "verified_durability_pct": 0
+  },
+  "architecture_milestones": [
+    {
+      "percent": 10,
+      "state": "PASS"
+    },
+    {
+      "percent": 20,
+      "state": "PASS"
+    },
+    {
+      "percent": 30,
+      "state": "PASS"
+    },
+    {
+      "percent": 40,
+      "state": "PASS"
+    },
+    {
+      "percent": 50,
+      "state": "PASS"
+    },
+    {
+      "percent": 60,
+      "state": "PASS"
+    },
+    {
+      "percent": 70,
+      "state": "PASS"
+    },
+    {
+      "percent": 80,
+      "state": "PASS",
+      "meaning": "idempotency, anti-duplicate, range closure, manifest closure, transaction safety, pre-100 barrier ready"
+    },
+    {
+      "percent": 90,
+      "state": "PENDING"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING"
+    }
+  ],
+  "closure_state": {
+    "manifest_status": "OPEN_INCOMPLETE",
+    "closed_verified_real_ranges": 0,
+    "full_source_scope_proven": false,
+    "pre_100_barrier_verdict": "NOT_READY"
+  },
+  "counters": {
+    "verified_raw_messages": 0,
+    "verified_real_attachments": 0,
+    "verified_real_source_records": 0,
+    "inferred_message_count": 0,
+    "reconstructed_from_memory_count": 0,
+    "silently_rewritten_message_count": 0,
+    "duplicate_conflict_count": 0,
+    "p0_loss_count": 0
+  },
+  "rule": "No architecture milestone can increase raw_transcript_coverage_pct."
+}
