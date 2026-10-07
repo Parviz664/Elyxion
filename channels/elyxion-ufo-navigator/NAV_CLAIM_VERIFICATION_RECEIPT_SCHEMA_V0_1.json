@@ -1,0 +1,34 @@
+{
+  "schema_id": "ELYXION_NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required": [
+    "verification_id",
+    "claim_id",
+    "claim_epistemic_state",
+    "verdict",
+    "materialization_receipt_ids",
+    "observations",
+    "limits",
+    "authority_effect"
+  ],
+  "verdict_values": [
+    "SUPPORTED_AT_DECLARED_LEVEL",
+    "SUPPORTED_WITH_LIMITS",
+    "CONTRADICTED",
+    "INSUFFICIENT_EVIDENCE",
+    "BLOCKED"
+  ],
+  "authority_effect_values": [
+    "NONE"
+  ],
+  "laws": {
+    "verification_receipt_does_not_promote_canon_or_authority": true,
+    "author_declared_claim_can_only_be_verified_at_author_declared_level_without_independent_evidence": true,
+    "collision_verification_must_preserve_both_sides": true,
+    "unresolved_scope_must_not_be_auto_resolved": true,
+    "semantic_verdict_requires_materialized_integrity_match": true,
+    "verifier_must_record_limits": true
+  }
+}
