@@ -1,0 +1,76 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_P_LATE_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [
+    {
+      "id": "SRC_REC_P3",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p3-final-text-renderer-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "a0e32002ac26a1d352a5ee4a956c31b7334a8a18"
+    },
+    {
+      "id": "SRC_REC_P4",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p4-feel-potential-engine-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "ae83997616370b0c01ddd1996768d9d1653752c3"
+    },
+    {
+      "id": "SRC_REC_P5",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p5-feel-truth-compressor-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "2a7f166e8a3d66ba98029e9a63fff0e06e0e66a1"
+    }
+  ],
+  "dependencies": [
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_P3",
+      "source_ids": [
+        "SRC_REC_P3"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_P3",
+      "source_ids": [
+        "SRC_REC_P3"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_P4",
+      "source_ids": [
+        "SRC_REC_P4"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_P4",
+      "source_ids": [
+        "SRC_REC_P4"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_P5",
+      "source_ids": [
+        "SRC_REC_P5"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_P5",
+      "source_ids": [
+        "SRC_REC_P5"
+      ]
+    }
+  ]
+}
