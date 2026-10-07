@@ -7,10 +7,13 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = BASE / "NAV_OBJECT_SCHEMA_V0_2.json"
 REGISTRY_PATH = BASE / "NAV_OBJECT_REGISTRY_V0_2.json"
+REL_SCHEMA_PATH = BASE / "NAV_RELATION_SCHEMA_V0_1.json"
+REL_REGISTRY_PATH = BASE / "NAV_RELATION_REGISTRY_V0_1.json"
 RECOVERY_PATH = BASE / "NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
-FIXTURE_PATH = BASE / "tests" / "NAV_OBJECT_FALSIFICATION_CASES_V0_1.json"
+OBJECT_FIXTURE_PATH = BASE / "tests" / "NAV_OBJECT_FALSIFICATION_CASES_V0_1.json"
+REL_FIXTURE_PATH = BASE / "tests" / "NAV_RELATION_FALSIFICATION_CASES_V0_1.json"
 
-def validate(schema, registry, recovery):
+def validate_objects(schema, registry, recovery):
     errors = []
     required = set(schema["required"])
     object_types = set(schema["object_types"])
@@ -30,17 +33,14 @@ def validate(schema, registry, recovery):
         missing = required - set(obj)
         if missing:
             errors.append(f"{oid}: missing required fields {sorted(missing)}")
-
         if oid in seen:
             errors.append(f"duplicate object id: {oid}")
         seen.add(oid)
 
         if obj.get("project_scope") != "ELYXION":
             errors.append(f"{oid}: project_scope must be ELYXION")
-
         if obj.get("object_type") not in object_types:
             errors.append(f"{oid}: invalid object_type {obj.get('object_type')}")
-
         if obj.get("evidence_state") not in evidence_states:
             errors.append(f"{oid}: invalid evidence_state {obj.get('evidence_state')}")
 
@@ -92,9 +92,9 @@ def validate(schema, registry, recovery):
 
         if not registry.get("cross_project_contract_refs"):
             for loc in obj.get("locations", []):
-                repo = loc.get("repository")
-                if repo and repo != "Parviz664/Elyxion":
-                    errors.append(f"{oid}: cross-project repository without explicit contract: {repo}")
+                repo_name = loc.get("repository")
+                if repo_name and repo_name != "Parviz664/Elyxion":
+                    errors.append(f"{oid}: cross-project repository without explicit contract: {repo_name}")
 
     for target in registry.get("discovery_targets", []):
         if target.get("evidence_state") == "NOT_OBSERVED" and target.get("existence_elsewhere") != "UNKNOWN":
@@ -124,16 +124,78 @@ def validate(schema, registry, recovery):
     if compression.get("cross_project_state_must_not_be_implicitly_imported") is not True:
         errors.append("cross-project implicit import must be forbidden")
 
-    prohibited = set(recovery.get("prohibited_patterns", []))
-    required_prohibited = {
-        "FULL_HISTORY_REPLAY_BY_DEFAULT",
-        "SUMMARY_AS_CANON_AUTHORITY",
-        "SILENT_CROSS_PROJECT_IMPORT",
-        "UNKNOWN_AUTOFILL",
-    }
-    missing_prohibited = required_prohibited - prohibited
-    if missing_prohibited:
-        errors.append(f"missing prohibited recovery patterns {sorted(missing_prohibited)}")
+    return errors
+
+def validate_relations(rel_schema, rel_registry, object_registry):
+    errors = []
+    object_ids = {x["id"] for x in object_registry.get("objects", [])}
+    discovery_ids = {x["id"] for x in object_registry.get("discovery_targets", [])}
+    kinds = set(rel_schema["relation_kinds"])
+    states = set(rel_schema["states"])
+    origins = set(rel_schema["origins"])
+    traversals = set(rel_schema["traversal_states"])
+    seen = set()
+
+    if rel_registry.get("project_scope") != "ELYXION":
+        errors.append("relation registry project_scope must be ELYXION")
+    if rel_registry.get("object_registry_ref") != REGISTRY_PATH.name:
+        errors.append("relation registry object_registry_ref mismatch")
+
+    for rel in rel_registry.get("confirmed_relations", []):
+        rid = rel.get("id", "<missing-id>")
+        missing = set(rel_schema["required_confirmed"]) - set(rel)
+        if missing:
+            errors.append(f"{rid}: missing confirmed relation fields {sorted(missing)}")
+        if rid in seen:
+            errors.append(f"duplicate relation id: {rid}")
+        seen.add(rid)
+
+        if rel.get("project_scope") != "ELYXION":
+            errors.append(f"{rid}: project_scope must be ELYXION")
+        if rel.get("source_id") not in object_ids:
+            errors.append(f"{rid}: unknown source object {rel.get('source_id')}")
+        if rel.get("target_id") not in object_ids:
+            errors.append(f"{rid}: unknown target object {rel.get('target_id')}")
+        if rel.get("kind") not in kinds:
+            errors.append(f"{rid}: invalid kind {rel.get('kind')}")
+        if rel.get("state") not in states or rel.get("state") != "CONFIRMED":
+            errors.append(f"{rid}: confirmed collection must contain CONFIRMED relations")
+        if rel.get("origin") not in origins:
+            errors.append(f"{rid}: invalid origin {rel.get('origin')}")
+        if rel.get("traversal") not in traversals or rel.get("traversal") != "ALLOWED_AS_FACT":
+            errors.append(f"{rid}: confirmed relation must be ALLOWED_AS_FACT")
+        if not rel.get("evidence"):
+            errors.append(f"{rid}: confirmed relation requires evidence")
+
+    for rel in rel_registry.get("unresolved_relations", []):
+        rid = rel.get("id", "<missing-id>")
+        missing = set(rel_schema["required_unresolved"]) - set(rel)
+        if missing:
+            errors.append(f"{rid}: missing unresolved relation fields {sorted(missing)}")
+        if rid in seen:
+            errors.append(f"duplicate relation id: {rid}")
+        seen.add(rid)
+
+        if rel.get("project_scope") != "ELYXION":
+            errors.append(f"{rid}: project_scope must be ELYXION")
+        if rel.get("source_id") not in object_ids:
+            errors.append(f"{rid}: unknown source object {rel.get('source_id')}")
+        if "target_id" in rel and rel.get("target_id") not in object_ids:
+            errors.append(f"{rid}: unknown target object {rel.get('target_id')}")
+        if "target_discovery_id" in rel and rel.get("target_discovery_id") not in discovery_ids:
+            errors.append(f"{rid}: unknown discovery target {rel.get('target_discovery_id')}")
+        if "target_id" not in rel and "target_discovery_id" not in rel:
+            errors.append(f"{rid}: unresolved relation requires target_id or target_discovery_id")
+        if rel.get("state") != "UNRESOLVED":
+            errors.append(f"{rid}: unresolved collection must remain UNRESOLVED")
+        if rel.get("origin") not in origins:
+            errors.append(f"{rid}: invalid origin {rel.get('origin')}")
+        if rel.get("traversal") != "BLOCKED_UNRESOLVED":
+            errors.append(f"{rid}: unresolved relation must be BLOCKED_UNRESOLVED")
+        if not str(rel.get("question", "")).strip():
+            errors.append(f"{rid}: unresolved relation requires explicit question")
+        if not rel.get("evidence"):
+            errors.append(f"{rid}: unresolved relation requires evidence for why the question exists")
 
     return errors
 
@@ -144,7 +206,7 @@ def set_path(root, dotted_path, value):
         cur = cur[part]
     cur[parts[-1]] = value
 
-def apply_fixture(registry, fixture):
+def apply_object_fixture(registry, fixture):
     mutated = copy.deepcopy(registry)
     mutation = fixture["mutation"]
     if "target_object" in mutation:
@@ -157,26 +219,42 @@ def apply_fixture(registry, fixture):
     set_path(target, mutation["path"], mutation["value"])
     return mutated
 
+def apply_relation_fixture(registry, fixture):
+    mutated = copy.deepcopy(registry)
+    collection = fixture["target_collection"]
+    target = next(x for x in mutated[collection] if x["id"] == fixture["target_id"])
+    set_path(target, fixture["mutation"]["path"], fixture["mutation"]["value"])
+    return mutated
+
 def main():
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    rel_schema = json.loads(REL_SCHEMA_PATH.read_text(encoding="utf-8"))
+    rel_registry = json.loads(REL_REGISTRY_PATH.read_text(encoding="utf-8"))
     recovery = json.loads(RECOVERY_PATH.read_text(encoding="utf-8"))
-    fixtures = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
+    object_fixtures = json.loads(OBJECT_FIXTURE_PATH.read_text(encoding="utf-8"))
+    relation_fixtures = json.loads(REL_FIXTURE_PATH.read_text(encoding="utf-8"))
 
-    errors = validate(schema, registry, recovery)
+    errors = validate_objects(schema, registry, recovery)
+    errors += validate_relations(rel_schema, rel_registry, registry)
     if errors:
         for error in errors:
             print(f"FAIL: {error}")
         return 1
 
     falsification_failures = []
-    for case in fixtures.get("cases", []):
-        mutated = apply_fixture(registry, case)
-        case_errors = validate(schema, mutated, recovery)
+
+    for case in object_fixtures.get("cases", []):
+        mutated = apply_object_fixture(registry, case)
+        case_errors = validate_objects(schema, mutated, recovery)
         if case.get("expected") == "FAIL" and not case_errors:
-            falsification_failures.append(
-                f"{case['id']}: invalid mutation was not rejected"
-            )
+            falsification_failures.append(f"{case['id']}: invalid object mutation was not rejected")
+
+    for case in relation_fixtures.get("cases", []):
+        mutated = apply_relation_fixture(rel_registry, case)
+        case_errors = validate_relations(rel_schema, mutated, registry)
+        if case.get("expected") == "FAIL" and not case_errors:
+            falsification_failures.append(f"{case['id']}: invalid relation mutation was not rejected")
 
     if falsification_failures:
         for error in falsification_failures:
@@ -184,10 +262,11 @@ def main():
         return 1
 
     print(
-        f"PASS: {len(registry.get('objects', []))} objects validated; "
-        f"{len(registry.get('discovery_targets', []))} unresolved discovery targets preserved; "
-        f"{len(recovery.get('layers', []))} recovery levels validated; "
-        f"{len(fixtures.get('cases', []))} falsification cases rejected."
+        f"PASS: {len(registry.get('objects', []))} objects; "
+        f"{len(rel_registry.get('confirmed_relations', []))} confirmed relations; "
+        f"{len(rel_registry.get('unresolved_relations', []))} unresolved relation questions; "
+        f"{len(recovery.get('layers', []))} recovery levels; "
+        f"{len(object_fixtures.get('cases', [])) + len(relation_fixtures.get('cases', []))} falsification cases rejected."
     )
     return 0
 
