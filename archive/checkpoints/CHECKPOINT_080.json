@@ -1,0 +1,41 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-080",
+  "status": "PASS_ARCHITECTURE__FULL_RANGE_INGEST_SAFETY_READY__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 80,
+  "raw_transcript_coverage_pct": 0,
+  "verified_recovery_pct": 0,
+  "verified_attachment_coverage_pct": 0,
+  "verified_source_parity_pct": 0,
+  "verified_durability_pct": 0,
+  "verified_raw_messages": 0,
+  "inferred_messages": 0,
+  "reconstructed_from_memory_messages": 0,
+  "silently_rewritten_messages": 0,
+  "duplicate_conflict_count": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "ingest_idempotency_contract_v1",
+    "anti_duplicate_policy_v1",
+    "range_closure_contract_v1",
+    "manifest_closure_contract_v1",
+    "pre_100_completeness_barrier_v1",
+    "ingest_transaction_contract_v1",
+    "synthetic_idempotency_vector_v1",
+    "synthetic_range_closure_vector_v1",
+    "full_range_ingest_plan_v1",
+    "coverage_ledger_v4"
+  ],
+  "strongest_current_claim": {
+    "architecture": "80_PERCENT_READY",
+    "raw_content": "0_PERCENT_ARCHIVED",
+    "manifest": "OPEN_INCOMPLETE",
+    "pre_100_barrier": "NOT_READY",
+    "exact_full_chat_recovery": "NOT_AVAILABLE"
+  },
+  "privacy_gate": "ACTIVE__PUBLIC_REPOSITORY",
+  "next_target_pct": 90,
+  "next_stage_requirement": "Build final audit matrix, threat/failure injection suite, global manifest proof bundle, and independent pre-close audit. Real RAW still blocked until private destination."
+}
