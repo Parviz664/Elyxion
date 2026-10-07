@@ -1,0 +1,55 @@
+{
+  "receipt_id": "ELYXION_NAV_002B_POST_ACTIVATION_REGEN_RECEIPT_V0_1",
+  "status": "SYNCHRONOUS_MIRROR_PASS",
+  "authority": "NAVIGATION_EVIDENCE_ONLY",
+  "project_scope": "ELYXION",
+  "validation_base_navigator_head": "c86c67f5120ccf1e6fe405c93663777703b84b55",
+  "external_source_heads": {
+    "main": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+    "E-Prime": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+    "agent/phase1-scaffold": "4f3b5c53849a992e282f85a8345b637e4b06d9d1",
+    "channel/p-control-point-v0.1": "4c7183356699a53d081e40b3d5d28cb362d6dbcf"
+  },
+  "self_evidence_blobs": {
+    "EVID_NAV_TOPOLOGY_V02": "b683ce4474beed02563fd2fcec198250529a5bf6",
+    "EVID_NAV_GLOBAL_C0_BOUNDARY": "04e12e5cbaca729ab93e750f90180c7ab597fe60",
+    "EVID_NAV_ACTIVATE": "e32d372df22f31d6742e1f489af4e128ba7d066f",
+    "EVID_NAV_README": "3455222989f84d7114152c6d90873280bc6d0693",
+    "EVID_NAV_OBJECT_SPINE": "6e7db245bf3d03681add9ed0870eb0800164d590",
+    "EVID_NAV_BOOTSTRAP": "276dc212cf6d8685149bb3cab5eb9e7ac6efd802"
+  },
+  "author_declaration_registry_blob": "239d9b05da5f6c80b0bc696887b631ac14610b50",
+  "regenerated_pack_results": [
+    {
+      "id": "CP01_ECO_ONE_HOP_V02",
+      "freshness": "FRESH",
+      "verdict": "PASS"
+    },
+    {
+      "id": "CP02_NAVIGATOR_ZERO_HOP_V02",
+      "freshness": "FRESH",
+      "verdict": "PASS"
+    }
+  ],
+  "handoff_results": [
+    {
+      "id": "H01_ECO_ONE_HOP",
+      "freshness": "FRESH",
+      "global_c0_construction_performed": false,
+      "consumer_location": "UNKNOWN",
+      "verdict": "PASS"
+    },
+    {
+      "id": "H02_NAVIGATOR_ZERO_HOP",
+      "freshness": "FRESH",
+      "global_c0_construction_performed": false,
+      "consumer_location": "UNKNOWN",
+      "verdict": "PASS"
+    }
+  ],
+  "caveats": [
+    "This is synchronous GitHub-state mirror evidence, not an observed GitHub Actions execution PASS.",
+    "Container fresh-clone execution was blocked by infrastructure rate limiting before tests began."
+  ],
+  "law": "Creating this receipt must not itself invalidate prior packs unless it changes an evidence blob used by those packs."
+}
