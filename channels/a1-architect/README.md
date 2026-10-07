@@ -1,6 +1,8 @@
 # Elyxion A1 Architect — Self-Recovery
 
-Status: `RECOVERY_CANDIDATE_STRONG_WITH_GAPS`
+Status: `SELF_RECOVERY_PASS_WITH_GAPS`
+
+Post-write audit: `POST_WRITE_AUDIT = PASS_WITH_PRESERVED_GAPS`
 
 Channel family: `A1_ARCHITECT`
 
