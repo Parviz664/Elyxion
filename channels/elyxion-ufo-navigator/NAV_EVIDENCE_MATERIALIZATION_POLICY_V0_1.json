@@ -1,0 +1,52 @@
+{
+  "policy_id": "ELYXION_NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "levels": [
+    {
+      "id": "M0_MANIFEST_ONLY",
+      "load": "evidence metadata only",
+      "use_when": "orientation, routing, low-risk bounded discovery"
+    },
+    {
+      "id": "M1_EXACT_ARTIFACT",
+      "load": "exact durable source artifact",
+      "use_when": "exact wording, role, status, authority, or contract meaning matters"
+    },
+    {
+      "id": "M2_CONFLICT_SET",
+      "load": "all material sources on every side of an open collision or disputed relation",
+      "use_when": "conflict/collision materially affects the answer"
+    },
+    {
+      "id": "M3_PRIMARY_RAW",
+      "load": "RAW / primary evidence where available",
+      "use_when": "source fidelity, chronology, provenance, or high-consequence ambiguity requires primary evidence"
+    }
+  ],
+  "escalation_triggers": [
+    "exact_wording_matters",
+    "canon_or_authority_decision",
+    "open_collision_affects_answer",
+    "unresolved_relation_affects_answer",
+    "source_is_stale",
+    "claim_sources_disagree",
+    "high_consequence_handoff",
+    "raw_fidelity_explicitly_required"
+  ],
+  "failure_states": [
+    "EVIDENCE_MISSING",
+    "PRIMARY_SOURCE_UNAVAILABLE",
+    "STALE_SOURCE_REQUIRES_RECOVERY",
+    "COLLISION_REQUIRES_MULTI_SOURCE_REVIEW"
+  ],
+  "laws": {
+    "more_context_is_not_default_remedy": true,
+    "load_minimum_sufficient_evidence": true,
+    "collision_requires_both_sides": true,
+    "stale_source_must_not_be_used_as_fresh": true,
+    "missing_primary_evidence_must_not_be_invented": true,
+    "summary_never_satisfies_explicit_raw_requirement": true
+  }
+}
