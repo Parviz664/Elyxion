@@ -1,0 +1,40 @@
+{
+  "artifact_type": "EPRIME_CHAT_RECORD_PROVENANCE_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "PRESERVE_SOURCE_STRUCTURE_METADATA_WITHOUT_MUTATING_RAW_MESSAGE_RECORD",
+  "required_fields": [
+    "sequence",
+    "source_order_index",
+    "source_record_kind",
+    "archive_role",
+    "source_record_id_or_null",
+    "timestamp_state",
+    "source_timestamp_raw_or_exact",
+    "normalized_utc_derived_or_null",
+    "attachment_count",
+    "source_ref"
+  ],
+  "source_record_kind_enum": [
+    "user",
+    "assistant",
+    "system",
+    "tool",
+    "unknown"
+  ],
+  "timestamp_state_enum": [
+    "PRESENT_EXACT",
+    "ABSENT_IN_SOURCE",
+    "UNAVAILABLE_IN_EXPORT",
+    "UNPARSEABLE_PRESERVED_RAW"
+  ],
+  "rules": [
+    "sequence must bind one-to-one to archive message record sequence",
+    "source_order_index must preserve original source order",
+    "source_record_kind must never be inferred from text",
+    "source_timestamp_raw_or_exact must preserve source value when present",
+    "normalized_utc_derived_or_null is non-authoritative derived metadata",
+    "attachment_count must equal attachment records bound to same sequence",
+    "unknown source kind must remain unknown and block strongest completeness claim"
+  ],
+  "mutation_policy": "APPEND_ONLY_NO_REWRITE"
+}
