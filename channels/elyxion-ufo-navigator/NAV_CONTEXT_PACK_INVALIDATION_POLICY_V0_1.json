@@ -1,0 +1,46 @@
+{
+  "policy_id": "ELYXION_NAV_CONTEXT_PACK_INVALIDATION_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "states": [
+    "FRESH",
+    "STALE_TARGETED",
+    "UNKNOWN_FRESHNESS",
+    "BLOCKED_REQUIRES_RECOVERY"
+  ],
+  "snapshot_rules": {
+    "external_github_evidence": "record evidence_id + ref + observed branch head + observed blob sha",
+    "self_hosted_github_evidence": "resolve and record exact blob sha for the referenced file at pack build",
+    "author_declaration": "record declaration id + exact author-declaration registry blob sha when available"
+  },
+  "invalidation_rules": [
+    {
+      "when": "external source head differs from current Navigator freshness policy",
+      "result": "STALE_TARGETED",
+      "action": "re-recover only affected source/evidence slice before high-confidence reuse"
+    },
+    {
+      "when": "self-hosted evidence file blob differs from pack snapshot",
+      "result": "STALE_TARGETED",
+      "action": "regenerate affected pack evidence/claims"
+    },
+    {
+      "when": "author-declaration registry blob differs",
+      "result": "STALE_TARGETED",
+      "action": "re-evaluate author-declared claims in the pack"
+    },
+    {
+      "when": "current source identity cannot be resolved",
+      "result": "UNKNOWN_FRESHNESS",
+      "action": "do not present pack as verified fresh"
+    }
+  ],
+  "laws": {
+    "stale_pack_is_not_automatically_false": true,
+    "stale_pack_must_not_be_presented_as_fresh": true,
+    "invalidation_should_follow_used_evidence_not_unrelated_project_changes": true,
+    "pack_fingerprint_is_integrity_identity_not_semantic_truth": true,
+    "regeneration_does_not_grant_new_authority": true
+  }
+}
