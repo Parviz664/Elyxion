@@ -5,18 +5,7 @@ on:
     branches:
       - channel/elyxion-ufo-navigator-v0.1
     paths:
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_3.json"
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_3.json"
-      - "channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_COLLISION_REGISTRY_V0_1.json"
-      - "channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
-      - "channels/elyxion-ufo-navigator/tests/**"
-      - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
-      - "channels/elyxion-ufo-navigator/tools/check_nav_freshness.py"
-      - "channels/elyxion-ufo-navigator/tools/build_context_slice.py"
-      - "channels/elyxion-ufo-navigator/tools/test_context_slice.py"
+      - "channels/elyxion-ufo-navigator/**"
       - ".github/workflows/navigator-object-validate.yml"
   pull_request:
     paths:
@@ -34,9 +23,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate Navigator substrate
-        run: python channels/elyxion-ufo-navigator/tools/validate_nav_objects.py
+      - name: Validate current Navigator substrate
+        run: python channels/elyxion-ufo-navigator/tools/validate_nav_substrate_v0_2.py
       - name: Test bounded context slices
         run: python channels/elyxion-ufo-navigator/tools/test_context_slice.py
+      - name: Test evidence-addressable context packs
+        run: python channels/elyxion-ufo-navigator/tools/test_context_pack.py
       - name: Check upstream freshness
         run: python channels/elyxion-ufo-navigator/tools/check_nav_freshness.py --fail-on-stale
