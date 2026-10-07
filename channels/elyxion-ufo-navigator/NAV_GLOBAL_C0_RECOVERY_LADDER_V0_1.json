@@ -1,0 +1,102 @@
+{
+  "profile_id": "ELYXION_GLOBAL_C0_RECOVERY_LADDER_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project": "Elyxion",
+  "design_target": "bounded_question_cost_should_track_relevant_dependency_slice_more_than_total_project_history",
+  "guarantee_level": "DESIGN_TARGET_NOT_COMPLEXITY_PROOF",
+  "default_strategy": "PROGRESSIVE_RECOVERY",
+  "state_update_strategy": "VERIFIED_SNAPSHOT_PLUS_DELTA_WITH_TARGETED_HISTORY",
+  "hard_numeric_context_budget": "NOT_DEFINED",
+  "layers": [
+    {
+      "level": 0,
+      "id": "GLOBAL_ORIENTATION",
+      "purpose": "locate major systems, current frontier, known gaps, and candidate relevant areas",
+      "default_load": true,
+      "source_kind": "navigation summaries/indexes",
+      "may_answer_exact_semantic_disputes": false
+    },
+    {
+      "level": 1,
+      "id": "SUBSYSTEM_MAP",
+      "purpose": "select relevant channels/surfaces/objects for the current task",
+      "default_load": "CONDITIONAL",
+      "source_kind": "registries and subsystem maps",
+      "may_answer_exact_semantic_disputes": false
+    },
+    {
+      "level": 2,
+      "id": "OBJECT_AUTHORITY_STATUS",
+      "purpose": "recover object identity, semantic status, evidence state, authority, readiness, blockers, and unknowns",
+      "default_load": "CONDITIONAL",
+      "source_kind": "typed object records",
+      "may_answer_exact_semantic_disputes": false
+    },
+    {
+      "level": 3,
+      "id": "DEPENDENCY_RELATION_SLICE",
+      "purpose": "recover only upstream/downstream relations needed for the current question",
+      "default_load": "CONDITIONAL",
+      "source_kind": "relation graph / handoff records",
+      "may_answer_exact_semantic_disputes": false
+    },
+    {
+      "level": 4,
+      "id": "SOURCE_ARTIFACT",
+      "purpose": "verify material claims against the exact durable artifact",
+      "default_load": "ESCALATION",
+      "source_kind": "GitHub artifact or other authoritative project surface",
+      "may_answer_exact_semantic_disputes": "SOMETIMES"
+    },
+    {
+      "level": 5,
+      "id": "RAW_PRIMARY_EVIDENCE",
+      "purpose": "recover verbatim/primary evidence when fidelity, chronology, authority, or dispute requires it",
+      "default_load": "ESCALATION",
+      "source_kind": "RAW or primary source",
+      "may_answer_exact_semantic_disputes": true
+    }
+  ],
+  "escalation_triggers": [
+    "authority_is_unclear",
+    "status_is_disputed",
+    "exact_wording_matters",
+    "lineage_is_unclear",
+    "conflicting_sources_exist",
+    "higher_level_view_is_stale",
+    "decision_risk_requires_stronger_evidence",
+    "requested_fidelity_requires_primary_source"
+  ],
+  "compression_rules": {
+    "summaries_are_caches_not_authority": true,
+    "compressed_views_must_preserve_evidence_descent": true,
+    "unknowns_must_not_be_removed_for_compactness": true,
+    "conflicts_must_not_be_silently_resolved": true,
+    "cross_project_state_must_not_be_implicitly_imported": true
+  },
+  "context_assembly_rules": {
+    "task_scoped": true,
+    "load_unrelated_history_by_default": false,
+    "include_global_orientation": true,
+    "include_relevant_objects": true,
+    "include_required_relations": true,
+    "include_live_unknowns_and_conflicts": true,
+    "include_minimum_sufficient_evidence": true
+  },
+  "freshness_rules": {
+    "source_identity_required": true,
+    "last_verified_required_for_cached_navigation_views": true,
+    "upstream_change_should_trigger_targeted_invalidation": true,
+    "hard_time_to_live": "NOT_DEFINED"
+  },
+  "prohibited_patterns": [
+    "FULL_HISTORY_REPLAY_BY_DEFAULT",
+    "ONE_GIANT_PERMANENT_SUMMARY_AS_TRUTH",
+    "SUMMARY_AS_CANON_AUTHORITY",
+    "IMPLEMENTATION_PRESENCE_AS_AUTHORITY",
+    "NOT_OBSERVED_AS_DOES_NOT_EXIST",
+    "SILENT_CROSS_PROJECT_IMPORT",
+    "UNKNOWN_AUTOFILL"
+  ]
+}
