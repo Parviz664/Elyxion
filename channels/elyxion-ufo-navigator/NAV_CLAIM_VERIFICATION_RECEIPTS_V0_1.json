@@ -265,6 +265,90 @@
         "P4 direct-input status remains contractually unresolved."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_A0_ORCHESTRATOR_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_A0_ORCHESTRATOR_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A0 recovery artifacts document a gateway/orchestrator family focused on transport, structural admissibility, carry and routing.",
+        "They explicitly deny author/canon creation authority.",
+        "They also preserve an earlier A0 Meaning Amplifier namespace with no recovered supersession statement into the gateway family."
+      ],
+      "limits": [
+        "v3.0 session-local exact state and later v4.1 project-level partial state must both be preserved.",
+        "Full v4.1 body is not recovered.",
+        "Early Meaning Amplifier -> A0_ORCHESTRATOR lineage remains UNKNOWN."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_A1_ARCHITECT_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_A1_ARCHITECT_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A1 artifacts document an architecture-translator role over source-bound canon/vision intent.",
+        "They explicitly preserve anti-domino, determinism, non-UI, source-binding and vertical-slice boundaries.",
+        "They explicitly deny author/canon, RAW, A0, A-Ultra and E-Prime authority."
+      ],
+      "limits": [
+        "Original birth identity before v3.1 remains UNKNOWN.",
+        "Original authorship of supplied law text is not proved.",
+        "The v3.3 implementation-lane compatibility tension remains HOLD."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_A2_SYSTEMS_MAP_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_A2_SYSTEMS_MAP_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A2 artifacts document a systems/dependency/invariant/open-question mapping role over supplied canon-bearing material.",
+        "They explicitly describe A2 as mapper, not author.",
+        "They explicitly deny implementation, conflict-resolution, canon-sovereignty and runtime-proof authority."
+      ],
+      "limits": [
+        "Earliest-origin confidence remains lower than current-role confidence.",
+        "Unrecovered v1.2/v1.3 contents remain incomplete.",
+        "Runtime software execution and independent judge execution remain NOT VERIFIED."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_A3_PRE_E0_HANDOFF_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_A3_PRE_E0_HANDOFF_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A3 artifacts document packaging/sealing authority over already-decided lawful material.",
+        "They explicitly deny truth/admissibility, E0 bind, author and runtime/build/test/release authority.",
+        "They preserve a historical reversal in E-Prime handling that must not be flattened."
+      ],
+      "limits": [
+        "Contract text authorship remains UNKNOWN.",
+        "A3 may not overrule A2 lawful judgment or E0 bind legality.",
+        "Era-specific routing is not promoted into a universal current route."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
