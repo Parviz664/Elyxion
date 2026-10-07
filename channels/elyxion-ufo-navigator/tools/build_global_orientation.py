@@ -41,9 +41,16 @@ def build_global_orientation():
     all_discovery=OBJECTS["discovery_targets"]
     horizon=[]
     for x in all_discovery:
+        if x["id"] in connected:
+            visibility="CONNECTED_BOUNDARY"
+        elif str(x.get("evidence_state","")).startswith("OBSERVED_"):
+            visibility="AMBIENT_OBSERVED"
+        else:
+            visibility="AMBIENT_REGISTERED_UNKNOWN"
         horizon.append({
           "id":x["id"],
-          "visibility":"CONNECTED_BOUNDARY" if x["id"] in connected else "AMBIENT_REGISTERED_UNKNOWN",
+          "visibility":visibility,
+          "evidence_state":x.get("evidence_state"),
           "repository_location":x.get("repository_location"),
           "existence_elsewhere":x.get("existence_elsewhere"),
           "author_declaration_ref":x.get("author_declaration_ref")
