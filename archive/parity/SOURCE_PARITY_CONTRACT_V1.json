@@ -1,0 +1,40 @@
+{
+  "artifact_type": "EPRIME_CHAT_SOURCE_PARITY_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "PROVE_ARCHIVE_RECORDS_MATCH_AUTHORITATIVE_SOURCE_STRUCTURE_AND_ORDER",
+  "parity_dimensions": [
+    "record_count",
+    "record_order",
+    "role_sequence",
+    "message_boundaries",
+    "timestamp_presence_and_value_when_exported",
+    "attachment_cardinality_and_order",
+    "system_record_presence",
+    "tool_record_presence",
+    "raw_text_exactness",
+    "source_ref_binding"
+  ],
+  "rules": [
+    "Archive record count must equal authoritative source count for the verified scope.",
+    "Archive sequence order must exactly match source order.",
+    "Roles must match source-declared roles; no role coercion.",
+    "Source records must not be merged or split.",
+    "Timestamps must be copied exactly when present; absence must remain null/absent per source mapping contract.",
+    "Every source-declared attachment must retain message association and attachment index.",
+    "System/tool records present in source must never be silently dropped.",
+    "Unknown record kinds must be preserved as opaque source-bound records or block, never discarded.",
+    "No parity mismatch may be auto-repaired."
+  ],
+  "verdict_enum": [
+    "PASS_PARITY",
+    "BLOCK_COUNT_MISMATCH",
+    "BLOCK_ORDER_MISMATCH",
+    "BLOCK_ROLE_MISMATCH",
+    "BLOCK_BOUNDARY_MISMATCH",
+    "BLOCK_TIMESTAMP_MISMATCH",
+    "BLOCK_ATTACHMENT_MISMATCH",
+    "BLOCK_SYSTEM_TOOL_DROP",
+    "BLOCK_OTHER_PARITY"
+  ],
+  "pass_rule": "Every active parity dimension passes with zero mismatches for declared source scope."
+}
