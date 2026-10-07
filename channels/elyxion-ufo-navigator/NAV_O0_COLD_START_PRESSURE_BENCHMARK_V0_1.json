@@ -1,0 +1,49 @@
+{
+  "benchmark_id": "ELYXION_NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1",
+  "status": "CANDIDATE_STRUCTURAL_MEASUREMENT",
+  "authority": "NAVIGATION_EVIDENCE_ONLY",
+  "project_scope": "ELYXION",
+  "baseline_ref": "NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json",
+  "depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
+  "sector_catalog_ref": "NAV_SECTOR_CATALOG_V0_1.json",
+  "comparison": {
+    "broad_orientation": {
+      "observed_branches": 31,
+      "observed_objects": 33,
+      "discovery_targets": 6,
+      "selected_evidence_identities": 42,
+      "total_evidence_identities": 46,
+      "default_loaded_source_bodies": 0,
+      "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+    },
+    "o0_topology_index": {
+      "observed_branches_represented": 31,
+      "observed_objects_represented_by_sector_counts": 33,
+      "discovery_targets_preserved": 6,
+      "sector_capsules": 6,
+      "individual_evidence_identities_loaded": 0,
+      "exact_source_bodies_loaded": 0,
+      "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+    }
+  },
+  "measured_effect": {
+    "cold_start_individual_evidence_identity_load_change": "42 -> 0",
+    "exact_source_body_load_change": "0 -> 0",
+    "sector_capsules_added": 6,
+    "branch_and_object_count_visibility_preserved": true,
+    "discovery_horizon_preserved": true
+  },
+  "interpretation": [
+    "O0 removes individual evidence identities from the default cold-start payload.",
+    "Evidence and source bodies are deferred to question-driven descent rather than deleted.",
+    "Topology visibility is preserved through sector counts and discovery horizon.",
+    "Semantic completeness is not improved by O0; it remains explicitly PARTIAL."
+  ],
+  "non_claims": [
+    "This is not a token-count benchmark.",
+    "This is not proof of asymptotic or sublinear scaling.",
+    "This does not prove Global C0 reasoning performance.",
+    "This does not reduce the amount of durable evidence stored in the repository.",
+    "This does not convert partial semantic coverage into full understanding."
+  ]
+}
