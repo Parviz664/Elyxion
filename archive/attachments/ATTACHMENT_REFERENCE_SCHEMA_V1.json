@@ -1,0 +1,40 @@
+{
+  "artifact_type": "EPRIME_CHAT_ATTACHMENT_REFERENCE_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "PRESERVE_ATTACHMENT_EXISTENCE_IDENTITY_AND_RECOVERY_PATH_WITHOUT_SILENT_DROP",
+  "required_fields": [
+    "attachment_id",
+    "message_sequence",
+    "attachment_index",
+    "attachment_type",
+    "original_filename_or_null",
+    "mime_type_or_null",
+    "source_ref",
+    "content_sha256_or_unknown",
+    "size_bytes_or_unknown",
+    "availability_status"
+  ],
+  "attachment_type_enum": [
+    "image",
+    "file",
+    "audio",
+    "video",
+    "link",
+    "other"
+  ],
+  "availability_status_enum": [
+    "PRESENT_AND_HASHED",
+    "PRESENT_REF_ONLY",
+    "MISSING_FROM_EXPORT",
+    "UNRESOLVED"
+  ],
+  "rules": [
+    "Every source-declared attachment must produce exactly one attachment record.",
+    "Missing attachment bytes must never be silently ignored.",
+    "If bytes exist, sha256 must be computed over exact bytes.",
+    "If bytes do not exist, content_sha256_or_unknown must remain UNKNOWN.",
+    "Attachment order within the source message must be preserved.",
+    "Attachment metadata must not be invented."
+  ],
+  "hundred_percent_binding": "100% full-context claim is BLOCKED when any source-declared attachment remains MISSING_FROM_EXPORT or UNRESOLVED."
+}
