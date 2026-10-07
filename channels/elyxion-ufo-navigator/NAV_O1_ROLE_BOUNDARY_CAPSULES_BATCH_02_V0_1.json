@@ -1,0 +1,148 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_02_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_A0_ORCHESTRATOR",
+      "object_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "source_identity_evidence_id": "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "role_summary": "Recovered A0_ORCHESTRATOR gateway family: a deterministic structural/transport/carry gate that validates admissibility and routing while explicitly not authoring meaning or canon.",
+      "documented_non_authorities": [
+        "does not own meaning creation",
+        "does not own canon creation",
+        "does not own world truth",
+        "does not own gameplay design",
+        "does not own scientific truth",
+        "does not own final author decisions",
+        "repair must not become prose editing"
+      ],
+      "status_and_evidence_ceiling": {
+        "session_local_exact_contract": "v3.0",
+        "latest_project_level_known_contract": "v4.1 partial",
+        "early_A0_meaning_amplifier_relation": "UNKNOWN LINEAGE RELATION",
+        "full_v4_1_artifact": "NOT_RECOVERED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "whether early A0 Meaning Amplifier and A0_ORCHESTRATOR are one lineage",
+        "current runtime activation between v3.0 and later v4.1",
+        "cross-channel route outside era-specific recovered contracts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_A1_ARCHITECT",
+      "object_id": "ELYX_REC_A1_ARCHITECT",
+      "source_identity_evidence_id": "EVID_REC_A1_ARCHITECT_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_A1_ARCHITECT_BOUNDARY"
+      ],
+      "role_summary": "Recovered A1 architecture translator that turns source-bound canon/vision intent into bounded implementation-ready architecture while preserving feel, anti-domino boundaries, determinism, assumptions, and non-UI defaults.",
+      "documented_non_authorities": [
+        "not author/canon authority",
+        "not RAW capture layer",
+        "not A-Ultra vision translation",
+        "not A0 routing authority",
+        "not P1 causal map planning",
+        "not P5 feel/truth compression",
+        "not A2 consumer/merger",
+        "not E-Prime archive/registry/ledger role"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_recovered_law": "A1 v3.3 meaning-cleanroom dual-view",
+        "identity_confidence_v3_1_to_v3_3": "VERY_HIGH",
+        "original_birth_identity": "UNKNOWN",
+        "supplied_law_original_authorship": "NOT_PROVED",
+        "current_contract_tension": "implementation lane vs legacy top-level implementation-bearing fields / HOLD"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "original A1 birth identity before v3.1",
+        "owner resolution of current v3.3 internal schema tension",
+        "cross-channel route beyond directly recovered contracts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_A2_SYSTEMS_MAP",
+      "object_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "source_identity_evidence_id": "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY"
+      ],
+      "role_summary": "Recovered A2 Systems Map mapper that transforms supplied canon-bearing material into trace-bound systems, typed dependencies, invariants, open questions, scope fences, fidelity/conflict metadata and handoff/export structures.",
+      "documented_non_authorities": [
+        "not raw-author source",
+        "not canon author",
+        "not A0 routing/orchestration",
+        "not A1 architecture authority",
+        "not A3 validator/sealer",
+        "not E3.5 assembler",
+        "not implementation builder",
+        "not lore/UI/progression author",
+        "not conflict resolver",
+        "not proof that runtime code exists"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_function_confidence": "HIGH",
+        "earliest_origin_confidence": "MEDIUM",
+        "unrecovered_v1_2_v1_3_confidence": "LOW",
+        "runtime_execution_evidence": "NOT_VERIFIED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "unrecovered v1.2/v1.3 contents",
+        "software runtime execution",
+        "independent judge endpoint execution",
+        "any unresolved source conflict outcome"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_A3_PRE_E0_HANDOFF",
+      "object_id": "ELYX_REC_A3_PRE_E0_HANDOFF",
+      "source_identity_evidence_id": "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_A3_PRE_E0_HANDOFF_BOUNDARY"
+      ],
+      "role_summary": "Recovered A3 pre-E0 lawful handoff seal compiler: packaging/sealing authority that preserves already-decided lawful A2 material in an E0-readable carrier without becoming truth, admissibility, bind, or runtime authority.",
+      "documented_non_authorities": [
+        "not author",
+        "not judge or truth source",
+        "not architect or optimizer",
+        "not admissibility interpreter",
+        "not hidden router",
+        "not builder helper",
+        "not second A2",
+        "not hidden E0",
+        "not E0 decision maker",
+        "no runtime/build/test/release authority"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_role_status": "OWNER_CONFIRMED_FOR_THIS_CHANNEL",
+        "contract_text_authorship": "UNKNOWN",
+        "v2_2_role_evidence_ceiling": "VERY_HIGH",
+        "historical_E_Prime_boundary": "reversed across eras; must not be flattened"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "contract text authorship",
+        "global applicability outside recovered A3 contract scope",
+        "cross-channel routing beyond explicitly recovered era contracts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "capsules_are_navigation_derivations_not_canon": true,
+    "no_cross_channel_route_is_created_by_this_batch": true,
+    "era_specific_route_statements_are_not_promoted_into_global_graph_relations": true,
+    "source_identity_and_boundary_evidence_are_preserved": true
+  }
+}
