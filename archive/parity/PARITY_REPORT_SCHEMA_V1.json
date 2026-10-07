@@ -1,0 +1,28 @@
+{
+  "artifact_type": "EPRIME_CHAT_PARITY_REPORT_SCHEMA_V1",
+  "status": "LOCKED",
+  "required_fields": [
+    "report_id",
+    "source_id",
+    "source_scope",
+    "source_record_count",
+    "archive_record_count",
+    "order_mismatch_count",
+    "role_mismatch_count",
+    "boundary_mismatch_count",
+    "timestamp_mismatch_count",
+    "attachment_mismatch_count",
+    "system_record_drop_count",
+    "tool_record_drop_count",
+    "opaque_unresolved_count",
+    "raw_text_mismatch_count",
+    "source_ref_mismatch_count",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_PARITY",
+    "BLOCK_PARITY"
+  ],
+  "pass_rule": "All mismatch/drop/unresolved counters are zero and source_record_count == archive_record_count.",
+  "hundred_percent_binding": "100_PERCENT_FULL_CHAT_CLAIM_REQUIRES PASS_PARITY FOR ENTIRE AUTHORITATIVE_SOURCE_SCOPE"
+}
