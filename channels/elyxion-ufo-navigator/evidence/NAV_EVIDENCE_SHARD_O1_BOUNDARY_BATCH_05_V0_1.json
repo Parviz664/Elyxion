@@ -1,0 +1,98 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_O1_BOUNDARY_BATCH_05_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_O1_D0_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d0-psychological-orchestration-governor-recovery-v0.1:channels/d0-psychological-orchestration-governor/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d0-psychological-orchestration-governor-recovery-v0.1",
+      "path": "channels/d0-psychological-orchestration-governor/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "a8465bee3208cd4dfc139a103ed7bbe807d47f34",
+      "observed_source_head": "c19b6c7fd6f4dca88750d7571d77c3518ffe2ec2",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_D0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_D1_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d1-performance-comfort-antiboredom-recovery-v0.1:channels/d1-performance-comfort-antiboredom-guard/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d1-performance-comfort-antiboredom-recovery-v0.1",
+      "path": "channels/d1-performance-comfort-antiboredom-guard/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "a7f227d550c63e56854448aab8088c8c185ee8b8",
+      "observed_source_head": "e9abc30ea80604d57998dd8e4825c5994f4798a9",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_D1"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_D2_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d2-psychological-microdirection-recovery-v0.1:channels/d2-psychological-microdirection/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d2-psychological-microdirection-recovery-v0.1",
+      "path": "channels/d2-psychological-microdirection/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "56a065651947f6e9fb9c7c50bb818af549dc8ed8",
+      "observed_source_head": "9e34b0c93833faf42841a40797515b77806e86d8",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_D2"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_D3_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d3-latent-superiority-recovery-v0.1:channels/d3-latent-superiority-augmentation/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d3-latent-superiority-recovery-v0.1",
+      "path": "channels/d3-latent-superiority-augmentation/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "f97e6bc50af3c37e6de454389ea53f27da627eec",
+      "observed_source_head": "e62c6ff7da15cfefc3d3da6a07bd22d81c79cf03",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_D3"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_D4_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d4-psycho-operational-trajectory-stabilization-recovery-v0.1:channels/d4-psycho-operational-trajectory-stabilization/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d4-psycho-operational-trajectory-stabilization-recovery-v0.1",
+      "path": "channels/d4-psycho-operational-trajectory-stabilization/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "550039ab166de45220b0b84f667ae17d1b58c640",
+      "observed_source_head": "4aaa4acc1f8126ab4b77d4dc64cd300c9ce18382",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_D4"
+      ]
+    }
+  ]
+}
