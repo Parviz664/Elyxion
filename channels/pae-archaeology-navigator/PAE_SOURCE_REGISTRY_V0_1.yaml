@@ -1,0 +1,107 @@
+registry_id: PAE_SOURCE_REGISTRY_V0_1
+status: CANDIDATE_OBSERVED_RECOVERY_SURFACES
+authority: DESCRIPTIVE_ONLY
+
+P:
+  P0:
+    branch: channel/p0-intent-normalizer-recovery-v0.1
+    path: channels/p0-intent-normalizer/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  P1:
+    branch: channel/p1-map-planner-recovery-v0.1
+    path: channels/p1-map-planner/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  P2:
+    branch: channel/p2-ladder-builder-recovery-v0.1
+    path: channels/p2-ladder-builder/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  P3:
+    branch: channel/p3-final-text-renderer-recovery-v0.1
+    path: channels/p3-final-text-renderer/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  P4:
+    branch: channel/p4-feel-potential-engine-recovery-v0.1
+    path: channels/p4-feel-potential-engine/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  P5:
+    branch: channel/p5-feel-truth-compressor-recovery-v0.1
+    path: channels/p5-feel-truth-compressor/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+    activation_note: RECOVERED_DOES_NOT_MEAN_ACTIVE
+
+A:
+  A0:
+    branch: channel/a0-orchestrator-recovery-v0.1
+    path: channels/a0-orchestrator/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  A_ULTRA:
+    branch: channel/a-ultra-vision-translator-recovery-v0.1
+    path: channels/a-ultra-vision-translator/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  A1:
+    branch: channel/a1-architect-recovery-v0.1
+    path: channels/a1-architect/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  A2:
+    branch: channel/a2-systems-map-recovery-v0.1
+    path: channels/a2-systems-map/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+    reconciliation_note: SELF_RECOVERY_STOPS_BEFORE_LATER_A2_V2_X_EVIDENCE_OBSERVED_IN_A3
+  A3:
+    branch: channel/a3-pre-e0-handoff-recovery-v0.1
+    path: channels/a3-pre-e0-handoff/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+
+E:
+  E_PRIME:
+    branch: channel/e-prime-canonical-truth-kernel-recovery-v0.1
+    path: channels/e-prime-canonical-truth-kernel/
+    recovery_status: SELF_RECOVERY_PASS_WITH_GAPS
+    inspected_by_pae_bootstrap: true
+  E0:
+    branch: channel/e0-intent-lock-handshake-recovery-v0.1
+    path: channels/e0-intent-lock-handshake/
+    recovery_status: DISCOVERED_AND_PARTIALLY_INSPECTED
+  E1:
+    branch: channel/e1-constrained-skeleton-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+  E2:
+    branch: channel/e2-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+  E3:
+    branch: channel/e3-self-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+  E3_5:
+    branch: channel/e3-5-input-assembler-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+  E4:
+    branch: channel/e4-integration-route-compiler-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+  E_CHAIN_RESEARCH:
+    branch: channel/e-chain-research-recovery-v0.1
+    recovery_status: DISCOVERED_NOT_YET_CROSS_AUDITED
+
+high_level:
+  dispatcher_branch: channel/elyxion-dispatcher-recovery-v0.1
+  ufo_navigator_branch: channel/elyxion-ufo-navigator-v0.1
+  global_c0:
+    existence: AUTHOR_DECLARED_EXISTS
+    durable_location: UNKNOWN_TO_PAE
+    pae_authority: NONE
+
+rules:
+  - branch_exists_does_not_mean_channel_active
+  - recovered_does_not_mean_current_global
+  - local_latest_does_not_mean_global_latest
+  - pae_may_explain_but_not_reconcile_global_authority
