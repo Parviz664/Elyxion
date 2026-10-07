@@ -1,31 +1,38 @@
-name: Navigator Object Validate
+name: Navigator Substrate Validate
 
 on:
   push:
     branches:
       - channel/elyxion-ufo-navigator-v0.1
     paths:
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_2.json"
+      - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_3.json"
+      - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_3.json"
+      - "channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_2.json"
+      - "channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_2.json"
+      - "channels/elyxion-ufo-navigator/NAV_COLLISION_REGISTRY_V0_1.json"
+      - "channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_2.json"
       - "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
-      - "channels/elyxion-ufo-navigator/tests/NAV_OBJECT_FALSIFICATION_CASES_V0_1.json"
+      - "channels/elyxion-ufo-navigator/tests/**"
       - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
+      - "channels/elyxion-ufo-navigator/tools/check_nav_freshness.py"
       - ".github/workflows/navigator-object-validate.yml"
   pull_request:
     paths:
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_2.json"
-      - "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
-      - "channels/elyxion-ufo-navigator/tests/NAV_OBJECT_FALSIFICATION_CASES_V0_1.json"
-      - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
+      - "channels/elyxion-ufo-navigator/**"
+      - ".github/workflows/navigator-object-validate.yml"
+  workflow_dispatch:
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate Navigator object graph substrate
+      - name: Validate Navigator substrate
         run: python channels/elyxion-ufo-navigator/tools/validate_nav_objects.py
+      - name: Check upstream freshness
+        run: python channels/elyxion-ufo-navigator/tools/check_nav_freshness.py --fail-on-stale
