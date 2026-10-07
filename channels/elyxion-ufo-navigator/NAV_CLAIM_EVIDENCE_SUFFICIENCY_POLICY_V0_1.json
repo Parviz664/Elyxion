@@ -1,0 +1,46 @@
+{
+  "policy_id": "ELYXION_NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "rules": [
+    {
+      "claim_epistemic_state": "AUTHOR_DECLARED",
+      "minimum_materialization": "M1_EXACT_ARTIFACT",
+      "requirement": "At least one integrity-matched AUTHOR_DECLARATION materialization receipt.",
+      "maximum_verdict_without_independent_evidence": "SUPPORTED_AT_DECLARED_LEVEL"
+    },
+    {
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "minimum_materialization": "M1_EXACT_ARTIFACT",
+      "requirement": "At least one integrity-matched exact source artifact that directly documents the claim."
+    },
+    {
+      "claim_class": "COLLISION",
+      "minimum_materialization": "M2_CONFLICT_SET",
+      "requirement": "Materialize at least two materially distinct sides of the collision."
+    },
+    {
+      "claim_epistemic_state": "NAVIGATOR_ASSESSMENT",
+      "minimum_materialization": "M1_EXACT_ARTIFACT",
+      "requirement": "Underlying materialized evidence plus explicit limits; assessment label must be preserved."
+    },
+    {
+      "trigger": "RAW_FIDELITY_REQUIRED",
+      "minimum_materialization": "M3_PRIMARY_RAW",
+      "requirement": "Summary or derived artifact cannot satisfy explicit RAW fidelity requirement."
+    }
+  ],
+  "failure_states": [
+    "INSUFFICIENT_EVIDENCE",
+    "INTEGRITY_MISMATCH",
+    "PRIMARY_SOURCE_UNAVAILABLE",
+    "ONE_SIDED_COLLISION_EVIDENCE"
+  ],
+  "laws": {
+    "more_evidence_quantity_does_not_equal_sufficiency": true,
+    "sufficiency_is_claim_specific": true,
+    "evidence_strength_cannot_exceed_source_epistemic_level": true,
+    "unknown_remains_unknown_when_required_source_is_missing": true
+  }
+}
