@@ -1,0 +1,62 @@
+{
+  "fixture_id": "ELYXION_NAV_CONTEXT_PACK_EXPECTATIONS_V0_2",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "CP01_ECO_ONE_HOP_V02",
+      "start_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "max_hops": 1,
+      "direction": "both",
+      "expected_object_ids": [
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "ELYX_SURFACE_PHASE1_SCAFFOLD",
+        "ELYX_GOV_CREATOR_REALITY_STABILIZER"
+      ],
+      "expected_discovery_ids": [
+        "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+        "DISCOVERY_GLOBAL_C0"
+      ],
+      "expected_claim_ids": [
+        "CLAIM_GLOBAL_C0_EXISTS",
+        "CLAIM_NAV_MUST_NOT_BUILD_GLOBAL_C0",
+        "CLAIM_ECO_SYSTEMS_ROLE",
+        "CLAIM_EPRIME_CHAT_TRANSCRIPTS_ONLY",
+        "CLAIM_ECOSYS_EPRIME_SCOPE_COLLISION_OPEN"
+      ],
+      "expected_evidence_count": 10,
+      "expected_risk_band": "HIGH",
+      "expected_materialization": "M2_CONFLICT_SET"
+    },
+    {
+      "id": "CP02_NAVIGATOR_ZERO_HOP_V02",
+      "start_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "max_hops": 0,
+      "direction": "both",
+      "expected_object_ids": [
+        "ELYX_SURFACE_UFO_NAVIGATOR"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_CHANNEL_ECO_SYSTEMS"
+      ],
+      "expected_discovery_ids": [
+        "DISCOVERY_GLOBAL_C0"
+      ],
+      "expected_claim_ids": [
+        "CLAIM_GLOBAL_C0_EXISTS",
+        "CLAIM_NAV_MUST_NOT_BUILD_GLOBAL_C0",
+        "CLAIM_NAV_NO_GLOBAL_C0_AUTHORITY",
+        "CLAIM_REALITY_STABILIZER_SCOPE"
+      ],
+      "expected_evidence_count": 7,
+      "expected_risk_band": "ELEVATED",
+      "expected_materialization": "M1_EXACT_ARTIFACT"
+    }
+  ]
+}
