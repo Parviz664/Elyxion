@@ -2,5 +2,37 @@
   "schema_id": "ELYXION_NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1",
   "status": "CANDIDATE",
   "authority": "NAVIGATION_ONLY",
-  "project_scope": "ELYXION"
+  "project_scope": "ELYXION",
+  "required": [
+    "receipt_id",
+    "evidence_id",
+    "requested_level",
+    "result",
+    "source_identity",
+    "integrity",
+    "body_handling",
+    "semantic_status"
+  ],
+  "result_values": [
+    "MATERIALIZED",
+    "BLOCKED",
+    "NOT_NEEDED"
+  ],
+  "integrity_values": [
+    "MATCH",
+    "MISMATCH",
+    "UNKNOWN"
+  ],
+  "semantic_status_values": [
+    "NOT_PERFORMED",
+    "SEPARATE_VERIFICATION_RECEIPT"
+  ],
+  "laws": {
+    "receipt_proves_source_retrieval_not_claim_truth": true,
+    "observed_identity_must_not_be_silently_rewritten": true,
+    "integrity_mismatch_blocks_semantic_verification": true,
+    "source_body_need_not_be_durably_duplicated": true,
+    "transient_body_may_be_discarded_after_receipt": true,
+    "author_declaration_source_kind_must_be_preserved": true
+  }
 }
