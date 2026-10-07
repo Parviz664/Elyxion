@@ -5,10 +5,10 @@ import subprocess
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
-POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_1.json"
+POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_2.json"
 
 def git_output(*args):
-    return subprocess.check_output(["git", *args], text=True).strip()
+    return subprocess.check_output(["git", *args], text=True, stderr=subprocess.DEVNULL).strip()
 
 def resolve_branch_head(ref, self_ref):
     if ref == self_ref:
@@ -26,6 +26,7 @@ def resolve_branch_head(ref, self_ref):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--fail-on-stale", action="store_true")
     args = parser.parse_args()
 
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
@@ -33,6 +34,7 @@ def main():
 
     source_states = {}
     stale_sources = set()
+    unknown_sources = set()
 
     for source in policy["sources"]:
         sid = source["id"]
@@ -47,7 +49,11 @@ def main():
             state = "FRESH"
         else:
             state = "STALE"
+
+        if state == "STALE":
             stale_sources.add(sid)
+        if state == "UNKNOWN":
+            unknown_sources.add(sid)
 
         source_states[sid] = {
             "state": state,
@@ -72,13 +78,17 @@ def main():
             "source_ids": dep["source_ids"],
         })
 
+    stale_subjects = [x for x in subjects if x["freshness"] == "STALE"]
+    unknown_subjects = [x for x in subjects if x["freshness"] == "UNKNOWN"]
+
     result = {
         "policy_id": policy["policy_id"],
         "source_states": source_states,
         "subjects": subjects,
         "stale_sources": sorted(stale_sources),
+        "unknown_sources": sorted(unknown_sources),
+        "targeted_recovery_required": bool(stale_subjects),
         "global_recovery_required": False,
-        "targeted_recovery_required": any(x["freshness"] == "STALE" for x in subjects),
     }
 
     if args.json:
@@ -86,11 +96,15 @@ def main():
     else:
         for sid, state in source_states.items():
             print(f"{sid}: {state['state']} ({state['ref']})")
-        stale_subjects = [x for x in subjects if x["freshness"] == "STALE"]
         print(f"STALE_SUBJECTS={len(stale_subjects)}")
+        print(f"UNKNOWN_SUBJECTS={len(unknown_subjects)}")
         print("GLOBAL_RECOVERY_REQUIRED=false")
 
-    return 1 if any(x["freshness"] == "UNKNOWN" for x in subjects) else 0
+    if unknown_subjects:
+        return 2
+    if args.fail_on_stale and stale_subjects:
+        return 3
+    return 0
 
 if __name__ == "__main__":
     raise SystemExit(main())
