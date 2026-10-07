@@ -1,0 +1,46 @@
+{
+  "artifact_type": "EPRIME_CHAT_ROLE_AND_RECORD_KIND_MAP_V1",
+  "status": "LOCKED",
+  "purpose": "DETERMINISTIC_MAPPING_OF_SOURCE_RECORD_KINDS_WITHOUT_SEMANTIC_REINTERPRETATION",
+  "canonical_roles": [
+    "user",
+    "assistant",
+    "system_if_exported",
+    "tool_if_exported",
+    "opaque_unknown"
+  ],
+  "mapping_rules": [
+    {
+      "source_kind": "user",
+      "archive_role": "user",
+      "action": "PRESERVE"
+    },
+    {
+      "source_kind": "assistant",
+      "archive_role": "assistant",
+      "action": "PRESERVE"
+    },
+    {
+      "source_kind": "system",
+      "archive_role": "system_if_exported",
+      "action": "PRESERVE"
+    },
+    {
+      "source_kind": "tool",
+      "archive_role": "tool_if_exported",
+      "action": "PRESERVE"
+    },
+    {
+      "source_kind": "unknown_or_unmapped",
+      "archive_role": "opaque_unknown",
+      "action": "PRESERVE_OPAQUE_AND_BLOCK_100_PERCENT_UNTIL_RESOLVED"
+    }
+  ],
+  "forbidden": [
+    "map_system_to_assistant",
+    "map_tool_to_assistant",
+    "drop_unknown_record",
+    "infer_role_from_message_text",
+    "merge_adjacent_records_with_same_role"
+  ]
+}
