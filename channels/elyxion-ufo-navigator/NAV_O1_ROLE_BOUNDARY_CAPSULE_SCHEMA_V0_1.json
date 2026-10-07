@@ -1,0 +1,33 @@
+{
+  "schema_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required": [
+    "capsule_id",
+    "object_id",
+    "source_identity_evidence_id",
+    "source_boundary_evidence",
+    "role_summary",
+    "documented_non_authorities",
+    "status_and_evidence_ceiling",
+    "relation_assertions",
+    "unknowns",
+    "capsule_state"
+  ],
+  "capsule_state_values": [
+    "DRAFT_FROM_EXACT_ARTIFACTS",
+    "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+    "VERIFIED_WITH_LIMITS"
+  ],
+  "laws": {
+    "capsule_is_navigation_derivation_not_canon": true,
+    "role_summary_must_be_source_bound": true,
+    "documented_non_authorities_must_not_be_invented": true,
+    "empty_relation_assertions_are_preferred_over_inference": true,
+    "numbering_or_name_similarity_does_not_prove_route": true,
+    "capsule_does_not_grant_authority": true,
+    "evidence_ceiling_must_be_preserved": true,
+    "unknowns_must_remain_explicit": true
+  }
+}
