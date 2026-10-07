@@ -1,0 +1,26 @@
+{
+  "artifact_type": "EPRIME_CHAT_PARITY_VERIFIER_ALGORITHM_V1",
+  "status": "LOCKED_REFERENCE_ALGORITHM",
+  "inputs": [
+    "authoritative_source_records",
+    "archive_message_records",
+    "attachment_manifest"
+  ],
+  "algorithm": [
+    "compare total source record count to archive record count",
+    "iterate source and archive records by source order index",
+    "compare record kind to locked role mapping",
+    "compare message boundary identity one-to-one",
+    "compare raw text exactness for text-bearing records",
+    "compare timestamp state/value according to TIMESTAMP_PARITY_POLICY_V1",
+    "compare attachment count, order, and message association",
+    "count missing system records",
+    "count missing tool records",
+    "count opaque unresolved records",
+    "emit report without repair or inference"
+  ],
+  "deterministic": true,
+  "inference_behavior": "NONE",
+  "repair_behavior": "NONE",
+  "failure_behavior": "BLOCK"
+}
