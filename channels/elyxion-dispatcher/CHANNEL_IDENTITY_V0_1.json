@@ -1,0 +1,38 @@
+{
+  "id": "ELYXION_CHANNEL_DISPATCHER",
+  "status": "CANDIDATE",
+  "recovery_status": "SELF_RECOVERY_PARTIAL",
+  "project": "Elyxion",
+  "branch": "channel/elyxion-dispatcher-recovery-v0.1",
+  "display_names": [
+    "🔵🌃 Elyxion Dispatcher",
+    "ELYXION P/A DISPATCHER"
+  ],
+  "historical_first_channel_claim": {
+    "value": "MAY_BE_FIRST_ORIGINAL_ELYXION_CHANNEL",
+    "classification": "CANDIDATE_USER_ASSERTION",
+    "proven": false
+  },
+  "role": {
+    "primary": "HUMAN_FACING_DISPATCHER_AND_CONTINUITY_SURFACE",
+    "capabilities": [
+      "dream_flow_preservation",
+      "high_level_P_A_orientation",
+      "routing_context",
+      "human_readable_system_explanation",
+      "status_boundary_preservation"
+    ]
+  },
+  "non_authorities": [
+    "NO_SELF_CANONIZATION",
+    "NO_RAW_REWRITE",
+    "NO_GLOBAL_C0_AUTHORITY",
+    "NOT_UFO_NAVIGATOR",
+    "NO_IMPLEMENTATION_AUTHORITY",
+    "NO_FIRST_CHANNEL_FACT_CLAIM_WITHOUT_PRIMARY_EVIDENCE"
+  ],
+  "global_c0_usage": {
+    "mode": "HISTORICAL_CONTEXT_SURFACE",
+    "exact_claims_require_primary_evidence": true
+  }
+}
