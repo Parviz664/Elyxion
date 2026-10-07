@@ -304,3 +304,120 @@ NAV-002 V0.1 is successful when:
 This is not a claim that Elyxion is globally mapped.
 
 It is the first durable substrate from which global mapping can safely grow.
+
+## Global-understanding scalability law
+
+The future Global C0 must not scale by repeatedly loading all known Elyxion material.
+
+The target property is:
+
+> **As Elyxion grows, the cost of answering one bounded global question should grow primarily with the relevant dependency slice, not with the total accumulated project history.**
+
+This is a design target, not a mathematically proven complexity guarantee.
+
+### Consequence 1 — multi-resolution understanding
+
+Global understanding must exist at several resolutions:
+
+```text
+L0 — global orientation
+L1 — subsystem / channel map
+L2 — object records + authority/status
+L3 — dependency / relation slice
+L4 — source artifacts
+L5 — RAW / primary evidence
+```
+
+A query should begin at the cheapest sufficient level and descend only where uncertainty, authority, conflict, or decision risk requires it.
+
+### Consequence 2 — snapshot + delta, not full historical replay
+
+Current-state recovery should prefer:
+
+```text
+verified snapshot
+   + verified changes since snapshot
+   + targeted historical drill-down when needed
+```
+
+over:
+
+```text
+re-read entire project history before every task
+```
+
+Historical material remains durable evidence; it simply is not forced into every reasoning context.
+
+### Consequence 3 — task-scoped context assembly
+
+Future C0 context must be assembled around the current question.
+
+A task context should contain only:
+- the relevant global orientation;
+- the affected objects;
+- their authority/status/readiness;
+- required upstream/downstream relations;
+- live conflicts/unknowns;
+- the minimum evidence necessary for the decision.
+
+Unrelated project history should remain addressable but unloaded.
+
+### Consequence 4 — summaries are caches, never final truth
+
+Compressed views, indexes, summaries, snapshots, and navigation records may accelerate recovery.
+
+They must not silently replace primary evidence.
+
+When a decision depends on exact wording, provenance, authority, chronology, or disputed meaning, the system must be able to descend to the source artifact and, where available, RAW.
+
+### Consequence 5 — freshness and invalidation
+
+A compact global view becomes dangerous if it survives after its sources changed.
+
+Therefore future layers need:
+- last-verified source identifiers;
+- freshness state;
+- invalidation when upstream evidence changes;
+- targeted re-recovery of affected objects rather than global rebuild when possible.
+
+Hard freshness timing thresholds are intentionally not invented in NAV-002 V0.1.
+
+### Consequence 6 — conflicts and UNKNOWN are part of the map
+
+The map is not required to look clean.
+
+A scalable system must preserve:
+- unresolved conflicts;
+- disputed routes;
+- missing sources;
+- uncertain identities;
+- unknown handoffs.
+
+Hiding these to reduce context size would create false compression.
+
+### Consequence 7 — cold-start recoverability is a first-class quality target
+
+A future fresh Global C0 should be able to recover enough project state to answer a bounded question without relying on chat memory.
+
+Recovery quality should eventually be tested with fresh-instance tasks such as:
+- locate the relevant subsystem;
+- identify current authority;
+- identify current frontier;
+- distinguish CANON from CANDIDATE/EXPERIMENTAL;
+- detect known conflict/UNKNOWN;
+- descend to evidence;
+- refuse unsupported certainty.
+
+The benchmark contract is future work; NAV-002 does not invent pass percentages.
+
+## Cross-project contamination guard
+
+Elyxion and other projects must remain distinct evidence universes unless an explicit cross-project contract says otherwise.
+
+A user message may contain ideas, analogies, or text mentioning another project. Navigator may extract an explicitly intended **general architectural principle**, but must not silently import that other project's objects, history, statuses, authorities, or canon into Elyxion.
+
+Therefore:
+- foreign-project object identity is not Elyxion object identity;
+- foreign-project evidence is not Elyxion evidence;
+- architectural inspiration does not prove lineage;
+- any future bridge must be represented explicitly.
