@@ -47,6 +47,10 @@ jobs:
         run: python channels/elyxion-ufo-navigator/tools/test_global_c0_handoff_blocking.py
       - name: Test existing Global C0 cold-start export
         run: python channels/elyxion-ufo-navigator/tools/test_global_c0_cold_start_export.py
+      - name: Test O0 sector-level orientation
+        run: python channels/elyxion-ufo-navigator/tools/test_global_orientation_o0.py
+      - name: Test normalized semantic coverage boundary
+        run: python channels/elyxion-ufo-navigator/tools/test_semantic_coverage.py
       - name: Test expanded global orientation
         run: python channels/elyxion-ufo-navigator/tools/test_global_orientation.py
       - name: Falsify global orientation blocking states
