@@ -1,0 +1,39 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-060",
+  "status": "PASS_ARCHITECTURE__ATTACHMENTS_DURABILITY_AND_SOURCE_ACQUISITION_READY__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 60,
+  "raw_transcript_coverage_pct": 0,
+  "verified_recovery_pct": 0,
+  "verified_attachment_coverage_pct": 0,
+  "verified_raw_messages": 0,
+  "verified_real_attachments": 0,
+  "inferred_messages": 0,
+  "reconstructed_from_memory_messages": 0,
+  "silently_rewritten_messages": 0,
+  "silently_dropped_attachments": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "attachment_reference_schema_v1",
+    "attachment_manifest_schema_v1",
+    "durability_policy_v1",
+    "copy_verification_record_schema_v1",
+    "full_source_acquisition_workflow_v1",
+    "raw_destination_gate_v1",
+    "synthetic_attachment_test_vector_v1"
+  ],
+  "strongest_current_claim": {
+    "architecture": "60_PERCENT_READY",
+    "raw_content": "0_PERCENT_ARCHIVED",
+    "source_blob": "NOT_ACQUIRED",
+    "real_attachments": "0_PERCENT_ARCHIVED",
+    "independent_verified_copies": 0,
+    "exact_message_recovery": "NOT_YET_TESTED_ON_REAL_CHAT",
+    "byte_exact_source_recovery": "NOT_YET_AVAILABLE"
+  },
+  "privacy_gate": "ACTIVE__PUBLIC_REPOSITORY",
+  "next_target_pct": 70,
+  "next_stage_requirement": "Build cross-check/parity layer for source order, roles, timestamps, attachments, and tool/system records; continue to block real RAW writes until destination privacy is safe."
+}
