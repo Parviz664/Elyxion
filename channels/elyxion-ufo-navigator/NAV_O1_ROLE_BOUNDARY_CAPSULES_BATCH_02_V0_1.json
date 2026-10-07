@@ -34,7 +34,11 @@
         "current runtime activation between v3.0 and later v4.1",
         "cross-channel route outside era-specific recovered contracts"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_A1_ARCHITECT",
@@ -67,7 +71,11 @@
         "owner resolution of current v3.3 internal schema tension",
         "cross-channel route beyond directly recovered contracts"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_A1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_A2_SYSTEMS_MAP",
@@ -102,7 +110,11 @@
         "independent judge endpoint execution",
         "any unresolved source conflict outcome"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_A3_PRE_E0_HANDOFF",
@@ -136,7 +148,11 @@
         "global applicability outside recovered A3 contract scope",
         "cross-channel routing beyond explicitly recovered era contracts"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08"
+      ]
     }
   ],
   "laws": {
