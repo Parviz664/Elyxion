@@ -228,3 +228,17 @@ Candidate next sub-frontier:
 Goal:
 
 Turn bounded object/relation slices into evidence-addressable context manifests so a future Global C0 can descend from a selected slice to exact durable source artifacts without loading unrelated history.
+
+## Self-hosting freshness correction
+
+After the checkpoint validation base, Navigator corrected one self-reference hazard:
+
+A file on the Navigator branch cannot truthfully contain the SHA of the commit that contains that same final file state without becoming self-referential.
+
+Therefore `ELYX_SURFACE_UFO_NAVIGATOR.last_verified` now uses:
+
+`tracking_mode = SELF_CURRENT_HEAD`
+
+and delegates self freshness to `NAV_FRESHNESS_POLICY_V0_2`.
+
+External source branches remain pinned to observed commit heads.
