@@ -1,0 +1,164 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_E_PRIME_KERNEL",
+      "object_id": "ELYX_REC_E_PRIME_KERNEL",
+      "source_identity_evidence_id": "EVID_REC_E_PRIME_KERNEL_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E_PRIME_KERNEL_BOUNDARY"
+      ],
+      "role_summary": "Architectural E-Prime truth/evidence/lineage/recovery organ for verified technical state, provenance, gate verdicts, registry/seal, rollback/recovery, DreamVault lineage and later ExecutionCanon references.",
+      "documented_non_authorities": [
+        "not the game repository",
+        "not the author dream stream",
+        "does not replace A0/A-Ultra/A1/A2/A3",
+        "not E0 bind authority",
+        "not E6 runtime authority",
+        "not the E-Prime chat archive",
+        "not a self-certifying oracle"
+      ],
+      "status_and_evidence_ceiling": {
+        "identity_status": "RECOVERED_ARCHITECTURAL_IDENTITY",
+        "namespace_boundary": "architectural E_PRIME_UE55_CANONICAL_TRUTH_KERNEL is separate from E-Prime CHAT_TRANSCRIPTS_ONLY archive branch",
+        "evidence_ceiling": "SOURCE_BOUND_RECOVERY_ARTIFACTS"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "full current authority precedence relative to all later E surfaces",
+        "exact current operational route to Global C0",
+        "any relation not directly stated in recovered artifacts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E_CHAIN_RESEARCH",
+      "object_id": "ELYX_REC_E_CHAIN_RESEARCH",
+      "source_identity_evidence_id": "EVID_REC_E_CHAIN_RESEARCH_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E_CHAIN_RESEARCH_BOUNDARY"
+      ],
+      "role_summary": "Meta-research / architecture-proof / recovery channel that researches and reconstructs the E-chain as a system, including dream-to-game-form placement, E0-E6 history, E5 boundaries, and E-Prime state evolution.",
+      "documented_non_authorities": [
+        "not E0, E1, E2, E3, E4, E5, E6 or E-Prime",
+        "not a gameplay implementation channel",
+        "not authority to invent missing history",
+        "does not own P/A dream extraction or canonization",
+        "does not own UE implementation"
+      ],
+      "status_and_evidence_ceiling": {
+        "identity_status": "RECOVERED_WITH_GAPS",
+        "whole_chain_identity_confidence": "HIGH",
+        "historical_name": "UNKNOWN",
+        "full_original_contract": "NOT_RECOVERED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "historical channel name",
+        "full original contract",
+        "globally authoritative E-chain route"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_DISPATCHER",
+      "object_id": "ELYX_REC_DISPATCHER",
+      "source_identity_evidence_id": "EVID_REC_DISPATCHER_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_DISPATCHER_BOUNDARY"
+      ],
+      "role_summary": "Human-facing Elyxion dispatcher / continuity surface for dream-flow preservation, high-level P/A orientation, routing context, human-readable system explanation, and status-boundary preservation.",
+      "documented_non_authorities": [
+        "no self-canonization",
+        "no RAW rewrite",
+        "no Global C0 authority",
+        "not the UFO Navigator",
+        "no implementation authority",
+        "no first-channel fact claim without primary evidence",
+        "not a replacement for P/A/E/D specialist channels"
+      ],
+      "status_and_evidence_ceiling": {
+        "lifecycle_status": "CANDIDATE",
+        "recovery_status": "SELF_RECOVERY_PARTIAL",
+        "canon_status": "NOT_CANON",
+        "historical_first_channel_claim": "CANDIDATE_USER_ASSERTION / UNPROVEN"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "whether this was historically the first/original Elyxion channel",
+        "exact chronology without primary transcript evidence"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_PAE_HISTORY",
+      "object_id": "ELYX_REC_PAE_HISTORY",
+      "source_identity_evidence_id": "EVID_REC_PAE_HISTORY_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_PAE_HISTORY_BOUNDARY"
+      ],
+      "role_summary": "Historical interpreter / human explainer / cross-channel archaeology surface for recovered P/A/E channel families, focused on lineage, role evolution, authority boundaries, contradiction classification, and evidence maps.",
+      "documented_non_authorities": [
+        "does not make canon decisions",
+        "does not make channel activation verdicts",
+        "does not make global route decisions",
+        "does not rewrite contracts",
+        "does not invent missing history",
+        "does not implement runtime",
+        "does not semantically upgrade old artifacts",
+        "must not drift into Global C0, UFO Navigator, Dispatcher, E-Prime, or specialist P/A/E roles"
+      ],
+      "status_and_evidence_ceiling": {
+        "role_class": "HISTORICAL_INTERPRETER / HUMAN_EXPLAINER / CROSS_CHANNEL_ARCHAEOLOGY",
+        "scope": "P/A/E recovered channel families",
+        "global_authority_boundary": "may escalate evidence; may not declare globally authoritative route"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "globally authoritative route when recovered channels disagree",
+        "historical facts lacking primary evidence"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_A_ULTRA",
+      "object_id": "ELYX_REC_A_ULTRA",
+      "source_identity_evidence_id": "EVID_REC_A_ULTRA_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_A_ULTRA_BOUNDARY"
+      ],
+      "role_summary": "Recovered A-Ultra / AUltra identity with compatibility role A_MINUS_1_VISION_TRANSLATOR; its current boundaries preserve source-grounded vision semantics while separating poetic/tone material from factual logic and implementation authority.",
+      "documented_non_authorities": [
+        "A-Ultra is not A1",
+        "does not route the whole project",
+        "does not decide build readiness",
+        "does not write A1 architecture",
+        "does not execute E implementation",
+        "does not resolve missing source by invention",
+        "does not turn metaphor into world law automatically"
+      ],
+      "status_and_evidence_ceiling": {
+        "naming_contract": "RECOVERED_FACT",
+        "line_by_line_authorship": "UNKNOWN",
+        "independent_rename_rationale": "UNKNOWN",
+        "continuity": "v4.3 supersedes v4.2 and preserves legacy aliases"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "independent author rationale for rename",
+        "formal status of historically observed P4 direct input"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "capsules_are_navigation_derivations_not_canon": true,
+    "no_cross_channel_route_is_created_by_this_batch": true,
+    "source_identity_and_boundary_evidence_are_preserved": true,
+    "semantic_verification_receipts_are_still_required_before_verified_claim_promotion": true
+  }
+}
