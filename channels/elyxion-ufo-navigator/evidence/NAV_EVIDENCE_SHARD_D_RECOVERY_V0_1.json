@@ -1,0 +1,103 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_D_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_REC_D0_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d0-psychological-orchestration-governor-recovery-v0.1:channels/d0-psychological-orchestration-governor/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d0-psychological-orchestration-governor-recovery-v0.1",
+      "path": "channels/d0-psychological-orchestration-governor/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "d6b2e0bfcf3a07f221020754fe8dd9de7b352f43",
+      "observed_source_head": "c19b6c7fd6f4dca88750d7571d77c3518ffe2ec2",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_D0",
+        "RELATION:REL_NAV_OBSERVES_REC_D0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_D1_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d1-performance-comfort-antiboredom-recovery-v0.1:channels/d1-performance-comfort-antiboredom-guard/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d1-performance-comfort-antiboredom-recovery-v0.1",
+      "path": "channels/d1-performance-comfort-antiboredom-guard/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "8562c159e2ba0878d4212c6ea3131cc5021a9c0d",
+      "observed_source_head": "e9abc30ea80604d57998dd8e4825c5994f4798a9",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_D1",
+        "RELATION:REL_NAV_OBSERVES_REC_D1"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_D2_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d2-psychological-microdirection-recovery-v0.1:channels/d2-psychological-microdirection/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d2-psychological-microdirection-recovery-v0.1",
+      "path": "channels/d2-psychological-microdirection/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "eb802fe66e2e0f8ce5bb6862bee6455c9fc9a709",
+      "observed_source_head": "9e34b0c93833faf42841a40797515b77806e86d8",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_D2",
+        "RELATION:REL_NAV_OBSERVES_REC_D2"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_D3_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d3-latent-superiority-recovery-v0.1:channels/d3-latent-superiority-augmentation/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d3-latent-superiority-recovery-v0.1",
+      "path": "channels/d3-latent-superiority-augmentation/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "f85ec11d32a544ce89a2f38895e2586eb44d030c",
+      "observed_source_head": "e62c6ff7da15cfefc3d3da6a07bd22d81c79cf03",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_D3",
+        "RELATION:REL_NAV_OBSERVES_REC_D3"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_D4_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/d4-psycho-operational-trajectory-stabilization-recovery-v0.1:channels/d4-psycho-operational-trajectory-stabilization/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/d4-psycho-operational-trajectory-stabilization-recovery-v0.1",
+      "path": "channels/d4-psycho-operational-trajectory-stabilization/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "9ed5e94dfcc848474cfc0d9f41c54c8b1a892cc2",
+      "observed_source_head": "4aaa4acc1f8126ab4b77d4dc64cd300c9ce18382",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_D4",
+        "RELATION:REL_NAV_OBSERVES_REC_D4"
+      ]
+    }
+  ]
+}
