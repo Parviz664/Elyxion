@@ -57,7 +57,7 @@
           "ref": "E-Prime"
         }
       ],
-      "semantic_status": "FROZEN",
+      "semantic_status": "UNKNOWN",
       "evidence_state": "DIRECTLY_OBSERVED",
       "authority": {
         "navigation": "NONE",
@@ -111,10 +111,10 @@
         "execution": "UNKNOWN",
         "archive": "NONE",
         "routing": "NONE",
-        "implementation": "EXPLICIT",
+        "implementation": "UNKNOWN",
         "author_selection": "NONE"
       },
-      "readiness": "PARTIAL",
+      "readiness": "UNKNOWN",
       "provenance": {
         "source_kind": "GITHUB_BRANCH",
         "direct_observation": true
@@ -124,7 +124,8 @@
       "conflicts": [],
       "unknowns": [
         "exact handoff from P-system",
-        "full implementation authority scope"
+        "full implementation authority scope",
+        "implementation authority is not proven by implementation presence"
       ],
       "evidence": [
         "agent/phase1-scaffold:README.md"
@@ -250,5 +251,6 @@
     "id": "NAV-002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE",
     "state": "ACTIVE_CANDIDATE",
     "goal": "build durable typed substrate for future Global C0 recovery without inventing missing project state"
-  }
+  },
+  "recovery_profile_ref": "NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
 }
