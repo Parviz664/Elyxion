@@ -1,0 +1,71 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_P_LATE_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_REC_P3",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P3",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p3-final-text-renderer-recovery-v0.1:channels/p3-final-text-renderer/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "a0e32002ac26a1d352a5ee4a956c31b7334a8a18",
+        "identity_blob_sha": "4388e8639ee49126e0441504f9d73ba5039d1c58",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_P4",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P4",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p4-feel-potential-engine-recovery-v0.1:channels/p4-feel-potential-engine/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "ae83997616370b0c01ddd1996768d9d1653752c3",
+        "identity_blob_sha": "3d0929f2c9e786c57e36dcea4b68fbcf91733432",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_P5",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_P5",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p5-feel-truth-compressor-recovery-v0.1:channels/p5-feel-truth-compressor/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "2a7f166e8a3d66ba98029e9a63fff0e06e0e66a1",
+        "identity_blob_sha": "ecc0e17a0d007de2150f1517e15fc775f5bee62b",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    }
+  ]
+}
