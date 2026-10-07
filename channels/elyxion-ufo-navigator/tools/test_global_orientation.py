@@ -5,7 +5,9 @@ def main():
     o=build_global_orientation()
     bad=[]
 
-    if o["readiness"]!="READY_GLOBAL_ORIENTATION":bad.append("readiness")
+    if o["readiness"]!="READY_TOPOLOGY_ORIENTATION":bad.append("readiness")
+    if o["topology_readiness"]!="READY_TOPOLOGY_ORIENTATION":bad.append("topology-readiness")
+    if o["semantic_readiness"]!="PARTIAL_NORMALIZED_SEMANTIC_COVERAGE":bad.append("semantic-readiness")
     if o["freshness"]["state"]!="FRESH":bad.append("freshness")
 
     cov=o["coverage"]
@@ -13,6 +15,7 @@ def main():
     if cov["observed_objects"]!={"selected":33,"total":33,"ratio":1.0}:bad.append("objects")
     if cov["discovery_horizon"]!={"selected":6,"total":6,"ratio":1.0}:bad.append("discovery")
     if cov["selected_claim_verification"]!={"sufficient":9,"selected":9,"ratio":1.0}:bad.append("claims")
+    if cov["normalized_object_claim_coverage"]!={"covered":6,"total":33,"ratio":6/33,"uncovered":27}:bad.append("semantic-coverage")
     if cov["evidence_identity"]["selected"]!=42 or cov["evidence_identity"]["total"]!=46:bad.append("evidence")
 
     h=o["ambient_discovery_horizon"]
@@ -34,7 +37,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: global orientation branches=31/31 objects=33/33 discovery=6/6 claims=9/9 evidence=42/46 bodies=0")
+    print("PASS: topology=READY branches=31/31 objects=33/33 discovery=6/6; indexed claims=9/9; normalized semantic objects=6/33 PARTIAL; evidence=42/46 bodies=0")
     return 0
 
 if __name__=="__main__":
