@@ -1,0 +1,56 @@
+{
+  "policy_id": "ELYXION_NAV_CONTEXT_PACK_RISK_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "bands": [
+    {
+      "id": "LOW",
+      "meaning": "orientation-only; no material dispute or authority decision"
+    },
+    {
+      "id": "ELEVATED",
+      "meaning": "unresolved boundary or author-declared-only dependency affects interpretation"
+    },
+    {
+      "id": "HIGH",
+      "meaning": "open collision, authority/canon decision, stale source, or cross-system handoff affects answer"
+    },
+    {
+      "id": "BLOCKED",
+      "meaning": "required evidence unavailable, stale recovery incomplete, or primary source required but missing"
+    }
+  ],
+  "rules": [
+    {
+      "when": "open collision is present and material",
+      "minimum_band": "HIGH",
+      "minimum_materialization": "M2_CONFLICT_SET"
+    },
+    {
+      "when": "unresolved relation affects conclusion",
+      "minimum_band": "ELEVATED",
+      "minimum_materialization": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "when": "authority or canon is being decided",
+      "minimum_band": "HIGH",
+      "minimum_materialization": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "when": "required source is stale",
+      "minimum_band": "BLOCKED",
+      "required_action": "targeted recovery before high-confidence use"
+    },
+    {
+      "when": "RAW is explicitly required but unavailable",
+      "minimum_band": "BLOCKED",
+      "required_action": "report missing primary evidence"
+    }
+  ],
+  "laws": {
+    "risk_band_does_not_measure_project_importance": true,
+    "risk_band_controls_evidence_escalation_not_emotional_tone": true,
+    "blocked_pack_must_not_be_presented_as_complete": true
+  }
+}
