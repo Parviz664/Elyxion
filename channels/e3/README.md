@@ -1,6 +1,6 @@
 # Elyxion E3 — Self-Recovery
 
-Status: RECOVERY_CANDIDATE_STRONG_WITH_GAPS
+Final recovery status: SELF_RECOVERY_PASS_WITH_GAPS
 
 Current strongest-known contracted identity:
 E3_CONVERGENCE_PACKAGING_AND_MICROSTEP_READINESS, spec 2.0.0.
@@ -22,4 +22,7 @@ SUPPLIED_BY_AUTHOR != NECESSARILY AUTHORED_BY_AUTHOR.
 Critical current boundary:
 E3 v2.0 does not choose among strategy portfolios, does not score superiority, does not bind canon, does not directly verify registry/seal, does not execute builds/tests/releases, and does not invent missing affordances.
 
-Before this recovery branch, no dedicated E3 repository surface was observed in the fresh branch/code search. E-Prime is a separate CHAT_TRANSCRIPTS_ONLY archive and is not used as the E3 recovery location.
+Before this recovery branch, no dedicated E3 repository surface was observed in the fresh branch/code search. E-Prime is a separate CHAT_TRANSCRIPTS_ONLY archive and was not used as the E3 recovery location.
+
+Audit:
+POST_WRITE_AUDIT = PASS_WITH_PRESERVED_GAPS.
