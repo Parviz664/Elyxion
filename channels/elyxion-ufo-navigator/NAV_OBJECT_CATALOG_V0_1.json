@@ -1,0 +1,56 @@
+{
+  "catalog_id": "ELYXION_NAV_OBJECT_CATALOG_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "core_registry": {
+    "path": "NAV_OBJECT_REGISTRY_V0_4.json",
+    "object_count": 7
+  },
+  "shards": [
+    {
+      "id": "A_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_A_RECOVERY_V0_1.json",
+      "object_count": 5
+    },
+    {
+      "id": "D_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_D_RECOVERY_V0_1.json",
+      "object_count": 5
+    },
+    {
+      "id": "E_INGRESS_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+      "object_count": 4
+    },
+    {
+      "id": "E_DOWNSTREAM_META_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json",
+      "object_count": 4
+    },
+    {
+      "id": "P_EARLY_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_P_EARLY_RECOVERY_V0_1.json",
+      "object_count": 3
+    },
+    {
+      "id": "P_LATE_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_P_LATE_RECOVERY_V0_1.json",
+      "object_count": 3
+    },
+    {
+      "id": "META_RECOVERY",
+      "path": "objects/NAV_OBJECT_SHARD_META_RECOVERY_V0_1.json",
+      "object_count": 2
+    }
+  ],
+  "discovery_ledger_ref": "NAV_DISCOVERY_LEDGER_V0_1.json",
+  "total_objects": 33,
+  "laws": {
+    "object_ids_must_be_unique_across_core_and_shards": true,
+    "shard_is_storage_partition_not_authority_partition": true,
+    "recovery_object_presence_does_not_prove_semantic_relations": true,
+    "discovery_state_comes_from_discovery_ledger_when_present": true,
+    "consumers_may_load_only_required_object_shards": true
+  }
+}
