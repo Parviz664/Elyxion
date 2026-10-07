@@ -107,6 +107,40 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_P_CONTROL_README_M1_2026_10_07",
+      "evidence_id": "EVID_P_CONTROL_README",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/p-control-point-v0.1",
+        "path": "channels/p-control-point/README.md",
+        "observed_blob_sha": "782460dd77037f9a3d933a83dd255bc0f70ac5d4"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 3955,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_PHASE1_README_M1_2026_10_07",
+      "evidence_id": "EVID_PHASE1_README",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "agent/phase1-scaffold",
+        "path": "README.md",
+        "observed_blob_sha": "be9a4134c8cb0ff5c8901d1aa2eb8feae228ea39"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 4455,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
