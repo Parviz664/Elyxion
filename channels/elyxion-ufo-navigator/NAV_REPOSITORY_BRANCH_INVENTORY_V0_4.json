@@ -38,10 +38,11 @@
     },
     {
       "branch": "channel/elyxion-ufo-navigator-v0.1",
-      "head_sha": "edccd2538f7dd29be5ec2ca6d30a26eb2351131f",
+      "head_sha": null,
       "family": "NAVIGATOR",
       "registry_state": "REPRESENTED_CORE",
-      "identity_evidence": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ACTIVATE.md"
+      "identity_evidence": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ACTIVATE.md",
+      "head_tracking": "SELF_CURRENT_HEAD"
     },
     {
       "branch": "channel/a0-orchestrator-recovery-v0.1",
