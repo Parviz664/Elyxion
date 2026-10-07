@@ -1,0 +1,48 @@
+{
+  "registry_id": "ELYXION_NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_ECOSYS_EPRIME_SCOPE_COLLISION_2026_10_07",
+      "claim_id": "CLAIM_ECOSYS_EPRIME_SCOPE_COLLISION_OPEN",
+      "claim_epistemic_state": "NAVIGATOR_ASSESSMENT",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_ECO_SYSTEMS_M2_2026_10_07",
+        "MAT_EPRIME_LOCK_M2_2026_10_07",
+        "MAT_EPRIME_MANIFEST_M2_2026_10_07"
+      ],
+      "observations": [
+        "Eco-Systems assigns E-Prime a broad durable-reality/recovery role.",
+        "E-Prime lock purpose=CHAT_TRANSCRIPTS_ONLY.",
+        "E-Prime manifest archive_scope=THIS_EPRIME_CHAT_TRANSCRIPT_ONLY; source_of_truth=RAW_CHAT_TRANSCRIPT."
+      ],
+      "limits": [
+        "This supports an unresolved scope mismatch; it does not determine which description has higher authority.",
+        "The documents may describe different intended layers or historical moments; Navigator must not auto-resolve that possibility."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_GLOBAL_C0_EXISTS_AUTHOR_LEVEL_2026_10_07",
+      "claim_id": "CLAIM_GLOBAL_C0_EXISTS",
+      "claim_epistemic_state": "AUTHOR_DECLARED",
+      "verdict": "SUPPORTED_AT_DECLARED_LEVEL",
+      "materialization_receipt_ids": [
+        "MAT_AUTHOR_GLOBAL_C0_M1_2026_10_07",
+        "MAT_GLOBAL_C0_BOUNDARY_M1_2026_10_07"
+      ],
+      "observations": [
+        "Author declaration=Global C0 already exists.",
+        "Repository surface=UNKNOWN"
+      ],
+      "limits": [
+        "This verifies the claim only at AUTHOR_DECLARED epistemic level.",
+        "It is not independent evidence of Global C0 implementation or repository location."
+      ],
+      "authority_effect": "NONE"
+    }
+  ]
+}
