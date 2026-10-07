@@ -1,0 +1,116 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_O1_BOUNDARY_BATCH_03_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_O1_P0_INTENT_NORMALIZER_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p0-intent-normalizer-recovery-v0.1:channels/p0-intent-normalizer/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p0-intent-normalizer-recovery-v0.1",
+      "path": "channels/p0-intent-normalizer/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "9c25f3335c928713d8bc9937c54d024d7ad2dd62",
+      "observed_source_head": "b79258b64d22bf9889568540eb7d310610840e0a",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P0_INTENT_NORMALIZER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_P1_MAP_PLANNER_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p1-map-planner-recovery-v0.1:channels/p1-map-planner/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p1-map-planner-recovery-v0.1",
+      "path": "channels/p1-map-planner/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "45a26967f3eae3c4b6cc7dfd2ce344bd9aa43cb1",
+      "observed_source_head": "594253aa9213265565ea5c201421d2fcfc0b20fb",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P1_MAP_PLANNER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_P2_LADDER_BUILDER_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p2-ladder-builder-recovery-v0.1:channels/p2-ladder-builder/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p2-ladder-builder-recovery-v0.1",
+      "path": "channels/p2-ladder-builder/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "d1afd7e9795b4b5ba3bb4a283d6e5096361cf22e",
+      "observed_source_head": "8eba384e005baac1bade2ddd2927cddb09b7dd5e",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P2_LADDER_BUILDER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p3-final-text-renderer-recovery-v0.1:channels/p3-final-text-renderer/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p3-final-text-renderer-recovery-v0.1",
+      "path": "channels/p3-final-text-renderer/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "48c33fc40e8f42ae41bc596b2bd2f9b72410f0e1",
+      "observed_source_head": "a0e32002ac26a1d352a5ee4a956c31b7334a8a18",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P3_FINAL_TEXT_RENDERER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p4-feel-potential-engine-recovery-v0.1:channels/p4-feel-potential-engine/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p4-feel-potential-engine-recovery-v0.1",
+      "path": "channels/p4-feel-potential-engine/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "34dad282e94e8237a518d0cd9990ce8e8858087e",
+      "observed_source_head": "ae83997616370b0c01ddd1996768d9d1653752c3",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P4_FEEL_POTENTIAL"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_P5_FEEL_TRUTH_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p5-feel-truth-compressor-recovery-v0.1:channels/p5-feel-truth-compressor/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p5-feel-truth-compressor-recovery-v0.1",
+      "path": "channels/p5-feel-truth-compressor/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "26a2dccf6c048315a8d6da665fa79177888e623b",
+      "observed_source_head": "2a7f166e8a3d66ba98029e9a63fff0e06e0e66a1",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_P5_FEEL_TRUTH"
+      ]
+    }
+  ]
+}
