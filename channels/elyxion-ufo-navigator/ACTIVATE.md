@@ -14,50 +14,61 @@ The creator explicitly states:
 
 `Global C0 already exists.`
 
-Navigator must not build, rebuild, duplicate, replace, or impersonate Global C0.
+Navigator must not build, rebuild, duplicate, replace, impersonate, or define the internals of Global C0.
 
 Current Navigator representation:
 
 - existence = `AUTHOR_DECLARED_EXISTS`
 - durable/repository location = `UNKNOWN`
 - Navigator Global C0 authority = `NONE`
-- Navigator role = substrate preparation only
+- Navigator role = evidence/navigation/recovery substrate only
 
 Read first:
 
-- `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
-- `channels/elyxion-ufo-navigator/NAV_AUTHOR_DECLARATIONS_V0_1.json`
+- `NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
+- `NAV_AUTHOR_DECLARATIONS_V0_1.json`
 
 ## Fresh activation procedure
 
-1. Fresh-read:
-   - `channels/elyxion-ufo-navigator/README.md`
-   - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
-   - `channels/elyxion-ufo-navigator/NAV_AUTHOR_DECLARATIONS_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_4.json`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_4.json`
-   - `channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_COLLISION_REGISTRY_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_EVIDENCE_SCHEMA_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_EVIDENCE_INDEX_V0_2.json`
-   - `channels/elyxion-ufo-navigator/NAV_CLAIM_SCHEMA_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_CLAIM_INDEX_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_CONTEXT_PACK_INVALIDATION_POLICY_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_CONTEXT_PACK_SCHEMA_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_002B_CLAIM_AWARE_CONTEXT_HANDOFF_CHECKPOINT_V0_2.md`
-2. Fresh-recover current branch/source heads before trusting cached navigation state.
-3. Run targeted freshness logic; do not globally replay Elyxion unless evidence actually requires it.
-4. Keep lifecycle status, source-native status, evidence state, authority, readiness, relation state, collision state, claim epistemics, and freshness distinct.
-5. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
-6. Never traverse unresolved relations as facts.
-7. Never auto-resolve collisions.
-8. Never treat an author declaration as GitHub-observed evidence.
-9. Never fill the existing Global C0 repository location without evidence.
+Fresh-read current contracts:
+
+- `README.md`
+- `NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
+- `NAV_AUTHOR_DECLARATIONS_V0_1.json`
+- `NAV_OBJECT_SCHEMA_V0_4.json`
+- `NAV_OBJECT_REGISTRY_V0_4.json`
+- `NAV_RELATION_SCHEMA_V0_3.json`
+- `NAV_RELATION_REGISTRY_V0_3.json`
+- `NAV_COLLISION_REGISTRY_V0_1.json`
+- `NAV_FRESHNESS_POLICY_V0_3.json`
+- `NAV_EVIDENCE_SCHEMA_V0_1.json`
+- `NAV_EVIDENCE_INDEX_V0_2.json`
+- `NAV_CLAIM_SCHEMA_V0_1.json`
+- `NAV_CLAIM_INDEX_V0_1.json`
+- `NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json`
+- `NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json`
+- `NAV_CONTEXT_PACK_INVALIDATION_POLICY_V0_1.json`
+- `NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1.json`
+- `NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1.json`
+- `NAV_MATERIALIZATION_RECEIPTS_V0_1.json`
+- `NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
+- `NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json`
+- `NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1.json`
+- `NAV_CONTEXT_PACK_SCHEMA_V0_3.json`
+- `NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_2.json`
+- `NAV_002B_MATERIALIZATION_VERIFICATION_REPAIR_CHECKPOINT_V0_3.md`
+
+Then:
+
+1. Fresh-recover current branch/source heads.
+2. Apply targeted freshness logic before trusting cached packs.
+3. Preserve lifecycle status, source-native labels, evidence state, authority, readiness, relation state, collision state, claim epistemics, verification state, and freshness as distinct axes.
+4. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
+5. Never traverse unresolved relations as facts.
+6. Never auto-resolve collisions.
+7. Never treat an author declaration as independent implementation evidence.
+8. Never promote an AUTHOR_DECLARED claim above `SUPPORTED_AT_DECLARED_LEVEL` without independent evidence.
+9. Never fill the existing Global C0 durable location without evidence.
 10. Never build Global C0.
 
 ## Current frontier
@@ -70,7 +81,7 @@ Parent:
 
 State:
 
-`ACTIVE_CANDIDATE / CLAIM-AWARE FINGERPRINTED PACKS + HANDOFF PROVEN BY MIRROR`
+`ACTIVE_CANDIDATE / MATERIALIZED + SEMANTICALLY VERIFIED + TARGETED-REPAIRABLE + EXPORTABLE`
 
 ## Current durable substrate
 
@@ -82,7 +93,8 @@ State:
 - freshness bindings = **21**
 - evidence identities = **20**
 - claims = **13**
-- author declarations = **1**
+- materialization receipts = **6**
+- semantic verification receipts = **7**
 
 Implemented:
 
@@ -97,35 +109,88 @@ Implemented:
 - bounded claim-aware context packs;
 - exact source snapshots;
 - SHA-256 pack fingerprint;
+- materialization receipt layer;
+- semantic claim verification receipts;
+- claim-specific evidence sufficiency policy;
 - targeted stale-pack invalidation;
-- existing Global C0 handoff envelope;
-- compact claim-aware validator V0.3;
+- targeted pack repair planner;
+- verification-aware existing Global C0 handoff V0.2;
+- cold-start export builder;
+- compact validators/regression tests;
 - GitHub Actions gate.
 
-## Latest synchronous proof
+## Materialization / verification law
 
-Current mirror verdict:
+`source retrieved != claim verified`
 
-`PASS`
+Materialization proves the exact source identity/read.
 
-Context packs:
+Semantic verification is a separate receipt.
 
-- Eco one-hop → 3 objects / 5 claims / 10 evidence / HIGH / M2 / FRESH
-- Navigator zero-hop → 1 object / 4 claims / 7 evidence / ELEVATED / M1 / FRESH
+Current control verification:
 
-Invalidation:
+### Eco one-hop
 
-- used `main` changes → `STALE_TARGETED`
-- unrelated P-control changes → Eco pack remains `FRESH`
-- used self evidence changes → `STALE_TARGETED`
-- author declaration registry changes → `STALE_TARGETED`
+- selected claims = 5
+- sufficient claims = 5
+- verification coverage = **1.0**
+- collision = `SUPPORTED_WITH_LIMITS`
 
-Global C0 handoff:
+### Navigator zero-hop
 
-- Eco one-hop → PASS
-- Navigator zero-hop → PASS
-- construction flag = false
-- consumer location = UNKNOWN
+- selected claims = 4
+- sufficient claims = 4
+- verification coverage = **1.0**
+
+Global C0 claims remain:
+
+`SUPPORTED_AT_DECLARED_LEVEL`
+
+not independent FACT.
+
+## Targeted repair law
+
+If:
+
+`branch head changed + used blob unchanged`
+
+then:
+
+`REVALIDATED_UNCHANGED`
+
+No semantic recheck is required.
+
+If:
+
+`used evidence blob changed`
+
+then:
+
+`rematerialize changed evidence → reverify dependent claims → reuse fresh supporting evidence → new fingerprint`
+
+Do not replay unrelated Elyxion history.
+
+## Existing Global C0 handoff
+
+Handoff readiness values:
+
+- `READY_FOR_GLOBAL_C0_REVIEW`
+- `BLOCKED_FRESHNESS`
+- `BLOCKED_EVIDENCE`
+
+Critical claims require sufficient verification before readiness.
+
+Cold-start export contains:
+
+- consumer boundary;
+- pack fingerprint;
+- risk/materialization;
+- verification summary;
+- verified claims + limits;
+- unresolved/collision/discovery IDs;
+- targeted repair contract.
+
+It does not define Global C0 internals.
 
 ## Important unresolved surfaces
 
@@ -141,28 +206,41 @@ Global C0 handoff:
 
 `COL_ECOSYS_EPRIME_SCOPE_001`
 
-State:
+Current verification:
 
-`OPEN_UNRESOLVED`
+`SUPPORTED_WITH_LIMITS`
 
-Do not infer a broad Eco-Systems → E-Prime operational handoff until authoritative evidence resolves the scope mismatch.
+Observed mismatch:
 
-## Validation caveat
+- Eco-Systems gives E-Prime a broad durable-reality/recovery role;
+- E-Prime own lock says `CHAT_TRANSCRIPTS_ONLY`;
+- E-Prime manifest says `THIS_EPRIME_CHAT_TRANSCRIPT_ONLY`.
 
-No GitHub Actions execution PASS has yet been observed through the connector.
+Do not choose a winner automatically.
 
-Container fresh-clone execution is currently blocked by infrastructure rate limiting.
+## Latest evidence level
 
-Use synchronous GitHub-state mirror PASS as the current evidence level, not CI PASS.
+Current synchronous GitHub-state verification:
 
-## Next work inside NAV-002B
+`PASS`
 
-- evidence body materialization with receipts;
-- claim verification receipts;
-- targeted stale-pack repair;
-- evidence sufficiency rules;
-- cold-start export samples for the existing Global C0 interface;
-- continue repository discovery without constructing Global C0.
+Control verification coverage:
+
+- Eco = **5/5**
+- Navigator zero-hop = **4/4**
+
+GitHub Actions workflow is configured for the current substrate, but no execution PASS has yet been observed through the connector.
+
+Do not claim CI PASS until observed.
+
+## Next candidate work
+
+- falsify handoff blocking states (`BLOCKED_EVIDENCE`, `BLOCKED_FRESHNESS`);
+- build reverse verification-dependency index for larger repair scopes;
+- broader multi-surface cold-start benchmark;
+- materialize only high-value evidence on demand;
+- continue discovering missing durable Elyxion surfaces;
+- never construct Global C0.
 
 ## Fresh-chat activation phrase
 
