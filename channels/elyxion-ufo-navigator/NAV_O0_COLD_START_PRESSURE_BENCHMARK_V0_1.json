@@ -11,8 +11,8 @@
       "observed_branches": 31,
       "observed_objects": 33,
       "discovery_targets": 6,
-      "selected_evidence_identities": 51,
-      "total_evidence_identities": 55,
+      "selected_evidence_identities": 57,
+      "total_evidence_identities": 61,
       "default_loaded_source_bodies": 0,
       "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
     },
@@ -27,7 +27,7 @@
     }
   },
   "measured_effect": {
-    "cold_start_individual_evidence_identity_load_change": "51 -> 0",
+    "cold_start_individual_evidence_identity_load_change": "57 -> 0",
     "exact_source_body_load_change": "0 -> 0",
     "sector_capsules_added": 6,
     "branch_and_object_count_visibility_preserved": true,
