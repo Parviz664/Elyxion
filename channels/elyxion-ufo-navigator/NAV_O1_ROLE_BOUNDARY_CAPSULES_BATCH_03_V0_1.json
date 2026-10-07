@@ -37,11 +37,12 @@
         "stable direct P0-to-A handoff",
         "current global route"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P0_IDENTITY_M1_2026_10_08",
         "MAT_O1_P0_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P0_INTENT_NORMALIZER_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_P1_MAP_PLANNER",
@@ -74,11 +75,12 @@
         "generic owner-confirmed mechanics boundary resolution",
         "runtime implementation state"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P1_IDENTITY_M1_2026_10_08",
         "MAT_O1_P1_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P1_MAP_PLANNER_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_P2_LADDER_BUILDER",
@@ -110,11 +112,12 @@
         "direct production consumption by each named A channel",
         "standalone runtime implementation"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P2_IDENTITY_M1_2026_10_08",
         "MAT_O1_P2_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P2_LADDER_BUILDER_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_P3_FINAL_TEXT_RENDERER",
@@ -148,11 +151,12 @@
         "direct A3 consumer route",
         "globally authoritative P route"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P3_IDENTITY_M1_2026_10_08",
         "MAT_O1_P3_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P3_FINAL_TEXT_RENDERER_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_P4_FEEL_POTENTIAL",
@@ -186,11 +190,12 @@
         "current globally authoritative route",
         "any automatic downstream authority from A-layer route options"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P4_IDENTITY_M1_2026_10_08",
         "MAT_O1_P4_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P4_FEEL_POTENTIAL_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_P5_FEEL_TRUTH",
@@ -225,11 +230,12 @@
         "external runtime implementation",
         "historical A/E handoff rules for earlier versions"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_P5_IDENTITY_M1_2026_10_08",
         "MAT_O1_P5_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_P5_FEEL_TRUTH_ROLE_BOUNDARY_2026_10_08"
     }
   ],
   "laws": {
