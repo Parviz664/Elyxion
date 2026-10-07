@@ -1,0 +1,51 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-090",
+  "status": "PASS_ARCHITECTURE__FINAL_AUDIT_AND_FAILURE_INJECTION_LAYER_READY__REAL_RAW_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 90,
+  "raw_transcript_coverage_pct": 0,
+  "verified_recovery_pct": 0,
+  "verified_attachment_coverage_pct": 0,
+  "verified_source_parity_pct": 0,
+  "verified_durability_pct": 0,
+  "preclose_audit_real_pct": 0,
+  "verified_raw_messages": 0,
+  "verified_real_source_records": 0,
+  "verified_real_attachments": 0,
+  "independent_verified_copies": 0,
+  "inferred_messages": 0,
+  "reconstructed_from_memory_messages": 0,
+  "silently_rewritten_messages": 0,
+  "silently_dropped_records": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "final_audit_matrix_v1",
+    "threat_and_failure_model_v1",
+    "failure_injection_suite_v1",
+    "global_proof_bundle_schema_v1",
+    "independent_preclose_audit_contract_v1",
+    "final_100_gate_contract_v1",
+    "independent_preclose_reference_verifier",
+    "synthetic_preclose_pass_vector",
+    "synthetic_preclose_block_vector",
+    "coverage_ledger_v5"
+  ],
+  "synthetic_expectations": {
+    "pass_vector": "PASS_PRECLOSE",
+    "block_vector": "BLOCK_PRECLOSE",
+    "failure_injection_cases_must_not_silently_pass": true,
+    "note": "Synthetic success does not count as real-chat coverage."
+  },
+  "strongest_current_claim": {
+    "architecture": "90_PERCENT_READY",
+    "raw_content": "0_PERCENT_ARCHIVED",
+    "real_preclose_audit": "NOT_RUN",
+    "final_100_gate": "NOT_ELIGIBLE",
+    "exact_full_chat_recovery": "NOT_AVAILABLE"
+  },
+  "privacy_gate": "ACTIVE__PUBLIC_REPOSITORY",
+  "next_target_pct": 100,
+  "next_stage_requirement": "Do not advance architecture to CLOSED_100. First acquire authoritative RAW, use a private RAW destination inside the Elyxion repository context or approved private storage, ingest all source ranges, verify attachments, run recovery, verify independent copies, build real proof bundle, run independent pre-close audit, then execute FINAL_100_GATE."
+}
