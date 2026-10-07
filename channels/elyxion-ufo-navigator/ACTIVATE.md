@@ -54,9 +54,11 @@ Fresh-read current contracts:
 - `NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1.json`
+- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_1.json`
 - `NAV_CONTEXT_PACK_SCHEMA_V0_3.json`
 - `NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_2.json`
 - `NAV_002B_MATERIALIZATION_VERIFICATION_REPAIR_CHECKPOINT_V0_3.md`
+- `NAV_002B_VERIFICATION_DEPENDENCY_HANDOFF_FALSIFICATION_CHECKPOINT_V0_4.md`
 
 Then:
 
@@ -81,7 +83,7 @@ Parent:
 
 State:
 
-`ACTIVE_CANDIDATE / MATERIALIZED + SEMANTICALLY VERIFIED + TARGETED-REPAIRABLE + EXPORTABLE`
+`ACTIVE_CANDIDATE / VERIFIED + REPAIRABLE + FALSIFIABLE HANDOFF SUBSTRATE`
 
 ## Current durable substrate
 
@@ -114,6 +116,7 @@ Implemented:
 - claim-specific evidence sufficiency policy;
 - targeted stale-pack invalidation;
 - targeted pack repair planner;
+- reverse verification-dependency index;
 - verification-aware existing Global C0 handoff V0.2;
 - cold-start export builder;
 - compact validators/regression tests;
@@ -171,6 +174,13 @@ then:
 Do not replay unrelated Elyxion history.
 
 ## Existing Global C0 handoff
+
+Handoff blocking falsification:
+
+- stale / unknown freshness → `BLOCKED_FRESHNESS`
+- critical claim insufficient → `BLOCKED_EVIDENCE`
+- fresh + critical claims sufficient → `READY_FOR_GLOBAL_C0_REVIEW`
+
 
 Handoff readiness values:
 
@@ -235,9 +245,8 @@ Do not claim CI PASS until observed.
 
 ## Next candidate work
 
-- falsify handoff blocking states (`BLOCKED_EVIDENCE`, `BLOCKED_FRESHNESS`);
-- build reverse verification-dependency index for larger repair scopes;
 - broader multi-surface cold-start benchmark;
+- evidence-budget / pack-size pressure tests;
 - materialize only high-value evidence on demand;
 - continue discovering missing durable Elyxion surfaces;
 - never construct Global C0.
