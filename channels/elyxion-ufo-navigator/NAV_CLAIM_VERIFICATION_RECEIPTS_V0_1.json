@@ -164,6 +164,107 @@
         "It does not independently verify every Phase1 canon detail."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E_PRIME_KERNEL_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E_PRIME_KERNEL_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E_PRIME_KERNEL_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E_PRIME_KERNEL_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "Architectural E-Prime identity explicitly defines a technical truth/evidence/lineage/recovery role.",
+        "Boundary artifact explicitly separates architectural E-Prime from the CHAT_TRANSCRIPTS_ONLY archive branch.",
+        "Boundary artifact reserves creative/canon authority to the author and bind/runtime authorities to other channels."
+      ],
+      "limits": [
+        "No global authority precedence is inferred.",
+        "No Global C0 location or internal architecture is inferred.",
+        "No E0/E6 authority is transferred to E-Prime."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E_CHAIN_RESEARCH_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E_CHAIN_RESEARCH_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E_CHAIN_RESEARCH_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E_CHAIN_RESEARCH_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "Identity artifact classifies the surface as META_RESEARCH / ARCHITECTURE_PROOF / RECOVERY.",
+        "It explicitly researches the E-chain as a system and explicitly disclaims E0-E6 operational identity and gameplay implementation authority."
+      ],
+      "limits": [
+        "Historical name remains UNKNOWN.",
+        "Full original contract is not recovered.",
+        "Research ownership does not equal runtime decision ownership."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_DISPATCHER_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_DISPATCHER_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_DISPATCHER_IDENTITY_M1_2026_10_08",
+        "MAT_O1_DISPATCHER_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "Identity JSON defines a HUMAN_FACING_DISPATCHER_AND_CONTINUITY_SURFACE.",
+        "README describes dream-flow preservation, high-level P/A orientation, routing context, continuity and human-readable explanation.",
+        "Both artifacts deny Global C0, UFO Navigator, canon and implementation authority."
+      ],
+      "limits": [
+        "Historical-first-channel claim remains unproven.",
+        "Recovery is partial and not a transcript-complete archive."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_PAE_HISTORY_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_PAE_HISTORY_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_PAE_HISTORY_IDENTITY_M1_2026_10_08",
+        "MAT_O1_PAE_HISTORY_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "Identity artifact defines HISTORICAL_INTERPRETER / HUMAN_EXPLAINER / CROSS_CHANNEL_ARCHAEOLOGY.",
+        "Boundary artifact explicitly separates PAE from Dispatcher, UFO Navigator, Global C0, E-Prime and specialist channels."
+      ],
+      "limits": [
+        "PAE may surface conflicts and chronology but may not declare the globally authoritative route.",
+        "Understanding specialist contracts does not grant specialist transformation authority."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_A_ULTRA_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_A_ULTRA_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A_ULTRA_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "Identity artifact explicitly distinguishes A-Ultra / A_MINUS_1 from A1.",
+        "Boundary artifact limits A-Ultra against project routing, build readiness, A1 architecture, E implementation and invention.",
+        "Poetic/tone material is explicitly separated from factual logic."
+      ],
+      "limits": [
+        "Line-by-line authorship of the recovered naming law remains UNKNOWN.",
+        "Independent rename rationale remains UNKNOWN.",
+        "P4 direct-input status remains contractually unresolved."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
