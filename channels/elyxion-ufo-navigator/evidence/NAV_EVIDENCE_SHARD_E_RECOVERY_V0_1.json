@@ -1,0 +1,160 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_E_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_REC_E0_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e0-intent-lock-handshake-recovery-v0.1",
+      "path": "channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "8056e3f7a26de6d78399fec1ab4fcafaa14bfa8c",
+      "observed_source_head": "5b37be9cf89b294794fd4b328f451ec1602a424c",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E0",
+        "RELATION:REL_NAV_OBSERVES_REC_E0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E1_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e1-constrained-skeleton-recovery-v0.1:channels/e1-constrained-implementation-skeleton-builder/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e1-constrained-skeleton-recovery-v0.1",
+      "path": "channels/e1-constrained-implementation-skeleton-builder/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "27a6e5848d05721e10580a36bc4fab2ed2a59e25",
+      "observed_source_head": "2ae3bbc3afb067f8ed28a14a2cd1f959d961adcc",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E1",
+        "RELATION:REL_NAV_OBSERVES_REC_E1"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E2_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e2-recovery-v0.1:channels/e2/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e2-recovery-v0.1",
+      "path": "channels/e2/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "91f70c25ede4a611b2cff487e7c542ad27c36fe0",
+      "observed_source_head": "ce30b165e5518f285c6abb461076f164382b4fcb",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E2",
+        "RELATION:REL_NAV_OBSERVES_REC_E2"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E3_5_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e3-5-input-assembler-recovery-v0.1",
+      "path": "channels/e3-5-e4-input-assembler/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "dda7f5530873acbd4f889e905f24c92a9b5f1fb8",
+      "observed_source_head": "bc5b4a3ab656afdc29b8f32d4309471d74c527de",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E3_5",
+        "RELATION:REL_NAV_OBSERVES_REC_E3_5"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E3_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e3-self-recovery-v0.1:channels/e3/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e3-self-recovery-v0.1",
+      "path": "channels/e3/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "b00d1083fdd7003e06eb77283abf39288bd9e1ef",
+      "observed_source_head": "bc26b919304377f5fbd51bd932989dd1b04118e8",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E3",
+        "RELATION:REL_NAV_OBSERVES_REC_E3"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E4_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e4-integration-route-compiler-recovery-v0.1:channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e4-integration-route-compiler-recovery-v0.1",
+      "path": "channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "c852ef139d794fe6b1fbe5a4937f74b2178f5fcc",
+      "observed_source_head": "9d3f73b37498c657164de9f71a6671a82f41d693",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E4",
+        "RELATION:REL_NAV_OBSERVES_REC_E4"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E_CHAIN_RESEARCH_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e-chain-research-recovery-v0.1:channels/e-chain-research/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e-chain-research-recovery-v0.1",
+      "path": "channels/e-chain-research/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "a34e14ebda54749907f696c65b764f6aebe5f250",
+      "observed_source_head": "4e66c0f561ac2bbd29a74d34375d31753ce81fc2",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E_CHAIN_RESEARCH",
+        "RELATION:REL_NAV_OBSERVES_REC_E_CHAIN_RESEARCH"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_E_PRIME_KERNEL_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e-prime-canonical-truth-kernel-recovery-v0.1:channels/e-prime-canonical-truth-kernel/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e-prime-canonical-truth-kernel-recovery-v0.1",
+      "path": "channels/e-prime-canonical-truth-kernel/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "9890d9e6165665e22d18ea84a626872040947e15",
+      "observed_source_head": "5b3aecefb7d8055268206f75f12b79d0e060dfe1",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_E_PRIME_KERNEL",
+        "RELATION:REL_NAV_OBSERVES_REC_E_PRIME_KERNEL"
+      ]
+    }
+  ]
+}
