@@ -12,27 +12,48 @@ Use this file as the clean activation entrypoint for a fresh chat.
 
 1. Fresh-read:
    - `channels/elyxion-ufo-navigator/README.md`
+   - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md`
+   - `channels/elyxion-ufo-navigator/NAV_AUTHOR_DECLARATIONS_V0_1.json`
    - `channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md`
    - `channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md`
    - `channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_3.json`
-   - `channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_2.json`
-   - `channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_4.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_4.json`
+   - `channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_3.json`
+   - `channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_3.json`
    - `channels/elyxion-ufo-navigator/NAV_COLLISION_REGISTRY_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_3.json`
+   - `channels/elyxion-ufo-navigator/NAV_EVIDENCE_SCHEMA_V0_1.json`
+   - `channels/elyxion-ufo-navigator/NAV_EVIDENCE_INDEX_V0_1.json`
+   - `channels/elyxion-ufo-navigator/NAV_CONTEXT_PACK_SCHEMA_V0_1.json`
    - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_002_SCALABLE_UNDERSTANDING_CHECKPOINT_V0_2.md`
-2. Recover current repository/branch heads from GitHub before trusting cached navigation state.
-3. Run targeted freshness logic: changed sources invalidate dependent slices, not the whole project.
-4. Preserve semantic status, evidence state, authority, readiness, relation state, collision state, and freshness as distinct axes.
+   - `channels/elyxion-ufo-navigator/NAV_002B_EVIDENCE_CONTEXT_PACK_CHECKPOINT_V0_1.md`
+2. Recover current branch/source heads from GitHub before trusting cached navigation state.
+3. Apply targeted freshness logic: changed sources invalidate dependent slices, not the whole project by default.
+4. Preserve semantic status, source-native labels, evidence state, authority, readiness, relation state, collision state, and freshness as distinct axes.
 5. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
 6. Never infer authority from implementation presence, polish, recency, tests, or branch ownership.
 7. Never traverse unresolved relations as facts.
 8. Never auto-resolve collisions.
 9. Preserve UNKNOWN / NOT OBSERVED instead of filling gaps.
 10. Keep Elyxion evidence separate from other projects unless an explicit cross-project contract exists.
-11. Operate as navigation / observation only. Navigator is not Global C0.
+11. Navigator is navigation/observation substrate only.
+
+## Hard Global C0 boundary
+
+The creator explicitly states:
+
+`Global C0 already exists.`
+
+Current Navigator representation:
+
+- existence = `AUTHOR_DECLARED_EXISTS`
+- durable/repository location = `UNKNOWN`
+- Navigator may build Global C0 = `NO`
+- Navigator may duplicate Global C0 = `NO`
+- Navigator Global C0 authority = `NONE`
+
+Navigator prepares topology, provenance, freshness, evidence indexes, bounded slices, and context packs for the existing Global C0.
 
 ## Completed frontier
 
@@ -44,52 +65,69 @@ Status:
 
 ## Current frontier
 
+`NAV-002B — Evidence Index + Context Pack Assembly`
+
+Parent frontier:
+
 `NAV-002 — Global Object / Authority / Provenance Spine`
 
 Status:
 
-`ACTIVE_CANDIDATE / CONNECTED_SUBSTRATE_EXISTS`
+`ACTIVE_CANDIDATE / FIRST_BOUNDED_PACKS_PROVEN`
 
-Current durable substrate includes:
+Current durable substrate:
 
-- object model V0.3;
-- 6 observed objects;
-- 6 unresolved discovery targets;
-- relation graph V0.2;
-- 6 confirmed relations;
-- 5 unresolved relation questions blocked from fact traversal;
-- collision radar with 1 open unresolved scope mismatch;
-- freshness/invalidation policy V0.2 with 18 dependency bindings;
-- self-hosting Navigator freshness uses `SELF_CURRENT_HEAD` rather than an impossible self-SHA pin;
-- progressive Global C0 recovery ladder L0→L5;
-- snapshot+delta recovery;
-- task-scoped context assembly;
+- object model V0.4;
+- 7 observed objects;
+- 6 discovery targets;
+- relation graph V0.3;
+- 8 confirmed relations;
+- 5 unresolved relation questions;
+- 1 open collision;
+- freshness policy V0.3 with 21 bindings;
+- Evidence Index V0.1 with 15 evidence identities;
+- author-declaration registry;
+- Global C0 non-duplication boundary;
 - bounded context-slice builder;
-- source/RAW evidence descent requirement;
-- specialized authority claims with evidence;
-- cross-project contamination guard;
-- structural/falsification validator;
-- GitHub Actions validation/freshness/context gate.
+- evidence-addressable context-pack builder;
+- default file bodies loaded by context pack = 0;
+- source / RAW evidence descent;
+- compact evidence-aware substrate validator V0.2;
+- GitHub Actions gate for validation / slice / pack / freshness.
 
-## Live topology update recovered during NAV-002
+## Latest synchronous proof
 
-`main` advanced from:
+Fresh GitHub-state mirror:
 
-`ed451eb878907c10ac697b34b1033ab6720aa858`
+`PASS`
 
-to:
+Current counts:
 
-`01b97c8edd19fdd59f81de827fb5f4a99861048f`
+- objects = 7
+- discovery targets = 6
+- confirmed relations = 8
+- unresolved relations = 5
+- collisions = 1
+- freshness bindings = 21
+- evidence identities = 15
+- author declarations = 1
 
-Targeted recovery discovered:
+Context Pack proofs:
 
-`🟣 Eco-Systems Elyxion`
+- `CP01_ECO_ONE_HOP` = PASS
+- `CP02_NAVIGATOR_ZERO_HOP` = PASS
 
-at:
+Global C0 is represented in the Navigator zero-hop pack as an author-declared existing system with unknown durable location. No Global C0 object is fabricated or built.
 
-`main:docs/channels/ECO-SYSTEMS-ELYXION.md`
+## Important unresolved locations
 
-Do not revert to the older five-object worldview.
+- 0.0.1.0 through 0.0.1.4 RAW/version surfaces;
+- A-channel repository surface;
+- E-channel repository surfaces beyond E-Prime;
+- existing Global C0 durable/repository surface;
+- Tools under Elyxion repository surface;
+- Dream / RAW durable surface;
+- exact P-to-implementation handoff.
 
 ## Open collision
 
@@ -103,56 +141,20 @@ State:
 
 Do not infer a broad operational handoff until authoritative evidence resolves the scope mismatch.
 
-## Important unresolved locations
-
-Still UNKNOWN / NOT OBSERVED as repository/durable surfaces:
-
-- 0.0.1.0 through 0.0.1.4 RAW/version surfaces;
-- A-channel repository surface;
-- E-channel repository surfaces beyond E-Prime;
-- Global C0 repository surface;
-- Tools under Elyxion repository surface;
-- Dream / RAW durable surface;
-- exact P-to-implementation handoff.
-
-Referenced concepts are not automatically equivalent to observed repository surfaces.
-
 ## Global-understanding law
 
-Global C0 must not require the whole accumulated Elyxion history in every reasoning context.
+For a bounded global question, recovery cost should follow the relevant dependency/evidence slice more than total accumulated project history.
 
-Design target:
+This is a design target, not a proved complexity guarantee.
 
-> For a bounded global question, recovery cost should follow the relevant dependency/evidence slice more than total accumulated project history.
+## Next work inside NAV-002B
 
-This is a design target, not a proved computational-complexity guarantee.
-
-## Candidate next sub-frontier
-
-`NAV-002B — Evidence Index + Context Pack Assembly`
-
-Purpose:
-
-Take a bounded object/relation slice and produce a structured evidence-addressable context manifest for future Global C0, while preserving freshness, UNKNOWN, unresolved relations, collisions, and source descent.
-
-This is a candidate next sub-frontier inside NAV-002, not a new canon authority layer.
-
-## Human role
-
-The creator remains free to dream without being forced into project management.
-
-Navigator quietly answers:
-- what exists;
-- where it lives;
-- where it came from;
-- what authority/status it has;
-- what it connects to;
-- what changed;
-- what became stale;
-- what conflicts;
-- what is missing;
-- what remains UNKNOWN.
+- evidence materialization policy;
+- claim-to-evidence granularity;
+- pack risk / escalation rules;
+- stale-pack invalidation;
+- cold-start handoff tests aimed at the existing Global C0 interface without building Global C0 itself.
 
 ## Fresh-chat activation phrase
 
-> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md` and the current Navigator contracts, then continue from the current frontier without inventing missing state.
+> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md` and the current Navigator contracts, then continue from the current frontier without inventing missing state or building Global C0.
