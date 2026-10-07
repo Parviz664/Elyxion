@@ -1,0 +1,22 @@
+{
+  "artifact_type": "EPRIME_CHAT_INGEST_IDEMPOTENCY_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "SAME_AUTHORITATIVE_INPUT_MUST_NOT_CREATE_DUPLICATE_ARCHIVE_RECORDS",
+  "idempotency_key_formula": "sha256(source_sha256 + ':' + declared_scope + ':' + parser_contract_version)",
+  "required_prewrite_checks": [
+    "lookup_existing_idempotency_key",
+    "compare_source_sha256",
+    "compare_declared_scope",
+    "compare_existing_receipt_chain"
+  ],
+  "outcomes": [
+    "NO_EXISTING_KEY__ALLOW_NEW_IMPORT",
+    "EXACT_EXISTING_IMPORT__NOOP_RETURN_EXISTING_RECEIPT",
+    "SAME_SCOPE_DIFFERENT_SOURCE_HASH__BLOCK_CONFLICT",
+    "SAME_SOURCE_HASH_DIFFERENT_SCOPE__ALLOW_ONLY_NON_OVERLAPPING_OR_IDENTICAL_OVERLAP",
+    "UNKNOWN_STATE__BLOCK"
+  ],
+  "duplicate_record_creation_allowed": false,
+  "silent_overwrite_allowed": false,
+  "mutation_of_prior_receipt_allowed": false
+}
