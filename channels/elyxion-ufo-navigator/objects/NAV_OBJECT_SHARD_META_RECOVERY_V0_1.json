@@ -1,0 +1,170 @@
+{
+  "registry_id": "ELYXION_NAV_OBJECT_SHARD_META_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "objects": [
+    {
+      "id": "ELYX_REC_DISPATCHER",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "DISPATCHER",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/elyxion-dispatcher-recovery-v0.1",
+          "path": "channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "HUMAN_DISPATCH_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_DISPATCHER"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/elyxion-dispatcher-recovery-v0.1:channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json"
+      ],
+      "last_verified": {
+        "head_sha": "fee2014268444bc08feac5a015f7b14ad2370c42",
+        "identity_blob_sha": "b9484a3be58e308f3c116207356d35e4e3f338fe",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    },
+    {
+      "id": "ELYX_REC_PAE_HISTORY",
+      "project_scope": "ELYXION",
+      "object_type": "CHANNEL",
+      "title": "PAE_HISTORY",
+      "locations": [
+        {
+          "repository": "Parviz664/Elyxion",
+          "ref": "channel/pae-history-navigator-recovery-v0.1",
+          "path": "channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md"
+        }
+      ],
+      "semantic_status": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "declared_status_labels": [],
+      "evidence_state": "DIRECTLY_OBSERVED",
+      "authority": {
+        "navigation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "canon": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "execution": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "archive": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "routing": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "implementation": {
+          "state": "UNKNOWN",
+          "evidence": []
+        },
+        "author_selection": {
+          "state": "UNKNOWN",
+          "evidence": []
+        }
+      },
+      "additional_authority_claims": [],
+      "readiness": {
+        "value": "UNKNOWN",
+        "origin": "UNKNOWN",
+        "evidence": []
+      },
+      "provenance": {
+        "source_kind": "GITHUB_RECOVERY_CHANNEL_IDENTITY",
+        "direct_observation": true,
+        "branch_family": "PAE_HISTORY_RECOVERY"
+      },
+      "relations": [
+        "REL_NAV_OBSERVES_REC_PAE_HISTORY"
+      ],
+      "blockers": [
+        "semantic relation mapping pending"
+      ],
+      "conflicts": [],
+      "unknowns": [
+        "cross-channel relations",
+        "authority beyond recovered identity",
+        "canon/execution status beyond observed identity evidence"
+      ],
+      "evidence": [
+        "channel/pae-history-navigator-recovery-v0.1:channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md"
+      ],
+      "last_verified": {
+        "head_sha": "8a474a5be5bcedb3570ebbce3628f69f62821e5a",
+        "identity_blob_sha": "1ab740223ec7cfb9ccfc596485d1e855458d5ba7",
+        "basis": "NAV topology expansion recovery 2026-10-07"
+      }
+    }
+  ]
+}
