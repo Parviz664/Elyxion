@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import json
 from pathlib import Path
+from nav_catalog import load_evidence
 
 B=Path(__file__).resolve().parents[1]
 
 def build_index():
-    E=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
+    E=load_evidence()
     C=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
     M=json.loads((B/"NAV_MATERIALIZATION_RECEIPTS_V0_1.json").read_text())
     V=json.loads((B/"NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json").read_text())
@@ -40,7 +41,7 @@ def build_index():
       "authority":"NAVIGATION_ONLY",
       "project_scope":"ELYXION",
       "source_refs":{
-        "evidence_index":"NAV_EVIDENCE_INDEX_V0_2.json",
+        "evidence_catalog":"NAV_EVIDENCE_CATALOG_V0_1.json",
         "claim_index":"NAV_CLAIM_INDEX_V0_1.json",
         "materialization_receipts":"NAV_MATERIALIZATION_RECEIPTS_V0_1.json",
         "verification_receipts":"NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json"
