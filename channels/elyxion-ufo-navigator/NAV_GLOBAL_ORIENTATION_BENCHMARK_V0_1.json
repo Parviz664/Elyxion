@@ -1,0 +1,63 @@
+{
+  "benchmark_id": "ELYXION_NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_1",
+  "status": "PRELIMINARY_BENCHMARK",
+  "authority": "NAVIGATION_EVIDENCE_ONLY",
+  "project_scope": "ELYXION",
+  "profile_ref": "NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json",
+  "measured_state": {
+    "observed_object_coverage": {
+      "selected": 7,
+      "total": 7,
+      "ratio": 1
+    },
+    "discovery_horizon_coverage": {
+      "selected": 6,
+      "total": 6,
+      "ratio": 1
+    },
+    "selected_claim_verification": {
+      "sufficient": 9,
+      "selected": 9,
+      "ratio": 1
+    },
+    "evidence_identity_pressure": {
+      "selected": 16,
+      "total": 20,
+      "ratio": 0.8
+    },
+    "default_loaded_file_bodies": 0,
+    "confirmed_relations": 8,
+    "unresolved_relations": 5,
+    "collisions": 1,
+    "connected_discovery_targets": 2,
+    "ambient_registered_unknowns": 4,
+    "materialization_receipts_available": 8,
+    "semantic_verification_receipts_available": 9
+  },
+  "ambient_unknown_ids": [
+    "DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4",
+    "DISCOVERY_A_CHANNEL",
+    "DISCOVERY_TOOLS_UNDER_ELYXION",
+    "DISCOVERY_DREAM_RAW_SURFACE"
+  ],
+  "verdict": "PASS_FOR_CURRENT_OBSERVED_SUBSTRATE",
+  "interpretation": [
+    "The Navigator can orient over every currently observed object while preserving every registered discovery target.",
+    "All selected surface claims in this benchmark have sufficient semantic verification.",
+    "Cold-start orientation does not require loading source bodies by default.",
+    "Evidence metadata breadth is still high at 16/20 identities; this benchmark does not prove low metadata growth."
+  ],
+  "non_claims": [
+    "This is not proof that Navigator covers all Elyxion history.",
+    "This is not proof of sublinear or asymptotic scaling.",
+    "This is not proof that future 10x or 100x repository growth will preserve the same ratios.",
+    "This is not a benchmark of Global C0 internal reasoning performance.",
+    "This does not locate the existing Global C0 durable surface."
+  ],
+  "next_required_evidence": [
+    "Run the same metrics at materially larger observed object counts.",
+    "Measure bounded-query packs separately from global-orientation packs.",
+    "Measure evidence metadata growth and exact-body materialization growth independently.",
+    "Preserve disconnected unknowns at every scale."
+  ]
+}
