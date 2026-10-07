@@ -5,10 +5,11 @@ def main():
     o=build_global_orientation()
     bad=[]
 
-    if o["readiness"]!="READY_GLOBAL_ORIENTATION":bad.append("readiness")
+    if o["readiness"]!="BLOCKED_TOPOLOGY_EXPANSION":bad.append("readiness")
     if o["freshness"]["state"]!="FRESH":bad.append("freshness")
 
     cov=o["coverage"]
+    if cov["branch_inventory_mapping"]!={"represented":5,"total":31,"ratio":5/31,"observed_unmapped":26}:bad.append("branch-mapping")
     if cov["observed_objects"]!={"selected":7,"total":7,"ratio":1.0}:bad.append("objects")
     if cov["discovery_horizon"]!={"selected":6,"total":6,"ratio":1.0}:bad.append("discovery")
     if cov["selected_claim_verification"]!={"sufficient":9,"selected":9,"ratio":1.0}:bad.append("claims")
@@ -29,7 +30,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: global orientation objects=7/7 discovery=6/6 claims=9/9 evidence=16/20 bodies=0")
+    print("PASS: topology expansion correctly blocks old 7-object orientation; branches=5/31 mapped")
     return 0
 
 if __name__=="__main__":
