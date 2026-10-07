@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
-POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_2.json"
+POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_3.json"
 
 def git_output(*args):
     return subprocess.check_output(["git", *args], text=True, stderr=subprocess.DEVNULL).strip()
