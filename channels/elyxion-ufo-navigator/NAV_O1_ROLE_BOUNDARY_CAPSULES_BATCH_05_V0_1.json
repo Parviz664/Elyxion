@@ -1,0 +1,182 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_05_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_D0",
+      "object_id": "ELYX_REC_D0",
+      "source_identity_evidence_id": "EVID_REC_D0_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_D0_BOUNDARY"
+      ],
+      "role_summary": "Recovered D0 Psychological Orchestration Governor: D-stack psychophysical quality/safety governor over an opaque immutable baseline, controlling pacing/signal density/recovery/clarity/safety budgets without owning meaning, canon or runtime promotion.",
+      "documented_non_authorities": [
+        "not canon source",
+        "not meaning editor",
+        "not story/lore author",
+        "not E-stack governor in v2.0",
+        "not runtime promotion authority",
+        "not substitute for missing registry entries",
+        "does not own D1/D3/D4 roles",
+        "no recovered direct P/A handoff"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_identity": "D0_PSYCHOLOGICAL_ORCHESTRATION_GOVERNOR v2.0",
+        "historical_identity": "D0_PSYCHOLOGICAL_ORCHESTRATION_AND_EXECUTION_GOVERNOR v1.x",
+        "lineage": "EXPLICIT_SUPERSESSION_v2_0_OVER_v1_2",
+        "breaking_change": "canon/invariant and E-stack governance responsibilities removed in v2.0"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "direct P/A relation",
+        "runtime implementation",
+        "any current authority removed by v2.0 refactor"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_D1",
+      "object_id": "ELYX_REC_D1",
+      "source_identity_evidence_id": "EVID_REC_D1_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_D1_BOUNDARY"
+      ],
+      "role_summary": "Recovered D1 Performance/Comfort/Anti-Boredom Guard: D-line guard that evaluates evidence-backed comfort, pressure, recovery, boredom/cognitive strain and D0-context integrity, with bounded interventions only after hard evidence gates pass.",
+      "documented_non_authorities": [
+        "not D0 truth authority",
+        "not D-line canon mutation authority",
+        "not gameplay/lore author",
+        "not runtime implementation",
+        "not medical diagnostic authority",
+        "no coercive behavior-shaping authority",
+        "not D2 optimizer",
+        "not D3 telemetry store",
+        "not D4 experiment orchestrator"
+      ],
+      "status_and_evidence_ceiling": {
+        "strongest_spec": "ELYX_D1_CHANNEL_SPEC_V2_4_MASTER",
+        "operating_contract": "OWNER-CONFIRMED",
+        "current_dependency_family": "D-line only",
+        "E_channel_integration_current": "FORBIDDEN_IN_v2_4",
+        "runtime_implementation": "UNKNOWN / NOT EVIDENCED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "runtime implementation",
+        "direct P/A bridge",
+        "any missing/untrusted evidence which must remain BLOCK/UNKNOWN"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_D2",
+      "object_id": "ELYX_REC_D2",
+      "source_identity_evidence_id": "EVID_REC_D2_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_D2_BOUNDARY"
+      ],
+      "role_summary": "Recovered D2 Psychological Microdirection channel: proposes selective perceptual/attention micro-interventions only inside D0-permitted space and D1 safety envelopes, preserving locked meaning/trajectory/canon and stopping when required verified inputs are missing.",
+      "documented_non_authorities": [
+        "does not own underlying truth",
+        "cannot override D0 locked context",
+        "cannot override D1 safety envelope",
+        "not lore or feature generator",
+        "no build/test/runtime/release authority",
+        "does not pre-authorize downstream implementation",
+        "not P or A channel in current identity"
+      ],
+      "status_and_evidence_ceiling": {
+        "strongest_spec": "ELYX_D2_CHANNEL_SPEC_V1_3_MASTER",
+        "current_contract_state": "CONTRACTED",
+        "runtime_build_implementation": "NOT_PROVEN",
+        "last_recovered_execution": "BLOCK",
+        "block_reason": "missing verified D0/D1 bundle plus D-registry/seal refs"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "software runtime implementation",
+        "historical origin before formal v1.1",
+        "future P/A relation absent separate evidence"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_D3",
+      "object_id": "ELYX_REC_D3",
+      "source_identity_evidence_id": "EVID_REC_D3_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_D3_BOUNDARY"
+      ],
+      "role_summary": "Recovered D3 latent augmentation layer: searches for evidence-bound quality reserves and emits append-only rollback-complete overlays over an immutable upstream baseline without rewriting, reprioritizing or semantically redirecting that baseline.",
+      "documented_non_authorities": [
+        "not baseline truth owner",
+        "not locked-context owner",
+        "not human-safety guard owner",
+        "not experiment orchestrator",
+        "no runtime execution",
+        "no release authority",
+        "no canon mutation",
+        "does not own D5/D6 domain channels",
+        "no synthetic number may be presented as observed evidence"
+      ],
+      "status_and_evidence_ceiling": {
+        "strongest_spec": "ELYX_D3_CHANNEL_SPEC_V1_3_MASTER",
+        "current_baseline": "D2 immutable baseline under D0/D1 constraints",
+        "historical_baseline": "E3 in v1.0-v1.2",
+        "historical_E_dependencies": "REMOVED_IN_v1_3",
+        "invariant": "D3 is not the baseline writer"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "line-by-line authorship",
+        "runtime implementation",
+        "any active E dependency in current v1.3"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_D4",
+      "object_id": "ELYX_REC_D4",
+      "source_identity_evidence_id": "EVID_REC_D4_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_D4_BOUNDARY"
+      ],
+      "role_summary": "Recovered D4 psycho-operational trajectory stabilization layer: evaluates long-session/iterative survivability and emits bounded append-only stabilization overlays with trigger/exit/rollback/recovery while preserving D3/D2/D1/D0 locked truth and never executing runtime.",
+      "documented_non_authorities": [
+        "not canon author",
+        "not D3 baseline owner",
+        "not D1 guard owner",
+        "not runtime/build/test/release executor",
+        "not lore/content generator",
+        "not P or A channel",
+        "not substitute for upstream truth",
+        "no hidden autonomy",
+        "no psycho-manipulative dark patterns"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_spec": "ELYX_D4_CHANNEL_SPEC_V1_2_MASTER",
+        "contract_state": "D4_READY_FOR_STRICT_DLINE_TRAJECTORY_STABILIZATION_V1_2",
+        "last_strict_execution": "BLOCK",
+        "execution_block_reason": "registry+seal refs absent",
+        "historical_route": "v1.1 mixed E/D baseline superseded, not deleted"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "runtime implementation",
+        "direct P/A relation",
+        "any missing registry/seal inputs which must remain BLOCK"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "capsules_are_navigation_derivations_not_canon": true,
+    "psychological_contract_roles_are_not_medical_diagnoses": true,
+    "no_cross_channel_route_is_created_by_this_batch": true,
+    "historical_E_dependencies_are_not_current_D_dependencies": true,
+    "missing_evidence_remains_UNKNOWN_or_BLOCK": true
+  }
+}
