@@ -1,0 +1,21 @@
+{
+  "artifact_type": "EPRIME_CHAT_INGEST_TRANSACTION_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "PREVENT_PARTIAL_IMPORT_FROM_LOOKING_COMPLETE",
+  "phases": [
+    "PRECHECK",
+    "STAGE_RECORDS",
+    "VERIFY_STAGED_RECORDS",
+    "STAGE_ATTACHMENTS",
+    "VERIFY_ATTACHMENTS",
+    "BUILD_RECEIPT",
+    "VERIFY_RECEIPT",
+    "COMMIT_RANGE",
+    "UPDATE_MANIFEST_LAST"
+  ],
+  "manifest_update_order": "LAST",
+  "partial_failure_behavior": "LEAVE_RANGE_OPEN_AND_EMIT_FAILURE_EVIDENCE",
+  "rollback_behavior": "DO_NOT_DELETE_EVIDENCE; mark staged attempt failed and start a new attempt",
+  "prior_verified_data_mutation_allowed": false,
+  "atomicity_goal": "NO_GLOBAL_MANIFEST_STATE_MAY CLAIM A RANGE BEFORE ITS VERIFICATION AND RECEIPT PASS"
+}
