@@ -1,8 +1,17 @@
-registry_id: P_CHANNEL_REGISTRY_V0_1
-status: PROVISIONAL_SOURCE_GROUNDED
+registry_id: P_CHANNEL_REGISTRY_V0_2
+status: FREEZE_CANDIDATE_ROUTE_HOLD
 root_question: "Как собрано?"
 mutation_authority: NONE
 canonization_authority: NONE
+
+control_point:
+  candidate: "P_CONTROL_POINT_V0.2_CANDIDATE"
+  freeze_readiness: PASS
+  freeze_readiness_ref: "P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md"
+  owner_freeze_gate: "decisions/P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE.md"
+  executable_validation: PASS
+  invariant_count: 25
+  falsification_case_count: 25
 
 current_route_authority:
   status: HOLD_UNRESOLVED
@@ -37,7 +46,7 @@ channels:
       - MISSING_GLOBAL_SUPERSESSION_PROOF
       - OWNER_RATIONALE_NOT_RECOVERED
       - ORIGINAL_MINUS_P1_SOURCE_BYTES_NOT_RECOVERED
-    next_action: HOLD_WHILE_OTHER_CHANNELS_RECOVER
+    next_action: HOLD_UNDER_DECISION_C
 
   "P0":
     role_status: STRONGLY_RECOVERED
@@ -60,11 +69,7 @@ channels:
           - "2.5.0"
     missing_versions:
       - "P0 v2.5 exact artifact"
-    notes:
-      - "Route change away from -P1 is strongly recovered inside the P0 lineage."
-      - "The direct owner rationale for NO_-P1 was not recovered."
-      - "Assistant-origin friction/efficiency explanations are quarantined."
-    next_action: HOLD_ROUTE_CONTINUE_CHANNEL_RECOVERY
+    next_action: HOLD_CURRENT_ROUTE_CONTINUE_APPEND_ONLY_RECOVERY
 
   "P1":
     role_status: STRONGLY_RECOVERED
@@ -78,17 +83,11 @@ channels:
       patch_policy: APPEND_ONLY
       id_freeze: true
       backward_compatible_with_base: true
-    recovered_v3_2_2_additions:
-      - felt_inevitability_hint
-      - topic_scope_entities_budget
-      - validated_scope_entities_used
-      - expanded_entity_binding_readiness
-      - handoff_packet_to_A
     minus_p1_relation:
       overlap_status: SUBSTANTIAL
       functional_migration_signal: STRONG
       formal_absorption_status: NOT_PROVED
-    next_action: COMPLETE_HOLD_CONTINUE_TO_P2
+    next_action: HOLD_UPSTREAM_ROUTE
 
   "P2":
     role_status: STRONGLY_RECOVERED
@@ -101,7 +100,7 @@ channels:
     split_merge_status: BOUNDED_TRACE_REQUIRED
     later_working_version: "ELYX_P2_LADDER_BUILDER_v3.5.0"
     version_lineage_status: PARTIAL
-    next_action: COMPLETE_CONTINUE_TO_P3
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
 
   "P3":
     role_status: STRONGLY_RECOVERED
@@ -120,7 +119,7 @@ channels:
     output_schema_status: UNKNOWN
     merge_split_rules_status: UNKNOWN
     version_lineage_status: PARTIAL
-    next_action: COMPLETE_CONTINUE_TO_P4
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
 
   "P4":
     role_status: STRONGLY_RECOVERED
@@ -136,9 +135,10 @@ channels:
     semantic_invention_forbidden: true
     automatic_canonization_forbidden: true
     version_lineage_status: PARTIAL
-    next_action: COMPLETE_READY_FOR_CHAIN_CROSSCHECK
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
 
 domain_boundary:
+  free_author_dream_outside_continuous_p_control: true
   p_channels_are_ai_work_architecture: true
   not_automatically_gameplay_systems: true
   translation_to_gameplay_requires_explicit_bridge: true
@@ -164,10 +164,15 @@ admission_rules:
   provenance_must_not_be_overclaimed: true
 
 failure_classes:
+  - RAW_OVERWRITE
+  - HISTORY_REWRITE
+  - AUTHORITY_INVERSION
+  - UNKNOWN_CLOSURE_WITHOUT_AUTHORITY
+  - STATUS_PROMOTION_DRIFT
+  - UNSOURCED_CONTRACT
   - UNSUPPORTED_CREATION
   - MATERIAL_LOSS
   - SILENT_NORMALIZATION
-  - STATUS_PROMOTION_DRIFT
   - ROLE_ESCAPE
   - ROUTING_AUTHORITY_CONFLICT
   - MISSING_SUPERSESSION_PROOF
@@ -176,28 +181,30 @@ failure_classes:
   - FUNCTION_DISAPPEARANCE_ASSUMPTION
   - FUNCTION_MIGRATION_EQUALS_RENAME
   - PROVENANCE_OVERCLAIM
+  - NODE_FUNCTION_CONFLATION
+  - ROUTE_HOLD_BREACH
+  - DOMAIN_BOUNDARY_BREACH
+  - CREATIVITY_CONTROL_DRIFT
+  - P2_SOURCE_ORPHAN
+  - P3_SEMANTIC_MUTATION
+  - P4_SELECTION_MUTATION
+  - AUTHOR_SELECTION_BYPASS
+  - UNCERTAINTY_PROMOTION
+  - SOURCE_ORDER_DRIFT
+  - GAP_ERASURE
 
-recovery_artifacts:
-  - "recovery/MINUS_P1_RECOVERY_PASS_V0_1.md"
-  - "recovery/MINUS_P1_SOURCE_ARTIFACT_RECOVERY_V0_2.md"
-  - "recovery/P0_ROUTE_RECOVERY_PASS_V0_1.md"
-  - "recovery/P1_MINUS_P1_FUNCTION_ABSORPTION_CHECK_V0_1.md"
-  - "recovery/P0_P1_CONVERSATION_SOURCE_RECOVERY_V0_2.md"
-  - "recovery/MINUS_P1_RATIONALE_RECOVERY_PASS_V0_1.md"
-  - "recovery/P0_V2_3_TO_V2_4_DELTA_RECONSTRUCTION_V0_1.md"
-  - "recovery/MINUS_P1_FUNCTIONAL_MIGRATION_MATRIX_V0_1.md"
-  - "recovery/MINUS_P1_NO_DROP_COVERAGE_PROOF_V0_1.md"
-  - "recovery/SOURCE_PROVENANCE_CORRECTION_V0_1.md"
-  - "recovery/P0_CONTRACT_LINEAGE_PASS_V0_1.md"
-  - "recovery/P1_CONTRACT_LINEAGE_PASS_V0_1.md"
-  - "recovery/P2_CONTRACT_RECOVERY_PASS_V0_1.md"
-  - "recovery/P3_CONTRACT_RECOVERY_PASS_V0_1.md"
-  - "recovery/P4_CONTRACT_RECOVERY_PASS_V0_1.md"
-  - "P_CHAIN_ROLE_SPINE_CROSSCHECK_V0_1.md"
-  - "P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md"
+gap_register:
+  ref: "P_CONTROL_POINT_V0_2_GAP_REGISTER.md"
+  g0_open: 1
+  critical_gap: "GAP-G0-001"
+  critical_gap_status: INTENTIONALLY_OPEN
 
-decision_artifacts:
-  - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_GATE_V0_1.md"
-  - "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
+validation:
+  invariants_ref: "P_CONTROL_POINT_INVARIANTS_V0_1.yaml"
+  falsification_cases_ref: "tests/P_CONTROL_POINT_FALSIFICATION_CASES_V0_1.json"
+  validator_ref: "tools/validate_p_control_point.py"
+  workflow_ref: ".github/workflows/p-control-point-validate.yml"
+  latest_recorded_candidate_run_id: 37561391549
+  latest_recorded_candidate_result: SUCCESS
 
-next_object: "P_CONTROL_POINT_V0_2_GAP_REGISTER"
+next_object: "P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE"
