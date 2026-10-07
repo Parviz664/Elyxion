@@ -1,0 +1,57 @@
+{
+  "fixture_id": "ELYXION_NAV_CONTEXT_SLICE_EXPECTATIONS_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "CS01_ECO_SYSTEMS_ONE_HOP_BOTH",
+      "start_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "max_hops": 1,
+      "direction": "both",
+      "include_unresolved_boundary": true,
+      "expected_object_ids": [
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_SURFACE_MAIN"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "ELYX_SURFACE_PHASE1_SCAFFOLD"
+      ],
+      "expected_confirmed_relation_ids": [
+        "REL_MAIN_CONTAINS_ECO_SYSTEMS",
+        "REL_ECOSYS_DECLARES_INTERFACE_EPRIME"
+      ],
+      "expected_unresolved_relation_ids": [
+        "UREL_E_PRIME_TO_BROADER_E",
+        "UREL_ECOSYS_TO_GLOBAL_C0",
+        "UREL_ECOSYS_TO_E_CHANNELS"
+      ],
+      "expected_collision_ids": [
+        "COL_ECOSYS_EPRIME_SCOPE_001"
+      ]
+    },
+    {
+      "id": "CS02_ECO_SYSTEMS_ZERO_HOP",
+      "start_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "max_hops": 0,
+      "direction": "both",
+      "include_unresolved_boundary": true,
+      "expected_object_ids": [
+        "ELYX_CHANNEL_ECO_SYSTEMS"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_SURFACE_P_CONTROL_POINT"
+      ],
+      "expected_confirmed_relation_ids": [],
+      "expected_unresolved_relation_ids": [
+        "UREL_ECOSYS_TO_GLOBAL_C0",
+        "UREL_ECOSYS_TO_E_CHANNELS"
+      ],
+      "expected_collision_ids": [
+        "COL_ECOSYS_EPRIME_SCOPE_001"
+      ]
+    }
+  ]
+}
