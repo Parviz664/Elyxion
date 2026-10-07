@@ -1,0 +1,39 @@
+{
+  "artifact_type": "EPRIME_CHAT_PRE_100_COMPLETENESS_BARRIER_V1",
+  "status": "LOCKED",
+  "purpose": "MAKE_100_PERCENT_A_VERDICT_NOT_A_DECORATIVE_NUMBER",
+  "required_zero_counts": [
+    "missing_message_count",
+    "sequence_gap_count",
+    "duplicate_conflict_count",
+    "raw_text_mismatch_count",
+    "role_mismatch_count",
+    "timestamp_mismatch_count",
+    "system_record_drop_count",
+    "tool_record_drop_count",
+    "unresolved_record_count",
+    "missing_attachment_count",
+    "unresolved_attachment_count",
+    "message_hash_mismatch_count",
+    "message_chain_break_count",
+    "chunk_chain_break_count",
+    "receipt_chain_break_count",
+    "recovery_mismatch_count"
+  ],
+  "required_passes": [
+    "FULL_SOURCE_SCOPE_PROVEN",
+    "SOURCE_BLOB_HASH_PASS",
+    "MESSAGE_COMPLETENESS_PASS",
+    "SOURCE_PARITY_PASS",
+    "ATTACHMENT_ACCOUNTING_PASS",
+    "RECOVERY_PASS",
+    "INDEPENDENT_COPY_READBACK_PASS"
+  ],
+  "verdict_enum": [
+    "NOT_READY",
+    "READY_FOR_FINAL_100_PROOF",
+    "BLOCKED"
+  ],
+  "rule": "Architecture progress alone can never satisfy this barrier.",
+  "fail_closed": true
+}
