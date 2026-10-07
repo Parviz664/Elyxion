@@ -1,0 +1,20 @@
+{
+  "artifact_type": "EPRIME_CHAT_TIMESTAMP_PARITY_POLICY_V1",
+  "status": "LOCKED",
+  "purpose": "PRESERVE_TIME_METADATA_WITHOUT_INVENTING_MISSING_TIMESTAMPS",
+  "source_timestamp_states": [
+    "PRESENT_EXACT",
+    "ABSENT_IN_SOURCE",
+    "UNAVAILABLE_IN_EXPORT",
+    "UNPARSEABLE_PRESERVED_RAW"
+  ],
+  "rules": [
+    "If source timestamp is present and parseable, preserve exact source value and separately store normalized UTC only if derived field is explicitly non-authoritative.",
+    "If source timestamp is absent, archive timestamp must not be invented.",
+    "If source timestamp is unparseable, preserve raw timestamp representation and mark parity constrained.",
+    "No local-time guess may be substituted for missing source timestamp."
+  ],
+  "authoritative_field": "source_timestamp_raw_or_exact",
+  "normalized_time_role": "DERIVED_NON_AUTHORITATIVE",
+  "mismatch_action": "BLOCK_TIMESTAMP_PARITY"
+}
