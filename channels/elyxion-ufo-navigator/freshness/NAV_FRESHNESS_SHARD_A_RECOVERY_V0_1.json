@@ -1,0 +1,120 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_A_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [
+    {
+      "id": "SRC_REC_A0_ORCHESTRATOR",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a0-orchestrator-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "e13b45bbd37e77ec243f3b5e8e9ffcb7da8d8a36"
+    },
+    {
+      "id": "SRC_REC_A1_ARCHITECT",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a1-architect-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "02b9677c65b62f0f39db839ee09694e7dcd40903"
+    },
+    {
+      "id": "SRC_REC_A2_SYSTEMS_MAP",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a2-systems-map-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "19faae42d1b0a944d59cc19d94a7d0cc017436c2"
+    },
+    {
+      "id": "SRC_REC_A3_PRE_E0_HANDOFF",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a3-pre-e0-handoff-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "f804d365f4cc75b719edd8159827269759c08dad"
+    },
+    {
+      "id": "SRC_REC_A_ULTRA",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "b0e1ce60268796bb2de026e05bc0ca3f520c5216"
+    }
+  ],
+  "dependencies": [
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "source_ids": [
+        "SRC_REC_A0_ORCHESTRATOR"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_A0_ORCHESTRATOR",
+      "source_ids": [
+        "SRC_REC_A0_ORCHESTRATOR"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_A1_ARCHITECT",
+      "source_ids": [
+        "SRC_REC_A1_ARCHITECT"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_A1_ARCHITECT",
+      "source_ids": [
+        "SRC_REC_A1_ARCHITECT"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "source_ids": [
+        "SRC_REC_A2_SYSTEMS_MAP"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_A2_SYSTEMS_MAP",
+      "source_ids": [
+        "SRC_REC_A2_SYSTEMS_MAP"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_A3_PRE_E0_HANDOFF",
+      "source_ids": [
+        "SRC_REC_A3_PRE_E0_HANDOFF"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_A3_PRE_E0_HANDOFF",
+      "source_ids": [
+        "SRC_REC_A3_PRE_E0_HANDOFF"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_A_ULTRA",
+      "source_ids": [
+        "SRC_REC_A_ULTRA"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_A_ULTRA",
+      "source_ids": [
+        "SRC_REC_A_ULTRA"
+      ]
+    }
+  ]
+}
