@@ -1,0 +1,46 @@
+navigator_version: "0.1"
+status: "CANDIDATE"
+authority: "NAVIGATION_ONLY"
+repository: "Parviz664/Elyxion"
+surfaces:
+  - id: "main"
+    kind: "branch"
+    observed: true
+    role: "default_repository_surface"
+    confidence: "observed"
+  - id: "E-Prime"
+    kind: "branch"
+    observed: true
+    role: "chat_transcript_archive"
+    confidence: "explicit_contract"
+    constraints:
+      - "raw_transcript_required_for_100pct_claim"
+      - "memory_reconstruction_forbidden"
+      - "append_only_sha256_manifest"
+      - "public_repo_privacy_gate"
+  - id: "agent/phase1-scaffold"
+    kind: "branch"
+    observed: true
+    role: "phase1_prototype_and_experimental_implementation"
+    confidence: "explicit_readme"
+    canon_boundary: "experimental_details_do_not_auto_define_canon"
+  - id: "channel/p-control-point-v0.1"
+    kind: "branch"
+    observed: true
+    role: "p_system_control_layer"
+    confidence: "explicit_readme"
+    route_state: "HOLD_UNRESOLVED"
+  - id: "channel/elyxion-ufo-navigator-v0.1"
+    kind: "branch"
+    observed: true
+    role: "global_navigation_observer"
+    confidence: "bootstrap_contract"
+
+unknowns:
+  - "A-channel GitHub surfaces not yet observed"
+  - "E-channel GitHub surfaces beyond E-Prime not yet observed"
+  - "0.0.1.0 through 0.0.1.4 mine/version surfaces not yet recovered"
+  - "exact P-to-implementation handoff unknown"
+  - "Global C0 repository surface not yet observed"
+
+current_frontier: "NAV-001_REPOSITORY_CHANNEL_TOPOLOGY_RECOVERY"
