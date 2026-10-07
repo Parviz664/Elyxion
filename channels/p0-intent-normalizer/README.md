@@ -1,6 +1,6 @@
 # Elyxion P0 Intent Normalizer — self recovery
 
-Status: `SELF_RECOVERY_IN_PROGRESS`
+Status: `SELF_RECOVERY_PASS_WITH_GAPS`
 
 Recovered family: `ELYX_P0_INTENT_NORMALIZER`
 
