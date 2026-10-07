@@ -1,0 +1,78 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_COVERAGE_LEDGER_V5",
+  "status": "ARCHITECTURE_90_READY__RAW_0",
+  "supersedes": "archive/COVERAGE_LEDGER_V4.json",
+  "target": "100_PERCENT_VERIFIED_FULL_CHAT_ARCHIVE",
+  "progress_axes": {
+    "architecture_progress_pct": 90,
+    "raw_transcript_coverage_pct": 0,
+    "verified_recovery_pct": 0,
+    "verified_attachment_coverage_pct": 0,
+    "verified_source_parity_pct": 0,
+    "verified_durability_pct": 0,
+    "preclose_audit_real_pct": 0
+  },
+  "architecture_milestones": [
+    {
+      "percent": 10,
+      "state": "PASS"
+    },
+    {
+      "percent": 20,
+      "state": "PASS"
+    },
+    {
+      "percent": 30,
+      "state": "PASS"
+    },
+    {
+      "percent": 40,
+      "state": "PASS"
+    },
+    {
+      "percent": 50,
+      "state": "PASS"
+    },
+    {
+      "percent": 60,
+      "state": "PASS"
+    },
+    {
+      "percent": 70,
+      "state": "PASS"
+    },
+    {
+      "percent": 80,
+      "state": "PASS"
+    },
+    {
+      "percent": 90,
+      "state": "PASS",
+      "meaning": "final audit matrix, threat model, failure injection, global proof bundle, independent pre-close audit and final 100 gate defined"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING",
+      "meaning": "requires real RAW acquisition, private destination, complete ingest, independent recovery and final gate"
+    }
+  ],
+  "closure_state": {
+    "manifest_status": "OPEN_INCOMPLETE",
+    "pre_100_barrier_verdict": "NOT_READY",
+    "independent_preclose_audit_real": "NOT_RUN",
+    "global_proof_bundle_real": "NOT_BUILT",
+    "final_100_gate": "NOT_RUN"
+  },
+  "counters": {
+    "verified_raw_messages": 0,
+    "verified_real_attachments": 0,
+    "verified_real_source_records": 0,
+    "independent_verified_copies": 0,
+    "inferred_message_count": 0,
+    "reconstructed_from_memory_count": 0,
+    "silently_rewritten_message_count": 0,
+    "silently_dropped_record_count": 0,
+    "p0_loss_count": 0
+  },
+  "final_invariant": "90% architecture readiness is not evidence of 90% archived conversation."
+}
