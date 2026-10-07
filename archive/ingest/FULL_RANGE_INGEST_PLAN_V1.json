@@ -1,0 +1,32 @@
+{
+  "artifact_type": "EPRIME_CHAT_FULL_RANGE_INGEST_PLAN_V1",
+  "status": "READY_NOT_EXECUTED",
+  "purpose": "DETERMINISTIC_PLAN_FOR_IMPORTING_COMPLETE_CONVERSATION_WITHOUT_SKIPS_OR_DUPLICATES",
+  "prerequisites": [
+    "authoritative source acquired",
+    "source blob sha256 locked",
+    "conversation scope proven",
+    "private raw destination verified"
+  ],
+  "procedure": [
+    "discover full source range",
+    "partition only on whole-record boundaries",
+    "assign monotonically increasing source sequences",
+    "for each range compute idempotency key before write",
+    "stage range",
+    "verify range",
+    "close range only on PASS",
+    "advance next range start from prior verified end + 1",
+    "after final source range verify no uncovered source sequence exists",
+    "run global parity",
+    "run global recovery",
+    "run attachment accounting",
+    "run copy readback verification",
+    "present PRE_100 barrier",
+    "close manifest only after explicit final E-Prime gate"
+  ],
+  "concurrency_policy": "SERIAL_BY_SOURCE_RANGE_UNLESS_DISJOINT_RANGES_HAVE_PROVEN_BOUNDARIES",
+  "resume_policy": "RESUME_FROM_LAST_CLOSED_VERIFIED_RANGE_PLUS_ONE",
+  "retry_policy": "IDEMPOTENT_RETRY_ONLY",
+  "skip_policy": "FORBIDDEN"
+}
