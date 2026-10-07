@@ -33,7 +33,11 @@
         "exact current operational route to Global C0",
         "any relation not directly stated in recovered artifacts"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_E_PRIME_KERNEL_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E_PRIME_KERNEL_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_E_CHAIN_RESEARCH",
@@ -62,7 +66,11 @@
         "full original contract",
         "globally authoritative E-chain route"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_E_CHAIN_RESEARCH_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E_CHAIN_RESEARCH_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_DISPATCHER",
@@ -92,7 +100,11 @@
         "whether this was historically the first/original Elyxion channel",
         "exact chronology without primary transcript evidence"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_DISPATCHER_IDENTITY_M1_2026_10_08",
+        "MAT_O1_DISPATCHER_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_PAE_HISTORY",
@@ -122,7 +134,11 @@
         "globally authoritative route when recovered channels disagree",
         "historical facts lacking primary evidence"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_PAE_HISTORY_IDENTITY_M1_2026_10_08",
+        "MAT_O1_PAE_HISTORY_BOUNDARY_M1_2026_10_08"
+      ]
     },
     {
       "capsule_id": "O1_A_ULTRA",
@@ -152,7 +168,11 @@
         "independent author rationale for rename",
         "formal status of historically observed P4 direct input"
       ],
-      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "materialization_receipt_ids": [
+        "MAT_O1_A_ULTRA_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08"
+      ]
     }
   ],
   "laws": {
