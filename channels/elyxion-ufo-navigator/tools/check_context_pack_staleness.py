@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import argparse, json, subprocess
 from pathlib import Path
+from nav_catalog import load_freshness
 
 BASE=Path(__file__).resolve().parents[1]
-POLICY=BASE/"NAV_FRESHNESS_POLICY_V0_3.json"
 AUTHOR_PATH="channels/elyxion-ufo-navigator/NAV_AUTHOR_DECLARATIONS_V0_1.json"
 
 def git_blob(path):
@@ -11,7 +11,7 @@ def git_blob(path):
     except Exception:return None
 
 def policy_heads():
-    p=json.loads(POLICY.read_text())
+    p=load_freshness()
     return {x["ref"]:x.get("observed_head") for x in p["sources"] if x["tracking_mode"]=="PINNED_OBSERVED_HEAD"}
 
 def evaluate_pack(pack,external_heads=None,blob_resolver=git_blob):
