@@ -1,0 +1,28 @@
+{
+  "fixture_id": "ELYXION_NAV_GLOBAL_C0_HANDOFF_EXPECTATIONS_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "H01_ECO_ONE_HOP",
+      "start_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "max_hops": 1,
+      "direction": "both",
+      "expected_consumer_existence": "AUTHOR_DECLARED_EXISTS",
+      "expected_consumer_location": "UNKNOWN",
+      "expected_build_flag": false,
+      "expected_payload_kind": "ELYXION_NAV_CONTEXT_PACK",
+      "expected_freshness": "FRESH"
+    },
+    {
+      "id": "H02_NAVIGATOR_ZERO_HOP",
+      "start_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "max_hops": 0,
+      "direction": "both",
+      "expected_consumer_existence": "AUTHOR_DECLARED_EXISTS",
+      "expected_consumer_location": "UNKNOWN",
+      "expected_build_flag": false,
+      "expected_payload_kind": "ELYXION_NAV_CONTEXT_PACK",
+      "expected_freshness": "FRESH"
+    }
+  ]
+}
