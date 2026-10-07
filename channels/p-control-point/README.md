@@ -16,15 +16,19 @@ The Control Point does **not** invent gameplay, does **not** canonize ideas, doe
 
 `channel/p-control-point-v0.1`
 
-Current candidate:
+Current frozen control contract:
 
-`P_CONTROL_POINT_V0.2_CANDIDATE`
+`P_CONTROL_POINT_V0_2_FROZEN`
+
+Freeze state:
+
+`FROZEN_CONTROL_LAYER / ROUTE_HOLD`
 
 Current route state:
 
 `HOLD_UNRESOLVED`
 
-Owner decision:
+Owner route decision:
 
 `C`
 
@@ -34,7 +38,7 @@ Owner decision:
 
 P-channels are a work/AI architecture. They are not automatically gameplay systems.
 
-## Recovered role spine
+## Frozen role spine
 
 - `P0` — intent normalization / strict downstream routing.
 - `P1` — causal/reality map + seed + linear order.
@@ -51,7 +55,7 @@ and later:
 
 `P0 -> P1 -> P2 -> P3 -> P4`
 
-No current global route is frozen while Decision C remains active.
+The frozen Control Point does not choose between them.
 
 ## Core laws
 
@@ -68,20 +72,22 @@ No current global route is frozen while Decision C remains active.
 - Functional similarity does not prove rename/absorption.
 - P3 rendering may not mutate P2 semantics.
 - P4 selection may not rewrite candidates or bypass author authority.
+- Free author dreaming remains outside continuous P-channel control.
 
 ## Control artifacts
 
 - `P_CONTROL_POINT_V0_1.md` — original source-grounded foundation.
-- `P_CONTROL_POINT_V0.2_CANDIDATE.md` — consolidated freeze candidate.
-- `P_CHANNEL_REGISTRY_V0_1.yaml` — current machine-readable registry; registry ID is now v0.2 candidate.
+- `P_CONTROL_POINT_V0.2_CANDIDATE.md` — pre-freeze consolidation.
+- `P_CONTROL_POINT_V0_2_FROZEN.md` — current frozen control contract.
+- `P_CHANNEL_REGISTRY_V0_2.yaml` — current frozen machine-readable registry.
 - `P_CONTROL_POINT_V0_2_GAP_REGISTER.md` — prioritized open gaps.
 - `P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md` — February→March→August→October route history.
 - `P_CHAIN_ROLE_SPINE_CROSSCHECK_V0_1.md` — end-to-end seam/authority cross-check.
 - `P_CONTROL_POINT_INVARIANTS_V0_1.yaml` — 25 machine-readable invariants.
 - `tests/P_CONTROL_POINT_FALSIFICATION_CASES_V0_1.json` — 25 falsification fixtures.
 - `tools/validate_p_control_point.py` — executable regression sentinel.
-- `P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md` — freeze readiness audit.
-- `decisions/P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE.md` — current owner gate.
+- `P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md` — pre-freeze readiness audit.
+- `decisions/P_CONTROL_POINT_V0_2_FREEZE_DECISION_2026_10_07.md` — owner freeze record.
 
 ## Validation
 
@@ -89,7 +95,17 @@ GitHub Actions workflow:
 
 `P Control Point Validate`
 
-The v0.2 candidate validation has passed in CI.
+The validator now checks the frozen v0.2 state itself, including:
+
+- frozen control-layer status;
+- Decision C / route HOLD;
+- both historical route families;
+- no merge authorization hidden inside the freeze;
+- no disputed-route implementation authorization;
+- free-author-dream boundary;
+- domain/canonization guards;
+- 25 invariants;
+- 25 falsification fixtures.
 
 This proves static control-contract consistency, not perfect semantic truth or complete historical recovery.
 
@@ -99,12 +115,14 @@ This proves static control-contract consistency, not perfect semantic truth or c
 
 Current `-P1` route authority remains intentionally unresolved under Decision C.
 
-This gap blocks runtime implementation across the disputed P0/-P1/P1 boundary, but does not invalidate the Control Point itself.
+This gap blocks runtime implementation across the disputed P0/-P1/P1 boundary, but does not invalidate the frozen Control Point.
 
-## Current next object
+## Repository stage
 
-`P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE`
+The Control Point is frozen.
 
-The Control Point is ready for an explicit owner decision to freeze v0.2 **with the route HOLD preserved**.
+The next repository stage is:
 
-No merge into `main` should occur before that explicit freeze decision.
+`PR READY FOR REVIEW`
+
+Freeze does **not** authorize merge to `main`; merge remains a separate action after review/checks.
