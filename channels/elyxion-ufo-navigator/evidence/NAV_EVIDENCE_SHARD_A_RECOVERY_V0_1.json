@@ -1,0 +1,103 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_A_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a0-orchestrator-recovery-v0.1",
+      "path": "channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "74ed132308a4ac2e423a208592a9419bb74b7f3c",
+      "observed_source_head": "e13b45bbd37e77ec243f3b5e8e9ffcb7da8d8a36",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_A0_ORCHESTRATOR",
+        "RELATION:REL_NAV_OBSERVES_REC_A0_ORCHESTRATOR"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_A1_ARCHITECT_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a1-architect-recovery-v0.1:channels/a1-architect/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a1-architect-recovery-v0.1",
+      "path": "channels/a1-architect/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "b58d07cfc49db7de7f6a789bf072334bab6d9c2e",
+      "observed_source_head": "02b9677c65b62f0f39db839ee09694e7dcd40903",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_A1_ARCHITECT",
+        "RELATION:REL_NAV_OBSERVES_REC_A1_ARCHITECT"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a2-systems-map-recovery-v0.1:channels/a2-systems-map/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a2-systems-map-recovery-v0.1",
+      "path": "channels/a2-systems-map/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "c062d353dbf3d9d62e3adcd57deeb1de50e667da",
+      "observed_source_head": "19faae42d1b0a944d59cc19d94a7d0cc017436c2",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_A2_SYSTEMS_MAP",
+        "RELATION:REL_NAV_OBSERVES_REC_A2_SYSTEMS_MAP"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a3-pre-e0-handoff-recovery-v0.1:channels/a3-pre-e0-handoff/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a3-pre-e0-handoff-recovery-v0.1",
+      "path": "channels/a3-pre-e0-handoff/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "b992667fd120e1c1a2cd34833fad411098b73a67",
+      "observed_source_head": "f804d365f4cc75b719edd8159827269759c08dad",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_A3_PRE_E0_HANDOFF",
+        "RELATION:REL_NAV_OBSERVES_REC_A3_PRE_E0_HANDOFF"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_A_ULTRA_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a-ultra-vision-translator-recovery-v0.1:channels/a-ultra-vision-translator/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+      "path": "channels/a-ultra-vision-translator/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "c116ba9c7da162a8b90d8d3727b1ecd56f5e5ed9",
+      "observed_source_head": "b0e1ce60268796bb2de026e05bc0ca3f520c5216",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_A_ULTRA",
+        "RELATION:REL_NAV_OBSERVES_REC_A_ULTRA"
+      ]
+    }
+  ]
+}
