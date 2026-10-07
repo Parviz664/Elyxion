@@ -11,6 +11,18 @@ OBJECTS=json.loads((B/"NAV_OBJECT_REGISTRY_V0_4.json").read_text())
 EVIDENCE=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
 
+def orientation_readiness(fresh_state,object_coverage,discovery_coverage,claim_coverage):
+    req=PROFILE["coverage_requirements"]
+    if fresh_state!="FRESH":
+        return "BLOCKED_FRESHNESS"
+    if object_coverage < req["observed_object_registry_coverage"]:
+        return "BLOCKED_OBSERVED_OBJECT_COVERAGE"
+    if discovery_coverage < req["discovery_horizon_coverage"]:
+        return "BLOCKED_DISCOVERY_HORIZON_COVERAGE"
+    if claim_coverage < req["selected_claim_verification_coverage"]:
+        return "BLOCKED_VERIFICATION"
+    return "READY_GLOBAL_ORIENTATION"
+
 def build_global_orientation():
     t=PROFILE["traversal"]
     pack=build_pack(
@@ -51,17 +63,9 @@ def build_global_orientation():
     claim_coverage=sufficient/selected_claims if selected_claims else 1.0
     discovery_coverage=discovery_count/total_discovery if total_discovery else 1.0
 
-    req=PROFILE["coverage_requirements"]
-    if fresh["state"]!="FRESH":
-        readiness="BLOCKED_FRESHNESS"
-    elif object_coverage < req["observed_object_registry_coverage"]:
-        readiness="BLOCKED_OBSERVED_OBJECT_COVERAGE"
-    elif discovery_coverage < req["discovery_horizon_coverage"]:
-        readiness="BLOCKED_DISCOVERY_HORIZON_COVERAGE"
-    elif claim_coverage < req["selected_claim_verification_coverage"]:
-        readiness="BLOCKED_VERIFICATION"
-    else:
-        readiness="READY_GLOBAL_ORIENTATION"
+    readiness=orientation_readiness(
+        fresh["state"],object_coverage,discovery_coverage,claim_coverage
+    )
 
     return {
       "orientation_version":"0.1",
