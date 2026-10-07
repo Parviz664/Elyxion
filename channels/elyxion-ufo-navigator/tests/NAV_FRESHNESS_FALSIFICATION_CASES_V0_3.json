@@ -1,0 +1,74 @@
+{
+  "fixture_id": "ELYXION_NAV_FRESHNESS_FALSIFICATION_CASES_V0_3",
+  "status": "CANDIDATE",
+  "supersedes_candidate": "ELYXION_NAV_FRESHNESS_FALSIFICATION_CASES_V0_2",
+  "cases": [
+    {
+      "id": "FF01_MAIN_HEAD_CHANGED_TARGETED_INVALIDATION",
+      "changed_sources": [
+        "SRC_BRANCH_MAIN"
+      ],
+      "expected_stale_subjects": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_GOV_CREATOR_REALITY_STABILIZER",
+        "REL_NAV_OBSERVES_MAIN",
+        "REL_MAIN_CONTAINS_ECO_SYSTEMS",
+        "REL_ECOSYS_DECLARES_INTERFACE_EPRIME",
+        "REL_MAIN_CONTAINS_REALITY_STABILIZER",
+        "REL_NAV_GOVERNED_BY_REALITY_STABILIZER",
+        "UREL_ECOSYS_TO_GLOBAL_C0",
+        "UREL_ECOSYS_TO_E_CHANNELS",
+        "COL_ECOSYS_EPRIME_SCOPE_001"
+      ],
+      "forbidden_stale_subjects": [
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "ELYX_SURFACE_PHASE1_SCAFFOLD"
+      ]
+    },
+    {
+      "id": "FF02_P_HEAD_CHANGED_TARGETED_INVALIDATION",
+      "changed_sources": [
+        "SRC_BRANCH_P_CONTROL"
+      ],
+      "expected_stale_subjects": [
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "REL_NAV_OBSERVES_P_CONTROL",
+        "UREL_P_TO_PHASE1_HANDOFF"
+      ],
+      "forbidden_stale_subjects": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_GOV_CREATOR_REALITY_STABILIZER"
+      ]
+    },
+    {
+      "id": "FF03_EPRIME_HEAD_CHANGED_TARGETED_INVALIDATION",
+      "changed_sources": [
+        "SRC_BRANCH_E_PRIME"
+      ],
+      "expected_stale_subjects": [
+        "ELYX_SURFACE_E_PRIME",
+        "REL_NAV_OBSERVES_E_PRIME",
+        "REL_ECOSYS_DECLARES_INTERFACE_EPRIME",
+        "UREL_E_PRIME_TO_BROADER_E",
+        "COL_ECOSYS_EPRIME_SCOPE_001"
+      ],
+      "forbidden_stale_subjects": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "ELYX_SURFACE_PHASE1_SCAFFOLD",
+        "ELYX_GOV_CREATOR_REALITY_STABILIZER"
+      ]
+    },
+    {
+      "id": "FF04_NAV_SELF_ADVANCE_DOES_NOT_FORCE_GLOBAL_REBUILD",
+      "changed_sources": [
+        "SRC_BRANCH_NAVIGATOR_SELF"
+      ],
+      "expected_global_recovery_required": false
+    }
+  ]
+}
