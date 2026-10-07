@@ -1,0 +1,92 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_E_INGRESS_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_REC_E0",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_E0",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "5b37be9cf89b294794fd4b328f451ec1602a424c",
+        "identity_blob_sha": "8056e3f7a26de6d78399fec1ab4fcafaa14bfa8c",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_E1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_E1",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e1-constrained-skeleton-recovery-v0.1:channels/e1-constrained-implementation-skeleton-builder/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "2ae3bbc3afb067f8ed28a14a2cd1f959d961adcc",
+        "identity_blob_sha": "27a6e5848d05721e10580a36bc4fab2ed2a59e25",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_E2",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_E2",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e2-recovery-v0.1:channels/e2/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "ce30b165e5518f285c6abb461076f164382b4fcb",
+        "identity_blob_sha": "91f70c25ede4a611b2cff487e7c542ad27c36fe0",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_E3_5",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_E3_5",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "bc5b4a3ab656afdc29b8f32d4309471d74c527de",
+        "identity_blob_sha": "dda7f5530873acbd4f889e905f24c92a9b5f1fb8",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    }
+  ]
+}
