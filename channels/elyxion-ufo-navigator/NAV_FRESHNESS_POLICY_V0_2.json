@@ -1,0 +1,200 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_POLICY_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_FRESHNESS_POLICY_V0_1",
+  "principle": "invalidate dependent navigation cache when an upstream durable source identity changes",
+  "sources": [
+    {
+      "id": "SRC_BRANCH_MAIN",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "main",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "01b97c8edd19fdd59f81de827fb5f4a99861048f"
+    },
+    {
+      "id": "SRC_BRANCH_E_PRIME",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "E-Prime",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "061c74cb8898cf9be23586feec1c680ea48e6f44"
+    },
+    {
+      "id": "SRC_BRANCH_PHASE1_SCAFFOLD",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "agent/phase1-scaffold",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "4f3b5c53849a992e282f85a8345b637e4b06d9d1"
+    },
+    {
+      "id": "SRC_BRANCH_P_CONTROL",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p-control-point-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "4c7183356699a53d081e40b3d5d28cb362d6dbcf"
+    },
+    {
+      "id": "SRC_BRANCH_NAVIGATOR_SELF",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "tracking_mode": "SELF_CURRENT_HEAD",
+      "observed_head": null
+    }
+  ],
+  "dependencies": [
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_SURFACE_MAIN",
+      "source_ids": [
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "source_ids": [
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_SURFACE_E_PRIME",
+      "source_ids": [
+        "SRC_BRANCH_E_PRIME"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_SURFACE_PHASE1_SCAFFOLD",
+      "source_ids": [
+        "SRC_BRANCH_PHASE1_SCAFFOLD"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_SURFACE_P_CONTROL_POINT",
+      "source_ids": [
+        "SRC_BRANCH_P_CONTROL"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_MAIN",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_E_PRIME",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_E_PRIME"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_PHASE1_SCAFFOLD",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_PHASE1_SCAFFOLD"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_P_CONTROL",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_P_CONTROL"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_MAIN_CONTAINS_ECO_SYSTEMS",
+      "source_ids": [
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_ECOSYS_DECLARES_INTERFACE_EPRIME",
+      "source_ids": [
+        "SRC_BRANCH_MAIN",
+        "SRC_BRANCH_E_PRIME"
+      ]
+    },
+    {
+      "subject_kind": "UNRESOLVED_RELATION",
+      "subject_id": "UREL_P_TO_PHASE1_HANDOFF",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_P_CONTROL",
+        "SRC_BRANCH_PHASE1_SCAFFOLD"
+      ]
+    },
+    {
+      "subject_kind": "UNRESOLVED_RELATION",
+      "subject_id": "UREL_E_PRIME_TO_BROADER_E",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF",
+        "SRC_BRANCH_E_PRIME"
+      ]
+    },
+    {
+      "subject_kind": "UNRESOLVED_RELATION",
+      "subject_id": "UREL_NAV_TO_GLOBAL_C0",
+      "source_ids": [
+        "SRC_BRANCH_NAVIGATOR_SELF"
+      ]
+    },
+    {
+      "subject_kind": "UNRESOLVED_RELATION",
+      "subject_id": "UREL_ECOSYS_TO_GLOBAL_C0",
+      "source_ids": [
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "UNRESOLVED_RELATION",
+      "subject_id": "UREL_ECOSYS_TO_E_CHANNELS",
+      "source_ids": [
+        "SRC_BRANCH_MAIN"
+      ]
+    },
+    {
+      "subject_kind": "COLLISION",
+      "subject_id": "COL_ECOSYS_EPRIME_SCOPE_001",
+      "source_ids": [
+        "SRC_BRANCH_MAIN",
+        "SRC_BRANCH_E_PRIME"
+      ]
+    }
+  ],
+  "freshness_states": [
+    "FRESH",
+    "STALE",
+    "UNKNOWN"
+  ],
+  "laws": {
+    "upstream_head_change_invalidates_dependents": true,
+    "stale_does_not_mean_false": true,
+    "stale_subject_requires_targeted_recovery_before_high_confidence_use": true,
+    "unchanged_unrelated_sources_do_not_force_global_recovery": true,
+    "self_current_head_is_fresh_within_checked_checkout": true,
+    "freshness_does_not_grant_semantic_authority": true
+  }
+}
