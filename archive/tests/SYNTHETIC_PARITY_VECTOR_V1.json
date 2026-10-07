@@ -1,0 +1,149 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_PARITY_VECTOR_V1",
+  "status": "TEST_ONLY_NON_USER_DATA",
+  "synthetic_only": true,
+  "source_records": [
+    {
+      "source_order_index": 1,
+      "source_record_kind": "system",
+      "source_record_id_or_null": "src-1",
+      "raw_text": "Synthetic system record.",
+      "timestamp_state": "PRESENT_EXACT",
+      "source_timestamp_raw_or_exact": "2026-01-01T00:00:00Z",
+      "attachments": []
+    },
+    {
+      "source_order_index": 2,
+      "source_record_kind": "user",
+      "source_record_id_or_null": "src-2",
+      "raw_text": "Synthetic user record.",
+      "timestamp_state": "ABSENT_IN_SOURCE",
+      "source_timestamp_raw_or_exact": null,
+      "attachments": []
+    },
+    {
+      "source_order_index": 3,
+      "source_record_kind": "assistant",
+      "source_record_id_or_null": "src-3",
+      "raw_text": "Synthetic assistant record 🌌",
+      "timestamp_state": "PRESENT_EXACT",
+      "source_timestamp_raw_or_exact": "2026-01-01T00:00:02Z",
+      "attachments": [
+        {
+          "attachment_index": 1,
+          "attachment_type": "image",
+          "source_ref": "SYNTHETIC://parity/attachment/1"
+        }
+      ]
+    },
+    {
+      "source_order_index": 4,
+      "source_record_kind": "tool",
+      "source_record_id_or_null": "src-4",
+      "raw_text": "Synthetic tool result.",
+      "timestamp_state": "UNAVAILABLE_IN_EXPORT",
+      "source_timestamp_raw_or_exact": null,
+      "attachments": []
+    }
+  ],
+  "archive_records": [
+    {
+      "sequence": 1,
+      "role": "system_if_exported",
+      "raw_text": "Synthetic system record.",
+      "source_ref": "SYNTHETIC://parity/record/1"
+    },
+    {
+      "sequence": 2,
+      "role": "user",
+      "raw_text": "Synthetic user record.",
+      "source_ref": "SYNTHETIC://parity/record/2"
+    },
+    {
+      "sequence": 3,
+      "role": "assistant",
+      "raw_text": "Synthetic assistant record 🌌",
+      "source_ref": "SYNTHETIC://parity/record/3"
+    },
+    {
+      "sequence": 4,
+      "role": "tool_if_exported",
+      "raw_text": "Synthetic tool result.",
+      "source_ref": "SYNTHETIC://parity/record/4"
+    }
+  ],
+  "provenance_records": [
+    {
+      "sequence": 1,
+      "source_order_index": 1,
+      "source_record_kind": "system",
+      "archive_role": "system_if_exported",
+      "source_record_id_or_null": "src-1",
+      "timestamp_state": "PRESENT_EXACT",
+      "source_timestamp_raw_or_exact": "2026-01-01T00:00:00Z",
+      "normalized_utc_derived_or_null": "2026-01-01T00:00:00Z",
+      "attachment_count": 0,
+      "source_ref": "SYNTHETIC://parity/record/1"
+    },
+    {
+      "sequence": 2,
+      "source_order_index": 2,
+      "source_record_kind": "user",
+      "archive_role": "user",
+      "source_record_id_or_null": "src-2",
+      "timestamp_state": "ABSENT_IN_SOURCE",
+      "source_timestamp_raw_or_exact": null,
+      "normalized_utc_derived_or_null": null,
+      "attachment_count": 0,
+      "source_ref": "SYNTHETIC://parity/record/2"
+    },
+    {
+      "sequence": 3,
+      "source_order_index": 3,
+      "source_record_kind": "assistant",
+      "archive_role": "assistant",
+      "source_record_id_or_null": "src-3",
+      "timestamp_state": "PRESENT_EXACT",
+      "source_timestamp_raw_or_exact": "2026-01-01T00:00:02Z",
+      "normalized_utc_derived_or_null": "2026-01-01T00:00:02Z",
+      "attachment_count": 1,
+      "source_ref": "SYNTHETIC://parity/record/3"
+    },
+    {
+      "sequence": 4,
+      "source_order_index": 4,
+      "source_record_kind": "tool",
+      "archive_role": "tool_if_exported",
+      "source_record_id_or_null": "src-4",
+      "timestamp_state": "UNAVAILABLE_IN_EXPORT",
+      "source_timestamp_raw_or_exact": null,
+      "normalized_utc_derived_or_null": null,
+      "attachment_count": 0,
+      "source_ref": "SYNTHETIC://parity/record/4"
+    }
+  ],
+  "attachment_records": [
+    {
+      "message_sequence": 3,
+      "attachment_index": 1,
+      "attachment_type": "image",
+      "source_ref": "SYNTHETIC://parity/attachment/1"
+    }
+  ],
+  "expected": {
+    "source_record_count": 4,
+    "archive_record_count": 4,
+    "order_mismatch_count": 0,
+    "role_mismatch_count": 0,
+    "boundary_mismatch_count": 0,
+    "timestamp_mismatch_count": 0,
+    "attachment_mismatch_count": 0,
+    "system_record_drop_count": 0,
+    "tool_record_drop_count": 0,
+    "opaque_unresolved_count": 0,
+    "raw_text_mismatch_count": 0,
+    "source_ref_mismatch_count": 0,
+    "verdict": "PASS_PARITY"
+  },
+  "note": "No real chat content."
+}
