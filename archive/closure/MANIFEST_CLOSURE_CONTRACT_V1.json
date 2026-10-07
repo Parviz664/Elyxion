@@ -1,0 +1,30 @@
+{
+  "artifact_type": "EPRIME_CHAT_MANIFEST_CLOSURE_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "PREVENT_PREMATURE_GLOBAL_COMPLETE_STATUS",
+  "global_closure_requirements": [
+    "authoritative_source_blob_identity locked",
+    "full source scope start/end proven",
+    "all source records covered by CLOSED_VERIFIED ranges",
+    "zero gaps across full source scope",
+    "zero conflicting overlaps",
+    "source/parsed/archive counts equal",
+    "full-source parity PASS",
+    "attachment manifest accounted",
+    "message chain PASS",
+    "chunk chain PASS",
+    "receipt chain PASS",
+    "recovery proof PASS",
+    "source blob sha256 readback PASS",
+    "required independent copy verification PASS"
+  ],
+  "global_status_enum": [
+    "OPEN_INCOMPLETE",
+    "READY_FOR_FINAL_PROOF",
+    "CLOSED_100_PERCENT_VERIFIED",
+    "BLOCKED"
+  ],
+  "auto_close_allowed": false,
+  "final_close_requires_explicit_eprime_gate": true,
+  "missing_or_unknown_requirement_action": "BLOCK"
+}
