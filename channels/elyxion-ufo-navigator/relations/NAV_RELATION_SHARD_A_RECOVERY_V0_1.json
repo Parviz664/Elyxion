@@ -1,0 +1,113 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_A_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_REC_A0_ORCHESTRATOR",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "e13b45bbd37e77ec243f3b5e8e9ffcb7da8d8a36",
+        "identity_blob_sha": "74ed132308a4ac2e423a208592a9419bb74b7f3c",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_A1_ARCHITECT",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_A1_ARCHITECT",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a1-architect-recovery-v0.1:channels/a1-architect/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "02b9677c65b62f0f39db839ee09694e7dcd40903",
+        "identity_blob_sha": "b58d07cfc49db7de7f6a789bf072334bab6d9c2e",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_A2_SYSTEMS_MAP",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a2-systems-map-recovery-v0.1:channels/a2-systems-map/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "19faae42d1b0a944d59cc19d94a7d0cc017436c2",
+        "identity_blob_sha": "c062d353dbf3d9d62e3adcd57deeb1de50e667da",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_A3_PRE_E0_HANDOFF",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_A3_PRE_E0_HANDOFF",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a3-pre-e0-handoff-recovery-v0.1:channels/a3-pre-e0-handoff/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "f804d365f4cc75b719edd8159827269759c08dad",
+        "identity_blob_sha": "b992667fd120e1c1a2cd34833fad411098b73a67",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_A_ULTRA",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_A_ULTRA",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a-ultra-vision-translator-recovery-v0.1:channels/a-ultra-vision-translator/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "b0e1ce60268796bb2de026e05bc0ca3f520c5216",
+        "identity_blob_sha": "c116ba9c7da162a8b90d8d3727b1ecd56f5e5ed9",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    }
+  ]
+}
