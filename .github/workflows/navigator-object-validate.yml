@@ -37,5 +37,7 @@ jobs:
         run: python channels/elyxion-ufo-navigator/tools/test_receipt_and_repair.py
       - name: Test existing Global C0 handoff envelope
         run: python channels/elyxion-ufo-navigator/tools/test_global_c0_handoff.py
+      - name: Test existing Global C0 cold-start export
+        run: python channels/elyxion-ufo-navigator/tools/test_global_c0_cold_start_export.py
       - name: Check upstream freshness
         run: python channels/elyxion-ufo-navigator/tools/check_nav_freshness.py --fail-on-stale
