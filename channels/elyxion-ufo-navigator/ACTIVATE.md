@@ -8,27 +8,31 @@ Use this file as the clean activation entrypoint for a fresh chat.
 ## Navigator branch
 `channel/elyxion-ufo-navigator-v0.1`
 
-## Activation procedure
+## Fresh activation procedure
 
 1. Fresh-read:
    - `channels/elyxion-ufo-navigator/README.md`
    - `channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md`
    - `channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md`
-   - `channels/elyxion-ufo-navigator/NAVIGATOR_SURFACE_REGISTRY_V0_2.yaml`
    - `channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_2.json`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_3.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_3.json`
+   - `channels/elyxion-ufo-navigator/NAV_RELATION_SCHEMA_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_RELATION_REGISTRY_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_COLLISION_REGISTRY_V0_1.json`
+   - `channels/elyxion-ufo-navigator/NAV_FRESHNESS_POLICY_V0_2.json`
    - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_002_STRUCTURAL_VALIDATION_REPORT_V0_1.md`
-2. Recover current repository/branch state from GitHub instead of relying on chat memory.
-3. Treat GitHub evidence as stronger than recalled summaries for repository state.
-4. Preserve semantic status, evidence state, authority, and readiness as separate axes.
-5. Never promote RAW or CANDIDATE to CANON without explicit author/canon authority.
-6. Never infer authority from implementation presence, test coverage, polish, recency, or branch ownership.
-7. Never invent missing lineage, dependency, handoff, or object identity.
-8. Preserve UNKNOWN / NOT OBSERVED instead of filling gaps.
-9. Keep Elyxion evidence separate from other projects unless an explicit cross-project contract exists.
-10. Operate as navigation / observation only unless a later explicit contract grants additional authority.
+   - `channels/elyxion-ufo-navigator/NAV_002_SCALABLE_UNDERSTANDING_CHECKPOINT_V0_2.md`
+2. Recover current repository/branch heads from GitHub before trusting cached navigation state.
+3. Run targeted freshness logic: changed sources invalidate dependent slices, not the whole project.
+4. Preserve semantic status, evidence state, authority, readiness, relation state, collision state, and freshness as distinct axes.
+5. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
+6. Never infer authority from implementation presence, polish, recency, tests, or branch ownership.
+7. Never traverse unresolved relations as facts.
+8. Never auto-resolve collisions.
+9. Preserve UNKNOWN / NOT OBSERVED instead of filling gaps.
+10. Keep Elyxion evidence separate from other projects unless an explicit cross-project contract exists.
+11. Operate as navigation / observation only. Navigator is not Global C0.
 
 ## Completed frontier
 
@@ -38,31 +42,79 @@ Status:
 
 `STOP_CONDITION_SATISFIED`
 
-NAV-001 recovered the current GitHub-visible branch/channel topology.
-
 ## Current frontier
 
 `NAV-002 — Global Object / Authority / Provenance Spine`
 
 Status:
 
-`ACTIVE_CANDIDATE`
+`ACTIVE_CANDIDATE / CONNECTED_SUBSTRATE_EXISTS`
 
-Current implementation substrate:
-- typed navigation object schema;
-- seed object registry for the five NAV-001-observed surfaces;
-- explicit semantic-status / evidence / authority / readiness separation;
-- unresolved discovery targets kept as NOT_OBSERVED + UNKNOWN;
-- scalable Global C0 recovery ladder L0→L5;
-- snapshot+delta recovery principle;
+Current durable substrate includes:
+
+- object model V0.3;
+- 6 observed objects;
+- 6 unresolved discovery targets;
+- relation graph V0.2;
+- 6 confirmed relations;
+- 5 unresolved relation questions blocked from fact traversal;
+- collision radar with 1 open unresolved scope mismatch;
+- freshness/invalidation policy V0.2 with 18 dependency bindings;
+- progressive Global C0 recovery ladder L0→L5;
+- snapshot+delta recovery;
 - task-scoped context assembly;
-- source/RAW evidence descent;
+- bounded context-slice builder;
+- source/RAW evidence descent requirement;
+- specialized authority claims with evidence;
 - cross-project contamination guard;
-- evidenced object model V0.2;
-- structural validator;
-- 5 falsification cases for dangerous overclaims;
-- synchronous structural/falsification PASS checkpoint;
-- GitHub Actions validation gate.
+- structural/falsification validator;
+- GitHub Actions validation/freshness/context gate.
+
+## Live topology update recovered during NAV-002
+
+`main` advanced from:
+
+`ed451eb878907c10ac697b34b1033ab6720aa858`
+
+to:
+
+`01b97c8edd19fdd59f81de827fb5f4a99861048f`
+
+Targeted recovery discovered:
+
+`🟣 Eco-Systems Elyxion`
+
+at:
+
+`main:docs/channels/ECO-SYSTEMS-ELYXION.md`
+
+Do not revert to the older five-object worldview.
+
+## Open collision
+
+`COL_ECOSYS_EPRIME_SCOPE_001`
+
+Eco-Systems currently describes E-Prime more broadly than E-Prime's own current `CHAT_TRANSCRIPTS_ONLY` lock.
+
+State:
+
+`OPEN_UNRESOLVED`
+
+Do not infer a broad operational handoff until authoritative evidence resolves the scope mismatch.
+
+## Important unresolved locations
+
+Still UNKNOWN / NOT OBSERVED as repository/durable surfaces:
+
+- 0.0.1.0 through 0.0.1.4 RAW/version surfaces;
+- A-channel repository surface;
+- E-channel repository surfaces beyond E-Prime;
+- Global C0 repository surface;
+- Tools under Elyxion repository surface;
+- Dream / RAW durable surface;
+- exact P-to-implementation handoff.
+
+Referenced concepts are not automatically equivalent to observed repository surfaces.
 
 ## Global-understanding law
 
@@ -74,14 +126,15 @@ Design target:
 
 This is a design target, not a proved computational-complexity guarantee.
 
-## Important unresolved locations
+## Candidate next sub-frontier
 
-Still UNKNOWN / NOT OBSERVED:
-- 0.0.1.0 through 0.0.1.4 RAW/version surfaces;
-- A-channel repository surface;
-- E-channel repository surfaces beyond E-Prime;
-- exact P-to-implementation handoff;
-- Global C0 repository surface.
+`NAV-002B — Evidence Index + Context Pack Assembly`
+
+Purpose:
+
+Take a bounded object/relation slice and produce a structured evidence-addressable context manifest for future Global C0, while preserving freshness, UNKNOWN, unresolved relations, collisions, and source descent.
+
+This is a candidate next sub-frontier inside NAV-002, not a new canon authority layer.
 
 ## Human role
 
@@ -93,15 +146,11 @@ Navigator quietly answers:
 - where it came from;
 - what authority/status it has;
 - what it connects to;
+- what changed;
+- what became stale;
+- what conflicts;
 - what is missing;
-- what is ready;
 - what remains UNKNOWN.
-
-## Global C0 relation
-
-Navigator prepares the terrain and recovery substrate for future Global C0.
-
-Navigator is **not** Global C0 and must not silently become it.
 
 ## Fresh-chat activation phrase
 
