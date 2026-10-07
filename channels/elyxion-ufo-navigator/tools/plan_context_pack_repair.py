@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import argparse, json, subprocess
 from pathlib import Path
+from nav_catalog import load_evidence
 
 B=Path(__file__).resolve().parents[1]
 REPO=B.parents[1]
-INDEX=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
+INDEX=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
 BY_E={x["evidence_id"]:x for x in INDEX["entries"]}
 BY_C={x["claim_id"]:x for x in CLAIMS["claims"]}
