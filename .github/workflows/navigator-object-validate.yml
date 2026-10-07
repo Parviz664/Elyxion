@@ -24,10 +24,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate current Navigator substrate
-        run: python channels/elyxion-ufo-navigator/tools/validate_nav_substrate_v0_2.py
+        run: python channels/elyxion-ufo-navigator/tools/validate_nav_substrate_v0_3.py
       - name: Test bounded context slices
         run: python channels/elyxion-ufo-navigator/tools/test_context_slice.py
-      - name: Test evidence-addressable context packs
+      - name: Test claim-aware context packs
         run: python channels/elyxion-ufo-navigator/tools/test_context_pack.py
+      - name: Test targeted context-pack invalidation
+        run: python channels/elyxion-ufo-navigator/tools/test_context_pack_invalidation.py
       - name: Check upstream freshness
         run: python channels/elyxion-ufo-navigator/tools/check_nav_freshness.py --fail-on-stale
