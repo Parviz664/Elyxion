@@ -1,0 +1,51 @@
+{
+  "fixture_id": "ELYXION_NAV_EVIDENCE_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "EF01_PINNED_EXTERNAL_WITHOUT_BLOB",
+      "target_id": "EVID_ECO_SYSTEMS",
+      "mutation": {
+        "path": "observed_blob_sha",
+        "value": null
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "EF02_PINNED_EXTERNAL_WITHOUT_HEAD",
+      "target_id": "EVID_EPRIME_LOCK",
+      "mutation": {
+        "path": "observed_source_head",
+        "value": null
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "EF03_DUPLICATE_LOCATOR",
+      "target_id": "EVID_REALITY_STABILIZER",
+      "mutation": {
+        "path": "locator",
+        "value": "main:docs/channels/ECO-SYSTEMS-ELYXION.md"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "EF04_AUTHOR_DECL_WRONG_TRACKING",
+      "target_id": "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+      "mutation": {
+        "path": "tracking_mode",
+        "value": "PINNED_BLOB_AND_HEAD"
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "EF05_SELF_HOSTED_PINNED_AS_EXTERNAL",
+      "target_id": "EVID_NAV_README",
+      "mutation": {
+        "path": "tracking_mode",
+        "value": "PINNED_BLOB_AND_HEAD"
+      },
+      "expected": "FAIL"
+    }
+  ]
+}
