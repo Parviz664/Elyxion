@@ -87,6 +87,11 @@
     "absence_does_not_imply_nonexistence": true,
     "unknown_must_not_be_autofilled": true,
     "authority_must_be_scoped": true,
-    "evidence_required_for_material_claims": true
+    "evidence_required_for_material_claims": true,
+    "summary_does_not_replace_primary_evidence": true,
+    "cross_project_import_requires_explicit_contract": true,
+    "task_context_should_be_relevance_scoped": true,
+    "implementation_presence_does_not_grant_implementation_authority": true,
+    "readiness_requires_evidence_or_explicit_navigator_basis": true
   }
 }
