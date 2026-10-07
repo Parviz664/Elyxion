@@ -349,6 +349,134 @@
         "Era-specific routing is not promoted into a universal current route."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P0_INTENT_NORMALIZER_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P0_INTENT_NORMALIZER_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P0 artifacts define a normalization/routing gateway rather than world-generation or canon authority.",
+        "They document historical routing through -P1 and later NO_-P1 variants.",
+        "They explicitly preserve the current global route as HOLD_UNRESOLVED."
+      ],
+      "limits": [
+        "Formal global deletion/absorption of -P1 is not proved.",
+        "P0 output v2.7 does not establish a formal v2.7 channel spec.",
+        "Stable P0->A handoff is not recovered.",
+        "Oral RAW Guard P0-* namespace is distinct unless lineage is proved."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P1_MAP_PLANNER_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P1_MAP_PLANNER_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P1 artifacts define a constrained causal-map planner with IDs, stages, uncertainty and scope binding.",
+        "They explicitly deny RAW overwrite, silent ambiguity repair, auto-canonization and fake causal certainty.",
+        "They preserve the -P1 relation and mechanics boundary as unresolved."
+      ],
+      "limits": [
+        "P1 is not proved to be a total successor/rename of -P1.",
+        "Mechanics conflict remains UNKNOWN/HOLD.",
+        "Runtime implementation remains UNKNOWN / NOT VERIFIED.",
+        "P1 PASS is not CANON."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P2_LADDER_BUILDER_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P2_LADDER_BUILDER_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P2 artifacts define conversion of P1 map semantics into source-bound causal microstep ladder data.",
+        "They explicitly separate P2 structural ladder work from P3 final rendering.",
+        "They deny canon authority and standalone runtime proof."
+      ],
+      "limits": [
+        "A-bridge is derivative rather than replacement for the main P2->P3 route.",
+        "Direct production use by each A channel is not fully recovered.",
+        "Global route implementation remains blocked by P Control Point HOLD_UNRESOLVED."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P3_FINAL_TEXT_RENDERER_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P3_FINAL_TEXT_RENDERER_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P3 artifacts define a representation-transform role over P2 ladder material.",
+        "They explicitly preserve meaning, causality, uncertainty, dependencies and lineage while prohibiting new upstream facts.",
+        "They strongly recover the local P2->P3->P4 seam."
+      ],
+      "limits": [
+        "Local seam does not resolve current global P-route authority.",
+        "Direct P3->A3 production routing is not proved.",
+        "P3 canon IDs are rendered-item identity, not project canon sovereignty."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P4_FEEL_POTENTIAL_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P4_FEEL_POTENTIAL_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P4_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P4 artifacts define a terminal selector/filter over P3-rendered candidates.",
+        "They explicitly preserve source order, dependencies, uncertainty and author-selection control.",
+        "They state P5 is not default and the global route dispute is outside P4 authority."
+      ],
+      "limits": [
+        "Scores are editorial priority, not truth.",
+        "A-layer handoff names are route options, not authority.",
+        "P5 remains disabled unless explicitly enabled."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_P5_FEEL_TRUTH_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_P5_FEEL_TRUTH_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P5_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P5 artifacts define an optional presentation-layer post-processor after P4 selection.",
+        "They explicitly deny new-causality and implementation-logic authority.",
+        "They document disabled_by_default and explicit enablement gates."
+      ],
+      "limits": [
+        "Durable core-spine membership is not proved.",
+        "External runtime implementation is not proved.",
+        "Historical A/E handoff rules for earlier versions are not fully established."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
