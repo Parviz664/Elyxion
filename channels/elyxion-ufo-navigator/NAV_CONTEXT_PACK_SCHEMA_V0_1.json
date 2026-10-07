@@ -1,0 +1,26 @@
+{
+  "schema_id": "ELYXION_NAV_CONTEXT_PACK_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required": [
+    "pack_version",
+    "project_scope",
+    "request",
+    "slice",
+    "evidence_manifest",
+    "unresolved_boundary",
+    "collisions",
+    "freshness_contract",
+    "laws"
+  ],
+  "laws": {
+    "pack_is_bounded_not_complete_world": true,
+    "evidence_manifest_is_deduplicated": true,
+    "unresolved_relations_are_visible_but_not_traversed": true,
+    "collisions_are_visible_and_not_auto_resolved": true,
+    "author_declared_facts_keep_source_kind": true,
+    "file_bodies_not_loaded_by_default": true,
+    "missing_evidence_index_entry_is_pack_failure": true
+  }
+}
