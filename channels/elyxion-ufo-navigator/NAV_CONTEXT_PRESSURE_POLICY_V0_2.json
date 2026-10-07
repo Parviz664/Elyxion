@@ -1,0 +1,89 @@
+{
+  "policy_id": "ELYXION_NAV_CONTEXT_PRESSURE_POLICY_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_CONTEXT_PRESSURE_POLICY_V0_1",
+  "dimensions": [
+    {
+      "id": "TOPOLOGY_VISIBILITY",
+      "meaning": "How much of the currently observed repository topology remains visible at the selected orientation depth.",
+      "current_O0": {
+        "branches": "31/31",
+        "objects": "33/33",
+        "discovery": "6/6"
+      }
+    },
+    {
+      "id": "INDIVIDUAL_EVIDENCE_IDENTITY_LOAD",
+      "meaning": "How many individual evidence identities are injected into the current reasoning payload.",
+      "broad_orientation": {
+        "selected": 42,
+        "total": 46
+      },
+      "O0_default": {
+        "selected": 0,
+        "total": 46
+      }
+    },
+    {
+      "id": "EXACT_SOURCE_BODY_LOAD",
+      "meaning": "How many exact source bodies are loaded into the current reasoning payload.",
+      "broad_orientation_default": 0,
+      "O0_default": 0,
+      "escalation": "O4_EXACT_SOURCE_ONLY_BY_NEED"
+    },
+    {
+      "id": "NORMALIZED_SEMANTIC_OBJECT_COVERAGE",
+      "meaning": "Fraction of observed objects represented by normalized OBJECT-level claims.",
+      "current": {
+        "covered": 6,
+        "total": 33,
+        "ratio": 0.18181818181818182
+      },
+      "full_semantic_readiness_target": 1
+    },
+    {
+      "id": "UNRESOLVED_UNKNOWN_VISIBILITY",
+      "meaning": "Whether unresolved relations, collisions, and discovery unknowns remain explicit rather than being compressed away.",
+      "current": {
+        "unresolved_relations": 5,
+        "collisions": 1,
+        "discovery_targets": 6
+      }
+    }
+  ],
+  "depth_defaults": {
+    "O0_TOPOLOGY_INDEX": {
+      "individual_evidence_identities": 0,
+      "exact_source_bodies": 0,
+      "semantic_claim_payload": "NONE_BY_DEFAULT"
+    },
+    "O1_ROLE_BOUNDARY": {
+      "individual_evidence_identities": "SELECTED_SURFACE_ONLY",
+      "exact_source_bodies": 0
+    },
+    "O2_RELATION_AUTHORITY": {
+      "individual_evidence_identities": "SELECTED_RELATION_SET_ONLY",
+      "exact_source_bodies": 0
+    },
+    "O3_CLAIM_EVIDENCE": {
+      "individual_evidence_identities": "QUESTION_SPECIFIC",
+      "exact_source_bodies": 0
+    },
+    "O4_EXACT_SOURCE": {
+      "exact_source_bodies": "TARGETED_ONLY"
+    },
+    "O5_PRIMARY_RAW": {
+      "exact_source_bodies": "PRIMARY_RAW_ONLY_WHEN_REQUIRED"
+    }
+  },
+  "laws": {
+    "topology_visibility_must_not_require_full_evidence_identity_load": true,
+    "metadata_pressure_and_source_body_pressure_are_separate": true,
+    "semantic_coverage_is_independent_from_topology_coverage": true,
+    "unknowns_must_not_be_dropped_to_reduce_payload": true,
+    "lower_payload_is_not_evidence_of_higher_truth": true,
+    "no_scaling_claim_without_multi_size_measurements": true
+  }
+}
