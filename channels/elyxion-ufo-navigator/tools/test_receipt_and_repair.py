@@ -6,7 +6,7 @@ from check_claim_sufficiency import evaluate_claim
 B=Path(__file__).resolve().parents[1]
 M=json.loads((B/"NAV_MATERIALIZATION_RECEIPTS_V0_1.json").read_text())
 V=json.loads((B/"NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json").read_text())
-C=json.loads((B/"NAV_CLAIM_INDEX_V0_5.json").read_text())
+C=json.loads((B/"NAV_CLAIM_INDEX_V0_6.json").read_text())
 
 def main():
     errors=[]
