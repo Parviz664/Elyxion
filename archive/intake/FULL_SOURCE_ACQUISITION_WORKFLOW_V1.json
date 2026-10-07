@@ -1,0 +1,73 @@
+{
+  "artifact_type": "EPRIME_CHAT_FULL_SOURCE_ACQUISITION_WORKFLOW_V1",
+  "status": "LOCKED",
+  "objective": "ACQUIRE_COMPLETE_AUTHORITATIVE_CONVERSATION_SOURCE_BEFORE_REAL_INGEST",
+  "phases": [
+    {
+      "phase": "A_SOURCE_ACQUIRE",
+      "required": [
+        "obtain complete machine-readable ChatGPT export or complete verbatim transcript",
+        "preserve original file bytes",
+        "record source filename and source type"
+      ]
+    },
+    {
+      "phase": "B_SOURCE_HASH",
+      "required": [
+        "compute sha256 over exact original bytes before parsing",
+        "record size_bytes",
+        "create immutable source identity record"
+      ]
+    },
+    {
+      "phase": "C_SCOPE_PROOF",
+      "required": [
+        "identify exact conversation",
+        "determine source start and end",
+        "record source message count when export permits",
+        "record attachment count when export permits"
+      ]
+    },
+    {
+      "phase": "D_PRIVACY_GATE",
+      "required": [
+        "verify destination for RAW content is private",
+        "verify no public branch receives raw transcript or attachment bytes"
+      ]
+    },
+    {
+      "phase": "E_INGEST",
+      "required": [
+        "parse without semantic normalization",
+        "emit ordered message records",
+        "emit attachment records",
+        "emit chunk manifests and receipts"
+      ]
+    },
+    {
+      "phase": "F_VERIFY",
+      "required": [
+        "run message completeness proof",
+        "run attachment completeness proof",
+        "run chain verification",
+        "run recovery proof"
+      ]
+    },
+    {
+      "phase": "G_REDUNDANCY",
+      "required": [
+        "create minimum required independent copies",
+        "perform full readback hash verification"
+      ]
+    }
+  ],
+  "fail_closed_conditions": [
+    "source_truncated",
+    "conversation_scope_ambiguous",
+    "public_destination_for_raw_data",
+    "message_gap",
+    "attachment_silent_drop",
+    "source_hash_mismatch"
+  ],
+  "inference_policy": "FORBIDDEN"
+}
