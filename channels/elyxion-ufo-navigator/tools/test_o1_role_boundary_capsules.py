@@ -22,14 +22,16 @@ def main():
         for eid in c["source_boundary_evidence"]:
             if eid not in evidence:bad.append(c["capsule_id"]+":boundary-evidence")
         if c["relation_assertions"]!=[]:bad.append(c["capsule_id"]+":relation-inference")
-        if c["capsule_state"]!="DRAFT_FROM_EXACT_ARTIFACTS":bad.append(c["capsule_id"]+":state")
+        if c["capsule_state"]!="VERIFIED_WITH_LIMITS":bad.append(c["capsule_id"]+":state")
+        if len(c.get("materialization_receipt_ids",[]))!=2:bad.append(c["capsule_id"]+":materialization-receipts")
+        if not c.get("semantic_verification_id"):bad.append(c["capsule_id"]+":verification")
         if not c["documented_non_authorities"]:bad.append(c["capsule_id"]+":non-authority")
         if not c["unknowns"]:bad.append(c["capsule_id"]+":unknowns")
 
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: O1 batch01 capsules=5 source-bound relation-assertions=0 state=DRAFT")
+    print("PASS: O1 batch01 capsules=5 source-bound relation-assertions=0 state=VERIFIED_WITH_LIMITS")
     return 0
 
 if __name__=="__main__":
