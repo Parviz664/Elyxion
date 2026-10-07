@@ -1,0 +1,343 @@
+{
+  "index_id": "ELYXION_NAV_CLAIM_INDEX_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_CLAIM_SCHEMA_V0_1.json",
+  "evidence_index_ref": "NAV_EVIDENCE_INDEX_V0_2.json",
+  "claims": [
+    {
+      "claim_id": "CLAIM_GLOBAL_C0_EXISTS",
+      "project_scope": "ELYXION",
+      "statement": "Global C0 UFO already exists.",
+      "claim_class": "EXISTENCE",
+      "epistemic_state": "AUTHOR_DECLARED",
+      "subject_refs": [
+        "DISCOVERY:DISCOVERY_GLOBAL_C0"
+      ],
+      "evidence_ids": [
+        "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+        "EVID_NAV_GLOBAL_C0_BOUNDARY"
+      ],
+      "limits": [
+        "Repository/durable location remains UNKNOWN to Navigator.",
+        "This does not identify Global C0 implementation topology."
+      ],
+      "materialization_hint": "M0_MANIFEST_ONLY"
+    },
+    {
+      "claim_id": "CLAIM_NAV_MUST_NOT_BUILD_GLOBAL_C0",
+      "project_scope": "ELYXION",
+      "statement": "Navigator must not build, rebuild, or duplicate Global C0.",
+      "claim_class": "AUTHORITY",
+      "epistemic_state": "AUTHOR_DECLARED",
+      "subject_refs": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR",
+        "DISCOVERY:DISCOVERY_GLOBAL_C0"
+      ],
+      "evidence_ids": [
+        "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+        "EVID_NAV_GLOBAL_C0_BOUNDARY",
+        "EVID_NAV_ACTIVATE"
+      ],
+      "limits": [
+        "Navigator may prepare substrate and handoff context only."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_NAV_NO_GLOBAL_C0_AUTHORITY",
+      "project_scope": "ELYXION",
+      "statement": "Navigator has no Global C0 authority and must not become Global C0.",
+      "claim_class": "AUTHORITY",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR"
+      ],
+      "evidence_ids": [
+        "EVID_NAV_GLOBAL_C0_BOUNDARY",
+        "EVID_NAV_README",
+        "EVID_NAV_ACTIVATE"
+      ],
+      "limits": [],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_ECO_SYSTEMS_ROLE",
+      "project_scope": "ELYXION",
+      "statement": "Eco-Systems Elyxion is an architectural/system-ecosystem research channel and is not self-canonizing or the implementation channel.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_CHANNEL_ECO_SYSTEMS"
+      ],
+      "evidence_ids": [
+        "EVID_ECO_SYSTEMS"
+      ],
+      "limits": [
+        "Operational handoff to existing Global C0 and E channels remains unresolved."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_EPRIME_CHAT_TRANSCRIPTS_ONLY",
+      "project_scope": "ELYXION",
+      "statement": "E-Prime's current explicit purpose is CHAT_TRANSCRIPTS_ONLY.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_SURFACE_E_PRIME"
+      ],
+      "evidence_ids": [
+        "EVID_EPRIME_LOCK"
+      ],
+      "limits": [
+        "Broader E-channel relation remains unresolved."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_ECOSYS_EPRIME_SCOPE_COLLISION_OPEN",
+      "project_scope": "ELYXION",
+      "statement": "Eco-Systems describes E-Prime more broadly than E-Prime's own current lock; the scope mismatch is open and unresolved.",
+      "claim_class": "COLLISION",
+      "epistemic_state": "NAVIGATOR_ASSESSMENT",
+      "subject_refs": [
+        "COLLISION:COL_ECOSYS_EPRIME_SCOPE_001",
+        "OBJECT:ELYX_CHANNEL_ECO_SYSTEMS",
+        "OBJECT:ELYX_SURFACE_E_PRIME"
+      ],
+      "evidence_ids": [
+        "EVID_ECO_SYSTEMS",
+        "EVID_EPRIME_LOCK",
+        "EVID_EPRIME_MANIFEST"
+      ],
+      "limits": [
+        "Navigator must not choose a winner or infer a broad operational handoff."
+      ],
+      "materialization_hint": "M2_CONFLICT_SET"
+    },
+    {
+      "claim_id": "CLAIM_REALITY_STABILIZER_SCOPE",
+      "project_scope": "ELYXION",
+      "statement": "Creator Reality Stabilizer Law governs all AI-assisted Elyxion conversations, research, architecture, planning, evaluation, and technical collaboration.",
+      "claim_class": "GOVERNANCE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_GOV_CREATOR_REALITY_STABILIZER",
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR"
+      ],
+      "evidence_ids": [
+        "EVID_REALITY_STABILIZER"
+      ],
+      "limits": [
+        "Source-native status label GOVERNANCE LAW is preserved separately from lifecycle status."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_P_ROUTE_HOLD",
+      "project_scope": "ELYXION",
+      "statement": "P Control Point is frozen with route state HOLD_UNRESOLVED; the -P1 route authority remains unresolved.",
+      "claim_class": "STATUS",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_SURFACE_P_CONTROL_POINT",
+        "UNRESOLVED_RELATION:UREL_P_TO_PHASE1_HANDOFF"
+      ],
+      "evidence_ids": [
+        "EVID_P_CONTROL_README"
+      ],
+      "limits": [
+        "This does not resolve the P-to-implementation handoff."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_PHASE1_EXPERIMENTAL_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "Phase 1 scaffold contains implementation/prototype work whose experimental details do not automatically define canon.",
+      "claim_class": "STATUS",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_SURFACE_PHASE1_SCAFFOLD"
+      ],
+      "evidence_ids": [
+        "EVID_PHASE1_README"
+      ],
+      "limits": [
+        "Implementation presence does not prove implementation authority or canon."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_CONTEXT_PACK_IS_BOUNDED",
+      "project_scope": "ELYXION",
+      "statement": "Navigator context packs are bounded slices and do not claim complete-world coverage.",
+      "claim_class": "NAVIGATION_CAPABILITY",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "NAVIGATION:CONTEXT_PACK"
+      ],
+      "evidence_ids": [
+        "EVID_NAV_CONTEXT_PACK_SCHEMA",
+        "EVID_NAV_002B_CHECKPOINT"
+      ],
+      "limits": [
+        "Boundedness does not prove that the selected slice is always sufficient for every question."
+      ],
+      "materialization_hint": "M0_MANIFEST_ONLY"
+    },
+    {
+      "claim_id": "CLAIM_PACK_MATERIALIZATION_ESCALATES_BY_NEED",
+      "project_scope": "ELYXION",
+      "statement": "Evidence materialization escalates from manifest-only to exact artifact, conflict set, and primary/RAW based on need.",
+      "claim_class": "NAVIGATION_CAPABILITY",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "NAVIGATION:CONTEXT_PACK"
+      ],
+      "evidence_ids": [
+        "EVID_NAV_MATERIALIZATION_POLICY"
+      ],
+      "limits": [
+        "Missing primary evidence must produce a blocked/missing-evidence state rather than invention."
+      ],
+      "materialization_hint": "M0_MANIFEST_ONLY"
+    },
+    {
+      "claim_id": "CLAIM_PACK_RISK_CONTROLS_EVIDENCE_ESCALATION",
+      "project_scope": "ELYXION",
+      "statement": "Context-pack risk bands control evidence escalation, not emotional tone or project importance.",
+      "claim_class": "NAVIGATION_CAPABILITY",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "NAVIGATION:CONTEXT_PACK"
+      ],
+      "evidence_ids": [
+        "EVID_NAV_PACK_RISK_POLICY"
+      ],
+      "limits": [
+        "Risk bands are policy categories, not scientific measurements."
+      ],
+      "materialization_hint": "M0_MANIFEST_ONLY"
+    },
+    {
+      "claim_id": "CLAIM_NAV_002B_FIRST_BOUNDED_PACKS_PROVEN",
+      "project_scope": "ELYXION",
+      "statement": "NAV-002B has synchronous mirror evidence for its first two bounded context-pack cases.",
+      "claim_class": "NAVIGATION_CAPABILITY",
+      "epistemic_state": "NAVIGATOR_ASSESSMENT",
+      "subject_refs": [
+        "NAVIGATION:CONTEXT_PACK"
+      ],
+      "evidence_ids": [
+        "EVID_NAV_002B_CHECKPOINT"
+      ],
+      "limits": [
+        "This is not an observed GitHub Actions PASS.",
+        "It does not prove complete Elyxion coverage or perfect pack sufficiency."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_O1_E_PRIME_KERNEL_ROLE_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "The recovered architectural E-Prime surface is a technical truth/evidence/lineage/recovery organ and is explicitly separate from the E-Prime CHAT_TRANSCRIPTS_ONLY archive surface.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_REC_E_PRIME_KERNEL"
+      ],
+      "evidence_ids": [
+        "EVID_REC_E_PRIME_KERNEL_IDENTITY",
+        "EVID_O1_E_PRIME_KERNEL_BOUNDARY"
+      ],
+      "limits": [
+        "This does not establish global authority precedence over all E surfaces.",
+        "This does not locate or define Global C0.",
+        "Recovered E-Prime kernel role is not E0 bind authority or E6 runtime authority."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_O1_E_CHAIN_RESEARCH_ROLE_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "The recovered E-chain research surface is a meta-research / architecture-proof / recovery channel for reconstructing the E-chain as a system, not an E0-E6 operational channel or gameplay implementation authority.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_REC_E_CHAIN_RESEARCH"
+      ],
+      "evidence_ids": [
+        "EVID_REC_E_CHAIN_RESEARCH_IDENTITY",
+        "EVID_O1_E_CHAIN_RESEARCH_BOUNDARY"
+      ],
+      "limits": [
+        "Historical name remains UNKNOWN.",
+        "Full original contract is not recovered.",
+        "Researching where a decision belongs does not grant runtime decision authority."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_O1_DISPATCHER_ROLE_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "The recovered Elyxion Dispatcher is a human-facing dispatcher / continuity surface for dream-flow preservation, high-level P/A orientation, routing context and human-readable system explanation; it is not Global C0, UFO Navigator, canon authority, or implementation authority.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_REC_DISPATCHER"
+      ],
+      "evidence_ids": [
+        "EVID_REC_DISPATCHER_IDENTITY",
+        "EVID_O1_DISPATCHER_BOUNDARY"
+      ],
+      "limits": [
+        "The claim that Dispatcher may be the first/original Elyxion channel remains unproven.",
+        "The recovery is partial and is not a 100% transcript archive."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_O1_PAE_HISTORY_ROLE_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "PAE Archaeology Navigator is a historical interpreter / human explainer / cross-channel archaeology surface for recovered P/A/E families and may surface evidence and conflicts without making canon, activation, global route, or runtime decisions.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_REC_PAE_HISTORY"
+      ],
+      "evidence_ids": [
+        "EVID_REC_PAE_HISTORY_IDENTITY",
+        "EVID_O1_PAE_HISTORY_BOUNDARY"
+      ],
+      "limits": [
+        "PAE may escalate evidence but may not declare the globally authoritative route.",
+        "Understanding specialist contracts does not grant specialist transformation authority."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    },
+    {
+      "claim_id": "CLAIM_O1_A_ULTRA_ROLE_BOUNDARY",
+      "project_scope": "ELYXION",
+      "statement": "A-Ultra / AUltra is the recovered public identity of A_MINUS_1_VISION_TRANSLATOR and is distinct from A1; its documented boundaries preserve source-grounded vision semantics without project-routing, build-readiness, A1-architecture, E-implementation, or invention authority.",
+      "claim_class": "ROLE",
+      "epistemic_state": "DIRECTLY_DOCUMENTED",
+      "subject_refs": [
+        "OBJECT:ELYX_REC_A_ULTRA"
+      ],
+      "evidence_ids": [
+        "EVID_REC_A_ULTRA_IDENTITY",
+        "EVID_O1_A_ULTRA_BOUNDARY"
+      ],
+      "limits": [
+        "Line-by-line authorship of the recovered naming law is UNKNOWN.",
+        "Independent author rationale for the rename is UNKNOWN.",
+        "Historically observed P4 direct input remains contractually unresolved."
+      ],
+      "materialization_hint": "M1_EXACT_ARTIFACT"
+    }
+  ],
+  "supersedes_candidate": "ELYXION_NAV_CLAIM_INDEX_V0_1"
+}
