@@ -1,0 +1,46 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_META_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_REC_DISPATCHER_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/elyxion-dispatcher-recovery-v0.1:channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-dispatcher-recovery-v0.1",
+      "path": "channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "b9484a3be58e308f3c116207356d35e4e3f338fe",
+      "observed_source_head": "fee2014268444bc08feac5a015f7b14ad2370c42",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_DISPATCHER",
+        "RELATION:REL_NAV_OBSERVES_REC_DISPATCHER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REC_PAE_HISTORY_IDENTITY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/pae-history-navigator-recovery-v0.1:channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/pae-history-navigator-recovery-v0.1",
+      "path": "channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "1ab740223ec7cfb9ccfc596485d1e855458d5ba7",
+      "observed_source_head": "8a474a5be5bcedb3570ebbce3628f69f62821e5a",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_REC_PAE_HISTORY",
+        "RELATION:REL_NAV_OBSERVES_REC_PAE_HISTORY"
+      ]
+    }
+  ]
+}
