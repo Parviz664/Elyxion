@@ -1,0 +1,26 @@
+{
+  "artifact_type": "EPRIME_CHAT_FINAL_100_GATE_CONTRACT_V1",
+  "status": "LOCKED_NOT_EXECUTABLE_WITHOUT_REAL_RAW",
+  "purpose": "DEFINE_THE_ONLY_PATH_TO_A_100_PERCENT_VERIFIED_ARCHIVE_CLAIM",
+  "prerequisites": [
+    "PRE_100_COMPLETENESS_BARRIER == READY_FOR_FINAL_100_PROOF",
+    "INDEPENDENT_PRECLOSE_AUDIT == PASS_PRECLOSE",
+    "GLOBAL_PROOF_BUNDLE == READY_FOR_100_GATE",
+    "full authoritative source scope proven",
+    "raw transcript coverage == 100",
+    "source parity == 100",
+    "attachment accounting strongest verdict passes",
+    "recovery proof passes",
+    "required independent copy readbacks pass",
+    "all critical mismatch/loss/drop counts == 0"
+  ],
+  "final_verdict_enum": [
+    "CLOSED_100_PERCENT_VERIFIED",
+    "BLOCKED"
+  ],
+  "architecture_only_cannot_pass": true,
+  "synthetic_only_evidence_cannot_pass": true,
+  "memory_or_summary_evidence_cannot_pass": true,
+  "explicit_eprime_gate_required": true,
+  "no_override": true
+}
