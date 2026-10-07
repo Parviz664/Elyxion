@@ -1,0 +1,43 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_ATTACHMENT_TEST_VECTOR_V1",
+  "status": "TEST_ONLY_NON_USER_DATA",
+  "synthetic_only": true,
+  "source_id": "SYNTHETIC_SOURCE_WITH_ATTACHMENT_V1",
+  "declared_attachment_count": 2,
+  "records": [
+    {
+      "attachment_id": "SYNTH-ATT-0001",
+      "message_sequence": 2,
+      "attachment_index": 1,
+      "attachment_type": "image",
+      "original_filename_or_null": "synthetic.png",
+      "mime_type_or_null": "image/png",
+      "source_ref": "SYNTHETIC://attachment/1",
+      "content_sha256_or_unknown": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "size_bytes_or_unknown": 1234,
+      "availability_status": "PRESENT_AND_HASHED"
+    },
+    {
+      "attachment_id": "SYNTH-ATT-0002",
+      "message_sequence": 3,
+      "attachment_index": 1,
+      "attachment_type": "file",
+      "original_filename_or_null": "missing.txt",
+      "mime_type_or_null": "text/plain",
+      "source_ref": "SYNTHETIC://attachment/2",
+      "content_sha256_or_unknown": "UNKNOWN",
+      "size_bytes_or_unknown": "UNKNOWN",
+      "availability_status": "MISSING_FROM_EXPORT"
+    }
+  ],
+  "expected_manifest": {
+    "archived_attachment_record_count": 2,
+    "hashed_attachment_count": 1,
+    "ref_only_attachment_count": 0,
+    "missing_attachment_count": 1,
+    "unresolved_attachment_count": 0,
+    "expected_verdict": "PASS_TEXT_ONLY_WITH_ATTACHMENT_CONSTRAINTS",
+    "strongest_full_context_claim_allowed": false
+  },
+  "note": "No real user attachment data."
+}
