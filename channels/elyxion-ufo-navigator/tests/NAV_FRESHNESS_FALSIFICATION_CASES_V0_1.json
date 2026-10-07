@@ -1,0 +1,42 @@
+{
+  "fixture_id": "ELYXION_NAV_FRESHNESS_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "FF01_MAIN_HEAD_CHANGED_ONLY_MAIN_DEPENDENTS_STALE",
+      "changed_sources": [
+        "SRC_BRANCH_MAIN"
+      ],
+      "expected_stale_subjects": [
+        "ELYX_SURFACE_MAIN",
+        "REL_NAV_OBSERVES_MAIN"
+      ],
+      "forbidden_stale_subjects": [
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_SURFACE_P_CONTROL_POINT"
+      ]
+    },
+    {
+      "id": "FF02_P_HEAD_CHANGED_TARGETED_INVALIDATION",
+      "changed_sources": [
+        "SRC_BRANCH_P_CONTROL"
+      ],
+      "expected_stale_subjects": [
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "REL_NAV_OBSERVES_P_CONTROL",
+        "UREL_P_TO_PHASE1_HANDOFF"
+      ],
+      "forbidden_stale_subjects": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME"
+      ]
+    },
+    {
+      "id": "FF03_NAV_SELF_ADVANCE_DOES_NOT_REQUIRE_GLOBAL_REBUILD",
+      "changed_sources": [
+        "SRC_BRANCH_NAVIGATOR_SELF"
+      ],
+      "expected_global_recovery_required": false
+    }
+  ]
+}
