@@ -15,6 +15,8 @@ on:
       - "channels/elyxion-ufo-navigator/tests/**"
       - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
       - "channels/elyxion-ufo-navigator/tools/check_nav_freshness.py"
+      - "channels/elyxion-ufo-navigator/tools/build_context_slice.py"
+      - "channels/elyxion-ufo-navigator/tools/test_context_slice.py"
       - ".github/workflows/navigator-object-validate.yml"
   pull_request:
     paths:
@@ -34,5 +36,7 @@ jobs:
           python-version: "3.12"
       - name: Validate Navigator substrate
         run: python channels/elyxion-ufo-navigator/tools/validate_nav_objects.py
+      - name: Test bounded context slices
+        run: python channels/elyxion-ufo-navigator/tools/test_context_slice.py
       - name: Check upstream freshness
         run: python channels/elyxion-ufo-navigator/tools/check_nav_freshness.py --fail-on-stale
