@@ -1,0 +1,50 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_IDEMPOTENCY_VECTOR_V1",
+  "status": "TEST_ONLY_NON_USER_DATA",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "case_id": "IDEMPOTENT_REPLAY",
+      "first_import": {
+        "source_sha256": "aaa",
+        "declared_scope": "1-3",
+        "parser_contract_version": "V1"
+      },
+      "second_import": {
+        "source_sha256": "aaa",
+        "declared_scope": "1-3",
+        "parser_contract_version": "V1"
+      },
+      "expected": "NOOP_RETURN_EXISTING_RECEIPT"
+    },
+    {
+      "case_id": "CONFLICT_SAME_SCOPE_DIFFERENT_SOURCE",
+      "first_import": {
+        "source_sha256": "aaa",
+        "declared_scope": "1-3",
+        "parser_contract_version": "V1"
+      },
+      "second_import": {
+        "source_sha256": "bbb",
+        "declared_scope": "1-3",
+        "parser_contract_version": "V1"
+      },
+      "expected": "BLOCK_CONFLICT"
+    },
+    {
+      "case_id": "IDENTICAL_TEXT_DIFFERENT_SEQUENCE",
+      "records": [
+        {
+          "sequence": 10,
+          "raw_text": "same"
+        },
+        {
+          "sequence": 11,
+          "raw_text": "same"
+        }
+      ],
+      "expected": "KEEP_BOTH_NOT_DUPLICATES"
+    }
+  ],
+  "note": "No real chat content."
+}
