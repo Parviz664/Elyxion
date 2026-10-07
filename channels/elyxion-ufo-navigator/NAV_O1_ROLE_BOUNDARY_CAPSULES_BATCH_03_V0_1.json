@@ -1,0 +1,218 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_03_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_P0_INTENT_NORMALIZER",
+      "object_id": "ELYX_REC_P0",
+      "source_identity_evidence_id": "EVID_REC_P0_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P0_INTENT_NORMALIZER_BOUNDARY"
+      ],
+      "role_summary": "Recovered P0 Intent Normalizer: a normalization and routing gateway that converts author/human intent into a strict P-chain routing artifact without becoming the world generator or canon authority.",
+      "documented_non_authorities": [
+        "not P1 causal/reality mapper",
+        "not P2 ladder builder",
+        "not P3 renderer",
+        "not P4 final cut",
+        "not A-layer world translator",
+        "not game runtime",
+        "not canon authority",
+        "normalized intent is not RAW"
+      ],
+      "status_and_evidence_ceiling": {
+        "earliest_directly_dated_contract": "v2.3",
+        "strongest_formal_channel_spec": "v2.6",
+        "supplied_output_v2_7": "OUTPUT_LEVEL_PATCH_EVIDENCE_NOT_FORMAL_CHANNEL_SPEC",
+        "oral_raw_guard_namespace_relation": "DISTINCT_ENTITY_UNLESS_LINEAGE_PROVED",
+        "current_global_route": "HOLD_UNRESOLVED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "formal absorption or deletion of historical -P1",
+        "generic owner-confirmed mechanics boundary resolution",
+        "stable direct P0-to-A handoff",
+        "current global route"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_P1_MAP_PLANNER",
+      "object_id": "ELYX_REC_P1",
+      "source_identity_evidence_id": "EVID_REC_P1_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P1_MAP_PLANNER_BOUNDARY"
+      ],
+      "role_summary": "Recovered P1 Map Planner: a constrained causal-map planner that converts normalized source material into ordered causal stages with explicit IDs, pressure, trigger, transition, stabilized state, uncertainty, scope binding, and downstream handoff.",
+      "documented_non_authorities": [
+        "must not overwrite USER RAW",
+        "must not silently repair ambiguous author meaning",
+        "must not auto-canonize",
+        "must not invent entities or mechanisms outside scope/allowlist",
+        "must not hide UNKNOWN",
+        "must not fake causal certainty",
+        "must not silently resolve -P1 route",
+        "does not govern the live author dream stream"
+      ],
+      "status_and_evidence_ceiling": {
+        "role_core": "RECOVERED_FACT / STRONGLY_RECOVERED",
+        "v3_2_4_structure": "CONTRACTED_USER_SUPPLIED_ARTIFACT",
+        "original_line_authorship": "UNKNOWN_ORIGIN",
+        "runtime_implementation": "UNKNOWN / NOT VERIFIED",
+        "mechanics_boundary_conflict": "UNKNOWN/HOLD"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "formal rename/succession relation to historical -P1",
+        "generic owner-confirmed mechanics boundary resolution",
+        "runtime implementation state"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_P2_LADDER_BUILDER",
+      "object_id": "ELYX_REC_P2",
+      "source_identity_evidence_id": "EVID_REC_P2_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P2_LADDER_BUILDER_BOUNDARY"
+      ],
+      "role_summary": "Recovered P2 Ladder Builder: converts P1 map/handoff semantics into source-bound causal microstep ladder data; it structures and preserves semantics but is not the final prose renderer or canon authority.",
+      "documented_non_authorities": [
+        "not final prose renderer",
+        "no canon authority",
+        "must not invent causal bridges",
+        "must not infer owner intent from assistant rationale",
+        "must not overwrite RAW",
+        "A-bridge is derivative and not a replacement for the main P2-to-P3 route"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_identity": "ELYX_P2_LADDER_BUILDER_v3.5.0",
+        "role_confidence": "VERY_HIGH",
+        "original_birth_rationale": "LOW",
+        "standalone_runtime_implementation": "NOT_PROVED",
+        "global_route_implementation": "BLOCKED_BY_P_CONTROL_POINT_HOLD_UNRESOLVED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "original birth rationale",
+        "exact earliest P2 contract",
+        "direct production consumption by each named A channel",
+        "standalone runtime implementation"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_P3_FINAL_TEXT_RENDERER",
+      "object_id": "ELYX_REC_P3",
+      "source_identity_evidence_id": "EVID_REC_P3_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY"
+      ],
+      "role_summary": "Recovered P3 Final Text Renderer: a representation-transform channel that renders P2 ladder material into readable proof-bound candidate text while preserving meaning, causality, uncertainty, dependencies, and source lineage.",
+      "documented_non_authorities": [
+        "not P0/P1/P2",
+        "not P4 final cut",
+        "not project canonization authority",
+        "not implementation/runtime",
+        "not UI/gameplay/lore author",
+        "not author dream stream",
+        "must not create new upstream facts",
+        "must not reorder causality for prose quality"
+      ],
+      "status_and_evidence_ceiling": {
+        "role_core_confidence": "VERY_HIGH",
+        "local_P2_P3_P4_seam": "STRONGLY_RECOVERED",
+        "global_route_authority": "HOLD_UNRESOLVED",
+        "direct_P3_to_A3_production_route": "NOT_PROVED",
+        "first_birth_wording": "PARTIAL/UNKNOWN"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "exact first creation date",
+        "exact original author of every supplied spec line",
+        "direct A3 consumer route",
+        "globally authoritative P route"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_P4_FEEL_POTENTIAL",
+      "object_id": "ELYX_REC_P4",
+      "source_identity_evidence_id": "EVID_REC_P4_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY"
+      ],
+      "role_summary": "Recovered P4 Feel Potential Engine: terminal recovered P-layer selector/filter over P3-rendered candidate material, scoring editorial/feel potential while preserving source order, dependencies, uncertainty, and author-selection boundaries.",
+      "documented_non_authorities": [
+        "not RAW capture",
+        "not author dream generation",
+        "not P0/P1/P2/P3",
+        "not gameplay/world simulation/lore",
+        "not automatic canon authority",
+        "cannot rewrite weak candidates into stronger meaning",
+        "cannot turn score into truth",
+        "cannot bypass author selection",
+        "cannot resolve disputed global route topology"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_exact_spec": "ELYX_P4_SPEC_V3_2_2",
+        "current_identity_provenance": "USER_SUPPLIED_ARTIFACT",
+        "authorship_of_every_line": "UNKNOWN",
+        "P5_default_status": "DISABLED / LEGACY_COMPATIBILITY_ONLY_UNLESS_EXPLICITLY_ENABLED",
+        "global_route_authority": "HOLD_UNRESOLVED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "exact historical channel_name fields for all old labels",
+        "current globally authoritative route",
+        "any automatic downstream authority from A-layer route options"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_P5_FEEL_TRUTH",
+      "object_id": "ELYX_REC_P5",
+      "source_identity_evidence_id": "EVID_REC_P5_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_P5_FEEL_TRUTH_BOUNDARY"
+      ],
+      "role_summary": "Recovered P5 Feel-Truth Compressor: an optional presentation-layer post-processor over an already selected P4 shortlist/spine, compressing delivery for feel/clarity/stakes/memory without becoming a source of new causality.",
+      "documented_non_authorities": [
+        "does not retroactively become P4",
+        "does not re-select causal backbone",
+        "does not make P3 obsolete",
+        "P5 packet alone is not causality authority",
+        "must not be used as implementation-logic source",
+        "quality PASS is not world canon",
+        "refinement is not new causal truth",
+        "does not control live author dreaming"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_identity": "ELYX_P5_FEEL_TRUTH_COMPRESSOR_v1.3",
+        "current_status_in_supplied_contract": "active",
+        "default_activation": "disabled_by_default=true",
+        "logic_micro_patch_gate": "enable_p5=true AND logic_patch_explicit=true",
+        "durable_P0_to_P4_core_membership": "NOT_PROVED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "whether v1.3 existed at channel birth",
+        "line-by-line authorship",
+        "membership in durable P0..P4 core spine",
+        "external runtime implementation",
+        "historical A/E handoff rules for earlier versions"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "capsules_are_navigation_derivations_not_canon": true,
+    "no_cross_channel_route_is_created_by_this_batch": true,
+    "local_neighbor_seams_are_not_promoted_into_global_route_authority": true,
+    "P5_optional_state_is_preserved": true,
+    "current_global_P_route_remains_HOLD_UNRESOLVED": true
+  }
+}
