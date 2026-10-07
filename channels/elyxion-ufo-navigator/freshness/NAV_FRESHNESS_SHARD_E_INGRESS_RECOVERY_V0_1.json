@@ -1,0 +1,98 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_E_INGRESS_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [
+    {
+      "id": "SRC_REC_E0",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e0-intent-lock-handshake-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "5b37be9cf89b294794fd4b328f451ec1602a424c"
+    },
+    {
+      "id": "SRC_REC_E1",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e1-constrained-skeleton-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "2ae3bbc3afb067f8ed28a14a2cd1f959d961adcc"
+    },
+    {
+      "id": "SRC_REC_E2",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e2-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "ce30b165e5518f285c6abb461076f164382b4fcb"
+    },
+    {
+      "id": "SRC_REC_E3_5",
+      "kind": "GITHUB_BRANCH_HEAD",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e3-5-input-assembler-recovery-v0.1",
+      "tracking_mode": "PINNED_OBSERVED_HEAD",
+      "observed_head": "bc5b4a3ab656afdc29b8f32d4309471d74c527de"
+    }
+  ],
+  "dependencies": [
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_E0",
+      "source_ids": [
+        "SRC_REC_E0"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_E0",
+      "source_ids": [
+        "SRC_REC_E0"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_E1",
+      "source_ids": [
+        "SRC_REC_E1"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_E1",
+      "source_ids": [
+        "SRC_REC_E1"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_E2",
+      "source_ids": [
+        "SRC_REC_E2"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_E2",
+      "source_ids": [
+        "SRC_REC_E2"
+      ]
+    },
+    {
+      "subject_kind": "OBJECT",
+      "subject_id": "ELYX_REC_E3_5",
+      "source_ids": [
+        "SRC_REC_E3_5"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_NAV_OBSERVES_REC_E3_5",
+      "source_ids": [
+        "SRC_REC_E3_5"
+      ]
+    }
+  ]
+}
