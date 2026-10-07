@@ -1,0 +1,45 @@
+{
+  "event_id": "ELYXION_NAV_TOPOLOGY_EXPANSION_EVENT_2026_10_07_V0_1",
+  "status": "DIRECTLY_OBSERVED_TOPOLOGY_CHANGE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "evidence_ref": "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json",
+  "previous_observed_branch_count": 5,
+  "current_observed_branch_count": 31,
+  "newly_observed_branch_count": 26,
+  "newly_observed_families": {
+    "A_RECOVERY": 5,
+    "D_RECOVERY": 5,
+    "E_AND_E_META_RECOVERY": 8,
+    "P_RECOVERY": 6,
+    "HUMAN_DISPATCH_RECOVERY": 1,
+    "PAE_HISTORY_RECOVERY": 1
+  },
+  "consequences": [
+    "The earlier 7/7 object-registry global-orientation benchmark is stale as a statement about current repository topology.",
+    "DISCOVERY_A_CHANNEL is no longer NOT_OBSERVED at repository-surface level; multiple A recovery branches are directly observed.",
+    "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME is no longer NOT_OBSERVED at repository-surface level; multiple E recovery branches are directly observed.",
+    "The new E-Prime canonical-truth-kernel recovery branch is relevant evidence for the open Eco-Systems/E-Prime scope mismatch but does not auto-resolve it.",
+    "Twenty-six observed branches are not yet mapped into the Navigator object registry.",
+    "Global orientation must block READY while observed topology is unmapped."
+  ],
+  "preserved_unknowns": [
+    "0.0.1.0 through 0.0.1.4 RAW/version surfaces remain not located by this scan.",
+    "existing Global C0 durable/repository surface remains UNKNOWN.",
+    "Tools under Elyxion dedicated surface remains not located by this scan.",
+    "Dream / RAW dedicated durable surface remains not located by this scan.",
+    "Relations and authority between newly observed recovery branches remain evidence-bound and must not be inferred from branch names."
+  ],
+  "invalidates": [
+    "NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_1 current-topology applicability",
+    "any claim that the current repository contains only five branches",
+    "DISCOVERY_A_CHANNEL evidence_state=NOT_OBSERVED",
+    "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME evidence_state=NOT_OBSERVED"
+  ],
+  "laws": {
+    "historical_benchmark_results_remain_historical_evidence": true,
+    "stale_benchmark_must_not_be_presented_as_current": true,
+    "new_branch_presence_does_not_grant_canon_or_runtime_authority": true,
+    "identity_recovery_does_not_equal_relation_recovery": true
+  }
+}
