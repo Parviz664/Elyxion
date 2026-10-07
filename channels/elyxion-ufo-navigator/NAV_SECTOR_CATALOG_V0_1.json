@@ -1,0 +1,118 @@
+{
+  "catalog_id": "ELYXION_NAV_SECTOR_CATALOG_V0_1",
+  "status": "CANDIDATE_NAVIGATION_PARTITION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "partition_basis": "storage/navigation grouping only; not semantic authority topology",
+  "sectors": [
+    {
+      "sector_id": "SECTOR_CORE",
+      "label": "Core observed surfaces",
+      "object_count": 7,
+      "confirmed_relation_count": 8,
+      "evidence_identity_count": 20,
+      "freshness_source_count": 5,
+      "source_refs": [
+        "NAV_OBJECT_REGISTRY_V0_4.json",
+        "NAV_RELATION_REGISTRY_V0_3.json",
+        "NAV_EVIDENCE_INDEX_V0_2.json",
+        "NAV_FRESHNESS_POLICY_V0_3.json"
+      ],
+      "semantic_completeness": "PARTIAL"
+    },
+    {
+      "sector_id": "SECTOR_A_RECOVERY",
+      "label": "A recovery surfaces",
+      "object_count": 5,
+      "confirmed_relation_count": 5,
+      "evidence_identity_count": 5,
+      "freshness_source_count": 5,
+      "source_refs": [
+        "objects/NAV_OBJECT_SHARD_A_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_A_RECOVERY_V0_1.json",
+        "evidence/NAV_EVIDENCE_SHARD_A_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_A_RECOVERY_V0_1.json"
+      ],
+      "semantic_completeness": "IDENTITY_ONLY_RELATIONS_BEYOND_OBSERVATION_UNKNOWN"
+    },
+    {
+      "sector_id": "SECTOR_D_RECOVERY",
+      "label": "D recovery surfaces",
+      "object_count": 5,
+      "confirmed_relation_count": 5,
+      "evidence_identity_count": 5,
+      "freshness_source_count": 5,
+      "source_refs": [
+        "objects/NAV_OBJECT_SHARD_D_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_D_RECOVERY_V0_1.json",
+        "evidence/NAV_EVIDENCE_SHARD_D_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_D_RECOVERY_V0_1.json"
+      ],
+      "semantic_completeness": "IDENTITY_ONLY_RELATIONS_BEYOND_OBSERVATION_UNKNOWN"
+    },
+    {
+      "sector_id": "SECTOR_E_RECOVERY",
+      "label": "E recovery surfaces",
+      "object_count": 8,
+      "confirmed_relation_count": 8,
+      "evidence_identity_count": 8,
+      "freshness_source_count": 8,
+      "source_refs": [
+        "objects/NAV_OBJECT_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+        "objects/NAV_OBJECT_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json",
+        "evidence/NAV_EVIDENCE_SHARD_E_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json"
+      ],
+      "semantic_completeness": "IDENTITY_ONLY_RELATIONS_BEYOND_OBSERVATION_UNKNOWN"
+    },
+    {
+      "sector_id": "SECTOR_P_RECOVERY",
+      "label": "P recovery surfaces",
+      "object_count": 6,
+      "confirmed_relation_count": 6,
+      "evidence_identity_count": 6,
+      "freshness_source_count": 6,
+      "source_refs": [
+        "objects/NAV_OBJECT_SHARD_P_EARLY_RECOVERY_V0_1.json",
+        "objects/NAV_OBJECT_SHARD_P_LATE_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_P_EARLY_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_P_LATE_RECOVERY_V0_1.json",
+        "evidence/NAV_EVIDENCE_SHARD_P_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_P_EARLY_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_P_LATE_RECOVERY_V0_1.json"
+      ],
+      "semantic_completeness": "IDENTITY_ONLY_RELATIONS_BEYOND_OBSERVATION_UNKNOWN"
+    },
+    {
+      "sector_id": "SECTOR_META_RECOVERY",
+      "label": "Dispatcher / PAE history recovery surfaces",
+      "object_count": 2,
+      "confirmed_relation_count": 2,
+      "evidence_identity_count": 2,
+      "freshness_source_count": 2,
+      "source_refs": [
+        "objects/NAV_OBJECT_SHARD_META_RECOVERY_V0_1.json",
+        "relations/NAV_RELATION_SHARD_META_RECOVERY_V0_1.json",
+        "evidence/NAV_EVIDENCE_SHARD_META_RECOVERY_V0_1.json",
+        "freshness/NAV_FRESHNESS_SHARD_META_RECOVERY_V0_1.json"
+      ],
+      "semantic_completeness": "IDENTITY_ONLY_RELATIONS_BEYOND_OBSERVATION_UNKNOWN"
+    }
+  ],
+  "totals": {
+    "sectors": 6,
+    "objects": 33,
+    "confirmed_relations": 34,
+    "evidence_identities": 46,
+    "freshness_sources": 31
+  },
+  "laws": {
+    "sector_is_navigation_partition_not_system_architecture": true,
+    "sector_membership_does_not_prove_cross_surface_relation": true,
+    "cold_start_may_use_sector_counts_without_loading_individual_evidence_identities": true,
+    "descent_to_surface_or_claim_level_is_on_demand": true
+  }
+}
