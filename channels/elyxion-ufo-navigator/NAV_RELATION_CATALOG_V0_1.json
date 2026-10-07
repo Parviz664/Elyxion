@@ -1,0 +1,57 @@
+{
+  "catalog_id": "ELYXION_NAV_RELATION_CATALOG_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "core_registry": {
+    "path": "NAV_RELATION_REGISTRY_V0_3.json",
+    "confirmed_relation_count": 8,
+    "unresolved_relation_count": 5
+  },
+  "shards": [
+    {
+      "id": "A_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_A_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 5
+    },
+    {
+      "id": "D_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_D_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 5
+    },
+    {
+      "id": "E_INGRESS_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 4
+    },
+    {
+      "id": "E_DOWNSTREAM_META_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 4
+    },
+    {
+      "id": "P_EARLY_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_P_EARLY_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 3
+    },
+    {
+      "id": "P_LATE_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_P_LATE_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 3
+    },
+    {
+      "id": "META_RECOVERY",
+      "path": "relations/NAV_RELATION_SHARD_META_RECOVERY_V0_1.json",
+      "confirmed_relation_count": 2
+    }
+  ],
+  "total_confirmed_relations": 34,
+  "total_unresolved_relations": 5,
+  "laws": {
+    "relation_ids_must_be_unique_across_core_and_shards": true,
+    "recovery_observes_relations_are_navigation_facts_only": true,
+    "semantic_cross_channel_relations_remain_unknown_until_evidenced": true,
+    "shard_is_storage_partition_not_authority_partition": true,
+    "consumers_may_load_only_required_relation_shards": true
+  }
+}
