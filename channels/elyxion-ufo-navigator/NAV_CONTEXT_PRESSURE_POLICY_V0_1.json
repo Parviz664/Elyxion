@@ -1,0 +1,50 @@
+{
+  "policy_id": "ELYXION_NAV_CONTEXT_PRESSURE_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "dimensions": [
+    {
+      "id": "OBSERVED_OBJECT_COVERAGE",
+      "meaning": "Fraction of currently observed Navigator objects represented in a global-orientation snapshot.",
+      "global_orientation_requirement": 1
+    },
+    {
+      "id": "DISCOVERY_HORIZON_COVERAGE",
+      "meaning": "Fraction of registered discovery targets kept visible, including disconnected unknowns.",
+      "global_orientation_requirement": 1
+    },
+    {
+      "id": "SELECTED_CLAIM_VERIFICATION",
+      "meaning": "Fraction of selected surface claims with sufficient semantic verification.",
+      "global_orientation_requirement": 1
+    },
+    {
+      "id": "EVIDENCE_IDENTITY_PRESSURE",
+      "meaning": "Fraction of Evidence Index identities carried as metadata by a pack.",
+      "global_orientation_requirement": "MEASURE_ONLY_NO_TARGET_YET"
+    },
+    {
+      "id": "SOURCE_BODY_LOAD",
+      "meaning": "Number of exact source bodies loaded into the current cold-start reasoning context.",
+      "default_requirement": 0,
+      "escalation": "ONLY_BY_MATERIALIZATION_NEED"
+    }
+  ],
+  "current_preliminary_measurement": {
+    "benchmark_ref": "NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_1.json",
+    "observed_object_coverage": 1,
+    "discovery_horizon_coverage": 1,
+    "selected_claim_verification": 1,
+    "evidence_identity_pressure": 0.8,
+    "default_source_body_load": 0
+  },
+  "laws": {
+    "metadata_pressure_and_body_pressure_are_separate": true,
+    "high_metadata_ratio_must_not_be_hidden_by_zero_body_load": true,
+    "zero_body_load_does_not_prove_sublinear_scaling": true,
+    "no_asymptotic_claim_without_multi_size_benchmarks": true,
+    "exact_source_body_load_requires_explicit_escalation": true,
+    "global_orientation_may_be_metadata_broad_but_must_remain_body_bounded": true
+  }
+}
