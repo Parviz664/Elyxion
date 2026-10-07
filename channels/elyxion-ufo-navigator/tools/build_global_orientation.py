@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+import argparse, json
+from pathlib import Path
+from build_context_pack import build_pack
+from check_context_pack_staleness import evaluate_pack
+from check_claim_sufficiency import evaluate_claim
+
+B=Path(__file__).resolve().parents[1]
+PROFILE=json.loads((B/"NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json").read_text())
+OBJECTS=json.loads((B/"NAV_OBJECT_REGISTRY_V0_4.json").read_text())
+EVIDENCE=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
+CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
+
+def build_global_orientation():
+    t=PROFILE["traversal"]
+    pack=build_pack(
+        t["start_id"],
+        t["max_hops"],
+        t["direction"],
+        t["include_unresolved_boundary"]
+    )
+    fresh=evaluate_pack(pack)
+
+    connected={x["id"] for x in pack["discovery_boundary"]}
+    all_discovery=OBJECTS["discovery_targets"]
+    horizon=[]
+    for x in all_discovery:
+        horizon.append({
+          "id":x["id"],
+          "visibility":"CONNECTED_BOUNDARY" if x["id"] in connected else "AMBIENT_REGISTERED_UNKNOWN",
+          "repository_location":x.get("repository_location"),
+          "existence_elsewhere":x.get("existence_elsewhere"),
+          "author_declaration_ref":x.get("author_declaration_ref")
+        })
+
+    verifications=[]
+    for claim in pack["claims"]:
+        verifications.append({
+          "claim_id":claim["claim_id"],
+          "result":evaluate_claim(claim["claim_id"])
+        })
+
+    selected_objects=len(pack["slice"]["objects"])
+    total_objects=len(OBJECTS["objects"])
+    selected_claims=len(pack["claims"])
+    sufficient=sum(1 for x in verifications if x["result"].get("state")=="SUFFICIENT")
+    discovery_count=len(horizon)
+    total_discovery=len(OBJECTS["discovery_targets"])
+
+    object_coverage=selected_objects/total_objects if total_objects else 1.0
+    claim_coverage=sufficient/selected_claims if selected_claims else 1.0
+    discovery_coverage=discovery_count/total_discovery if total_discovery else 1.0
+
+    req=PROFILE["coverage_requirements"]
+    if fresh["state"]!="FRESH":
+        readiness="BLOCKED_FRESHNESS"
+    elif object_coverage < req["observed_object_registry_coverage"]:
+        readiness="BLOCKED_OBSERVED_OBJECT_COVERAGE"
+    elif discovery_coverage < req["discovery_horizon_coverage"]:
+        readiness="BLOCKED_DISCOVERY_HORIZON_COVERAGE"
+    elif claim_coverage < req["selected_claim_verification_coverage"]:
+        readiness="BLOCKED_VERIFICATION"
+    else:
+        readiness="READY_GLOBAL_ORIENTATION"
+
+    return {
+      "orientation_version":"0.1",
+      "profile_id":PROFILE["profile_id"],
+      "project_scope":"ELYXION",
+      "readiness":readiness,
+      "freshness":fresh,
+      "coverage":{
+        "observed_objects":{"selected":selected_objects,"total":total_objects,"ratio":object_coverage},
+        "discovery_horizon":{"selected":discovery_count,"total":total_discovery,"ratio":discovery_coverage},
+        "selected_claim_verification":{"sufficient":sufficient,"selected":selected_claims,"ratio":claim_coverage},
+        "evidence_identity":{"selected":len(pack["evidence_manifest"]),"total":len(EVIDENCE["entries"]),"ratio":len(pack["evidence_manifest"])/len(EVIDENCE["entries"]) if EVIDENCE["entries"] else 1.0}
+      },
+      "bounded_pack":pack,
+      "ambient_discovery_horizon":horizon,
+      "claim_verifications":verifications,
+      "pressure":{
+        "default_loaded_file_bodies":len(pack["materialization_plan"]["default_loaded_file_bodies"]),
+        "selected_evidence_identities":len(pack["evidence_manifest"]),
+        "total_indexed_evidence_identities":len(EVIDENCE["entries"]),
+        "selected_claims":selected_claims,
+        "total_indexed_claims":len(CLAIMS["claims"])
+      },
+      "laws":{
+        "orientation_covers_current_observed_registry_not_all_history":True,
+        "ambient_unknowns_are_preserved":True,
+        "full_history_replay_default":False,
+        "global_c0_construction_performed":False
+      }
+    }
+
+def main():
+    p=argparse.ArgumentParser()
+    p.parse_args()
+    print(json.dumps(build_global_orientation(),indent=2,ensure_ascii=False))
+
+if __name__=="__main__":
+    main()
