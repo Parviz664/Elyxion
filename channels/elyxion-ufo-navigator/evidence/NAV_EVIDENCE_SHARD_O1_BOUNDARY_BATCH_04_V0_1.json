@@ -1,0 +1,116 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_O1_BOUNDARY_BATCH_04_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_O1_E0_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e0-intent-lock-handshake-recovery-v0.1",
+      "path": "channels/e0-intent-lock-handshake/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "5d36e7617262037c360de28fee6cd0cf09114178",
+      "observed_source_head": "5b37be9cf89b294794fd4b328f451ec1602a424c",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_E1_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e1-constrained-skeleton-recovery-v0.1:channels/e1-constrained-implementation-skeleton-builder/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e1-constrained-skeleton-recovery-v0.1",
+      "path": "channels/e1-constrained-implementation-skeleton-builder/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "b05b47190f5f713538ac09daa36f19e6ea9aaf87",
+      "observed_source_head": "2ae3bbc3afb067f8ed28a14a2cd1f959d961adcc",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E1"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_E2_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e2-recovery-v0.1:channels/e2/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e2-recovery-v0.1",
+      "path": "channels/e2/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "4fdd6dfbd60f962500e3cb53b58704ccdcd75a8e",
+      "observed_source_head": "ce30b165e5518f285c6abb461076f164382b4fcb",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E2"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_E3_5_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e3-5-input-assembler-recovery-v0.1",
+      "path": "channels/e3-5-e4-input-assembler/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "81bcdec18e15790c14724b6439f0c5ef1f26cd29",
+      "observed_source_head": "bc5b4a3ab656afdc29b8f32d4309471d74c527de",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E3_5"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_E3_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e3-self-recovery-v0.1:channels/e3/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e3-self-recovery-v0.1",
+      "path": "channels/e3/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "47709556949a34e2d0667fd8d498718c8dc0d535",
+      "observed_source_head": "bc26b919304377f5fbd51bd932989dd1b04118e8",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E3"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O1_E4_BOUNDARY",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e4-integration-route-compiler-recovery-v0.1:channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_BOUNDARIES.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e4-integration-route-compiler-recovery-v0.1",
+      "path": "channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_BOUNDARIES.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "ca62a2da7cedd7a2ab75803460a69e83a2106444",
+      "observed_source_head": "9d3f73b37498c657164de9f71a6671a82f41d693",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O1_CAPSULE:O1_E4"
+      ]
+    }
+  ]
+}
