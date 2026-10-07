@@ -1,0 +1,64 @@
+{
+  "catalog_id": "ELYXION_NAV_FRESHNESS_CATALOG_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "core_policy": {
+    "path": "NAV_FRESHNESS_POLICY_V0_3.json",
+    "source_count": 5,
+    "dependency_count": 21
+  },
+  "shards": [
+    {
+      "id": "A_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_A_RECOVERY_V0_1.json",
+      "source_count": 5,
+      "dependency_count": 10
+    },
+    {
+      "id": "D_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_D_RECOVERY_V0_1.json",
+      "source_count": 5,
+      "dependency_count": 10
+    },
+    {
+      "id": "E_INGRESS_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_E_INGRESS_RECOVERY_V0_1.json",
+      "source_count": 4,
+      "dependency_count": 8
+    },
+    {
+      "id": "E_DOWNSTREAM_META_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_E_DOWNSTREAM_META_RECOVERY_V0_1.json",
+      "source_count": 4,
+      "dependency_count": 8
+    },
+    {
+      "id": "P_EARLY_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_P_EARLY_RECOVERY_V0_1.json",
+      "source_count": 3,
+      "dependency_count": 6
+    },
+    {
+      "id": "P_LATE_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_P_LATE_RECOVERY_V0_1.json",
+      "source_count": 3,
+      "dependency_count": 6
+    },
+    {
+      "id": "META_RECOVERY",
+      "path": "freshness/NAV_FRESHNESS_SHARD_META_RECOVERY_V0_1.json",
+      "source_count": 2,
+      "dependency_count": 4
+    }
+  ],
+  "total_sources": 31,
+  "total_dependencies": 73,
+  "laws": {
+    "source_ids_must_be_unique_across_core_and_shards": true,
+    "freshness_dependencies_are_targeted_not_global": true,
+    "shard_change_must_not_invalidate_unrelated_shards": true,
+    "self_navigator_head_remains_self_resolved": true,
+    "branch_head_change_requires_subject_specific_recovery": true
+  }
+}
