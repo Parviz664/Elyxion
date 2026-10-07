@@ -1,0 +1,56 @@
+{
+  "profile_id": "ELYXION_NAV_GLOBAL_ORIENTATION_PROFILE_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_GLOBAL_ORIENTATION_PROFILE_V0_1",
+  "purpose": "Provide a broad topology/identity orientation over all currently observed Navigator surfaces while explicitly separating topology readiness from semantic-comprehension readiness.",
+  "traversal": {
+    "start_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+    "max_hops": 2,
+    "direction": "both",
+    "include_unresolved_boundary": true
+  },
+  "topology_requirements": {
+    "branch_inventory_mapping_coverage": 1,
+    "observed_object_catalog_coverage": 1,
+    "discovery_horizon_coverage": 1,
+    "freshness_state": "FRESH"
+  },
+  "semantic_measurement": {
+    "metric": "NORMALIZED_OBJECT_CLAIM_COVERAGE",
+    "source": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1.json",
+    "current_ratio": 0.18181818181818182,
+    "readiness_threshold_for_full_normalized_semantic_coverage": 1,
+    "current_state": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+  },
+  "readiness_axes": {
+    "topology": [
+      "READY_TOPOLOGY_ORIENTATION",
+      "BLOCKED_FRESHNESS",
+      "BLOCKED_TOPOLOGY_EXPANSION",
+      "BLOCKED_OBSERVED_OBJECT_COVERAGE",
+      "BLOCKED_DISCOVERY_HORIZON_COVERAGE"
+    ],
+    "semantics": [
+      "READY_NORMALIZED_SEMANTIC_COVERAGE",
+      "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE",
+      "UNKNOWN_SEMANTIC_COVERAGE"
+    ]
+  },
+  "context_policy": {
+    "default_loaded_file_bodies": 0,
+    "default_individual_evidence_identities_at_O0": 0,
+    "evidence_metadata_may_be_loaded_at_deeper_levels": true,
+    "exact_bodies_loaded_only_by_materialization_need": true,
+    "full_history_replay_default": false
+  },
+  "laws": {
+    "topology_ready_does_not_mean_semantically_complete": true,
+    "selected_claim_verification_does_not_equal_all_surface_semantic_coverage": true,
+    "disconnected_unknowns_must_not_disappear": true,
+    "recovery_identity_presence_does_not_prove_cross_channel_relations": true,
+    "semantic_readiness_must_be_reported_separately": true,
+    "global_c0_is_not_built_or_defined": true
+  }
+}
