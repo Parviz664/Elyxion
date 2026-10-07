@@ -1,0 +1,46 @@
+{
+  "schema_id": "ELYXION_NAV_EVIDENCE_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required": [
+    "evidence_id",
+    "project_scope",
+    "source_type",
+    "source_role",
+    "locator",
+    "tracking_mode",
+    "load_policy",
+    "can_replace_raw",
+    "consumers"
+  ],
+  "source_types": [
+    "GITHUB_FILE",
+    "AUTHOR_DECLARATION"
+  ],
+  "tracking_modes": [
+    "PINNED_BLOB_AND_HEAD",
+    "SELF_RESOLVE_AT_PACK_BUILD",
+    "AUTHOR_DECLARATION_RECORD"
+  ],
+  "load_policies": [
+    "MANIFEST_ONLY_DEFAULT",
+    "LOAD_ON_DECISION_ESCALATION",
+    "LOAD_WHEN_EXACT_WORDING_REQUIRED"
+  ],
+  "source_roles": [
+    "PRIMARY_PROJECT_ARTIFACT",
+    "SPECIALIZED_CONTRACT",
+    "NAVIGATION_CONTRACT",
+    "NAVIGATION_EVIDENCE",
+    "AUTHOR_DECLARATION"
+  ],
+  "laws": {
+    "evidence_index_is_address_book_not_truth_replacement": true,
+    "pinned_external_file_requires_blob_and_head": true,
+    "self_hosted_file_must_not_require_immutable_self_head": true,
+    "author_declaration_must_remain_distinct_from_github_observation": true,
+    "raw_required_claims_cannot_be_satisfied_by_summary_only": true,
+    "duplicate_locators_must_not_create_duplicate_evidence_identity": true
+  }
+}
