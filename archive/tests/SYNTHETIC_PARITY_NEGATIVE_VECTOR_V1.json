@@ -1,0 +1,54 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_PARITY_NEGATIVE_VECTOR_V1",
+  "status": "TEST_ONLY_EXPECT_BLOCK",
+  "synthetic_only": true,
+  "failure_injected": "TOOL_RECORD_DROPPED",
+  "source_records": [
+    {
+      "source_order_index": 1,
+      "source_record_kind": "user",
+      "source_record_id_or_null": "neg-1",
+      "raw_text": "Synthetic user.",
+      "timestamp_state": "ABSENT_IN_SOURCE",
+      "source_timestamp_raw_or_exact": null,
+      "attachments": []
+    },
+    {
+      "source_order_index": 2,
+      "source_record_kind": "tool",
+      "source_record_id_or_null": "neg-2",
+      "raw_text": "Synthetic tool.",
+      "timestamp_state": "ABSENT_IN_SOURCE",
+      "source_timestamp_raw_or_exact": null,
+      "attachments": []
+    }
+  ],
+  "archive_records": [
+    {
+      "sequence": 1,
+      "role": "user",
+      "raw_text": "Synthetic user.",
+      "source_ref": "SYNTHETIC://negative/1"
+    }
+  ],
+  "provenance_records": [
+    {
+      "sequence": 1,
+      "source_order_index": 1,
+      "source_record_kind": "user",
+      "archive_role": "user",
+      "source_record_id_or_null": "neg-1",
+      "timestamp_state": "ABSENT_IN_SOURCE",
+      "source_timestamp_raw_or_exact": null,
+      "normalized_utc_derived_or_null": null,
+      "attachment_count": 0,
+      "source_ref": "SYNTHETIC://negative/1"
+    }
+  ],
+  "attachment_records": [],
+  "expected": {
+    "verdict": "BLOCK_PARITY",
+    "tool_record_drop_must_be_detected": true
+  },
+  "note": "No real chat content."
+}
