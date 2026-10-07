@@ -1,0 +1,68 @@
+{
+  "schema_id": "ELYXION_NAV_RELATION_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "required_confirmed": [
+    "id",
+    "project_scope",
+    "source_id",
+    "target_id",
+    "kind",
+    "state",
+    "origin",
+    "evidence",
+    "traversal",
+    "unknowns",
+    "last_verified"
+  ],
+  "required_unresolved": [
+    "id",
+    "project_scope",
+    "source_id",
+    "state",
+    "question",
+    "origin",
+    "evidence",
+    "traversal",
+    "unknowns",
+    "last_verified"
+  ],
+  "relation_kinds": [
+    "OBSERVES",
+    "REFERENCES",
+    "DERIVED_FROM",
+    "IMPLEMENTS",
+    "ARCHIVES",
+    "ROUTES_TO",
+    "HANDS_OFF_TO",
+    "DEPENDS_ON",
+    "SUPERSEDES",
+    "CONFLICTS_WITH",
+    "PREPARES_FOR",
+    "UNKNOWN_RELATION"
+  ],
+  "states": [
+    "CONFIRMED",
+    "UNRESOLVED",
+    "DEPRECATED"
+  ],
+  "origins": [
+    "DECLARED",
+    "NAVIGATOR_ASSESSMENT"
+  ],
+  "traversal_states": [
+    "ALLOWED_AS_FACT",
+    "BLOCKED_UNRESOLVED",
+    "BLOCKED_DEPRECATED"
+  ],
+  "laws": {
+    "confirmed_relation_requires_existing_object_endpoints": true,
+    "confirmed_relation_requires_evidence": true,
+    "unresolved_relation_must_not_be_traversable_as_fact": true,
+    "unresolved_relation_requires_explicit_question": true,
+    "similarity_does_not_prove_relation": true,
+    "missing_handoff_does_not_prove_no_handoff": true,
+    "direction_is_semantic_and_must_not_be_inverted": true
+  }
+}
