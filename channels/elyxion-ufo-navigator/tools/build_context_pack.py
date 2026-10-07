@@ -2,12 +2,11 @@
 import argparse, hashlib, json, subprocess
 from pathlib import Path
 from build_context_slice import build_slice, load_documents
+from nav_catalog import load_evidence
 
 BASE=Path(__file__).resolve().parents[1]
-OBJECT_REGISTRY=BASE/"NAV_OBJECT_REGISTRY_V0_4.json"
-EVIDENCE_INDEX=BASE/"NAV_EVIDENCE_INDEX_V0_2.json"
 CLAIM_INDEX=BASE/"NAV_CLAIM_INDEX_V0_1.json"
-FRESHNESS_POLICY=BASE/"NAV_FRESHNESS_POLICY_V0_3.json"
+FRESHNESS_POLICY=BASE/"NAV_FRESHNESS_CATALOG_V0_1.json"
 MATERIALIZATION_POLICY=BASE/"NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json"
 RISK_POLICY=BASE/"NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json"
 INVALIDATION_POLICY=BASE/"NAV_CONTEXT_PACK_INVALIDATION_POLICY_V0_1.json"
@@ -59,8 +58,8 @@ def snapshot_entry(e):
 def build_pack(start_id,max_hops=1,direction="both",include_unresolved_boundary=True):
     objects_doc,relations_doc,collisions_doc=load_documents()
     sl=build_slice(objects_doc,relations_doc,collisions_doc,start_id,max_hops,direction,include_unresolved_boundary)
-    objreg=json.loads(OBJECT_REGISTRY.read_text())
-    evid=json.loads(EVIDENCE_INDEX.read_text())
+    objreg=objects_doc
+    evid=load_evidence()
     claims_doc=json.loads(CLAIM_INDEX.read_text())
     disc={x["id"]:x for x in objreg["discovery_targets"]}
 
@@ -115,7 +114,7 @@ def build_pack(start_id,max_hops=1,direction="both",include_unresolved_boundary=
     fingerprint=hashlib.sha256(json.dumps(fingerprint_payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
 
     return {
-      "pack_version":"0.3","project_scope":"ELYXION",
+      "pack_version":"0.4","project_scope":"ELYXION",
       "request":{"start_id":start_id,"max_hops":max_hops,"direction":direction,"include_unresolved_boundary":include_unresolved_boundary},
       "slice":{"objects":sl["objects"],"confirmed_relations":sl["confirmed_relations"]},
       "discovery_boundary":discovery_boundary,"unresolved_boundary":sl["unresolved_boundary"],"collisions":sl["collisions"],
