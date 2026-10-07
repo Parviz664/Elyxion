@@ -8,7 +8,7 @@ def J(name):
     return json.loads((B/name).read_text())
 
 def build_o0():
-    sectors=J("NAV_SECTOR_CATALOG_V0_3.json")
+    sectors=J("NAV_SECTOR_CATALOG_V0_4.json")
     discovery=J("NAV_DISCOVERY_LEDGER_V0_1.json")
     branch=J("NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json")
     collision=J("NAV_COLLISION_REGISTRY_V0_1.json")
