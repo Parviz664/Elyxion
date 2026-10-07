@@ -1,6 +1,6 @@
 # CHANNEL_SELF_UNDERSTANDING_REPORT
 
-Status: `SELF_RECOVERY_PASS_WITH_GAPS` before post-write audit
+Status: `SELF_RECOVERY_PASS_WITH_GAPS`
 
 ## 1. Who I am
 
