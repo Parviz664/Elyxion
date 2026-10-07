@@ -10,12 +10,12 @@ BY_ID={x["evidence_id"]:x for x in INDEX["entries"]}
 
 def git(*args):
     try:
-        return subprocess.check_output(["git",*args],cwd=B.parent.parent.parent,text=True,stderr=subprocess.DEVNULL).strip()
+        return subprocess.check_output(["git",*args],cwd=B.parents[1],text=True,stderr=subprocess.DEVNULL).strip()
     except Exception:
         return None
 
 def git_blob_for_path(path):
-    return git("hash-object",str(B.parent.parent.parent/path))
+    return git("hash-object",str(B.parents[1]/path))
 
 def materialize(evidence_id,requested_level):
     e=BY_ID.get(evidence_id)
@@ -55,7 +55,7 @@ def materialize(evidence_id,requested_level):
         }
 
     path=Path(e["path"])
-    repo_root=B.parent.parent.parent
+    repo_root=B.parents[1]
     local=repo_root/path
 
     if e["tracking_mode"]=="SELF_RESOLVE_AT_PACK_BUILD":
