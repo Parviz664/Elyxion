@@ -1,0 +1,57 @@
+{
+  "fixture_id": "ELYXION_NAV_CLAIM_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "CLF01_DOCUMENTED_WITHOUT_EVIDENCE",
+      "target_id": "CLAIM_ECO_SYSTEMS_ROLE",
+      "mutation": {
+        "path": "evidence_ids",
+        "value": []
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CLF02_AUTHOR_DECLARED_WITHOUT_AUTHOR_EVIDENCE",
+      "target_id": "CLAIM_GLOBAL_C0_EXISTS",
+      "mutation": {
+        "path": "evidence_ids",
+        "value": [
+          "EVID_NAV_GLOBAL_C0_BOUNDARY"
+        ]
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CLF03_COLLISION_WITH_ONE_SOURCE",
+      "target_id": "CLAIM_ECOSYS_EPRIME_SCOPE_COLLISION_OPEN",
+      "mutation": {
+        "path": "evidence_ids",
+        "value": [
+          "EVID_ECO_SYSTEMS"
+        ]
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CLF04_UNKNOWN_EVIDENCE_ID",
+      "target_id": "CLAIM_P_ROUTE_HOLD",
+      "mutation": {
+        "path": "evidence_ids",
+        "value": [
+          "EVID_DOES_NOT_EXIST"
+        ]
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CLF05_INVALID_MATERIALIZATION_HINT",
+      "target_id": "CLAIM_PHASE1_EXPERIMENTAL_BOUNDARY",
+      "mutation": {
+        "path": "materialization_hint",
+        "value": "M99_MAGIC"
+      },
+      "expected": "FAIL"
+    }
+  ]
+}
