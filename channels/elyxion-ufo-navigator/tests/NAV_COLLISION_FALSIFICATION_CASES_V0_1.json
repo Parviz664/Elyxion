@@ -1,0 +1,36 @@
+{
+  "fixture_id": "ELYXION_NAV_COLLISION_FALSIFICATION_CASES_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "CF01_COLLISION_WITHOUT_EVIDENCE",
+      "target_id": "COL_ECOSYS_EPRIME_SCOPE_001",
+      "mutation": {
+        "path": "evidence",
+        "value": []
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CF02_COLLISION_UNKNOWN_OBJECT",
+      "target_id": "COL_ECOSYS_EPRIME_SCOPE_001",
+      "mutation": {
+        "path": "object_ids",
+        "value": [
+          "ELYX_CHANNEL_ECO_SYSTEMS",
+          "ELYX_DOES_NOT_EXIST"
+        ]
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "CF03_COLLISION_AUTO_RESOLUTION_ALLOWED",
+      "target_id": "COL_ECOSYS_EPRIME_SCOPE_001",
+      "mutation": {
+        "path": "auto_resolution_forbidden",
+        "value": false
+      },
+      "expected": "FAIL"
+    }
+  ]
+}
