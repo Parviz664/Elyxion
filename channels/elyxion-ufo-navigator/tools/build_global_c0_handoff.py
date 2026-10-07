@@ -9,6 +9,13 @@ B=Path(__file__).resolve().parents[1]
 VERS=json.loads((B/"NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json").read_text())
 BY_VER={x["claim_id"]:x for x in VERS["verifications"]}
 
+def handoff_readiness(fresh_state,critical_failure_claim_ids):
+    if fresh_state!="FRESH":
+        return "BLOCKED_FRESHNESS"
+    if critical_failure_claim_ids:
+        return "BLOCKED_EVIDENCE"
+    return "READY_FOR_GLOBAL_C0_REVIEW"
+
 def build_handoff(start_id,max_hops=1,direction="both"):
     pack=build_pack(start_id,max_hops,direction,True)
     fresh=evaluate_pack(pack)
@@ -40,12 +47,7 @@ def build_handoff(start_id,max_hops=1,direction="both"):
     total=len(pack["claims"])
     coverage=(sufficient_count/total) if total else 1.0
 
-    if fresh["state"]!="FRESH":
-        readiness="BLOCKED_FRESHNESS"
-    elif critical_failures:
-        readiness="BLOCKED_EVIDENCE"
-    else:
-        readiness="READY_FOR_GLOBAL_C0_REVIEW"
+    readiness=handoff_readiness(fresh["state"],critical_failures)
 
     return {
       "handoff_version":"0.2",
