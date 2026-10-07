@@ -1,0 +1,27 @@
+{
+  "artifact_type": "EPRIME_CHAT_COPY_VERIFICATION_RECORD_SCHEMA_V1",
+  "status": "LOCKED",
+  "required_fields": [
+    "copy_id",
+    "copy_class",
+    "storage_ref",
+    "source_blob_sha256_expected",
+    "source_blob_sha256_observed",
+    "manifest_sha256_expected",
+    "manifest_sha256_observed",
+    "verified_at_utc",
+    "verification_method",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_READBACK_HASH_MATCH",
+    "BLOCK_SOURCE_HASH_MISMATCH",
+    "BLOCK_MANIFEST_HASH_MISMATCH",
+    "BLOCK_UNREADABLE_COPY"
+  ],
+  "verification_method_enum": [
+    "FULL_READBACK_SHA256",
+    "BYTE_IDENTICAL_COPY_CHECK"
+  ],
+  "pass_rule": "Both source blob and manifest observed hashes equal expected hashes."
+}
