@@ -31,6 +31,10 @@ jobs:
         run: python channels/elyxion-ufo-navigator/tools/test_context_pack.py
       - name: Test targeted context-pack invalidation
         run: python channels/elyxion-ufo-navigator/tools/test_context_pack_invalidation.py
+      - name: Test bounded evidence materialization
+        run: python channels/elyxion-ufo-navigator/tools/test_materialize_evidence.py
+      - name: Test receipts sufficiency and targeted repair
+        run: python channels/elyxion-ufo-navigator/tools/test_receipt_and_repair.py
       - name: Test existing Global C0 handoff envelope
         run: python channels/elyxion-ufo-navigator/tools/test_global_c0_handoff.py
       - name: Check upstream freshness
