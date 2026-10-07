@@ -477,6 +477,132 @@
         "Historical A/E handoff rules for earlier versions are not fully established."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E0_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E0_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E0 artifacts document ingress/bind authority, cross-lock consistency and planning-vs-promotion permissions.",
+        "They explicitly deny executor/source-truth/E1-E3 plan authority.",
+        "They document material role realignment by v1.5."
+      ],
+      "limits": [
+        "v1.5 topology must not be projected backward into v1.1.",
+        "PASS may coexist with runtime_promotion_allowed=false.",
+        "No broad E-mainline routing claim is created by this verification."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E1_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E1_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E1 artifacts document evolution into post-E0 constrained implementation skeleton authority.",
+        "They explicitly separate E1 from E0 binding, E2 translation, E3 convergence, readiness and runtime.",
+        "They preserve historical D-line behavior changes."
+      ],
+      "limits": [
+        "Full v1.6 field-level contract is only partially re-retrieved.",
+        "No runtime/build/test/release authority is inferred.",
+        "Historical constraints are not back-projected into earlier versions without evidence."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E2_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E2_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E2 artifacts document a current engine-contract translation and bounded-route role.",
+        "They document radical evolution from v1.x multi-variant exploration into v2.x bounded translation.",
+        "They explicitly stop before build sequence, readiness, human action and runtime."
+      ],
+      "limits": [
+        "Exact v2.3 field-level body is only partially recovered.",
+        "No runtime execution is proved.",
+        "Historical D/E5 concerns removed from v2.3 core are not silently restored."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E3_5_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E3_5_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E3.5 artifacts document ref-only input assembly, type/lane/root checks and no-drop coverage proof.",
+        "They explicitly deny source mutation, root-merging authority and E4 conflict/readiness authority.",
+        "They state coverage complete != E4 complete."
+      ],
+      "limits": [
+        "Current owner-canon status is UNKNOWN.",
+        "Recovery does not activate v1.4.1.",
+        "Waivers do not prove missing sources exist."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E3_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E3_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E3 artifacts document current convergence/packaging around one primary production path.",
+        "They explicitly separate E3 from lock, registry/seal verification, skeleton, translation, downstream readiness and runtime authority.",
+        "Historical v1.x superiority-hardener role is preserved as superseded."
+      ],
+      "limits": [
+        "Pre-v1.1 formal identity remains UNKNOWN.",
+        "No direct P↔A bridge is established.",
+        "No runtime/build/test/release authority is inferred."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_E4_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_E4_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E4_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E4 artifacts document integration/readiness route compilation over an already selected production path.",
+        "They explicitly preserve E0 truth binding and deny build/test/runtime/release authority.",
+        "They document real narrowing/recomposition from v1.1 to v2.1."
+      ],
+      "limits": [
+        "AUS-4 association remains uncorroborated provenance conflict.",
+        "E4 cannot reconstruct missing refs or override D0/D1 guards.",
+        "Historical numeric ranking permissions are superseded and not current authority."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
