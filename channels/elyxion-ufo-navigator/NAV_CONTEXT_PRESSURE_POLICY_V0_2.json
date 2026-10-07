@@ -18,8 +18,8 @@
       "id": "INDIVIDUAL_EVIDENCE_IDENTITY_LOAD",
       "meaning": "How many individual evidence identities are injected into the current reasoning payload.",
       "broad_orientation": {
-        "selected": 57,
-        "total": 61
+        "selected": 63,
+        "total": 67
       },
       "O0_default": {
         "selected": 0,
@@ -37,9 +37,9 @@
       "id": "NORMALIZED_SEMANTIC_OBJECT_COVERAGE",
       "meaning": "Fraction of observed objects represented by normalized OBJECT-level claims.",
       "current": {
-        "covered": 21,
+        "covered": 27,
         "total": 33,
-        "ratio": 0.6363636363636364
+        "ratio": 0.8181818181818182
       },
       "full_semantic_readiness_target": 1
     },
