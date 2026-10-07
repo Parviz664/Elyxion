@@ -5,8 +5,8 @@ from collections import deque
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
-OBJECTS = BASE / "NAV_OBJECT_REGISTRY_V0_3.json"
-RELATIONS = BASE / "NAV_RELATION_REGISTRY_V0_2.json"
+OBJECTS = BASE / "NAV_OBJECT_REGISTRY_V0_4.json"
+RELATIONS = BASE / "NAV_RELATION_REGISTRY_V0_3.json"
 COLLISIONS = BASE / "NAV_COLLISION_REGISTRY_V0_1.json"
 
 def load_documents():
