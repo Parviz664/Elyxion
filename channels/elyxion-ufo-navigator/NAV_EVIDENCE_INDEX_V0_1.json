@@ -1,0 +1,310 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_INDEX_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_EVIDENCE_SCHEMA_V0_1.json",
+  "object_registry_ref": "NAV_OBJECT_REGISTRY_V0_4.json",
+  "relation_registry_ref": "NAV_RELATION_REGISTRY_V0_3.json",
+  "author_declarations_ref": "NAV_AUTHOR_DECLARATIONS_V0_1.json",
+  "entries": [
+    {
+      "evidence_id": "EVID_MAIN_README",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "PRIMARY_PROJECT_ARTIFACT",
+      "locator": "main:README.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "main",
+      "path": "README.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "022b0d628676325076f505d7e72a440ba4a1bc95",
+      "observed_source_head": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_MAIN",
+        "RELATION:REL_MAIN_CONTAINS_ECO_SYSTEMS",
+        "RELATION:REL_MAIN_CONTAINS_REALITY_STABILIZER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_ECO_SYSTEMS",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "PRIMARY_PROJECT_ARTIFACT",
+      "locator": "main:docs/channels/ECO-SYSTEMS-ELYXION.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "main",
+      "path": "docs/channels/ECO-SYSTEMS-ELYXION.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "e05e677f9a961d507812380e98002d7af2608304",
+      "observed_source_head": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+      "load_policy": "LOAD_ON_DECISION_ESCALATION",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_CHANNEL_ECO_SYSTEMS",
+        "RELATION:REL_MAIN_CONTAINS_ECO_SYSTEMS",
+        "RELATION:REL_ECOSYS_DECLARES_INTERFACE_EPRIME",
+        "UNRESOLVED_RELATION:UREL_ECOSYS_TO_GLOBAL_C0",
+        "UNRESOLVED_RELATION:UREL_ECOSYS_TO_E_CHANNELS",
+        "COLLISION:COL_ECOSYS_EPRIME_SCOPE_001"
+      ]
+    },
+    {
+      "evidence_id": "EVID_REALITY_STABILIZER",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "PRIMARY_PROJECT_ARTIFACT",
+      "locator": "main:docs/governance/CREATOR-REALITY-STABILIZER-LAW.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "main",
+      "path": "docs/governance/CREATOR-REALITY-STABILIZER-LAW.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "95226478ef8b259e7cc46ed08b782859f092cd0b",
+      "observed_source_head": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+      "load_policy": "LOAD_WHEN_EXACT_WORDING_REQUIRED",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_GOV_CREATOR_REALITY_STABILIZER",
+        "RELATION:REL_MAIN_CONTAINS_REALITY_STABILIZER",
+        "RELATION:REL_NAV_GOVERNED_BY_REALITY_STABILIZER"
+      ]
+    },
+    {
+      "evidence_id": "EVID_EPRIME_LOCK",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "E-Prime:ARCHIVE_LOCK.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "E-Prime",
+      "path": "ARCHIVE_LOCK.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "c34a95613b8d45324de0e75e15d6459badddc83f",
+      "observed_source_head": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+      "load_policy": "LOAD_ON_DECISION_ESCALATION",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_E_PRIME",
+        "UNRESOLVED_RELATION:UREL_E_PRIME_TO_BROADER_E",
+        "COLLISION:COL_ECOSYS_EPRIME_SCOPE_001"
+      ]
+    },
+    {
+      "evidence_id": "EVID_EPRIME_MANIFEST",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "E-Prime:archive/ARCHIVE_MANIFEST.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "E-Prime",
+      "path": "archive/ARCHIVE_MANIFEST.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "ee67e503591d2af3d9eacadcf1a4627da7906051",
+      "observed_source_head": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_E_PRIME",
+        "COLLISION:COL_ECOSYS_EPRIME_SCOPE_001"
+      ]
+    },
+    {
+      "evidence_id": "EVID_EPRIME_EXPECTED_SOURCE",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "E-Prime:archive/intake/EXPECTED_SOURCE_MANIFEST.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "E-Prime",
+      "path": "archive/intake/EXPECTED_SOURCE_MANIFEST.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "52137137fdae9f25ae1e8ab985473eeae21aa9f1",
+      "observed_source_head": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_E_PRIME"
+      ]
+    },
+    {
+      "evidence_id": "EVID_EPRIME_RAW_SLOT",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "E-Prime:archive/intake/RAW_SOURCE_SLOT_0001.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "E-Prime",
+      "path": "archive/intake/RAW_SOURCE_SLOT_0001.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "db29826b8e402cc3f5097146eb303bf35219d311",
+      "observed_source_head": "061c74cb8898cf9be23586feec1c680ea48e6f44",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_E_PRIME"
+      ]
+    },
+    {
+      "evidence_id": "EVID_PHASE1_README",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "PRIMARY_PROJECT_ARTIFACT",
+      "locator": "agent/phase1-scaffold:README.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "agent/phase1-scaffold",
+      "path": "README.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "be9a4134c8cb0ff5c8901d1aa2eb8feae228ea39",
+      "observed_source_head": "4f3b5c53849a992e282f85a8345b637e4b06d9d1",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_PHASE1_SCAFFOLD"
+      ]
+    },
+    {
+      "evidence_id": "EVID_P_CONTROL_README",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/p-control-point-v0.1:channels/p-control-point/README.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/p-control-point-v0.1",
+      "path": "channels/p-control-point/README.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "782460dd77037f9a3d933a83dd255bc0f70ac5d4",
+      "observed_source_head": "4c7183356699a53d081e40b3d5d28cb362d6dbcf",
+      "load_policy": "LOAD_ON_DECISION_ESCALATION",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_P_CONTROL_POINT",
+        "UNRESOLVED_RELATION:UREL_P_TO_PHASE1_HANDOFF"
+      ]
+    },
+    {
+      "evidence_id": "EVID_NAV_ACTIVATE",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "NAVIGATION_CONTRACT",
+      "locator": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ACTIVATE.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "path": "channels/elyxion-ufo-navigator/ACTIVATE.md",
+      "tracking_mode": "SELF_RESOLVE_AT_PACK_BUILD",
+      "observed_blob_sha": null,
+      "observed_source_head": null,
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR",
+        "UNRESOLVED_RELATION:UREL_NAV_TO_GLOBAL_C0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_NAV_README",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "NAVIGATION_CONTRACT",
+      "locator": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/README.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "path": "channels/elyxion-ufo-navigator/README.md",
+      "tracking_mode": "SELF_RESOLVE_AT_PACK_BUILD",
+      "observed_blob_sha": null,
+      "observed_source_head": null,
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR",
+        "RELATION:REL_NAV_OBSERVES_MAIN",
+        "RELATION:REL_NAV_OBSERVES_E_PRIME",
+        "RELATION:REL_NAV_OBSERVES_PHASE1_SCAFFOLD",
+        "RELATION:REL_NAV_OBSERVES_P_CONTROL",
+        "UNRESOLVED_RELATION:UREL_NAV_TO_GLOBAL_C0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_NAV_BOOTSTRAP",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "NAVIGATION_CONTRACT",
+      "locator": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "path": "channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md",
+      "tracking_mode": "SELF_RESOLVE_AT_PACK_BUILD",
+      "observed_blob_sha": null,
+      "observed_source_head": null,
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR"
+      ]
+    },
+    {
+      "evidence_id": "EVID_NAV_TOPOLOGY_V02",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "NAVIGATION_EVIDENCE",
+      "locator": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "path": "channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md",
+      "tracking_mode": "SELF_RESOLVE_AT_PACK_BUILD",
+      "observed_blob_sha": null,
+      "observed_source_head": null,
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "RELATION:REL_NAV_OBSERVES_MAIN",
+        "RELATION:REL_NAV_OBSERVES_E_PRIME",
+        "RELATION:REL_NAV_OBSERVES_PHASE1_SCAFFOLD",
+        "RELATION:REL_NAV_OBSERVES_P_CONTROL",
+        "UNRESOLVED_RELATION:UREL_P_TO_PHASE1_HANDOFF",
+        "UNRESOLVED_RELATION:UREL_E_PRIME_TO_BROADER_E"
+      ]
+    },
+    {
+      "evidence_id": "EVID_NAV_OBJECT_SPINE",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "NAVIGATION_CONTRACT",
+      "locator": "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/elyxion-ufo-navigator-v0.1",
+      "path": "channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md",
+      "tracking_mode": "SELF_RESOLVE_AT_PACK_BUILD",
+      "observed_blob_sha": null,
+      "observed_source_head": null,
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "OBJECT:ELYX_SURFACE_UFO_NAVIGATOR"
+      ]
+    },
+    {
+      "evidence_id": "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+      "project_scope": "ELYXION",
+      "source_type": "AUTHOR_DECLARATION",
+      "source_role": "AUTHOR_DECLARATION",
+      "locator": "NAV_AUTHOR_DECLARATIONS_V0_1.json#AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07",
+      "registry_ref": "NAV_AUTHOR_DECLARATIONS_V0_1.json",
+      "declaration_id": "AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07",
+      "tracking_mode": "AUTHOR_DECLARATION_RECORD",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "DISCOVERY:DISCOVERY_GLOBAL_C0",
+        "UNRESOLVED_RELATION:UREL_NAV_TO_GLOBAL_C0"
+      ]
+    }
+  ],
+  "rules": {
+    "default_context_pack_contains_metadata_not_file_bodies": true,
+    "exact_source_content_loaded_only_on_escalation": true,
+    "evidence_entry_does_not_promote_claim_certainty": true,
+    "author_declaration_and_repository_observation_remain_separate": true
+  }
+}
