@@ -5,27 +5,34 @@ from build_context_pack import build_pack
 from check_context_pack_staleness import evaluate_pack
 from check_claim_sufficiency import evaluate_claim
 from nav_catalog import load_objects, load_evidence
+from build_semantic_coverage import build_semantic_coverage
 
 B=Path(__file__).resolve().parents[1]
-PROFILE=json.loads((B/"NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json").read_text())
+PROFILE=json.loads((B/"NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json").read_text())
 OBJECTS=load_objects()
 EVIDENCE=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
 BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
 
-def orientation_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage,claim_coverage):
-    req=PROFILE["coverage_requirements"]
+def topology_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage):
+    req=PROFILE["topology_requirements"]
     if fresh_state!="FRESH":
         return "BLOCKED_FRESHNESS"
     if branch_mapping_coverage < req["branch_inventory_mapping_coverage"]:
         return "BLOCKED_TOPOLOGY_EXPANSION"
-    if object_coverage < req["observed_object_registry_coverage"]:
+    if object_coverage < req["observed_object_catalog_coverage"]:
         return "BLOCKED_OBSERVED_OBJECT_COVERAGE"
     if discovery_coverage < req["discovery_horizon_coverage"]:
         return "BLOCKED_DISCOVERY_HORIZON_COVERAGE"
-    if claim_coverage < req["selected_claim_verification_coverage"]:
-        return "BLOCKED_VERIFICATION"
-    return "READY_GLOBAL_ORIENTATION"
+    return "READY_TOPOLOGY_ORIENTATION"
+
+def semantic_readiness(normalized_object_claim_coverage):
+    threshold=PROFILE["semantic_measurement"]["readiness_threshold_for_full_normalized_semantic_coverage"]
+    if normalized_object_claim_coverage is None:
+        return "UNKNOWN_SEMANTIC_COVERAGE"
+    if normalized_object_claim_coverage >= threshold:
+        return "READY_NORMALIZED_SEMANTIC_COVERAGE"
+    return "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
 
 def build_global_orientation():
     t=PROFILE["traversal"]
@@ -77,21 +84,26 @@ def build_global_orientation():
     branch_total=BRANCH_INVENTORY["counts"]["total"]
     branch_mapping_coverage=mapped/branch_total if branch_total else 1.0
 
-    readiness=orientation_readiness(
-        fresh["state"],branch_mapping_coverage,object_coverage,discovery_coverage,claim_coverage
+    topo_readiness=topology_readiness(
+        fresh["state"],branch_mapping_coverage,object_coverage,discovery_coverage
     )
+    semantic=build_semantic_coverage()
+    sem_readiness=semantic_readiness(semantic.get("coverage_ratio"))
 
     return {
-      "orientation_version":"0.1",
+      "orientation_version":"0.2",
       "profile_id":PROFILE["profile_id"],
       "project_scope":"ELYXION",
-      "readiness":readiness,
+      "readiness":topo_readiness,
+      "topology_readiness":topo_readiness,
+      "semantic_readiness":sem_readiness,
       "freshness":fresh,
       "coverage":{
         "branch_inventory_mapping":{"represented":mapped,"total":branch_total,"ratio":branch_mapping_coverage,"observed_unmapped":BRANCH_INVENTORY["counts"]["observed_unmapped"]},
         "observed_objects":{"selected":selected_objects,"total":total_objects,"ratio":object_coverage},
         "discovery_horizon":{"selected":discovery_count,"total":total_discovery,"ratio":discovery_coverage},
         "selected_claim_verification":{"sufficient":sufficient,"selected":selected_claims,"ratio":claim_coverage},
+        "normalized_object_claim_coverage":{"covered":semantic["objects_with_normalized_claims"],"total":semantic["objects_total"],"ratio":semantic["coverage_ratio"],"uncovered":semantic["objects_without_normalized_claims"]},
         "evidence_identity":{"selected":len(pack["evidence_manifest"]),"total":len(EVIDENCE["entries"]),"ratio":len(pack["evidence_manifest"])/len(EVIDENCE["entries"]) if EVIDENCE["entries"] else 1.0}
       },
       "bounded_pack":pack,
@@ -109,7 +121,9 @@ def build_global_orientation():
         "observed_unmapped_branches_block_ready":True,
         "ambient_unknowns_are_preserved":True,
         "full_history_replay_default":False,
-        "global_c0_construction_performed":False
+        "global_c0_construction_performed":False,
+        "topology_ready_does_not_mean_semantically_complete":True,
+        "selected_claim_verification_does_not_equal_all_surface_semantic_coverage":True
       }
     }
 
