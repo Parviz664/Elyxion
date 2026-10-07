@@ -1,0 +1,42 @@
+{
+  "schema_id": "ELYXION_NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_2",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_GLOBAL_C0_HANDOFF_SCHEMA_V0_1",
+  "scope": "Navigator output envelope for the already-existing Global C0; does not define Global C0 internals.",
+  "required": [
+    "handoff_version",
+    "producer",
+    "consumer",
+    "consumer_existence",
+    "consumer_location",
+    "navigator_authority",
+    "payload_kind",
+    "payload",
+    "payload_fingerprint",
+    "freshness",
+    "risk",
+    "verification_summary",
+    "claim_verifications",
+    "boundary_summary",
+    "handoff_readiness",
+    "non_authority"
+  ],
+  "readiness_values": [
+    "READY_FOR_GLOBAL_C0_REVIEW",
+    "BLOCKED_FRESHNESS",
+    "BLOCKED_EVIDENCE"
+  ],
+  "laws": {
+    "global_c0_must_not_be_built_by_handoff": true,
+    "consumer_location_unknown_must_not_be_filled_without_evidence": true,
+    "handoff_does_not_define_consumer_internal_architecture": true,
+    "stale_payload_blocks_fresh_handoff_claim": true,
+    "critical_claims_require_sufficient_verification": true,
+    "author_declared_claims_must_not_be_promoted": true,
+    "collision_claims_require_multi_side_verification": true,
+    "unresolved_and_collisions_must_remain_visible": true,
+    "payload_fingerprint_must_be_preserved": true
+  }
+}
