@@ -8,7 +8,7 @@ def J(name):
     return json.loads((B/name).read_text())
 
 def build_o0():
-    sectors=J("NAV_SECTOR_CATALOG_V0_1.json")
+    sectors=J("NAV_SECTOR_CATALOG_V0_2.json")
     discovery=J("NAV_DISCOVERY_LEDGER_V0_1.json")
     branch=J("NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json")
     collision=J("NAV_COLLISION_REGISTRY_V0_1.json")
@@ -44,6 +44,8 @@ def build_o0():
           "label":x["label"],
           "object_count":x["object_count"],
           "confirmed_relation_count":x["confirmed_relation_count"],
+          "verified_o1_capsules":x.get("verified_o1_capsules",0),
+          "normalized_object_claims_present":x.get("normalized_object_claims_present",0),
           "semantic_completeness":x["semantic_completeness"]
         }
         for x in sectors["sectors"]
@@ -55,7 +57,9 @@ def build_o0():
         "confirmed_relations":sectors["totals"]["confirmed_relations"],
         "unresolved_relations":len(relations["unresolved_relations"]),
         "collisions":len(collision["collisions"]),
-        "discovery_targets":len(horizon)
+        "discovery_targets":len(horizon),
+        "verified_o1_capsules":sectors["totals"].get("verified_o1_capsules",0),
+        "normalized_object_claims_present":sectors["totals"].get("normalized_object_claims_present",0)
       },
       "discovery_horizon":horizon,
       "pressure":{
