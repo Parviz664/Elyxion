@@ -1,0 +1,29 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_DURABILITY_POLICY_V1",
+  "status": "LOCKED",
+  "purpose": "REDUCE_SINGLE_POINT_OF_FAILURE_FOR_RAW_SOURCE_AND_ARCHIVE",
+  "minimum_copy_model": {
+    "required_independent_copies_for_strongest_claim": 2,
+    "preferred_independent_copies": 3,
+    "same_repository_different_branch_counts_as_independent": false,
+    "same_device_different_folder_counts_as_independent": false
+  },
+  "copy_classes": [
+    "PRIMARY_PRIVATE_GIT_OR_PRIVATE_ARCHIVE",
+    "SECONDARY_INDEPENDENT_CLOUD_OR_STORAGE",
+    "OPTIONAL_OFFLINE_OR_LOCAL_EXPORT_COPY"
+  ],
+  "per_copy_requirements": [
+    "source_blob_sha256 recorded",
+    "manifest_sha256 recorded",
+    "copy_location_ref recorded",
+    "verification_timestamp recorded",
+    "readback_hash_verified"
+  ],
+  "correlation_rules": [
+    "Two logical copies backed by the same single provider/account do not satisfy strongest independence claim.",
+    "At least one copy should be restorable without relying on the exact same failure domain as the primary copy."
+  ],
+  "durability_claim_rule": "No numerical loss-probability guarantee may be asserted from copy count alone.",
+  "strongest_current_target": "MULTI_COPY_HASH_VERIFIED"
+}
