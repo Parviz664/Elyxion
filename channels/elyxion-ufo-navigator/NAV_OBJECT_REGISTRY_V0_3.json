@@ -500,8 +500,8 @@
         "channel/elyxion-ufo-navigator-v0.1:channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md"
       ],
       "last_verified": {
-        "head_sha": "f540e4b968881459a4b8101220bd8a56faec8e80",
-        "basis": "NAV-002 substrate before relation/freshness expansion"
+        "tracking_mode": "SELF_CURRENT_HEAD",
+        "basis": "Navigator branch is self-hosting; use NAV_FRESHNESS_POLICY_V0_2 rather than an impossible immutable self-commit pin"
       }
     }
   ],
