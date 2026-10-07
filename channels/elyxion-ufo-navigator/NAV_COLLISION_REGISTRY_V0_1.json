@@ -1,0 +1,26 @@
+{
+  "registry_id": "ELYXION_NAV_COLLISION_REGISTRY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "collisions": [
+    {
+      "id": "COL_ECOSYS_EPRIME_SCOPE_001",
+      "state": "OPEN_UNRESOLVED",
+      "classification": "POSSIBLE_ROLE_SCOPE_MISMATCH",
+      "object_ids": [
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_SURFACE_E_PRIME"
+      ],
+      "observation": "Eco-Systems describes E-Prime as a broad durable-reality/recovery interface, while E-Prime's own current lock explicitly defines CHAT_TRANSCRIPTS_ONLY and blocks transcript commit while the repository is public.",
+      "evidence": [
+        "main:docs/channels/ECO-SYSTEMS-ELYXION.md",
+        "E-Prime:ARCHIVE_LOCK.json",
+        "E-Prime:archive/ARCHIVE_MANIFEST.json"
+      ],
+      "resolution_authority": "UNKNOWN",
+      "auto_resolution_forbidden": true,
+      "effect": "Do not infer a broad Eco-Systems→E-Prime operational handoff until the scope mismatch is resolved by authoritative evidence."
+    }
+  ]
+}
