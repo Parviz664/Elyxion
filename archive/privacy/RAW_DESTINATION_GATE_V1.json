@@ -1,0 +1,18 @@
+{
+  "artifact_type": "EPRIME_CHAT_RAW_DESTINATION_GATE_V1",
+  "status": "ACTIVE",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "current_repository_visibility": "PUBLIC",
+  "raw_text_commit_allowed": false,
+  "raw_source_blob_commit_allowed": false,
+  "attachment_bytes_commit_allowed": false,
+  "architecture_metadata_commit_allowed": true,
+  "unlock_requirements": [
+    "repository or approved RAW destination is PRIVATE",
+    "operator intentionally approves raw transcript archival destination",
+    "destination visibility rechecked immediately before first raw write"
+  ],
+  "behavior_on_unknown_visibility": "BLOCK",
+  "rationale": "A public branch cannot safely contain private full-chat history."
+}
