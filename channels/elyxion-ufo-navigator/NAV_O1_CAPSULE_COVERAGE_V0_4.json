@@ -1,0 +1,67 @@
+{
+  "coverage_id": "ELYXION_NAV_O1_CAPSULE_COVERAGE_V0_4",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O1_CAPSULE_COVERAGE_V0_3",
+  "current_semantic_snapshot": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_5.json",
+  "verified_batches": [
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_02_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_03_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_04_V0_1.json"
+  ],
+  "objects_total": 33,
+  "baseline_normalized_claim_objects": 6,
+  "verified_o1_objects": 21,
+  "current_normalized_claim_objects": 27,
+  "remaining_objects_without_normalized_object_claims": 6,
+  "batch_progress": [
+    {
+      "batch": "01",
+      "objects": 5,
+      "sector_effect": "A-Ultra + E/meta high-value surfaces"
+    },
+    {
+      "batch": "02",
+      "objects": 4,
+      "sector_effect": "A recovery sector O1 complete"
+    },
+    {
+      "batch": "03",
+      "objects": 6,
+      "sector_effect": "P recovery sector O1 complete"
+    },
+    {
+      "batch": "04",
+      "objects": 6,
+      "sector_effect": "operational E objects; E recovery sector O1 complete"
+    }
+  ],
+  "next_batches": [
+    {
+      "batch": "05",
+      "objects": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "projected_coverage": "32/33"
+    },
+    {
+      "batch": "06",
+      "objects": [
+        "main"
+      ],
+      "projected_coverage": "33/33"
+    }
+  ],
+  "laws": {
+    "O1_complete_does_not_equal_O2_relation_complete": true,
+    "verified_capsule_does_not_grant_canon": true,
+    "E_numbering_does_not_prove_global_route": true,
+    "remaining_gap_must_not_be_filled_by_inference": true
+  }
+}
