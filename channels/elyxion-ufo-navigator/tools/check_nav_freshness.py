@@ -3,9 +3,9 @@ import argparse
 import json
 import subprocess
 from pathlib import Path
+from nav_catalog import load_freshness
 
 BASE = Path(__file__).resolve().parents[1]
-POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_3.json"
 
 def git_output(*args):
     return subprocess.check_output(["git", *args], text=True, stderr=subprocess.DEVNULL).strip()
@@ -29,7 +29,7 @@ def main():
     parser.add_argument("--fail-on-stale", action="store_true")
     args = parser.parse_args()
 
-    policy = json.loads(POLICY.read_text(encoding="utf-8"))
+    policy = load_freshness()
     self_ref = "channel/elyxion-ufo-navigator-v0.1"
 
     source_states = {}
