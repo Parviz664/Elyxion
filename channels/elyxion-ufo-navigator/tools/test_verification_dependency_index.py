@@ -6,7 +6,7 @@ from build_verification_dependency_index import build_index
 B=Path(__file__).resolve().parents[1]
 
 def main():
-    expected=json.loads((B/"NAV_VERIFICATION_DEPENDENCY_INDEX_V0_3.json").read_text())
+    expected=json.loads((B/"NAV_VERIFICATION_DEPENDENCY_INDEX_V0_4.json").read_text())
     actual=build_index()
     if actual!=expected:
         print("FAIL: derived verification dependency index drift")
