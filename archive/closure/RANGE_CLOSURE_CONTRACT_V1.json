@@ -1,0 +1,26 @@
+{
+  "artifact_type": "EPRIME_CHAT_RANGE_CLOSURE_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "FORMALLY_CLOSE_ONLY_CONTIGUOUS_VERIFIED_SOURCE_RANGES",
+  "closeable_range_requirements": [
+    "source_sequence_start_known",
+    "source_sequence_end_known",
+    "expected_message_count_known_or_provable",
+    "all records in range archived",
+    "all message hashes verified",
+    "zero sequence gaps",
+    "zero conflicting overlaps",
+    "zero unresolved source records",
+    "boundary chain links verified",
+    "parity report PASS for range"
+  ],
+  "range_status_enum": [
+    "OPEN",
+    "CLOSED_VERIFIED",
+    "BLOCKED_GAP",
+    "BLOCKED_CONFLICT",
+    "BLOCKED_UNKNOWN_BOUNDARY"
+  ],
+  "reopen_policy": "A closed verified range is immutable; later corrections create superseding closure evidence, never rewrite prior proof.",
+  "closure_claim_rule": "Only CLOSED_VERIFIED ranges contribute to verified raw coverage."
+}
