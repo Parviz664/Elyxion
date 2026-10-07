@@ -1,0 +1,27 @@
+{
+  "registry_id": "ELYXION_NAV_AUTHOR_DECLARATIONS_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "declarations": [
+    {
+      "id": "AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07",
+      "subject": "Global C0 UFO",
+      "declaration": "Global C0 already exists.",
+      "source_kind": "CURRENT_AUTHOR_DECLARATION",
+      "declared_by": "creator",
+      "declared_at_date": "2026-10-07",
+      "repository_surface": "UNKNOWN",
+      "implications": [
+        "Navigator must not build Global C0.",
+        "Navigator must not duplicate Global C0.",
+        "Navigator prepares evidence, topology, context, freshness, and recovery substrate for Global C0."
+      ],
+      "non_implications": [
+        "This declaration does not identify a GitHub branch or file.",
+        "This declaration does not grant Navigator Global C0 authority.",
+        "This declaration does not prove a specific implementation topology."
+      ]
+    }
+  ]
+}
