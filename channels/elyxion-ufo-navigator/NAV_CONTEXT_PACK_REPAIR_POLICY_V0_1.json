@@ -1,0 +1,43 @@
+{
+  "policy_id": "ELYXION_NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "states": [
+    "REVALIDATED_UNCHANGED",
+    "REMATERIALIZE_REQUIRED",
+    "REVERIFY_REQUIRED",
+    "REPAIRED",
+    "BLOCKED"
+  ],
+  "rules": [
+    {
+      "when": "source head changed but used evidence blob is unchanged",
+      "action": "update source snapshot; preserve semantic verification",
+      "state": "REVALIDATED_UNCHANGED"
+    },
+    {
+      "when": "used evidence blob changed",
+      "action": "rematerialize evidence and reverify only dependent claims",
+      "state": "REMATERIALIZE_REQUIRED"
+    },
+    {
+      "when": "author declaration registry blob changed",
+      "action": "reverify only claims that depend on the changed declaration",
+      "state": "REVERIFY_REQUIRED"
+    },
+    {
+      "when": "required current source cannot be resolved",
+      "action": "block high-confidence handoff",
+      "state": "BLOCKED"
+    }
+  ],
+  "laws": {
+    "repair_scope_follows_used_evidence": true,
+    "unchanged_claims_must_not_be_reverified_by_default": true,
+    "fresh_materialization_receipts_may_be_reused": true,
+    "collision_reverification_must_still_cover_both_sides": true,
+    "repair_produces_new_pack_fingerprint": true,
+    "global_replay_required_by_default": false
+  }
+}
