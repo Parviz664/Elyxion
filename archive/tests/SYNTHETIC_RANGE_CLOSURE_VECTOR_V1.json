@@ -1,0 +1,46 @@
+{
+  "artifact_type": "EPRIME_SYNTHETIC_RANGE_CLOSURE_VECTOR_V1",
+  "status": "TEST_ONLY_NON_USER_DATA",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "case_id": "CONTIGUOUS_PASS",
+      "source_sequence_start": 1,
+      "source_sequence_end": 3,
+      "archived_sequences": [
+        1,
+        2,
+        3
+      ],
+      "mismatches": 0,
+      "parity": "PASS_PARITY",
+      "expected_status": "CLOSED_VERIFIED"
+    },
+    {
+      "case_id": "GAP_BLOCK",
+      "source_sequence_start": 1,
+      "source_sequence_end": 3,
+      "archived_sequences": [
+        1,
+        3
+      ],
+      "mismatches": 0,
+      "parity": "PASS_PARITY",
+      "expected_status": "BLOCKED_GAP"
+    },
+    {
+      "case_id": "UNKNOWN_END_BLOCK",
+      "source_sequence_start": 1,
+      "source_sequence_end": null,
+      "archived_sequences": [
+        1,
+        2,
+        3
+      ],
+      "mismatches": 0,
+      "parity": "PASS_PARITY",
+      "expected_status": "BLOCKED_UNKNOWN_BOUNDARY"
+    }
+  ],
+  "note": "No real chat content."
+}
