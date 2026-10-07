@@ -1,0 +1,33 @@
+{
+  "coverage_id": "ELYXION_NAV_O1_CAPSULE_COVERAGE_V0_1",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "baseline_semantic_snapshot": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1.json",
+  "current_semantic_snapshot": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_2.json",
+  "batch_01_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json",
+  "objects_total": 33,
+  "baseline_normalized_claim_objects": 6,
+  "verified_o1_batch_01_objects": 5,
+  "current_normalized_claim_objects": 11,
+  "remaining_objects_without_normalized_object_claims": 22,
+  "verified_o1_capsule_ids": [
+    "O1_E_PRIME_KERNEL",
+    "O1_E_CHAIN_RESEARCH",
+    "O1_DISPATCHER",
+    "O1_PAE_HISTORY",
+    "O1_A_ULTRA"
+  ],
+  "progress": {
+    "normalized_claim_coverage_before": 0.18181818181818182,
+    "normalized_claim_coverage_now": 0.3333333333333333,
+    "absolute_object_gain": 5,
+    "remaining_gap": 22
+  },
+  "laws": {
+    "verified_capsule_does_not_grant_canon": true,
+    "verified_capsule_does_not_create_cross_channel_route": true,
+    "semantic_coverage_progress_is_not_global_semantic_completeness": true,
+    "remaining_gap_must_not_be_filled_by_inference": true
+  }
+}
