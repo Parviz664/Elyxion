@@ -4,7 +4,7 @@ from pathlib import Path
 from nav_catalog import load_objects
 
 B=Path(__file__).resolve().parents[1]
-CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_3.json").read_text())
+CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_4.json").read_text())
 
 def build_semantic_coverage():
     objects=load_objects()["objects"]
