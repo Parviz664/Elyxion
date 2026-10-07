@@ -1,0 +1,62 @@
+{
+  "fixture_id": "ELYXION_NAV_CONTEXT_PACK_EXPECTATIONS_V0_1",
+  "status": "CANDIDATE",
+  "cases": [
+    {
+      "id": "CP01_ECO_ONE_HOP",
+      "start_id": "ELYX_CHANNEL_ECO_SYSTEMS",
+      "max_hops": 1,
+      "direction": "both",
+      "expected_object_ids": [
+        "ELYX_CHANNEL_ECO_SYSTEMS",
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_P_CONTROL_POINT",
+        "ELYX_SURFACE_PHASE1_SCAFFOLD",
+        "ELYX_GOV_CREATOR_REALITY_STABILIZER"
+      ],
+      "expected_discovery_ids": [
+        "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+        "DISCOVERY_GLOBAL_C0"
+      ],
+      "expected_evidence_ids": [
+        "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+        "EVID_ECO_SYSTEMS",
+        "EVID_EPRIME_EXPECTED_SOURCE",
+        "EVID_EPRIME_LOCK",
+        "EVID_EPRIME_MANIFEST",
+        "EVID_EPRIME_RAW_SLOT",
+        "EVID_MAIN_README",
+        "EVID_NAV_TOPOLOGY_V02"
+      ],
+      "expected_default_loaded_file_bodies": 0
+    },
+    {
+      "id": "CP02_NAVIGATOR_ZERO_HOP",
+      "start_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "max_hops": 0,
+      "direction": "both",
+      "expected_object_ids": [
+        "ELYX_SURFACE_UFO_NAVIGATOR"
+      ],
+      "forbidden_object_ids": [
+        "ELYX_SURFACE_MAIN",
+        "ELYX_SURFACE_E_PRIME",
+        "ELYX_CHANNEL_ECO_SYSTEMS"
+      ],
+      "expected_discovery_ids": [
+        "DISCOVERY_GLOBAL_C0"
+      ],
+      "expected_evidence_ids": [
+        "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+        "EVID_NAV_ACTIVATE",
+        "EVID_NAV_BOOTSTRAP",
+        "EVID_NAV_OBJECT_SPINE",
+        "EVID_NAV_README"
+      ],
+      "expected_default_loaded_file_bodies": 0
+    }
+  ]
+}
