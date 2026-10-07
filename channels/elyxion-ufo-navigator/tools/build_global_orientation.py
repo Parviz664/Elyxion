@@ -11,7 +11,7 @@ B=Path(__file__).resolve().parents[1]
 PROFILE=json.loads((B/"NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json").read_text())
 OBJECTS=load_objects()
 EVIDENCE=load_evidence()
-CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
+CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_2.json").read_text())
 BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
 
 def topology_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage):
