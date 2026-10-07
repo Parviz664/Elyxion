@@ -16,9 +16,10 @@ Use this file as the clean activation entrypoint for a fresh chat.
    - `channels/elyxion-ufo-navigator/NAV_001_REPOSITORY_TOPOLOGY_SNAPSHOT_V0_2.md`
    - `channels/elyxion-ufo-navigator/NAVIGATOR_SURFACE_REGISTRY_V0_2.yaml`
    - `channels/elyxion-ufo-navigator/NAV_002_GLOBAL_OBJECT_AUTHORITY_PROVENANCE_SPINE_V0_1.md`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_1.json`
-   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_1.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_2.json`
+   - `channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_2.json`
    - `channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json`
+   - `channels/elyxion-ufo-navigator/NAV_002_STRUCTURAL_VALIDATION_REPORT_V0_1.md`
 2. Recover current repository/branch state from GitHub instead of relying on chat memory.
 3. Treat GitHub evidence as stronger than recalled summaries for repository state.
 4. Preserve semantic status, evidence state, authority, and readiness as separate axes.
@@ -57,7 +58,10 @@ Current implementation substrate:
 - task-scoped context assembly;
 - source/RAW evidence descent;
 - cross-project contamination guard;
+- evidenced object model V0.2;
 - structural validator;
+- 5 falsification cases for dangerous overclaims;
+- synchronous structural/falsification PASS checkpoint;
 - GitHub Actions validation gate.
 
 ## Global-understanding law
