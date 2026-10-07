@@ -1,6 +1,6 @@
 # P5 Feel-Truth Compressor — channel recovery
 
-Recovery status: SELF_RECOVERY_PASS_WITH_GAPS candidate until post-write audit.
+Recovery status: SELF_RECOVERY_PASS_WITH_GAPS.
 
 Recovered channel:
 - strongest current technical identity: `ELYX_P5_FEEL_TRUTH_COMPRESSOR_v1.3`
