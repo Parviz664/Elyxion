@@ -9,55 +9,50 @@ OBJECTS = BASE / "NAV_OBJECT_REGISTRY_V0_3.json"
 RELATIONS = BASE / "NAV_RELATION_REGISTRY_V0_2.json"
 COLLISIONS = BASE / "NAV_COLLISION_REGISTRY_V0_1.json"
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Build a bounded Elyxion Navigator context slice from confirmed relations."
+def load_documents():
+    return (
+        json.loads(OBJECTS.read_text(encoding="utf-8")),
+        json.loads(RELATIONS.read_text(encoding="utf-8")),
+        json.loads(COLLISIONS.read_text(encoding="utf-8")),
     )
-    parser.add_argument("start_id")
-    parser.add_argument("--max-hops", type=int, default=1)
-    parser.add_argument(
-        "--direction",
-        choices=["outgoing", "incoming", "both"],
-        default="both",
-        help="Select neighbors without changing the semantic direction stored in relation records.",
-    )
-    parser.add_argument(
-        "--include-unresolved-boundary",
-        action="store_true",
-        help="Include unresolved relation questions touching selected objects; never traverse them.",
-    )
-    args = parser.parse_args()
 
-    objects_doc = json.loads(OBJECTS.read_text(encoding="utf-8"))
-    relations_doc = json.loads(RELATIONS.read_text(encoding="utf-8"))
-    collisions_doc = json.loads(COLLISIONS.read_text(encoding="utf-8"))
-
+def build_slice(
+    objects_doc,
+    relations_doc,
+    collisions_doc,
+    start_id,
+    max_hops=1,
+    direction="both",
+    include_unresolved_boundary=False,
+):
     objects = {x["id"]: x for x in objects_doc.get("objects", [])}
-    if args.start_id not in objects:
-        raise SystemExit(f"unknown start object: {args.start_id}")
-    if args.max_hops < 0:
-        raise SystemExit("--max-hops must be >= 0")
+    if start_id not in objects:
+        raise ValueError(f"unknown start object: {start_id}")
+    if max_hops < 0:
+        raise ValueError("max_hops must be >= 0")
+    if direction not in {"outgoing", "incoming", "both"}:
+        raise ValueError(f"invalid direction: {direction}")
 
     confirmed = [
         r for r in relations_doc.get("confirmed_relations", [])
         if r.get("state") == "CONFIRMED" and r.get("traversal") == "ALLOWED_AS_FACT"
     ]
 
-    selected = {args.start_id}
+    selected = {start_id}
     selected_relations = []
     seen_rel_ids = set()
-    q = deque([(args.start_id, 0)])
+    q = deque([(start_id, 0)])
 
     while q:
         node, depth = q.popleft()
-        if depth >= args.max_hops:
+        if depth >= max_hops:
             continue
 
         for rel in confirmed:
             neighbors = []
-            if args.direction in ("outgoing", "both") and rel["source_id"] == node:
+            if direction in ("outgoing", "both") and rel["source_id"] == node:
                 neighbors.append(rel["target_id"])
-            if args.direction in ("incoming", "both") and rel["target_id"] == node:
+            if direction in ("incoming", "both") and rel["target_id"] == node:
                 neighbors.append(rel["source_id"])
 
             if not neighbors:
@@ -73,7 +68,7 @@ def main():
                     q.append((neighbor, depth + 1))
 
     unresolved = []
-    if args.include_unresolved_boundary:
+    if include_unresolved_boundary:
         for rel in relations_doc.get("unresolved_relations", []):
             touching = rel.get("source_id") in selected or rel.get("target_id") in selected
             if touching and rel.get("traversal") == "BLOCKED_UNRESOLVED":
@@ -84,12 +79,12 @@ def main():
         if any(oid in selected for oid in c.get("object_ids", []))
     ]
 
-    result = {
-        "slice_version": "0.2",
+    return {
+        "slice_version": "0.3",
         "project_scope": "ELYXION",
-        "start_id": args.start_id,
-        "max_hops": args.max_hops,
-        "direction": args.direction,
+        "start_id": start_id,
+        "max_hops": max_hops,
+        "direction": direction,
         "objects": [objects[x] for x in sorted(selected)],
         "confirmed_relations": selected_relations,
         "unresolved_boundary": unresolved,
@@ -102,6 +97,29 @@ def main():
             "evidence_descent_preserved": True,
         },
     }
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Build a bounded Elyxion Navigator context slice from confirmed relations."
+    )
+    parser.add_argument("start_id")
+    parser.add_argument("--max-hops", type=int, default=1)
+    parser.add_argument("--direction", choices=["outgoing", "incoming", "both"], default="both")
+    parser.add_argument("--include-unresolved-boundary", action="store_true")
+    args = parser.parse_args()
+
+    docs = load_documents()
+    try:
+        result = build_slice(
+            *docs,
+            start_id=args.start_id,
+            max_hops=args.max_hops,
+            direction=args.direction,
+            include_unresolved_boundary=args.include_unresolved_boundary,
+        )
+    except ValueError as exc:
+        raise SystemExit(str(exc))
+
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
