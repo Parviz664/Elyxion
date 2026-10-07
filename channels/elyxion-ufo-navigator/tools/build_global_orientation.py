@@ -4,13 +4,14 @@ from pathlib import Path
 from build_context_pack import build_pack
 from check_context_pack_staleness import evaluate_pack
 from check_claim_sufficiency import evaluate_claim
+from nav_catalog import load_objects, load_evidence
 
 B=Path(__file__).resolve().parents[1]
 PROFILE=json.loads((B/"NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json").read_text())
-OBJECTS=json.loads((B/"NAV_OBJECT_REGISTRY_V0_4.json").read_text())
-EVIDENCE=json.loads((B/"NAV_EVIDENCE_INDEX_V0_2.json").read_text())
+OBJECTS=load_objects()
+EVIDENCE=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_1.json").read_text())
-BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json").read_text())
+BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
 
 def orientation_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage,claim_coverage):
     req=PROFILE["coverage_requirements"]
@@ -65,7 +66,7 @@ def build_global_orientation():
     object_coverage=selected_objects/total_objects if total_objects else 1.0
     claim_coverage=sufficient/selected_claims if selected_claims else 1.0
     discovery_coverage=discovery_count/total_discovery if total_discovery else 1.0
-    mapped=BRANCH_INVENTORY["counts"]["represented_in_object_registry"]
+    mapped=BRANCH_INVENTORY["counts"]["represented_in_object_catalog"]
     branch_total=BRANCH_INVENTORY["counts"]["total"]
     branch_mapping_coverage=mapped/branch_total if branch_total else 1.0
 
