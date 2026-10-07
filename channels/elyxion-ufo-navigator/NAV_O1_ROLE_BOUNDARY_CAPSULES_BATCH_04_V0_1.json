@@ -1,0 +1,218 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_04_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_E0",
+      "object_id": "ELYX_REC_E0",
+      "source_identity_evidence_id": "EVID_REC_E0_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E0_BOUNDARY"
+      ],
+      "role_summary": "Recovered E0 Intent Lock / Handshake Gate: the E-mainline bind/ingress authority that validates locked inputs, cross-lock consistency, bind legality, planning-vs-promotion permissions and constrained dispatch without becoming executor or source-truth creator.",
+      "documented_non_authorities": [
+        "does not own source dream meaning",
+        "does not own A2 admissibility",
+        "does not own A3 sealing semantics",
+        "does not create E-Prime truth",
+        "does not generate E6 runtime evidence",
+        "does not author E1/E2/E3 plan content",
+        "does not own D-layer psychological design",
+        "gate/binder, not executor"
+      ],
+      "status_and_evidence_ceiling": {
+        "lineage": "SAME_CHANNEL_LINEAGE_WITH_ROLE_REALIGNMENT",
+        "early_role": "mandatory ingress gate around E-Prime anchor + A2 handshake",
+        "strongest_role_v1_5": "dual-lock binder over kernel truth + dream seal",
+        "evidence_ceiling": "HIGH",
+        "runtime_promotion": "PASS may coexist with runtime_promotion_allowed=false"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "pre-v1.1 identity",
+        "natural-language birth artifact",
+        "line-by-line authorship of supplied JSON",
+        "any route not directly supported by recovered era-specific contracts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E1",
+      "object_id": "ELYX_REC_E1",
+      "source_identity_evidence_id": "EVID_REC_E1_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E1_BOUNDARY"
+      ],
+      "role_summary": "Recovered E1 constrained implementation skeleton authority: post-E0 layer that exposes a lawful trace-bound implementation skeleton and proof boundaries without becoming source canon, engine-contract translation, build convergence, readiness routing, runtime execution or human task authority.",
+      "documented_non_authorities": [
+        "not a second E0",
+        "does not own canon truth or dream meaning",
+        "not E2 engine-contract translation",
+        "not E3 build convergence/planning",
+        "not readiness routing",
+        "not runtime execution",
+        "not human task authority",
+        "does not author D1 psycho touchpoints in current v1.4+ lineage"
+      ],
+      "status_and_evidence_ceiling": {
+        "early_identity": "E1_CONSTRAINED_IMPLEMENTATION_THINKING_ENGINE",
+        "transition_v1_4": "skeleton + fences + proof hooks, no execution draft",
+        "strongest_identity": "E1_CONSTRAINED_IMPLEMENTATION_SKELETON_BUILDER v1.6",
+        "identity_evidence": "HIGH",
+        "full_v1_6_field_level_recovery": "PARTIAL"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "complete field-by-field v1.6 contract",
+        "any current runtime implementation",
+        "any authority not explicitly preserved in recovered contracts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E2",
+      "object_id": "ELYX_REC_E2",
+      "source_identity_evidence_id": "EVID_REC_E2_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E2_BOUNDARY"
+      ],
+      "role_summary": "Recovered E2 engine-contract translation and bounded-route authority: receives lawful E1 skeleton material under E0 context, translates it into engine-facing contracts and bounded route space, reports maturity/uncertainty, then stops before build sequence, readiness, human action or runtime.",
+      "documented_non_authorities": [
+        "not runtime executor",
+        "no build/test/package/release authority",
+        "no readiness authority",
+        "no human-execution authority",
+        "does not mutate upstream locked truth",
+        "does not own exact build sequence",
+        "does not own release/readiness decision"
+      ],
+      "status_and_evidence_ceiling": {
+        "v1_identity": "deep variant intelligence / path expansion",
+        "v2_1_identity": "linear engine-contract bridge",
+        "v2_2_v2_3_identity": "pure engine-contract translation + bounded route space",
+        "current_full_body_recovery": "PARTIALLY_RECOVERED",
+        "role_direction_evidence": "HIGH",
+        "exact_v2_3_field_level_evidence": "MEDIUM"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "complete v2.3 body",
+        "runtime implementation",
+        "any route beyond recovered handoff semantics"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E3_5",
+      "object_id": "ELYX_REC_E3_5",
+      "source_identity_evidence_id": "EVID_REC_E3_5_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E3_5_BOUNDARY"
+      ],
+      "role_summary": "Recovered E3.5 E4 Input Assembler / No-Drop Coverage Proof: bounded ref-only fan-in checkpoint that validates required refs/types/lanes/roots and 1:1 coverage before E4 without rewriting source meaning or deciding E4 conflict/readiness logic.",
+      "documented_non_authorities": [
+        "not idea generator",
+        "not semantic editor",
+        "not source normalizer",
+        "not E4",
+        "does not decide E4 internal conflict topology",
+        "does not own root merging",
+        "no runtime/release/CANON readiness claims",
+        "missing source is never invented"
+      ],
+      "status_and_evidence_ceiling": {
+        "current_strongest_contract": "ELYX_E3_5_CHANNEL_SPEC_V1_4_MASTER",
+        "contract_status": "DRAFT_READY_FOR_USE",
+        "provenance": "USER_SUPPLIED_ARTIFACT",
+        "owner_authorship": "UNKNOWN",
+        "identity_confidence": "HIGH",
+        "current_owner_canon_status": "UNKNOWN"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "original birth rationale in full",
+        "current owner-canon status",
+        "activation of unrecovered v1.4.1",
+        "downstream E4 verdicts beyond coverage proof"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E3",
+      "object_id": "ELYX_REC_E3",
+      "source_identity_evidence_id": "EVID_REC_E3_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E3_BOUNDARY"
+      ],
+      "role_summary": "Recovered E3 convergence/packaging layer: packages one primary production path from locked upstream substrate, checks completeness without guessing, preserves meaning/implementation separation and produces a downstream production bundle without taking lock, registry, readiness or runtime authority.",
+      "documented_non_authorities": [
+        "does not own dream/meaning authority",
+        "does not own lock authority",
+        "does not own registry/seal verification authority",
+        "does not own E1 skeleton authority",
+        "does not own E2 engine-contract translation",
+        "does not own downstream readiness",
+        "does not own build/test/release/runtime",
+        "is neither P nor A channel"
+      ],
+      "status_and_evidence_ceiling": {
+        "strongest_identity": "E3_CONVERGENCE_PACKAGING_AND_MICROSTEP_READINESS v2.0",
+        "historical_identity": "E3_EXTREME_REALIZATION_SELECTION_AND_PACKAGING v1.1/v1.2",
+        "historical_identity_state": "SUPERSEDED_NOT_ERASED",
+        "v2_0_confidence": "HIGH",
+        "pre_v1_1_identity": "UNKNOWN"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "pre-v1.1 exact formal identity",
+        "runtime implementation",
+        "any direct P/A bridge",
+        "any current authority beyond v2.0 recovered contract"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    },
+    {
+      "capsule_id": "O1_E4",
+      "object_id": "ELYX_REC_E4",
+      "source_identity_evidence_id": "EVID_REC_E4_IDENTITY",
+      "source_boundary_evidence": [
+        "EVID_O1_E4_BOUNDARY"
+      ],
+      "role_summary": "Recovered E4 Integration and Execution Readiness Routing surface: compiles/integrates the selected production route, maps closure/conflicts/readiness constraints and prepares non-architectural downstream execution surfaces while E0 remains truth binder and actual build/test/runtime/release authority remains outside E4.",
+      "documented_non_authorities": [
+        "not E0 truth binder",
+        "does not rewrite dream meaning",
+        "does not author E1 skeleton",
+        "does not replace E2 translation",
+        "does not redo E3 selection",
+        "does not build/test/run/release",
+        "cannot override D0 invariants or D1 guards",
+        "does not reconstruct missing refs"
+      ],
+      "status_and_evidence_ceiling": {
+        "technical_id": "E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING",
+        "v1_1_role": "broad integration cartography + ranking/readiness",
+        "v2_1_role": "narrowed route compiler/readiness mapping",
+        "identity_delta": "REAL_ROLE_NARROWING_RECOMPOSITION",
+        "AUS4_lineage_link": "UNKNOWN_PROVENANCE_CONFLICT_NOT_MERGED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "AUS-4 lineage association",
+        "runtime implementation",
+        "any authority beyond recovered v2.1 boundaries"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "capsules_are_navigation_derivations_not_canon": true,
+    "no_cross_channel_route_is_created_by_this_batch": true,
+    "channel_numbering_does_not_prove_route": true,
+    "role_realignment_history_must_not_be_flattened": true,
+    "bind_readiness_and_runtime_authority_remain_separate": true
+  }
+}
