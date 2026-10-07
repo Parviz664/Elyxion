@@ -1,6 +1,6 @@
 # D2 — Psychological Microdirection and Awe Orchestration
 
-Recovery status: RECOVERY_IN_PROGRESS
+Recovery status: SELF_RECOVERY_PASS_WITH_GAPS
 Project: ELYXION
 Current strongest-known channel ID: D2_PSYCHOLOGICAL_MICRODIRECTION_AND_AWE_ORCHESTRATION
 Current strongest-known human name: D2 Канал Психо-Режиссуры Микромоментов
@@ -48,6 +48,7 @@ D2 is not:
 
 ## Files
 
+- CHANNEL_ARCHAEOLOGY.md
 - CHANNEL_IDENTITY.md
 - CHANNEL_HISTORY.md
 - CHANNEL_TIMELINE.md
@@ -65,7 +66,8 @@ D2 is not:
 - CHANNEL_SELF_UNDERSTANDING_REPORT.md
 - raw-evidence/
 - versions/
-- recovery/
+- recovery/SELF_AUDIT_2026-10-07.md
+- recovery/POST_WRITE_AUDIT_2026-10-07.md
 
 ## Important historical warning
 
