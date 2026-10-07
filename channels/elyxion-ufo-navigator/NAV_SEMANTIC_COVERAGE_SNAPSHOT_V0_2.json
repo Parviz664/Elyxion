@@ -1,0 +1,28 @@
+{
+  "snapshot_id": "ELYXION_NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_2",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1",
+  "metric": "NORMALIZED_OBJECT_CLAIM_COVERAGE",
+  "claim_index_ref": "NAV_CLAIM_INDEX_V0_2.json",
+  "objects_total": 33,
+  "objects_with_normalized_claims": 11,
+  "objects_without_normalized_claims": 22,
+  "coverage_ratio": 0.3333333333333333,
+  "newly_covered_by_o1_batch_01": [
+    "ELYX_REC_E_PRIME_KERNEL",
+    "ELYX_REC_E_CHAIN_RESEARCH",
+    "ELYX_REC_DISPATCHER",
+    "ELYX_REC_PAE_HISTORY",
+    "ELYX_REC_A_ULTRA"
+  ],
+  "interpretation": {
+    "topology_identity_coverage": "33/33 observed objects represented",
+    "normalized_semantic_claim_coverage": "11/33",
+    "o1_batch_01_state": "VERIFIED_WITH_LIMITS",
+    "global_semantic_completeness": "NOT_PROVEN",
+    "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+  },
+  "next_requirement": "Continue O1 role/boundary normalization for the remaining 22 objects without normalized OBJECT-level claim coverage."
+}
