@@ -14,7 +14,7 @@ def main():
     ]
     semantic_cases=[
       ("semantic-full",1.0,"READY_NORMALIZED_SEMANTIC_COVERAGE"),
-      ("semantic-current",11/33,"PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"),
+      ("semantic-current",15/33,"PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"),
       ("semantic-zero",0.0,"PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"),
       ("semantic-unknown",None,"UNKNOWN_SEMANTIC_COVERAGE")
     ]
