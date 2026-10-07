@@ -37,11 +37,12 @@
         "line-by-line authorship of supplied JSON",
         "any route not directly supported by recovered era-specific contracts"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E0_IDENTITY_M1_2026_10_08",
         "MAT_O1_E0_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E0_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_E1",
@@ -74,11 +75,12 @@
         "any current runtime implementation",
         "any authority not explicitly preserved in recovered contracts"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E1_IDENTITY_M1_2026_10_08",
         "MAT_O1_E1_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E1_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_E2",
@@ -111,11 +113,12 @@
         "runtime implementation",
         "any route beyond recovered handoff semantics"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E2_IDENTITY_M1_2026_10_08",
         "MAT_O1_E2_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E2_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_E3_5",
@@ -150,11 +153,12 @@
         "activation of unrecovered v1.4.1",
         "downstream E4 verdicts beyond coverage proof"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E3_5_IDENTITY_M1_2026_10_08",
         "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E3_5_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_E3",
@@ -188,11 +192,12 @@
         "any direct P/A bridge",
         "any current authority beyond v2.0 recovered contract"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E3_IDENTITY_M1_2026_10_08",
         "MAT_O1_E3_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E3_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_E4",
@@ -225,11 +230,12 @@
         "runtime implementation",
         "any authority beyond recovered v2.1 boundaries"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_E4_IDENTITY_M1_2026_10_08",
         "MAT_O1_E4_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_E4_ROLE_BOUNDARY_2026_10_08"
     }
   ],
   "laws": {
