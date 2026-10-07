@@ -1,0 +1,90 @@
+navigator_version: "0.2"
+status: "CANDIDATE"
+authority: "NAVIGATION_ONLY"
+repository: "Parviz664/Elyxion"
+recovery_base_head: "fee52877fd511c57f1c916bbae350dff4d1a4d64"
+branch_inventory_complete_for_recovery_pass: true
+
+surfaces:
+  - id: "main"
+    kind: "branch"
+    observed: true
+    verified_head: "ed451eb878907c10ac697b34b1033ab6720aa858"
+    role: "default_repository_surface"
+    status: "OBSERVED"
+    evidence:
+      - "main:README.md"
+
+  - id: "E-Prime"
+    kind: "branch"
+    observed: true
+    verified_head: "061c74cb8898cf9be23586feec1c680ea48e6f44"
+    role: "chat_transcript_archive"
+    status: "OBSERVED_SPECIALIZED_ARCHIVE_LOCKED"
+    constraints:
+      - "raw_transcript_required_for_100pct_claim"
+      - "memory_reconstruction_forbidden"
+      - "append_only_sha256_manifest"
+      - "public_repo_privacy_gate"
+    observed_archive_state:
+      transcript_blocks_committed: 0
+      source_state: "AWAITING_AUTHORITATIVE_RAW_SOURCE"
+    evidence:
+      - "E-Prime:ARCHIVE_LOCK.json"
+      - "E-Prime:archive/ARCHIVE_MANIFEST.json"
+      - "E-Prime:archive/intake/EXPECTED_SOURCE_MANIFEST.json"
+      - "E-Prime:archive/intake/RAW_SOURCE_SLOT_0001.json"
+
+  - id: "agent/phase1-scaffold"
+    kind: "branch"
+    observed: true
+    verified_head: "4f3b5c53849a992e282f85a8345b637e4b06d9d1"
+    role: "phase1_prototype_and_experimental_implementation"
+    status: "OBSERVED_IMPLEMENTATION_EXPERIMENTAL"
+    canon_boundary: "experimental_details_do_not_auto_define_canon"
+    evidence:
+      - "agent/phase1-scaffold:README.md"
+
+  - id: "channel/p-control-point-v0.1"
+    kind: "branch"
+    observed: true
+    verified_head: "4c7183356699a53d081e40b3d5d28cb362d6dbcf"
+    role: "p_system_control_layer"
+    status: "OBSERVED_SPECIALIZED_ROUTE_HOLD"
+    route_state: "HOLD_UNRESOLVED"
+    evidence:
+      - "channel/p-control-point-v0.1:channels/p-control-point/README.md"
+
+  - id: "channel/elyxion-ufo-navigator-v0.1"
+    kind: "branch"
+    observed: true
+    verified_head_before_recovery_write: "fee52877fd511c57f1c916bbae350dff4d1a4d64"
+    role: "global_navigation_observer"
+    status: "ACTIVE_CANDIDATE_NAVIGATION_ONLY"
+    evidence:
+      - "channels/elyxion-ufo-navigator/ACTIVATE.md"
+      - "channels/elyxion-ufo-navigator/README.md"
+      - "channels/elyxion-ufo-navigator/ELYXION_UFO_NAVIGATOR_BOOTSTRAP_V0_1.md"
+
+targeted_recovery:
+  raw_versions_0_0_1_0_through_0_0_1_4:
+    status: "NOT_OBSERVED_IN_CURRENT_GITHUB_SURFACES"
+    existence_elsewhere: "UNKNOWN"
+  a_channel:
+    status: "NOT_OBSERVED_IN_CURRENT_GITHUB_SURFACES"
+    existence_elsewhere: "UNKNOWN"
+  e_channels_beyond_e_prime:
+    status: "NOT_OBSERVED_IN_CURRENT_GITHUB_SURFACES"
+    existence_elsewhere: "UNKNOWN"
+
+unknowns:
+  - "exact P-to-implementation handoff"
+  - "exact canon-promotion authority chain at Navigator level"
+  - "0.0.1.0 through 0.0.1.4 location outside current GitHub-visible surfaces"
+  - "A-channel repository location if any"
+  - "E-channel repository location beyond E-Prime if any"
+  - "Global C0 repository surface"
+
+current_frontier: "NAV-001_REPOSITORY_CHANNEL_TOPOLOGY_RECOVERY"
+current_frontier_state: "STOP_CONDITION_SATISFIED"
+next_frontier: "UNASSIGNED_REQUIRES_EXPLICIT_CONTRACT_OR_AUTHOR_DIRECTION"
