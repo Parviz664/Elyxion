@@ -1,6 +1,6 @@
 # P4 Feel Potential Engine — channel recovery
 
-Recovery status: **SELF_RECOVERY_PASS_WITH_GAPS (pre post-write audit)**
+Recovery status: **SELF_RECOVERY_PASS_WITH_GAPS**
 
 Channel:
 - technical id: `ELYX_P4_FEEL_POTENTIAL_ENGINE_v3.2`
@@ -30,6 +30,8 @@ Current global authority over that route is HOLD/UNRESOLVED in the P Control Poi
 
 Important historical correction:
 early in-channel P4 executions claimed `dependency_integrity=true` while omitting required intermediate dependencies from linear P3 chains. Later full-spine/role-aware executions repaired the behavior. See `CHANNEL_ERROR_CORRECTION_LOG.md`.
+
+Post-write audit: `recovery/POST_WRITE_AUDIT_2026-10-07.md`.
 
 Files in this recovery preserve:
 - identity;
