@@ -7,12 +7,14 @@ on:
     paths:
       - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_1.json"
       - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_1.json"
+      - "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
       - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
       - ".github/workflows/navigator-object-validate.yml"
   pull_request:
     paths:
       - "channels/elyxion-ufo-navigator/NAV_OBJECT_SCHEMA_V0_1.json"
       - "channels/elyxion-ufo-navigator/NAV_OBJECT_REGISTRY_V0_1.json"
+      - "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_RECOVERY_LADDER_V0_1.json"
       - "channels/elyxion-ufo-navigator/tools/validate_nav_objects.py"
 
 jobs:
@@ -23,5 +25,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate Navigator objects
+      - name: Validate Navigator objects and recovery ladder
         run: python channels/elyxion-ufo-navigator/tools/validate_nav_objects.py
