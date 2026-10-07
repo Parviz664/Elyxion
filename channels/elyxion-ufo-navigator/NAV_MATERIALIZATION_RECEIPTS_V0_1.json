@@ -1,0 +1,95 @@
+{
+  "registry_id": "ELYXION_NAV_MATERIALIZATION_RECEIPTS_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "receipts": [
+    {
+      "receipt_id": "MAT_ECO_SYSTEMS_M2_2026_10_07",
+      "evidence_id": "EVID_ECO_SYSTEMS",
+      "requested_level": "M2_CONFLICT_SET",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "main",
+        "path": "docs/channels/ECO-SYSTEMS-ELYXION.md",
+        "observed_blob_sha": "e05e677f9a961d507812380e98002d7af2608304"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 7350,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_EPRIME_LOCK_M2_2026_10_07",
+      "evidence_id": "EVID_EPRIME_LOCK",
+      "requested_level": "M2_CONFLICT_SET",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "E-Prime",
+        "path": "ARCHIVE_LOCK.json",
+        "observed_blob_sha": "c34a95613b8d45324de0e75e15d6459badddc83f"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 418,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_EPRIME_MANIFEST_M2_2026_10_07",
+      "evidence_id": "EVID_EPRIME_MANIFEST",
+      "requested_level": "M2_CONFLICT_SET",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "E-Prime",
+        "path": "archive/ARCHIVE_MANIFEST.json",
+        "observed_blob_sha": "ee67e503591d2af3d9eacadcf1a4627da7906051"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 868,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_AUTHOR_GLOBAL_C0_M1_2026_10_07",
+      "evidence_id": "EVID_AUTHOR_GLOBAL_C0_EXISTS",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/elyxion-ufo-navigator-v0.1",
+        "path": "channels/elyxion-ufo-navigator/NAV_AUTHOR_DECLARATIONS_V0_1.json",
+        "observed_blob_sha": "239d9b05da5f6c80b0bc696887b631ac14610b50",
+        "declaration_id": "AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07",
+        "source_kind": "CURRENT_AUTHOR_DECLARATION"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1001,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_GLOBAL_C0_BOUNDARY_M1_2026_10_07",
+      "evidence_id": "EVID_NAV_GLOBAL_C0_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/elyxion-ufo-navigator-v0.1",
+        "path": "channels/elyxion-ufo-navigator/NAV_GLOBAL_C0_EXISTENCE_BOUNDARY_V0_1.md",
+        "observed_blob_sha": "04e12e5cbaca729ab93e750f90180c7ab597fe60"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1723,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    }
+  ]
+}
