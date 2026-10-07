@@ -1,0 +1,210 @@
+registry_id: P_CHANNEL_REGISTRY_V0_2
+status: FREEZE_CANDIDATE_ROUTE_HOLD
+root_question: "Как собрано?"
+mutation_authority: NONE
+canonization_authority: NONE
+
+control_point:
+  candidate: "P_CONTROL_POINT_V0.2_CANDIDATE"
+  freeze_readiness: PASS
+  freeze_readiness_ref: "P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md"
+  owner_freeze_gate: "decisions/P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE.md"
+  executable_validation: PASS
+  invariant_count: 25
+  falsification_case_count: 25
+
+current_route_authority:
+  status: HOLD_UNRESOLVED
+  owner_decision: C
+  decision_date: "2026-10-06"
+  decision_ref: "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
+  implementation_boundary_blocked: true
+
+channel_order:
+  - "-P1"
+  - "P0"
+  - "P1"
+  - "P2"
+  - "P3"
+  - "P4"
+
+channels:
+  "-P1":
+    role_status: HISTORICALLY_RECOVERED_CONFLICTED
+    contract_status: HOLD_UNVERIFIED
+    implementation_status: BLOCKED
+    recovered_historical_role: "reality skeleton / causal continuity layer"
+    node_status: HISTORICALLY_PRESENT_CURRENTLY_UNRESOLVED
+    functional_migration_status: STRONGLY_SUPPORTED
+    bounded_no_drop_status: PASS_WITH_EVIDENCE_CEILING
+    absorption_status: NOT_PROVED
+    recovered_route_families:
+      - "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
+      - "P0 -> P1 -> P2 -> P3 -> P4"
+    blockers:
+      - MINUS_P1_ROUTING_AUTHORITY_UNRESOLVED
+      - MISSING_GLOBAL_SUPERSESSION_PROOF
+      - OWNER_RATIONALE_NOT_RECOVERED
+      - ORIGINAL_MINUS_P1_SOURCE_BYTES_NOT_RECOVERED
+    next_action: HOLD_UNDER_DECISION_C
+
+  "P0":
+    role_status: STRONGLY_RECOVERED
+    contract_status: HISTORICAL_LINEAGE_RECOVERED_CURRENT_ROUTE_HOLD
+    implementation_status: BLOCKED_AT_DISPUTED_ROUTE_BOUNDARY
+    recovered_role: "front intent normalization / strict downstream routing"
+    recovered_route_history:
+      - version: ELYX_P0_OUTPUT_V2_3
+        route: "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
+      - version: ELYX_P0_CHANNEL_SPEC_V2_4
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1: true
+      - version: ELYX_P0_OUTPUT_V2_4
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1_enforced: true
+      - version: ELYX_P0_CHANNEL_SPEC_V2_6
+        route: "P0 -> P1 -> P2 -> P3 -> P4"
+        no_minus_p1_enforced: true
+        supersedes_semver:
+          - "2.5.0"
+    missing_versions:
+      - "P0 v2.5 exact artifact"
+    next_action: HOLD_CURRENT_ROUTE_CONTINUE_APPEND_ONLY_RECOVERY
+
+  "P1":
+    role_status: STRONGLY_RECOVERED
+    contract_status: HISTORICAL_LINEAGE_RECOVERED_CURRENT_UPSTREAM_HOLD
+    implementation_status: BLOCKED_AT_DISPUTED_UPSTREAM_BOUNDARY
+    recovered_role: "causal map + seed + linear order"
+    recovered_micro_stage_order: "conditions -> pressure -> trigger -> micro-transition -> stabilized state"
+    lineage:
+      base: "v3.2.1"
+      patch: "v3.2.2"
+      patch_policy: APPEND_ONLY
+      id_freeze: true
+      backward_compatible_with_base: true
+    minus_p1_relation:
+      overlap_status: SUBSTANTIAL
+      functional_migration_signal: STRONG
+      formal_absorption_status: NOT_PROVED
+    next_action: HOLD_UPSTREAM_ROUTE
+
+  "P2":
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_RECOVERED_VERSION_LINEAGE_PARTIAL
+    implementation_status: NOT_STARTED
+    recovered_role: "source-bound ladder builder over P1 causal map"
+    recovered_spec: "ELYX_P2_LADDER_BUILDER_v3.2.1"
+    recovered_output: "ELYX_P2_LADDER_PACKET_V3_2_1"
+    source_binding_status: STRONG
+    split_merge_status: BOUNDED_TRACE_REQUIRED
+    later_working_version: "ELYX_P2_LADDER_BUILDER_v3.5.0"
+    version_lineage_status: PARTIAL
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
+
+  "P3":
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_AND_INPUT_RECOVERED_OUTPUT_SCHEMA_PARTIAL
+    implementation_status: NOT_STARTED
+    recovered_role: "final_text_renderer_patch_safe"
+    recovered_input: "ELYX_P3_INPUT_V3"
+    recovered_render_mode: "final_text_patch_safe"
+    recovered_output_identity: "ELYX_P3_RENDERED_LADDER_PACKET_V3"
+    downstream_binding: "ELYX_P4_INPUT_V3 candidate_items_ref"
+    semantic_drift_forbidden: true
+    truth_first_required: true
+    anti_bloat_required: true
+    anti_premature_complexity_required: true
+    uncertainty_marking_required: true
+    output_schema_status: UNKNOWN
+    merge_split_rules_status: UNKNOWN
+    version_lineage_status: PARTIAL
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
+
+  "P4":
+    role_status: STRONGLY_RECOVERED
+    contract_status: ROLE_CORE_RECOVERED_VERSION_LINEAGE_PARTIAL
+    implementation_status: NOT_STARTED
+    recovered_role: "feel_potential_sorter_final_cut"
+    recovered_channel: "ELYX_P4_FEEL_POTENTIAL_ENGINE_v3.2"
+    recovered_packet: "ELYX_P4_FILTER_SHORTLIST_PACKET_V3_2_2"
+    recovered_input: "ELYX_P4_INPUT_V3"
+    source_order_preservation: STRONG
+    dependency_preservation: STRONG
+    author_selection_mode: "author_selects_ids_only"
+    semantic_invention_forbidden: true
+    automatic_canonization_forbidden: true
+    version_lineage_status: PARTIAL
+    next_action: APPEND_ONLY_RECOVERY_IF_NEW_EVIDENCE
+
+domain_boundary:
+  free_author_dream_outside_continuous_p_control: true
+  p_channels_are_ai_work_architecture: true
+  not_automatically_gameplay_systems: true
+  translation_to_gameplay_requires_explicit_bridge: true
+
+provenance_model:
+  distinguish_supplied_by_from_authored_by: true
+  current_safe_chat_class: USER_SUPPLIED_CHAT_ARTIFACT
+  owner_explicit_decision_class: OWNER_EXPLICIT_DECISION
+  persistent_raw_class: PERSISTENT_RAW_FILE
+  assistant_interpretation_class: ASSISTANT_INTERPRETATION
+
+admission_rules:
+  contracted_requires_source_ref: true
+  unknown_must_remain_unknown: true
+  silent_status_promotion_forbidden: true
+  silent_role_completion_forbidden: true
+  append_only_correction_history: true
+  lower_authority_may_not_overwrite_higher: true
+  unresolved_route_conflict_blocks_implementation: true
+  similarity_does_not_prove_absorption_or_rename: true
+  node_absence_does_not_prove_function_absence: true
+  function_presence_does_not_prove_node_activity: true
+  provenance_must_not_be_overclaimed: true
+
+failure_classes:
+  - RAW_OVERWRITE
+  - HISTORY_REWRITE
+  - AUTHORITY_INVERSION
+  - UNKNOWN_CLOSURE_WITHOUT_AUTHORITY
+  - STATUS_PROMOTION_DRIFT
+  - UNSOURCED_CONTRACT
+  - UNSUPPORTED_CREATION
+  - MATERIAL_LOSS
+  - SILENT_NORMALIZATION
+  - ROLE_ESCAPE
+  - ROUTING_AUTHORITY_CONFLICT
+  - MISSING_SUPERSESSION_PROOF
+  - FALSE_ABSORPTION_INFERENCE
+  - ASSISTANT_RATIONALE_PROMOTION
+  - FUNCTION_DISAPPEARANCE_ASSUMPTION
+  - FUNCTION_MIGRATION_EQUALS_RENAME
+  - PROVENANCE_OVERCLAIM
+  - NODE_FUNCTION_CONFLATION
+  - ROUTE_HOLD_BREACH
+  - DOMAIN_BOUNDARY_BREACH
+  - CREATIVITY_CONTROL_DRIFT
+  - P2_SOURCE_ORPHAN
+  - P3_SEMANTIC_MUTATION
+  - P4_SELECTION_MUTATION
+  - AUTHOR_SELECTION_BYPASS
+  - UNCERTAINTY_PROMOTION
+  - SOURCE_ORDER_DRIFT
+  - GAP_ERASURE
+
+gap_register:
+  ref: "P_CONTROL_POINT_V0_2_GAP_REGISTER.md"
+  g0_open: 1
+  critical_gap: "GAP-G0-001"
+  critical_gap_status: INTENTIONALLY_OPEN
+
+validation:
+  invariants_ref: "P_CONTROL_POINT_INVARIANTS_V0_1.yaml"
+  falsification_cases_ref: "tests/P_CONTROL_POINT_FALSIFICATION_CASES_V0_1.json"
+  validator_ref: "tools/validate_p_control_point.py"
+  workflow_ref: ".github/workflows/p-control-point-validate.yml"
+  latest_recorded_candidate_run_id: 37561391549
+  latest_recorded_candidate_result: SUCCESS
+
+next_object: "P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE"

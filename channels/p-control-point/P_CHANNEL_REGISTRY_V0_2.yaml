@@ -1,0 +1,80 @@
+registry_id: P_CHANNEL_REGISTRY_V0_2
+status: FROZEN_CONTROL_LAYER_ROUTE_HOLD
+root_question: "Как собрано?"
+mutation_authority: NONE
+canonization_authority: NONE
+
+control_point:
+  frozen_contract: "P_CONTROL_POINT_V0_2_FROZEN.md"
+  candidate_ref: "P_CONTROL_POINT_V0.2_CANDIDATE.md"
+  freeze_decision_ref: "decisions/P_CONTROL_POINT_V0_2_FREEZE_DECISION_2026_10_07.md"
+  freeze_readiness_ref: "P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md"
+  frozen_on: "2026-10-07"
+  change_policy: APPEND_ONLY_OR_EXPLICIT_SUPERSESSION
+  executable_validation_required: true
+  invariant_count: 25
+  falsification_case_count: 25
+
+current_route_authority:
+  status: HOLD_UNRESOLVED
+  owner_decision: C
+  decision_ref: "decisions/MINUS_P1_CURRENT_STATUS_DECISION_2026_10_06_V0_1.md"
+  implementation_boundary_blocked: true
+
+role_spine:
+  P0: "front intent normalization / strict downstream routing"
+  P1: "causal/reality map + seed + linear order"
+  P2: "source-bound ladder builder over P1 causal map"
+  P3: "patch-safe final-text renderer"
+  P4: "feel-potential sorter / final cut"
+
+minus_p1:
+  historical_role: "reality skeleton / causal continuity layer"
+  current_status: HOLD_UNRESOLVED
+  functional_migration_status: STRONGLY_SUPPORTED
+  formal_absorption_status: NOT_PROVED
+  route_family_a: "P0 -> -P1 -> P1 -> P2 -> P3 -> P4"
+  route_family_b: "P0 -> P1 -> P2 -> P3 -> P4"
+
+domain_boundary:
+  free_author_dream_outside_continuous_p_control: true
+  p_channels_are_ai_work_architecture: true
+  not_automatically_gameplay_systems: true
+  translation_to_gameplay_requires_explicit_bridge: true
+
+truth_model:
+  raw_immutable: true
+  append_only_corrections: true
+  unknown_preserved: true
+  automatic_canonization_forbidden: true
+  contracted_requires_source_ref: true
+  lower_authority_may_not_overwrite_higher: true
+
+cross_channel_guards:
+  p0_to_p1_no_silent_normalization: true
+  p1_to_p2_source_lineage_required: true
+  p2_to_p3_semantic_mutation_forbidden: true
+  p3_to_p4_candidate_rewrite_forbidden: true
+  author_selection_bypass_forbidden: true
+
+provenance:
+  supplied_by_not_equal_authored_by: true
+  assistant_rationale_not_owner_intent: true
+  provenance_overclaim_forbidden: true
+
+gap_register:
+  ref: "P_CONTROL_POINT_V0_2_GAP_REGISTER.md"
+  critical_gap: "GAP-G0-001"
+  critical_gap_status: INTENTIONALLY_OPEN
+
+validation:
+  invariants_ref: "P_CONTROL_POINT_INVARIANTS_V0_1.yaml"
+  falsification_cases_ref: "tests/P_CONTROL_POINT_FALSIFICATION_CASES_V0_1.json"
+  validator_ref: "tools/validate_p_control_point.py"
+  workflow_ref: ".github/workflows/p-control-point-validate.yml"
+  frozen_state_validation_required: true
+
+next_stage:
+  pr_state_target: READY_FOR_REVIEW
+  merge_authorized: false
+  route_implementation_authorized: false

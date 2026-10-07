@@ -1,0 +1,163 @@
+schema_version: "0.1"
+control_point: P_CONTROL_POINT_V0_1
+status: PROVISIONAL_SOURCE_GROUNDED
+
+invariants:
+  - id: PCP-I001
+    name: raw_immutability
+    severity: critical
+    rule: "Locked USER RAW MUST NOT be edited in place."
+    violation: RAW_OVERWRITE
+
+  - id: PCP-I002
+    name: append_only_correction_history
+    severity: critical
+    rule: "Corrections MUST be represented as versioned deltas; superseded source remains recoverable."
+    violation: HISTORY_REWRITE
+
+  - id: PCP-I003
+    name: authority_monotonicity
+    severity: critical
+    rule: "A lower-authority interpretation MUST NOT silently overwrite a higher-authority source."
+    violation: AUTHORITY_INVERSION
+
+  - id: PCP-I004
+    name: unknown_preservation
+    severity: critical
+    rule: "UNKNOWN MUST remain UNKNOWN until evidence or explicit owner resolution exists."
+    violation: UNKNOWN_CLOSURE_WITHOUT_AUTHORITY
+
+  - id: PCP-I005
+    name: no_automatic_canonization
+    severity: critical
+    rule: "RAW, interpretation, candidate, shortlist, or rendered output MUST NOT become canon automatically."
+    violation: STATUS_PROMOTION_DRIFT
+
+  - id: PCP-I006
+    name: contracted_requires_source
+    severity: critical
+    rule: "No field may be CONTRACTED without an authoritative source reference."
+    violation: UNSOURCED_CONTRACT
+
+  - id: PCP-I007
+    name: no_unsupported_creation
+    severity: critical
+    rule: "Every material downstream claim MUST have acceptable upstream/source lineage."
+    violation: UNSUPPORTED_CREATION
+
+  - id: PCP-I008
+    name: no_material_loss
+    severity: critical
+    rule: "A material upstream element MUST NOT disappear without an explicit traceable reason."
+    violation: MATERIAL_LOSS
+
+  - id: PCP-I009
+    name: no_silent_normalization
+    severity: high
+    rule: "Ambiguous, unusual, incomplete, or uncertain author material MUST NOT be silently repaired."
+    violation: SILENT_NORMALIZATION
+
+  - id: PCP-I010
+    name: role_boundary
+    severity: critical
+    rule: "A channel MUST NOT perform transformations outside its admitted role."
+    violation: ROLE_ESCAPE
+
+  - id: PCP-I011
+    name: provenance_precision
+    severity: high
+    rule: "SUPPLIED_BY, AUTHORED_BY, OWNER_EXPLICIT_DECISION, PERSISTENT_RAW_FILE, and ASSISTANT_INTERPRETATION MUST remain distinct provenance classes."
+    violation: PROVENANCE_OVERCLAIM
+
+  - id: PCP-I012
+    name: assistant_rationale_quarantine
+    severity: high
+    rule: "Assistant-origin rationale MUST NOT be promoted to owner intent."
+    violation: ASSISTANT_RATIONALE_PROMOTION
+
+  - id: PCP-I013
+    name: node_function_separation
+    severity: high
+    rule: "Node absence MUST NOT imply function absence; function presence MUST NOT imply node activity."
+    violation: NODE_FUNCTION_CONFLATION
+
+  - id: PCP-I014
+    name: similarity_not_absorption
+    severity: high
+    rule: "Functional similarity MUST NOT be treated as proof of rename, absorption, or supersession."
+    violation: FALSE_ABSORPTION_INFERENCE
+
+  - id: PCP-I015
+    name: route_hold_enforcement
+    severity: critical
+    precondition: "current_route_authority.status == HOLD_UNRESOLVED"
+    rule: "No current global P-route may be frozen or implemented across the disputed P0/-P1/P1 boundary."
+    violation: ROUTE_HOLD_BREACH
+
+  - id: PCP-I016
+    name: historical_route_preservation
+    severity: critical
+    rule: "Historical route families MUST remain preserved even when a later route is selected."
+    violation: HISTORY_COLLAPSE
+
+  - id: PCP-I017
+    name: work_architecture_boundary
+    severity: critical
+    rule: "P-channels MUST NOT be silently converted into gameplay mechanics, lore entities, player roles, or runtime world objects."
+    violation: DOMAIN_BOUNDARY_BREACH
+
+  - id: PCP-I018
+    name: free_author_dream_boundary
+    severity: high
+    rule: "P-channels MUST NOT require continuous live classification of the author's dream stream; structuring is downstream of preserved source capture unless explicitly invoked."
+    violation: CREATIVITY_CONTROL_DRIFT
+
+  - id: PCP-I019
+    name: p1_to_p2_lineage
+    severity: critical
+    rule: "Material P2 ladder items MUST preserve P1 source binding."
+    violation: P2_SOURCE_ORPHAN
+
+  - id: PCP-I020
+    name: p2_to_p3_semantic_fidelity
+    severity: critical
+    rule: "P3 MAY render P2 material but MUST NOT strengthen, repair, or replace P2 semantics without explicit authority."
+    violation: P3_SEMANTIC_MUTATION
+
+  - id: PCP-I021
+    name: p3_to_p4_selection_boundary
+    severity: critical
+    rule: "P4 MAY filter/shortlist admitted P3 candidates but MUST NOT rewrite candidate meaning or silently canonize selections."
+    violation: P4_SELECTION_MUTATION
+
+  - id: PCP-I022
+    name: author_selection_authority
+    severity: critical
+    precondition: "P4.selection_mode == author_selects_ids_only"
+    rule: "Final ID selection authority remains with the author."
+    violation: AUTHOR_SELECTION_BYPASS
+
+  - id: PCP-I023
+    name: uncertainty_monotonicity
+    severity: high
+    rule: "Downstream processing MUST NOT silently upgrade plausible/speculative/unknown material into certainty."
+    violation: UNCERTAINTY_PROMOTION
+
+  - id: PCP-I024
+    name: source_order_preservation
+    severity: high
+    rule: "Where a channel contract requires strict source order, downstream processing MUST preserve that order unless an explicit authorized rule permits change."
+    violation: SOURCE_ORDER_DRIFT
+
+  - id: PCP-I025
+    name: unresolved_gap_visibility
+    severity: high
+    rule: "Known unresolved G0/G1 gaps MUST remain visible in the gap register and registry until explicitly closed with evidence."
+    violation: GAP_ERASURE
+
+current_required_state:
+  current_route_authority_status: HOLD_UNRESOLVED
+  owner_decision: C
+  automatic_canonization: false
+  mutation_authority: NONE
+  canonization_authority: NONE
