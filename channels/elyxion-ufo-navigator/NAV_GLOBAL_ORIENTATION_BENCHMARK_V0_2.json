@@ -5,7 +5,7 @@
   "project_scope": "ELYXION",
   "supersedes_for_current_topology": "ELYXION_NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_1",
   "topology_expansion_ref": "NAV_TOPOLOGY_EXPANSION_EVENT_2026_10_07_V0_1.json",
-  "profile_ref": "NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json",
+  "profile_ref": "NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json",
   "catalog_refs": {
     "objects": "NAV_OBJECT_CATALOG_V0_1.json",
     "relations": "NAV_RELATION_CATALOG_V0_1.json",
@@ -47,7 +47,13 @@
     "ambient_observed_discovery_targets": 1,
     "ambient_unknown_discovery_targets": 3,
     "materialization_receipts_available": 8,
-    "semantic_verification_receipts_available": 9
+    "semantic_verification_receipts_available": 9,
+    "normalized_object_claim_coverage": {
+      "covered": 6,
+      "total": 33,
+      "ratio": 0.18181818181818182,
+      "uncovered": 27
+    }
   },
   "discovery_horizon": {
     "connected": [
@@ -63,20 +69,29 @@
       "DISCOVERY_DREAM_RAW_SURFACE"
     ]
   },
-  "expected_readiness_after_execution_checks": "READY_GLOBAL_ORIENTATION",
   "interpretation": [
     "All currently observed repository branches are represented in the navigation object catalog.",
     "The broad orientation graph can reach all 33 currently cataloged objects through confirmed navigation observations plus existing core relations.",
-    "All nine currently selected semantic claims have sufficient verification receipts.",
+    "All nine currently selected indexed claims have sufficient verification receipts.",
+    "Only 6 of 33 observed objects currently have normalized OBJECT-level claim coverage; this is PARTIAL semantic coverage, not global semantic completeness.",
     "Global-orientation metadata breadth is high at approximately 91.3 percent of indexed evidence identities.",
-    "Exact source bodies remain unloaded by default; source-body pressure is therefore separated from metadata pressure."
+    "Exact source bodies remain unloaded by default; source-body pressure is separated from metadata pressure.",
+    "O0 sector orientation exists to avoid loading individual evidence identities at cold start."
   ],
   "non_claims": [
+    "Topology readiness does not prove semantic completeness.",
+    "9/9 selected indexed claim verification does not mean 33/33 objects are semantically normalized.",
     "This does not prove all Elyxion history has been recovered.",
     "This does not prove sublinear or asymptotic scaling.",
     "This does not prove that future 10x or 100x growth will preserve current ratios.",
     "This does not benchmark Global C0 internal reasoning performance.",
     "This does not identify the existing Global C0 durable/repository surface.",
     "CI execution PASS is not claimed until observed."
-  ]
+  ],
+  "orientation_depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
+  "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_1.json",
+  "readiness_axes": {
+    "topology": "READY_TOPOLOGY_ORIENTATION_EXPECTED_AFTER_EXECUTION_CHECKS",
+    "semantics": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+  }
 }
