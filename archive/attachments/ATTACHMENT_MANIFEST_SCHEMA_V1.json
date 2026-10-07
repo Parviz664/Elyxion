@@ -1,0 +1,24 @@
+{
+  "artifact_type": "EPRIME_CHAT_ATTACHMENT_MANIFEST_SCHEMA_V1",
+  "status": "LOCKED",
+  "purpose": "GLOBAL_ATTACHMENT_COMPLETENESS_ACCOUNTING",
+  "required_fields": [
+    "source_id",
+    "declared_attachment_count",
+    "archived_attachment_record_count",
+    "hashed_attachment_count",
+    "ref_only_attachment_count",
+    "missing_attachment_count",
+    "unresolved_attachment_count",
+    "records",
+    "verdict"
+  ],
+  "verdict_enum": [
+    "PASS_ALL_ATTACHMENTS_ACCOUNTED",
+    "PASS_TEXT_ONLY_WITH_ATTACHMENT_CONSTRAINTS",
+    "BLOCK_ATTACHMENT_GAPS"
+  ],
+  "strongest_pass_rule": "declared_attachment_count == archived_attachment_record_count AND missing_attachment_count == 0 AND unresolved_attachment_count == 0",
+  "text_only_rule": "Text transcript may be complete while full-context archive remains constrained.",
+  "no_drop_rule": true
+}
