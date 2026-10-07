@@ -1,0 +1,82 @@
+{
+  "benchmark_id": "ELYXION_NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2",
+  "status": "CANDIDATE_STRUCTURAL_MEASUREMENT_CI_UNOBSERVED",
+  "authority": "NAVIGATION_EVIDENCE_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_for_current_topology": "ELYXION_NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_1",
+  "topology_expansion_ref": "NAV_TOPOLOGY_EXPANSION_EVENT_2026_10_07_V0_1.json",
+  "profile_ref": "NAV_GLOBAL_ORIENTATION_PROFILE_V0_1.json",
+  "catalog_refs": {
+    "objects": "NAV_OBJECT_CATALOG_V0_1.json",
+    "relations": "NAV_RELATION_CATALOG_V0_1.json",
+    "evidence": "NAV_EVIDENCE_CATALOG_V0_1.json",
+    "freshness": "NAV_FRESHNESS_CATALOG_V0_1.json",
+    "discovery": "NAV_DISCOVERY_LEDGER_V0_1.json"
+  },
+  "structural_measurement": {
+    "branch_inventory_mapping": {
+      "represented": 31,
+      "total": 31,
+      "ratio": 1
+    },
+    "observed_object_coverage": {
+      "selected": 33,
+      "total": 33,
+      "ratio": 1
+    },
+    "discovery_horizon_coverage": {
+      "selected": 6,
+      "total": 6,
+      "ratio": 1
+    },
+    "selected_claim_verification": {
+      "sufficient": 9,
+      "selected": 9,
+      "ratio": 1
+    },
+    "evidence_identity_pressure": {
+      "selected": 42,
+      "total": 46,
+      "ratio": 0.9130434782608695
+    },
+    "default_loaded_file_bodies": 0,
+    "confirmed_relations": 34,
+    "unresolved_relations": 5,
+    "collisions": 1,
+    "connected_discovery_targets": 2,
+    "ambient_observed_discovery_targets": 1,
+    "ambient_unknown_discovery_targets": 3,
+    "materialization_receipts_available": 8,
+    "semantic_verification_receipts_available": 9
+  },
+  "discovery_horizon": {
+    "connected": [
+      "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+      "DISCOVERY_GLOBAL_C0"
+    ],
+    "ambient_observed": [
+      "DISCOVERY_A_CHANNEL"
+    ],
+    "ambient_unknown": [
+      "DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4",
+      "DISCOVERY_TOOLS_UNDER_ELYXION",
+      "DISCOVERY_DREAM_RAW_SURFACE"
+    ]
+  },
+  "expected_readiness_after_execution_checks": "READY_GLOBAL_ORIENTATION",
+  "interpretation": [
+    "All currently observed repository branches are represented in the navigation object catalog.",
+    "The broad orientation graph can reach all 33 currently cataloged objects through confirmed navigation observations plus existing core relations.",
+    "All nine currently selected semantic claims have sufficient verification receipts.",
+    "Global-orientation metadata breadth is high at approximately 91.3 percent of indexed evidence identities.",
+    "Exact source bodies remain unloaded by default; source-body pressure is therefore separated from metadata pressure."
+  ],
+  "non_claims": [
+    "This does not prove all Elyxion history has been recovered.",
+    "This does not prove sublinear or asymptotic scaling.",
+    "This does not prove that future 10x or 100x growth will preserve current ratios.",
+    "This does not benchmark Global C0 internal reasoning performance.",
+    "This does not identify the existing Global C0 durable/repository surface.",
+    "CI execution PASS is not claimed until observed."
+  ]
+}
