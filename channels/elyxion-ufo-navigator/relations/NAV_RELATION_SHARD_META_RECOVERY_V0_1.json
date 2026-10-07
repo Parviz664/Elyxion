@@ -1,0 +1,50 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_META_RECOVERY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_NAV_OBSERVES_REC_DISPATCHER",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_DISPATCHER",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/elyxion-dispatcher-recovery-v0.1:channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "fee2014268444bc08feac5a015f7b14ad2370c42",
+        "identity_blob_sha": "b9484a3be58e308f3c116207356d35e4e3f338fe",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    },
+    {
+      "id": "REL_NAV_OBSERVES_REC_PAE_HISTORY",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_SURFACE_UFO_NAVIGATOR",
+      "target_id": "ELYX_REC_PAE_HISTORY",
+      "kind": "OBSERVES",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/pae-history-navigator-recovery-v0.1:channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "unknowns": [
+        "semantic relations beyond direct Navigator observation remain UNKNOWN"
+      ],
+      "last_verified": {
+        "head_sha": "8a474a5be5bcedb3570ebbce3628f69f62821e5a",
+        "identity_blob_sha": "1ab740223ec7cfb9ccfc596485d1e855458d5ba7",
+        "basis": "NAV direct recovery-surface observation 2026-10-07"
+      }
+    }
+  ]
+}
