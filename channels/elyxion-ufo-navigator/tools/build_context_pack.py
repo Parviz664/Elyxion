@@ -1,171 +1,142 @@
 #!/usr/bin/env python3
-import argparse
-import json
+import argparse, json
 from pathlib import Path
 from build_context_slice import build_slice, load_documents
 
-BASE = Path(__file__).resolve().parents[1]
-OBJECT_REGISTRY = BASE / "NAV_OBJECT_REGISTRY_V0_4.json"
-EVIDENCE_INDEX = BASE / "NAV_EVIDENCE_INDEX_V0_1.json"
-FRESHNESS_POLICY = BASE / "NAV_FRESHNESS_POLICY_V0_3.json"
+BASE=Path(__file__).resolve().parents[1]
+OBJECT_REGISTRY=BASE/"NAV_OBJECT_REGISTRY_V0_4.json"
+EVIDENCE_INDEX=BASE/"NAV_EVIDENCE_INDEX_V0_2.json"
+CLAIM_INDEX=BASE/"NAV_CLAIM_INDEX_V0_1.json"
+FRESHNESS_POLICY=BASE/"NAV_FRESHNESS_POLICY_V0_3.json"
+MATERIALIZATION_POLICY=BASE/"NAV_EVIDENCE_MATERIALIZATION_POLICY_V0_1.json"
+RISK_POLICY=BASE/"NAV_CONTEXT_PACK_RISK_POLICY_V0_1.json"
 
-def collect_evidence_locators(value, out):
-    if isinstance(value, list):
-        for item in value:
-            collect_evidence_locators(item, out)
-        return
-    if not isinstance(value, dict):
-        return
-    for key, item in value.items():
-        if key == "evidence" and isinstance(item, list):
-            for ref in item:
-                if isinstance(ref, str) and ":" in ref:
-                    out.add(ref)
-        else:
-            collect_evidence_locators(item, out)
+def collect_refs(v,out):
+    if isinstance(v,list):
+        for x in v: collect_refs(x,out)
+    elif isinstance(v,dict):
+        for k,x in v.items():
+            if k=="evidence" and isinstance(x,list):
+                out.update(y for y in x if isinstance(y,str) and ":" in y)
+            else: collect_refs(x,out)
 
-def build_pack(start_id, max_hops=1, direction="both", include_unresolved_boundary=True):
-    objects_doc, relations_doc, collisions_doc = load_documents()
-    slice_doc = build_slice(
-        objects_doc,
-        relations_doc,
-        collisions_doc,
-        start_id=start_id,
-        max_hops=max_hops,
-        direction=direction,
-        include_unresolved_boundary=include_unresolved_boundary,
-    )
+def build_pack(start_id,max_hops=1,direction="both",include_unresolved_boundary=True):
+    objects_doc,relations_doc,collisions_doc=load_documents()
+    sl=build_slice(objects_doc,relations_doc,collisions_doc,start_id,max_hops,direction,include_unresolved_boundary)
+    objreg=json.loads(OBJECT_REGISTRY.read_text())
+    evid=json.loads(EVIDENCE_INDEX.read_text())
+    claims_doc=json.loads(CLAIM_INDEX.read_text())
+    disc={x["id"]:x for x in objreg["discovery_targets"]}
 
-    object_registry = json.loads(OBJECT_REGISTRY.read_text(encoding="utf-8"))
-    evidence_index = json.loads(EVIDENCE_INDEX.read_text(encoding="utf-8"))
-    freshness = json.loads(FRESHNESS_POLICY.read_text(encoding="utf-8"))
+    discovery_ids={r["target_discovery_id"] for r in sl["unresolved_boundary"] if r.get("target_discovery_id")}
+    discovery_boundary=[disc[x] for x in sorted(discovery_ids) if x in disc]
 
-    discovery_map = {
-        item["id"]: item for item in object_registry.get("discovery_targets", [])
-    }
+    subjects={f"OBJECT:{x['id']}" for x in sl["objects"]}
+    subjects|={f"RELATION:{x['id']}" for x in sl["confirmed_relations"]}
+    subjects|={f"UNRESOLVED_RELATION:{x['id']}" for x in sl["unresolved_boundary"]}
+    subjects|={f"COLLISION:{x['id']}" for x in sl["collisions"]}
+    subjects|={f"DISCOVERY:{x['id']}" for x in discovery_boundary}
 
-    discovery_ids = set()
-    for relation in slice_doc.get("unresolved_boundary", []):
-        target = relation.get("target_discovery_id")
-        if target:
-            discovery_ids.add(target)
-
-    discovery_boundary = [
-        discovery_map[x] for x in sorted(discovery_ids) if x in discovery_map
+    claims=[
+        c for c in claims_doc["claims"]
+        if subjects.intersection(c.get("subject_refs",[]))
     ]
 
-    locators = set()
-    collect_evidence_locators(slice_doc["objects"], locators)
-    collect_evidence_locators(slice_doc["confirmed_relations"], locators)
-    collect_evidence_locators(slice_doc["unresolved_boundary"], locators)
-    collect_evidence_locators(slice_doc["collisions"], locators)
+    refs=set()
+    collect_refs(sl["objects"],refs)
+    collect_refs(sl["confirmed_relations"],refs)
+    collect_refs(sl["unresolved_boundary"],refs)
+    collect_refs(sl["collisions"],refs)
 
-    declaration_ids = set()
-    for relation in slice_doc.get("unresolved_boundary", []):
-        ref = relation.get("author_declaration_ref")
-        if ref:
-            declaration_ids.add(ref)
-    for target in discovery_boundary:
-        ref = target.get("author_declaration_ref")
-        if ref:
-            declaration_ids.add(ref)
+    byloc={x["locator"]:x for x in evid["entries"] if x["source_type"]=="GITHUB_FILE"}
+    bydecl={x["declaration_id"]:x for x in evid["entries"] if x["source_type"]=="AUTHOR_DECLARATION"}
+    byid={x["evidence_id"]:x for x in evid["entries"]}
 
-    by_locator = {
-        entry["locator"]: entry for entry in evidence_index.get("entries", [])
-        if entry.get("source_type") == "GITHUB_FILE"
-    }
-    by_declaration = {
-        entry["declaration_id"]: entry for entry in evidence_index.get("entries", [])
-        if entry.get("source_type") == "AUTHOR_DECLARATION"
-    }
+    missing=[x for x in refs if x not in byloc]
+    decls={x.get("author_declaration_ref") for x in discovery_boundary if x.get("author_declaration_ref")}
+    decls|={x.get("author_declaration_ref") for x in sl["unresolved_boundary"] if x.get("author_declaration_ref")}
+    missing_decl=[x for x in decls if x not in bydecl]
 
-    missing = sorted(x for x in locators if x not in by_locator)
-    missing_declarations = sorted(
-        x for x in declaration_ids if x not in by_declaration
-    )
-    if missing or missing_declarations:
-        raise ValueError(
-            "evidence index gap: "
-            + json.dumps({
-                "missing_locators": missing,
-                "missing_declarations": missing_declarations,
-            })
-        )
+    evidence_ids={byloc[x]["evidence_id"] for x in refs if x in byloc}
+    evidence_ids|={bydecl[x]["evidence_id"] for x in decls if x in bydecl}
 
-    evidence_ids = {by_locator[x]["evidence_id"] for x in locators}
-    evidence_ids.update(by_declaration[x]["evidence_id"] for x in declaration_ids)
-    evidence_by_id = {
-        entry["evidence_id"]: entry for entry in evidence_index.get("entries", [])
-    }
-    evidence_manifest = [
-        evidence_by_id[x] for x in sorted(evidence_ids)
-    ]
+    for claim in claims:
+        for eid in claim.get("evidence_ids",[]):
+            if eid not in byid:
+                missing.append("claim-evidence:"+eid)
+            else:
+                evidence_ids.add(eid)
 
+    if missing or missing_decl:
+        raise ValueError(json.dumps({"missing":sorted(missing),"missing_declarations":sorted(missing_decl)}))
+
+    if sl["collisions"]:
+        risk_band="HIGH"; materialization="M2_CONFLICT_SET"
+    elif sl["unresolved_boundary"] or any(c["epistemic_state"]=="AUTHOR_DECLARED" for c in claims):
+        risk_band="ELEVATED"; materialization="M1_EXACT_ARTIFACT"
+    else:
+        risk_band="LOW"; materialization="M0_MANIFEST_ONLY"
+
+    manifest=[byid[x] for x in sorted(evidence_ids)]
     return {
-        "pack_version": "0.1",
-        "project_scope": "ELYXION",
-        "request": {
-            "start_id": start_id,
-            "max_hops": max_hops,
-            "direction": direction,
-            "include_unresolved_boundary": include_unresolved_boundary,
-        },
-        "slice": {
-            "objects": slice_doc["objects"],
-            "confirmed_relations": slice_doc["confirmed_relations"],
-        },
-        "discovery_boundary": discovery_boundary,
-        "unresolved_boundary": slice_doc["unresolved_boundary"],
-        "collisions": slice_doc["collisions"],
-        "evidence_manifest": evidence_manifest,
-        "materialization_plan": {
-            "default_loaded_file_bodies": [],
-            "manifest_only_evidence_ids": [
-                x["evidence_id"] for x in evidence_manifest
-            ],
-            "escalation_required_for_file_content": True,
-        },
-        "freshness_contract": {
-            "policy_ref": FRESHNESS_POLICY.name,
-            "must_check_before_high_confidence_use": True,
-            "stale_means_recover_affected_slice_not_global_replay": True,
-        },
-        "budget": {
-            "selected_object_count": len(slice_doc["objects"]),
-            "total_known_object_count": len(object_registry.get("objects", [])),
-            "selected_evidence_count": len(evidence_manifest),
-            "total_indexed_evidence_count": len(evidence_index.get("entries", [])),
-        },
-        "laws": {
-            "pack_is_bounded_not_complete_world": True,
-            "evidence_manifest_is_deduplicated": True,
-            "file_bodies_not_loaded_by_default": True,
-            "unresolved_relations_not_traversed": True,
-            "collisions_not_auto_resolved": True,
-            "author_declaration_source_kind_preserved": True,
-            "evidence_descent_preserved": True,
-        },
+      "pack_version":"0.2",
+      "project_scope":"ELYXION",
+      "request":{"start_id":start_id,"max_hops":max_hops,"direction":direction,"include_unresolved_boundary":include_unresolved_boundary},
+      "slice":{"objects":sl["objects"],"confirmed_relations":sl["confirmed_relations"]},
+      "discovery_boundary":discovery_boundary,
+      "unresolved_boundary":sl["unresolved_boundary"],
+      "collisions":sl["collisions"],
+      "claims":claims,
+      "evidence_manifest":manifest,
+      "risk":{
+        "band":risk_band,
+        "policy_ref":RISK_POLICY.name,
+        "reason_flags":{
+          "collision_present":bool(sl["collisions"]),
+          "unresolved_boundary_present":bool(sl["unresolved_boundary"]),
+          "author_declared_claim_present":any(c["epistemic_state"]=="AUTHOR_DECLARED" for c in claims)
+        }
+      },
+      "materialization_plan":{
+        "policy_ref":MATERIALIZATION_POLICY.name,
+        "recommended_minimum_level":materialization,
+        "default_loaded_file_bodies":[],
+        "manifest_only_evidence_ids":[x["evidence_id"] for x in manifest],
+        "exact_source_loading_is_escalation":True
+      },
+      "freshness_contract":{
+        "policy_ref":FRESHNESS_POLICY.name,
+        "must_check_before_high_confidence_use":True,
+        "stale_means_targeted_recovery_not_global_replay":True
+      },
+      "budget":{
+        "selected_object_count":len(sl["objects"]),
+        "total_known_object_count":len(objreg["objects"]),
+        "selected_claim_count":len(claims),
+        "total_indexed_claim_count":len(claims_doc["claims"]),
+        "selected_evidence_count":len(manifest),
+        "total_indexed_evidence_count":len(evid["entries"])
+      },
+      "laws":{
+        "pack_is_bounded_not_complete_world":True,
+        "claims_are_evidence_linked":True,
+        "unresolved_relations_not_traversed":True,
+        "collisions_not_auto_resolved":True,
+        "file_bodies_not_loaded_by_default":True,
+        "existing_global_c0_not_built_by_pack":True
+      }
     }
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("start_id")
-    parser.add_argument("--max-hops", type=int, default=1)
-    parser.add_argument("--direction", choices=["outgoing", "incoming", "both"], default="both")
-    parser.add_argument("--exclude-unresolved-boundary", action="store_true")
-    args = parser.parse_args()
-
+    p=argparse.ArgumentParser()
+    p.add_argument("start_id");p.add_argument("--max-hops",type=int,default=1)
+    p.add_argument("--direction",choices=["outgoing","incoming","both"],default="both")
+    p.add_argument("--exclude-unresolved-boundary",action="store_true")
+    a=p.parse_args()
     try:
-        result = build_pack(
-            start_id=args.start_id,
-            max_hops=args.max_hops,
-            direction=args.direction,
-            include_unresolved_boundary=not args.exclude_unresolved_boundary,
-        )
-    except ValueError as exc:
-        raise SystemExit(str(exc))
+        r=build_pack(a.start_id,a.max_hops,a.direction,not a.exclude_unresolved_boundary)
+    except ValueError as e:
+        raise SystemExit(str(e))
+    print(json.dumps(r,indent=2,ensure_ascii=False))
 
-    print(json.dumps(result, indent=2, ensure_ascii=False))
-
-if __name__ == "__main__":
-    main()
+if __name__=="__main__": main()
