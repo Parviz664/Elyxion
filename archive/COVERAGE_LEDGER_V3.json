@@ -1,0 +1,80 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_COVERAGE_LEDGER_V3",
+  "status": "ARCHITECTURE_70_READY__RAW_0",
+  "supersedes": "archive/COVERAGE_LEDGER_V2.json",
+  "target": "100_PERCENT_VERIFIED_FULL_CHAT_ARCHIVE",
+  "progress_axes": {
+    "architecture_progress_pct": 70,
+    "raw_transcript_coverage_pct": 0,
+    "verified_recovery_pct": 0,
+    "verified_attachment_coverage_pct": 0,
+    "verified_source_parity_pct": 0
+  },
+  "architecture_milestones": [
+    {
+      "percent": 10,
+      "state": "PASS",
+      "meaning": "archive laws/schema/manifest/privacy/source rules locked"
+    },
+    {
+      "percent": 20,
+      "state": "PASS",
+      "meaning": "authoritative RAW intake contract and ingest protocol ready"
+    },
+    {
+      "percent": 30,
+      "state": "PASS",
+      "meaning": "zero-mutation parser/chunking/completeness contracts ready"
+    },
+    {
+      "percent": 40,
+      "state": "PASS",
+      "meaning": "deterministic verifier/hash/receipt chain ready"
+    },
+    {
+      "percent": 50,
+      "state": "PASS",
+      "meaning": "coverage accounting + recovery proof + original source blob preservation ready"
+    },
+    {
+      "percent": 60,
+      "state": "PASS",
+      "meaning": "attachments + durability + full source acquisition workflow ready"
+    },
+    {
+      "percent": 70,
+      "state": "PASS",
+      "meaning": "source order/role/timestamp/system/tool/attachment parity verification ready"
+    },
+    {
+      "percent": 80,
+      "state": "PENDING"
+    },
+    {
+      "percent": 90,
+      "state": "PENDING"
+    },
+    {
+      "percent": 100,
+      "state": "PENDING"
+    }
+  ],
+  "hard_separation_rules": [
+    "architecture progress is not raw transcript coverage",
+    "synthetic test success is not real-chat coverage",
+    "text completeness is not full-context completeness when attachments are unresolved",
+    "archive-record recovery is not byte-identical original export recovery unless source blob is preserved",
+    "source parity must pass before full-chat completeness can be claimed"
+  ],
+  "counters": {
+    "verified_raw_messages": 0,
+    "verified_real_attachments": 0,
+    "verified_real_source_records": 0,
+    "inferred_message_count": 0,
+    "reconstructed_from_memory_count": 0,
+    "silently_rewritten_message_count": 0,
+    "silently_dropped_attachment_count": 0,
+    "silently_dropped_system_or_tool_record_count": 0,
+    "p0_loss_count": 0
+  }
+}
