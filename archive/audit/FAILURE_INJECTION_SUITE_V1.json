@@ -1,0 +1,122 @@
+{
+  "artifact_type": "EPRIME_CHAT_FAILURE_INJECTION_SUITE_V1",
+  "status": "LOCKED_TEST_PLAN",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "id": "FI01",
+      "inject": "remove sequence 2",
+      "must_trigger": [
+        "BLOCK_INCOMPLETE",
+        "sequence_gap_count>0"
+      ]
+    },
+    {
+      "id": "FI02",
+      "inject": "swap sequences 2 and 3",
+      "must_trigger": [
+        "BLOCK_PARITY",
+        "order_mismatch_count>0"
+      ]
+    },
+    {
+      "id": "FI03",
+      "inject": "change one UTF-8 character in raw_text",
+      "must_trigger": [
+        "BLOCK_INTEGRITY",
+        "message_hash_mismatch_count>0"
+      ]
+    },
+    {
+      "id": "FI04",
+      "inject": "change role user->assistant",
+      "must_trigger": [
+        "BLOCK_PARITY",
+        "role_mismatch_count>0"
+      ]
+    },
+    {
+      "id": "FI05",
+      "inject": "drop tool record",
+      "must_trigger": [
+        "BLOCK_PARITY",
+        "tool_record_drop_count>0"
+      ]
+    },
+    {
+      "id": "FI06",
+      "inject": "drop declared attachment",
+      "must_trigger": [
+        "BLOCK_ATTACHMENT_GAPS",
+        "missing_attachment_count>0"
+      ]
+    },
+    {
+      "id": "FI07",
+      "inject": "break previous_message_sha256",
+      "must_trigger": [
+        "BLOCK_INTEGRITY",
+        "message_chain_break_count>0"
+      ]
+    },
+    {
+      "id": "FI08",
+      "inject": "break previous_receipt_sha256",
+      "must_trigger": [
+        "receipt_chain_break_count>0",
+        "PRE_100_BLOCK"
+      ]
+    },
+    {
+      "id": "FI09",
+      "inject": "replay exact same range",
+      "must_trigger": [
+        "NOOP_RETURN_EXISTING_RECEIPT"
+      ]
+    },
+    {
+      "id": "FI10",
+      "inject": "same scope different source_sha256",
+      "must_trigger": [
+        "BLOCK_CONFLICT"
+      ]
+    },
+    {
+      "id": "FI11",
+      "inject": "mark manifest complete with unresolved record",
+      "must_trigger": [
+        "PRE_100_BLOCK"
+      ]
+    },
+    {
+      "id": "FI12",
+      "inject": "modify source blob after initial hash",
+      "must_trigger": [
+        "SOURCE_BLOB_HASH_FAIL"
+      ]
+    },
+    {
+      "id": "FI13",
+      "inject": "make secondary copy unreadable",
+      "must_trigger": [
+        "DURABILITY_BLOCK"
+      ]
+    },
+    {
+      "id": "FI14",
+      "inject": "replace RAW with summary",
+      "must_trigger": [
+        "SOURCE_AUTHORITY_BLOCK"
+      ]
+    },
+    {
+      "id": "FI15",
+      "inject": "attempt raw write to public repository",
+      "must_trigger": [
+        "PRIVACY_BLOCK"
+      ]
+    }
+  ],
+  "pass_condition": "Every case produces its required blocking/noop outcome and zero case is silently accepted.",
+  "raw_user_data_required": false
+}
