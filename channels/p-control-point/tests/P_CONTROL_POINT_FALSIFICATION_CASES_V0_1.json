@@ -1,0 +1,203 @@
+{
+  "schema_version": "0.1",
+  "cases": [
+    {
+      "id": "F001",
+      "name": "edit locked raw",
+      "facts": {
+        "edits_locked_raw": true
+      },
+      "expected": "RAW_OVERWRITE"
+    },
+    {
+      "id": "F002",
+      "name": "correction replaces history",
+      "facts": {
+        "correction_without_delta": true
+      },
+      "expected": "HISTORY_REWRITE"
+    },
+    {
+      "id": "F003",
+      "name": "lower authority overwrites source",
+      "facts": {
+        "lower_overwrites_higher": true
+      },
+      "expected": "AUTHORITY_INVERSION"
+    },
+    {
+      "id": "F004",
+      "name": "unknown closed by fluency",
+      "facts": {
+        "resolves_unknown_without_authority": true
+      },
+      "expected": "UNKNOWN_CLOSURE_WITHOUT_AUTHORITY"
+    },
+    {
+      "id": "F005",
+      "name": "candidate auto canonized",
+      "facts": {
+        "automatic_canonization": true
+      },
+      "expected": "STATUS_PROMOTION_DRIFT"
+    },
+    {
+      "id": "F006",
+      "name": "contract without source",
+      "facts": {
+        "contracted_without_source": true
+      },
+      "expected": "UNSOURCED_CONTRACT"
+    },
+    {
+      "id": "F007",
+      "name": "new material without lineage",
+      "facts": {
+        "material_output_without_lineage": true
+      },
+      "expected": "UNSUPPORTED_CREATION"
+    },
+    {
+      "id": "F008",
+      "name": "input silently dropped",
+      "facts": {
+        "material_input_dropped_without_reason": true
+      },
+      "expected": "MATERIAL_LOSS"
+    },
+    {
+      "id": "F009",
+      "name": "ambiguous author wording beautified",
+      "facts": {
+        "normalizes_ambiguous_raw": true
+      },
+      "expected": "SILENT_NORMALIZATION"
+    },
+    {
+      "id": "F010",
+      "name": "channel escapes role",
+      "facts": {
+        "role_escape": true
+      },
+      "expected": "ROLE_ESCAPE"
+    },
+    {
+      "id": "F011",
+      "name": "supplied artifact claimed owner-authored",
+      "facts": {
+        "provenance_overclaim": true
+      },
+      "expected": "PROVENANCE_OVERCLAIM"
+    },
+    {
+      "id": "F012",
+      "name": "assistant rationale promoted",
+      "facts": {
+        "assistant_rationale_as_owner": true
+      },
+      "expected": "ASSISTANT_RATIONALE_PROMOTION"
+    },
+    {
+      "id": "F013",
+      "name": "node absence treated as function absence",
+      "facts": {
+        "node_function_conflation": true
+      },
+      "expected": "NODE_FUNCTION_CONFLATION"
+    },
+    {
+      "id": "F014",
+      "name": "similarity treated as absorption",
+      "facts": {
+        "functional_similarity_as_absorption": true
+      },
+      "expected": "FALSE_ABSORPTION_INFERENCE"
+    },
+    {
+      "id": "F015",
+      "name": "freeze route during Decision C hold",
+      "facts": {
+        "freeze_current_route": true
+      },
+      "expected": "ROUTE_HOLD_BREACH"
+    },
+    {
+      "id": "F016",
+      "name": "P-channel silently becomes gameplay",
+      "facts": {
+        "gameplay_conversion_without_bridge": true
+      },
+      "expected": "DOMAIN_BOUNDARY_BREACH"
+    },
+    {
+      "id": "F017",
+      "name": "system forces live dream classification",
+      "facts": {
+        "requires_live_dream_classification": true
+      },
+      "expected": "CREATIVITY_CONTROL_DRIFT"
+    },
+    {
+      "id": "F018",
+      "name": "P2 ladder item orphaned from P1",
+      "facts": {
+        "p2_item_without_p1_binding": true
+      },
+      "expected": "P2_SOURCE_ORPHAN"
+    },
+    {
+      "id": "F019",
+      "name": "P3 strengthens source semantics",
+      "facts": {
+        "p3_strengthens_semantics": true
+      },
+      "expected": "P3_SEMANTIC_MUTATION"
+    },
+    {
+      "id": "F020",
+      "name": "P4 rewrites candidate",
+      "facts": {
+        "p4_rewrites_candidate": true
+      },
+      "expected": "P4_SELECTION_MUTATION"
+    },
+    {
+      "id": "F021",
+      "name": "P4 bypasses author ID selection",
+      "facts": {
+        "p4_bypasses_author_selection": true
+      },
+      "expected": "AUTHOR_SELECTION_BYPASS"
+    },
+    {
+      "id": "F022",
+      "name": "speculative becomes certain",
+      "facts": {
+        "uncertainty_promoted": true
+      },
+      "expected": "UNCERTAINTY_PROMOTION"
+    },
+    {
+      "id": "F023",
+      "name": "strict source order changed",
+      "facts": {
+        "source_order_changed_without_authority": true
+      },
+      "expected": "SOURCE_ORDER_DRIFT"
+    },
+    {
+      "id": "F024",
+      "name": "known gap erased",
+      "facts": {
+        "known_gap_erased": true
+      },
+      "expected": "GAP_ERASURE"
+    },
+    {
+      "id": "F025",
+      "name": "healthy preservation flow",
+      "facts": {},
+      "expected": "PASS"
+    }
+  ]
+}
