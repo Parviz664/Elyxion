@@ -1,0 +1,47 @@
+{
+  "artifact_type": "EPRIME_CHAT_ARCHIVE_CHECKPOINT_V1",
+  "checkpoint_id": "EPRIME-ARCHIVE-CP-070",
+  "status": "PASS_ARCHITECTURE__SOURCE_PARITY_LAYER_READY__RAW_SOURCE_NOT_INGESTED",
+  "repository": "Parviz664/Elyxion",
+  "branch": "E-Prime",
+  "architecture_progress_pct": 70,
+  "raw_transcript_coverage_pct": 0,
+  "verified_recovery_pct": 0,
+  "verified_attachment_coverage_pct": 0,
+  "verified_source_parity_pct": 0,
+  "verified_raw_messages": 0,
+  "verified_real_source_records": 0,
+  "inferred_messages": 0,
+  "reconstructed_from_memory_messages": 0,
+  "silently_rewritten_messages": 0,
+  "silently_dropped_attachments": 0,
+  "silently_dropped_system_or_tool_records": 0,
+  "p0_loss_count": 0,
+  "newly_locked_controls": [
+    "source_parity_contract_v1",
+    "role_and_record_kind_map_v1",
+    "timestamp_parity_policy_v1",
+    "parity_report_schema_v1",
+    "parity_verifier_algorithm_v1",
+    "record_provenance_schema_v1",
+    "deterministic_parity_verifier_reference",
+    "golden_synthetic_parity_vector",
+    "negative_tool_drop_parity_vector",
+    "coverage_ledger_v3"
+  ],
+  "synthetic_test_expectations": {
+    "positive_vector": "PASS_PARITY",
+    "negative_tool_drop_vector": "BLOCK_PARITY",
+    "note": "Synthetic tests contain no real chat content and do not increase RAW coverage."
+  },
+  "strongest_current_claim": {
+    "architecture": "70_PERCENT_READY",
+    "raw_content": "0_PERCENT_ARCHIVED",
+    "source_parity_on_real_chat": "NOT_TESTED",
+    "source_blob": "NOT_ACQUIRED",
+    "full_context_recovery": "NOT_AVAILABLE"
+  },
+  "privacy_gate": "ACTIVE__PUBLIC_REPOSITORY",
+  "next_target_pct": 80,
+  "next_stage_requirement": "Build full-range ingestion plan, anti-duplication/idempotency controls, manifest closure rules, and pre-100 completeness barrier; do not write real chat while destination is public."
+}
