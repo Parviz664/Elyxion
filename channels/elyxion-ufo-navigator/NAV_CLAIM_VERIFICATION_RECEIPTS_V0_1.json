@@ -127,6 +127,43 @@
         "The source-native label GOVERNANCE LAW remains separate from Navigator lifecycle CANON/CANDIDATE status."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_P_ROUTE_HOLD_2026_10_07",
+      "claim_id": "CLAIM_P_ROUTE_HOLD",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_P_CONTROL_README_M1_2026_10_07"
+      ],
+      "observations": [
+        "P Control Point current route state is HOLD_UNRESOLVED.",
+        "The frozen contract is P_CONTROL_POINT_V0_2_FROZEN.",
+        "The -P1 route authority remains intentionally unresolved under Decision C."
+      ],
+      "limits": [
+        "This verifies the current frozen route hold; it does not resolve the P-to-implementation handoff.",
+        "Freeze does not authorize merge or disputed-route implementation."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_PHASE1_EXPERIMENTAL_BOUNDARY_2026_10_07",
+      "claim_id": "CLAIM_PHASE1_EXPERIMENTAL_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_PHASE1_README_M1_2026_10_07"
+      ],
+      "observations": [
+        "Phase1 README explicitly separates USER_APPROVED_PROTOTYPE_RULE, USER_STATED_CANON gesture order, and EXPERIMENTAL_CANDIDATE layers.",
+        "It states that fixed topology, numbers, timing, and phase placement in the experiment do not define Phase 1 canon."
+      ],
+      "limits": [
+        "This verifies the experimental/canon separation in the branch README only.",
+        "It does not independently verify every Phase1 canon detail."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
