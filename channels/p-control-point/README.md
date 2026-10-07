@@ -1,6 +1,6 @@
 # Elyxion P Control Point
 
-Dedicated control layer for Elyxion P-channels.
+Dedicated control layer for the Elyxion P-channel work architecture.
 
 ## Mission
 
@@ -10,45 +10,101 @@ Root question:
 
 > **Как собрано? / How is it assembled?**
 
-The control point does **not** invent gameplay, does **not** canonize ideas, and does **not** silently repair unknowns.
+The Control Point does **not** invent gameplay, does **not** canonize ideas, does **not** silently repair unknowns, and does **not** manage the author's live dream stream.
 
 ## Current branch
 
 `channel/p-control-point-v0.1`
 
-This branch is intentionally isolated from `main` while the control architecture is recovered and verified.
+Current candidate:
 
-## Known P-channel set
+`P_CONTROL_POINT_V0.2_CANDIDATE`
 
-`-P1 -> P0 -> P1 -> P2 -> P3 -> P4`
+Current route state:
 
-Important: the existence and order of these names are source-supported, but the exact role of each channel is not assumed unless separately recovered and referenced.
+`HOLD_UNRESOLVED`
+
+Owner decision:
+
+`C`
+
+## Safe high-level flow
+
+`FREE AUTHOR DREAM / RAW -> capture/preservation -> P-channel structuring when invoked -> separate author/canon authority`
+
+P-channels are a work/AI architecture. They are not automatically gameplay systems.
+
+## Recovered role spine
+
+- `P0` — intent normalization / strict downstream routing.
+- `P1` — causal/reality map + seed + linear order.
+- `P2` — source-bound ladder builder over P1.
+- `P3` — patch-safe final-text renderer.
+- `P4` — feel-potential filter / final cut with author-selection boundary.
+- `-P1` — historically recovered reality-skeleton / causal-continuity layer; current routing remains unresolved.
+
+Historical route families are both preserved:
+
+`P0 -> -P1 -> P1 -> P2 -> P3 -> P4`
+
+and later:
+
+`P0 -> P1 -> P2 -> P3 -> P4`
+
+No current global route is frozen while Decision C remains active.
 
 ## Core laws
 
 - USER RAW is immutable.
 - Corrections are append-only deltas.
 - Lower-authority interpretation cannot silently overwrite higher-authority source.
-- UNKNOWN remains UNKNOWN until resolved by evidence or owner confirmation.
-- No field becomes CONTRACTED without an authoritative source reference.
-- Every material output should be traceable to input lineage.
+- UNKNOWN remains UNKNOWN until evidence or owner confirmation resolves it.
+- CONTRACTED status requires an authoritative source reference.
 - Unsupported creation is a failure.
-- Material loss without an explicit reason is a failure.
+- Material loss without an explicit traceable reason is a failure.
+- Automatic canonization is forbidden.
+- Provenance must distinguish supplied-by from authored-by.
+- Node identity and function set are separate axes.
+- Functional similarity does not prove rename/absorption.
+- P3 rendering may not mutate P2 semantics.
+- P4 selection may not rewrite candidates or bypass author authority.
 
-## Initial files
+## Control artifacts
 
-- `P_CONTROL_POINT_V0_1.md` — source-grounded control contract.
-- `P_CHANNEL_REGISTRY_V0_1.yaml` — initial channel registry with unresolved roles explicitly preserved.
+- `P_CONTROL_POINT_V0_1.md` — original source-grounded foundation.
+- `P_CONTROL_POINT_V0.2_CANDIDATE.md` — consolidated freeze candidate.
+- `P_CHANNEL_REGISTRY_V0_1.yaml` — current machine-readable registry; registry ID is now v0.2 candidate.
+- `P_CONTROL_POINT_V0_2_GAP_REGISTER.md` — prioritized open gaps.
+- `P_SYSTEM_ROUTE_AUTHORITY_TIMELINE_V0_1.md` — February→March→August→October route history.
+- `P_CHAIN_ROLE_SPINE_CROSSCHECK_V0_1.md` — end-to-end seam/authority cross-check.
+- `P_CONTROL_POINT_INVARIANTS_V0_1.yaml` — 25 machine-readable invariants.
+- `tests/P_CONTROL_POINT_FALSIFICATION_CASES_V0_1.json` — 25 falsification fixtures.
+- `tools/validate_p_control_point.py` — executable regression sentinel.
+- `P_CONTROL_POINT_V0_2_FREEZE_READINESS_AUDIT.md` — freeze readiness audit.
+- `decisions/P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE.md` — current owner gate.
 
-## Source anchors currently used
+## Validation
 
-- `ELYXION_PRRS_RAW_0.0.0.1.md`
-- `ELYXION_PRRS_RAW_0.0.0.2.md`
+GitHub Actions workflow:
 
-These source files are not yet copied into this branch. Their names are recorded as provenance anchors only.
+`P Control Point Validate`
 
-## Next object
+The v0.2 candidate validation has passed in CI.
 
-`-P1 RECOVERY PASS`
+This proves static control-contract consistency, not perfect semantic truth or complete historical recovery.
 
-Goal: recover every authoritative mention of `-P1`, compare later versions, identify conflicts, preserve unknowns, and produce a first falsifiable contract draft.
+## Current critical gap
+
+`GAP-G0-001`
+
+Current `-P1` route authority remains intentionally unresolved under Decision C.
+
+This gap blocks runtime implementation across the disputed P0/-P1/P1 boundary, but does not invalidate the Control Point itself.
+
+## Current next object
+
+`P_CONTROL_POINT_V0_2_OWNER_FREEZE_GATE`
+
+The Control Point is ready for an explicit owner decision to freeze v0.2 **with the route HOLD preserved**.
+
+No merge into `main` should occur before that explicit freeze decision.
