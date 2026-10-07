@@ -1,0 +1,69 @@
+{
+  "policy_id": "ELYXION_NAV_ORIENTATION_DEPTH_POLICY_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "purpose": "Decouple global orientation from full semantic/evidence loading by using explicit descent levels.",
+  "levels": [
+    {
+      "level": "O0_TOPOLOGY_INDEX",
+      "purpose": "Know what major sectors/surfaces exist, current discovery horizon, open risk counts, and where to descend.",
+      "payload": [
+        "sector capsules",
+        "branch/object counts",
+        "discovery horizon",
+        "unresolved/collision counts",
+        "Global C0 boundary"
+      ],
+      "source_bodies_default": 0,
+      "individual_evidence_identities_default": 0,
+      "readiness_meaning": "topology/identity orientation only"
+    },
+    {
+      "level": "O1_ROLE_BOUNDARY",
+      "purpose": "Load normalized role, non-authority, status, and boundary capsule for selected surfaces.",
+      "source_bodies_default": 0,
+      "descent_trigger": "Question requires knowing what a surface is or is not."
+    },
+    {
+      "level": "O2_RELATION_AUTHORITY",
+      "purpose": "Load verified cross-surface relation, authority, handoff, collision, and unresolved-boundary semantics.",
+      "source_bodies_default": 0,
+      "descent_trigger": "Question requires how surfaces connect or who may decide/route/execute."
+    },
+    {
+      "level": "O3_CLAIM_EVIDENCE",
+      "purpose": "Load question-specific claims, verification receipts, evidence identities, and sufficiency state.",
+      "source_bodies_default": 0,
+      "descent_trigger": "Decision requires evidence-backed semantic claims."
+    },
+    {
+      "level": "O4_EXACT_SOURCE",
+      "purpose": "Materialize exact source artifact bodies for selected evidence only.",
+      "source_bodies_default": "TARGETED_ONLY",
+      "descent_trigger": "Exact wording, conflict adjudication, or stronger verification is required."
+    },
+    {
+      "level": "O5_PRIMARY_RAW",
+      "purpose": "Use primary RAW/transcript/source when fidelity requirements cannot be satisfied by derived artifacts.",
+      "source_bodies_default": "NEVER_AUTOMATIC",
+      "descent_trigger": "Explicit RAW fidelity requirement."
+    }
+  ],
+  "current_state": {
+    "O0_TOPOLOGY_INDEX": "IMPLEMENTABLE_CURRENTLY",
+    "O1_ROLE_BOUNDARY": "PARTIAL_RECOVERY_IDENTITIES_EXIST_NORMALIZED_CAPSULES_NOT_COMPLETE",
+    "O2_RELATION_AUTHORITY": "PARTIAL_MANY_CROSS_CHANNEL_RELATIONS_UNKNOWN",
+    "O3_CLAIM_EVIDENCE": "WORKING_FOR_INDEXED_CLAIMS",
+    "O4_EXACT_SOURCE": "WORKING_TARGETED_MATERIALIZATION",
+    "O5_PRIMARY_RAW": "AVAILABILITY_DEPENDS_ON_SOURCE"
+  },
+  "laws": {
+    "higher_depth_is_not_higher_authority": true,
+    "global_cold_start_should_not_default_to_O3_or_deeper": true,
+    "topology_ready_does_not_mean_semantically_complete": true,
+    "descent_must_be_question_driven": true,
+    "unknowns_must_survive_descent": true,
+    "no_level_builds_or_defines_Global_C0": true
+  }
+}
