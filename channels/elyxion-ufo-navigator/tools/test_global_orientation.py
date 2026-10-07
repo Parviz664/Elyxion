@@ -14,9 +14,9 @@ def main():
     if cov["branch_inventory_mapping"]!={"represented":31,"total":31,"ratio":1.0,"observed_unmapped":0}:bad.append("branch-mapping")
     if cov["observed_objects"]!={"selected":33,"total":33,"ratio":1.0}:bad.append("objects")
     if cov["discovery_horizon"]!={"selected":6,"total":6,"ratio":1.0}:bad.append("discovery")
-    if cov["selected_claim_verification"]!={"sufficient":9,"selected":9,"ratio":1.0}:bad.append("claims")
-    if cov["normalized_object_claim_coverage"]!={"covered":6,"total":33,"ratio":6/33,"uncovered":27}:bad.append("semantic-coverage")
-    if cov["evidence_identity"]["selected"]!=42 or cov["evidence_identity"]["total"]!=51:bad.append("evidence")
+    if cov["selected_claim_verification"]!={"sufficient":14,"selected":14,"ratio":1.0}:bad.append("claims")
+    if cov["normalized_object_claim_coverage"]!={"covered":11,"total":33,"ratio":11/33,"uncovered":22}:bad.append("semantic-coverage")
+    if cov["evidence_identity"]["selected"]!=47 or cov["evidence_identity"]["total"]!=51:bad.append("evidence")
 
     h=o["ambient_discovery_horizon"]
     connected={x["id"] for x in h if x["visibility"]=="CONNECTED_BOUNDARY"}
@@ -37,7 +37,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: topology=READY branches=31/31 objects=33/33 discovery=6/6; indexed claims=9/9; normalized semantic objects=6/33 PARTIAL; evidence=42/51 bodies=0")
+    print("PASS: topology=READY branches=31/31 objects=33/33 discovery=6/6; indexed claims=14/14; normalized semantic objects=11/33 PARTIAL; evidence=47/51 bodies=0")
     return 0
 
 if __name__=="__main__":
