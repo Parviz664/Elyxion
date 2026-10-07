@@ -1,0 +1,24 @@
+{
+  "artifact_type": "EPRIME_CHAT_INDEPENDENT_PRECLOSE_AUDIT_CONTRACT_V1",
+  "status": "LOCKED",
+  "purpose": "RECHECK_FINAL_ARCHIVE_FROM_EVIDENCE_WITHOUT_TRUSTING_PRIOR_SUMMARY_OR CLAIM",
+  "auditor_rules": [
+    "Do not trust manifest status as evidence by itself.",
+    "Recompute or independently verify all available hashes.",
+    "Read referenced reports and validate required verdicts.",
+    "Recount full source scope independently when source format permits.",
+    "Check that all CLOSED_VERIFIED ranges cover source exactly once except identical verified overlaps.",
+    "Check attachment accounting independently.",
+    "Check recovery output and terminal chain hash independently.",
+    "Check durability readback records.",
+    "Check privacy gate state.",
+    "Treat missing or unreadable evidence as BLOCK.",
+    "Do not repair findings during audit."
+  ],
+  "independence_definition": "Audit must derive verdict from referenced evidence, not from the previous E-Prime checkpoint percentage.",
+  "verdict_enum": [
+    "PASS_PRECLOSE",
+    "BLOCK_PRECLOSE"
+  ],
+  "hundred_percent_binding": "Final 100% gate cannot run without PASS_PRECLOSE."
+}
