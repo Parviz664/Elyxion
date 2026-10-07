@@ -141,6 +141,176 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_E_PRIME_KERNEL_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_E_PRIME_KERNEL_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/e-prime-canonical-truth-kernel-recovery-v0.1",
+        "path": "channels/e-prime-canonical-truth-kernel/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "9890d9e6165665e22d18ea84a626872040947e15"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 894,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_E_PRIME_KERNEL_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_E_PRIME_KERNEL_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/e-prime-canonical-truth-kernel-recovery-v0.1",
+        "path": "channels/e-prime-canonical-truth-kernel/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "29a22959c4cbd775bc1ed87d009675aceb4e2258"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1263,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_E_CHAIN_RESEARCH_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_E_CHAIN_RESEARCH_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/e-chain-research-recovery-v0.1",
+        "path": "channels/e-chain-research/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "a34e14ebda54749907f696c65b764f6aebe5f250"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 853,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_E_CHAIN_RESEARCH_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_E_CHAIN_RESEARCH_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/e-chain-research-recovery-v0.1",
+        "path": "channels/e-chain-research/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "c9e10c62f08be7ccaed8e49ec8c7e7466ebcd432"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 578,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_DISPATCHER_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_DISPATCHER_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/elyxion-dispatcher-recovery-v0.1",
+        "path": "channels/elyxion-dispatcher/CHANNEL_IDENTITY_V0_1.json",
+        "observed_blob_sha": "b9484a3be58e308f3c116207356d35e4e3f338fe"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1075,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_DISPATCHER_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_DISPATCHER_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/elyxion-dispatcher-recovery-v0.1",
+        "path": "channels/elyxion-dispatcher/README.md",
+        "observed_blob_sha": "0b0899e38142a75dc2f8aa7b9ec57b354da2db4e"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 2532,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_PAE_HISTORY_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_PAE_HISTORY_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/pae-history-navigator-recovery-v0.1",
+        "path": "channels/pae-archaeology-navigator/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "1ab740223ec7cfb9ccfc596485d1e855458d5ba7"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1375,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_PAE_HISTORY_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_PAE_HISTORY_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/pae-history-navigator-recovery-v0.1",
+        "path": "channels/pae-archaeology-navigator/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "4cd236610f42c77bcb12effd56995e2afa59db79"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1752,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A_ULTRA_IDENTITY_M1_2026_10_08",
+      "evidence_id": "EVID_REC_A_ULTRA_IDENTITY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+        "path": "channels/a-ultra-vision-translator/CHANNEL_IDENTITY.md",
+        "observed_blob_sha": "c116ba9c7da162a8b90d8d3727b1ecd56f5e5ed9"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1251,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08",
+      "evidence_id": "EVID_O1_A_ULTRA_BOUNDARY",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+        "path": "channels/a-ultra-vision-translator/CHANNEL_BOUNDARIES.md",
+        "observed_blob_sha": "45a1c7fbb3ca8026b0fe2dc378c83d3fbb212e20"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1538,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
