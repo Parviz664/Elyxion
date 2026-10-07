@@ -43,6 +43,90 @@
         "It is not independent evidence of Global C0 implementation or repository location."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_NAV_MUST_NOT_BUILD_GLOBAL_C0_2026_10_07",
+      "claim_id": "CLAIM_NAV_MUST_NOT_BUILD_GLOBAL_C0",
+      "claim_epistemic_state": "AUTHOR_DECLARED",
+      "verdict": "SUPPORTED_AT_DECLARED_LEVEL",
+      "materialization_receipt_ids": [
+        "MAT_AUTHOR_GLOBAL_C0_M1_2026_10_07",
+        "MAT_GLOBAL_C0_BOUNDARY_M1_2026_10_07"
+      ],
+      "observations": [
+        "Author declaration explicitly states Navigator must not build Global C0.",
+        "Navigator boundary independently preserves the same non-duplication constraint."
+      ],
+      "limits": [
+        "This verifies the constraint at the creator-declared governance level; it does not locate or define Global C0 internals."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_NAV_NO_GLOBAL_C0_AUTHORITY_2026_10_07",
+      "claim_id": "CLAIM_NAV_NO_GLOBAL_C0_AUTHORITY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_GLOBAL_C0_BOUNDARY_M1_2026_10_07"
+      ],
+      "observations": [
+        "Global C0 boundary records Navigator Global C0 authority as NONE."
+      ],
+      "limits": [
+        "This is a Navigator boundary claim, not a description of Global C0 internal authority."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_ECO_SYSTEMS_ROLE_2026_10_07",
+      "claim_id": "CLAIM_ECO_SYSTEMS_ROLE",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_ECO_SYSTEMS_M2_2026_10_07"
+      ],
+      "observations": [
+        "Eco-Systems source declares an exploratory architectural/system-ecosystem research role and explicitly rejects self-canonization and implementation-channel identity."
+      ],
+      "limits": [
+        "Operational handoff contracts to Global C0 / E channels remain unresolved."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_EPRIME_CHAT_TRANSCRIPTS_ONLY_2026_10_07",
+      "claim_id": "CLAIM_EPRIME_CHAT_TRANSCRIPTS_ONLY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_EPRIME_LOCK_M2_2026_10_07",
+        "MAT_EPRIME_MANIFEST_M2_2026_10_07"
+      ],
+      "observations": [
+        "ARCHIVE_LOCK purpose is CHAT_TRANSCRIPTS_ONLY.",
+        "ARCHIVE_MANIFEST archive_scope is THIS_EPRIME_CHAT_TRANSCRIPT_ONLY."
+      ],
+      "limits": [
+        "This does not resolve whether another later or separate E-Prime role exists elsewhere."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_REALITY_STABILIZER_SCOPE_2026_10_07",
+      "claim_id": "CLAIM_REALITY_STABILIZER_SCOPE",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_REALITY_STABILIZER_M1_2026_10_07"
+      ],
+      "observations": [
+        "Creator Reality Stabilizer Law explicitly scopes itself to all AI-assisted Elyxion conversations, research, architecture, planning, evaluation, and technical collaboration."
+      ],
+      "limits": [
+        "The source-native label GOVERNANCE LAW remains separate from Navigator lifecycle CANON/CANDIDATE status."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
