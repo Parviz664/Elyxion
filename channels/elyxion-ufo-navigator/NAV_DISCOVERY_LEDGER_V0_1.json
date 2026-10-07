@@ -1,0 +1,117 @@
+{
+  "ledger_id": "ELYXION_NAV_DISCOVERY_LEDGER_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_observation_state_from": "NAV_OBJECT_REGISTRY_V0_4.json discovery_targets",
+  "targets": [
+    {
+      "id": "DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4",
+      "target": "0.0.1.0 through 0.0.1.4 RAW/version surfaces",
+      "evidence_state": "NOT_OBSERVED_IN_CURRENT_GITHUB_SCAN",
+      "existence_elsewhere": "UNKNOWN",
+      "repository_location": "UNKNOWN",
+      "observed_object_ids": [],
+      "evidence": [
+        "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json"
+      ],
+      "limits": [
+        "No 0.0.1.0 or 0.0.1.4 match was found in the current default-branch search; absence elsewhere is not proved."
+      ]
+    },
+    {
+      "id": "DISCOVERY_A_CHANNEL",
+      "target": "A-channel repository surfaces",
+      "evidence_state": "OBSERVED_MULTIPLE_RECOVERY_SURFACES",
+      "existence_elsewhere": "OBSERVED_CURRENT_GITHUB_SURFACES",
+      "repository_location": "MULTIPLE_BRANCHES",
+      "observed_object_ids": [
+        "ELYX_REC_A0_ORCHESTRATOR",
+        "ELYX_REC_A1_ARCHITECT",
+        "ELYX_REC_A2_SYSTEMS_MAP",
+        "ELYX_REC_A3_PRE_E0_HANDOFF",
+        "ELYX_REC_A_ULTRA"
+      ],
+      "evidence": [
+        "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json",
+        "NAV_RECOVERY_SURFACE_MAPPING_V0_1.json"
+      ],
+      "limits": [
+        "Presence does not prove cross-A routing, supersession, or authority."
+      ]
+    },
+    {
+      "id": "DISCOVERY_E_CHANNELS_BEYOND_E_PRIME",
+      "target": "E-channel repository surfaces beyond the E-Prime chat-archive surface",
+      "evidence_state": "OBSERVED_MULTIPLE_RECOVERY_SURFACES",
+      "existence_elsewhere": "OBSERVED_CURRENT_GITHUB_SURFACES",
+      "repository_location": "MULTIPLE_BRANCHES",
+      "observed_object_ids": [
+        "ELYX_REC_E0",
+        "ELYX_REC_E1",
+        "ELYX_REC_E2",
+        "ELYX_REC_E3_5",
+        "ELYX_REC_E3",
+        "ELYX_REC_E4",
+        "ELYX_REC_E_CHAIN_RESEARCH",
+        "ELYX_REC_E_PRIME_KERNEL"
+      ],
+      "evidence": [
+        "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json",
+        "NAV_RECOVERY_SURFACE_MAPPING_V0_1.json"
+      ],
+      "limits": [
+        "Presence does not resolve E-Prime archive vs E-Prime canonical-truth-kernel scope or any handoff relation."
+      ]
+    },
+    {
+      "id": "DISCOVERY_GLOBAL_C0",
+      "target": "Existing Global C0 durable/repository surface",
+      "evidence_state": "AUTHOR_DECLARED_EXISTS_LOCATION_UNOBSERVED",
+      "existence_elsewhere": "AUTHOR_DECLARED_EXISTS",
+      "repository_location": "UNKNOWN",
+      "observed_object_ids": [],
+      "author_declaration_ref": "AUTHDECL_GLOBAL_C0_EXISTS_2026_10_07",
+      "evidence": [
+        "NAV_AUTHOR_DECLARATIONS_V0_1.json"
+      ],
+      "limits": [
+        "No durable/repository surface has been identified by Navigator."
+      ]
+    },
+    {
+      "id": "DISCOVERY_TOOLS_UNDER_ELYXION",
+      "target": "Dedicated Tools under Elyxion surface",
+      "evidence_state": "NOT_OBSERVED_AS_DEDICATED_SURFACE",
+      "existence_elsewhere": "UNKNOWN",
+      "repository_location": "UNKNOWN",
+      "observed_object_ids": [],
+      "evidence": [
+        "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json"
+      ],
+      "limits": [
+        "Tool directories inside recovery channels do not automatically prove the dedicated Tools-under-Elyxion surface referenced by Eco-Systems."
+      ]
+    },
+    {
+      "id": "DISCOVERY_DREAM_RAW_SURFACE",
+      "target": "Dedicated Dream / RAW durable surface",
+      "evidence_state": "NOT_OBSERVED_AS_DEDICATED_SURFACE",
+      "existence_elsewhere": "UNKNOWN",
+      "repository_location": "UNKNOWN",
+      "observed_object_ids": [],
+      "evidence": [
+        "NAV_REPOSITORY_BRANCH_INVENTORY_V0_3.json"
+      ],
+      "limits": [
+        "raw-evidence files inside specialist recovery branches are not automatically the Dream/RAW durable surface."
+      ]
+    }
+  ],
+  "laws": {
+    "observed_surface_does_not_resolve_relation": true,
+    "raw_evidence_subdirectory_does_not_equal_dream_raw_surface": true,
+    "generic_tool_file_does_not_equal_tools_surface": true,
+    "author_declared_existence_does_not_identify_location": true
+  }
+}
