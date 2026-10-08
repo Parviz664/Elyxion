@@ -69,7 +69,7 @@ Fresh-read current durable truth, not chat memory.
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_8.json`
+- `NAV_SECTOR_CATALOG_V0_9.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
@@ -77,10 +77,12 @@ Fresh-read current durable truth, not chat memory.
 - `NAV_O1_CAPSULE_COVERAGE_V0_5.json`
 - `NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json`
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json`
+- `NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json`
-- `NAV_O2_RELATION_PROGRESS_V0_1.json`
-- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_1.json`
+- `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json`
+- `NAV_O2_RELATION_PROGRESS_V0_2.json`
+- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_2.json`
 
 ### O1 capsule batches
 
@@ -96,6 +98,7 @@ Fresh-read current durable truth, not chat memory.
 
 - `NAV_002B_O1_COMPLETE_CHECKPOINT_V0_8.md`
 - `NAV_002B_O2_BATCH_01_CHECKPOINT_V0_9.md`
+- `NAV_002B_O2_BATCH_02_CHECKPOINT_V0_10.md`
 
 Then:
 
@@ -121,12 +124,12 @@ Fresh exhaustive recovery observed:
 - observed unmapped branches = **0**
 - objects = **33**
 - discovery targets = **6**
-- confirmed relations = **41**
+- confirmed relations = **52**
 - unresolved relations = **5**
 - open collisions = **1**
 - evidence identities = **72**
 - freshness sources = **31**
-- freshness dependencies = **80**
+- freshness dependencies = **91**
 - indexed claims = **40**
 - materialization receipts = **61**
 - semantic verification receipts = **36**
@@ -331,11 +334,11 @@ Technical E-Prime recovery does not automatically resolve the historical archive
 
 Verified assertions:
 
-**8**
+**19**
 
 Promoted current-local base relations:
 
-**7**
+**18**
 
 Verified conditional relation not promoted:
 
@@ -373,8 +376,46 @@ Therefore no O2 completion percentage is permitted.
 
 O0 compact counters now include:
 
-- verified O2 local relations = **7**
+- verified O2 local relations = **18**
 - verified O2 conditional assertions = **1**
+
+## O2 Batch 02 current state
+
+Additional promoted current-local relations:
+
+### A/E ingress
+
+- A2 -> A3 HANDS_OFF_TO
+- A3 -> E0 HANDS_OFF_TO
+
+### D dependency graph
+
+- D1 DEPENDS_ON D0
+- D2 DEPENDS_ON D0
+- D2 DEPENDS_ON D1
+- D3 DEPENDS_ON D0
+- D3 DEPENDS_ON D1
+- D3 DEPENDS_ON D2
+- D4 DEPENDS_ON D1
+- D4 DEPENDS_ON D2
+- D3 -> D4 HANDS_OFF_TO
+
+Critical law:
+
+`D dependency graph != D0 -> D1 -> D2 -> D3 -> D4 pipeline`
+
+Current totals:
+
+- O2 verified assertions = **19**
+- O2 promoted local relations = **18**
+- O2 conditional verified/not promoted = **1**
+- base confirmed relations = **52**
+- base unresolved relations = **5**
+- freshness dependencies = **91**
+
+Known total relation universe remains `UNKNOWN`.
+
+No O2 percentage is permitted.
 
 ## Current frontier
 
