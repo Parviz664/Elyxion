@@ -13,7 +13,7 @@ OBJECTS=load_objects()
 EVIDENCE=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_7.json").read_text())
 BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
-O2_PROGRESS=json.loads((B/"NAV_O2_RELATION_PROGRESS_V0_1.json").read_text())
+O2_PROGRESS=json.loads((B/"NAV_O2_RELATION_PROGRESS_V0_2.json").read_text())
 
 def topology_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage):
     req=PROFILE["topology_requirements"]
