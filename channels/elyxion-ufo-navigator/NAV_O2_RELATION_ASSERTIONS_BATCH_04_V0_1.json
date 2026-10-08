@@ -1,0 +1,89 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_ASSERTIONS_BATCH_04_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertions": [
+    {
+      "assertion_id": "O2_A0_DECLARES_INTERFACE_WITH_A_ULTRA_V4_1",
+      "source_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "target_id": "ELYX_REC_A_ULTRA",
+      "base_kind": "DECLARES_INTERFACE_WITH",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A0_v4_1_LATEST_KNOWN_PARTIAL",
+      "conditions": [
+        "adult ingress profile",
+        "A0 v4.1 post-A-Ultra crystal-carry role"
+      ],
+      "authority_boundary": {
+        "source_owns": "A0 source-side transport/carry declaration and structural gateway semantics",
+        "target_owns": "A-Ultra vision translation/crystallization semantics",
+        "does_not_prove": [
+          "A-Ultra target-side acceptance of an exact A0 transport contract",
+          "mandatory full-output handoff",
+          "A0 meaning authority",
+          "a timeless A route"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "full exact A0 v4.1 artifact/schema",
+        "target-side transport acceptance details"
+      ]
+    },
+    {
+      "assertion_id": "O2_A0_DECLARES_INTERFACE_WITH_E0_V4_1",
+      "source_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "target_id": "ELYX_REC_E0",
+      "base_kind": "DECLARES_INTERFACE_WITH",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A0_v4_1_LATEST_KNOWN_PARTIAL",
+      "conditions": [
+        "adult downstream profile",
+        "A0 output classified by READY_FOR_E0 / READY_FOR_E0_WITH_CONSTRAINTS / BLOCKED_FOR_E0"
+      ],
+      "authority_boundary": {
+        "source_owns": "A0 source-side E0-ready carry/routing declaration",
+        "target_owns": "E0 bind legality, dual-lock verification and constrained dispatch",
+        "does_not_prove": [
+          "E0 target-side acceptance of the unrecovered exact A0 v4.1 schema",
+          "A0 bind authority",
+          "replacement of A3 dream-seal semantics",
+          "a complete adult route beyond the A0 boundary"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "full exact A0 v4.1 artifact/schema",
+        "E0-side matching acceptance contract",
+        "temporal/profile reconciliation with A3 v2.2 and E0 v1.5"
+      ]
+    }
+  ],
+  "relation_tension_ref": "NAV_O2_RELATION_TENSIONS_V0_1.json",
+  "laws": {
+    "declared_interface_proves_source_declaration_not_target_acceptance": true,
+    "no_handoff_kind_without_target_side_support": true,
+    "A0_v4_1_partial_recovery_must_remain_partial": true,
+    "A_route_tension_remains_open": true
+  }
+}
