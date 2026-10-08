@@ -1,0 +1,213 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_O2_BATCH_01_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_O2_P2_HANDS_OFF_TO_P3",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_P2",
+      "target_id": "ELYX_REC_P3",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p2-ladder-builder-recovery-v0.1:channels/p2-ladder-builder/CHANNEL_BOUNDARIES.md",
+        "channel/p3-final-text-renderer-recovery-v0.1:channels/p3-final-text-renderer/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_O1_P2_LADDER_BUILDER_BOUNDARY",
+        "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_RECOVERED_P2_P3_SEAM",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_P2_TO_P3_2026_10_08",
+      "unknowns": [
+        "current global P route remains HOLD_UNRESOLVED"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_P3_HANDS_OFF_TO_P4",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_P3",
+      "target_id": "ELYX_REC_P4",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/p3-final-text-renderer-recovery-v0.1:channels/p3-final-text-renderer/CHANNEL_BOUNDARIES.md",
+        "channel/p4-feel-potential-engine-recovery-v0.1:channels/p4-feel-potential-engine/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY",
+        "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_RECOVERED_P3_P4_SEAM",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_P3_TO_P4_2026_10_08",
+      "unknowns": [
+        "current global P route remains HOLD_UNRESOLVED"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_E0_HANDS_OFF_TO_E1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_E0",
+      "target_id": "ELYX_REC_E1",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md",
+        "channel/e1-constrained-skeleton-recovery-v0.1:channels/e1-constrained-implementation-skeleton-builder/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_E0_IDENTITY",
+        "EVID_O1_E1_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E1_v1_4_PLUS__E0_DUAL_LOCK_LINEAGE",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_E0_TO_E1_2026_10_08",
+      "unknowns": [
+        "earlier pre-v1.4 E0/E1 topology is not generalized"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_E1_HANDS_OFF_TO_E2",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_E1",
+      "target_id": "ELYX_REC_E2",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e1-constrained-skeleton-recovery-v0.1:channels/e1-constrained-implementation-skeleton-builder/CHANNEL_BOUNDARIES.md",
+        "channel/e2-recovery-v0.1:channels/e2/CHANNEL_IDENTITY.md"
+      ],
+      "evidence_ids": [
+        "EVID_O1_E1_BOUNDARY",
+        "EVID_REC_E2_IDENTITY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_E1_v1_6_TO_E2_v2_x",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_E1_TO_E2_2026_10_08",
+      "unknowns": [
+        "exact E2 v2.3 field-level contract remains partially recovered"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_E2_HANDS_OFF_TO_E3",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_E2",
+      "target_id": "ELYX_REC_E3",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e2-recovery-v0.1:channels/e2/CHANNEL_BOUNDARIES.md",
+        "channel/e3-self-recovery-v0.1:channels/e3/CHANNEL_IDENTITY.md"
+      ],
+      "evidence_ids": [
+        "EVID_O1_E2_BOUNDARY",
+        "EVID_REC_E3_IDENTITY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E2_v2_2_PLUS_TO_E3_v2_0_CURRENT_STRONGEST",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_E2_TO_E3_2026_10_08",
+      "unknowns": [
+        "historical E2 v1.x multi-variant relation is not merged into current seam"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_E3_HANDS_OFF_TO_E4",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_E3",
+      "target_id": "ELYX_REC_E4",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e3-self-recovery-v0.1:channels/e3/CHANNEL_IDENTITY.md",
+        "channel/e4-integration-route-compiler-recovery-v0.1:channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_E3_IDENTITY",
+        "EVID_O1_E4_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E3_v2_0_TO_E4_v2_1_CURRENT_STRONGEST",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_E3_TO_E4_2026_10_08",
+      "unknowns": [
+        "historical E3 v1.x superiority-hardener route is not current"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 dual-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_E3_5_HANDS_OFF_TO_E4",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_E3_5",
+      "target_id": "ELYX_REC_E4",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_IDENTITY.md",
+        "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_BOUNDARIES.md",
+        "channel/e4-integration-route-compiler-recovery-v0.1:channels/E4_INTEGRATION_AND_EXECUTION_READINESS_ROUTING/CHANNEL_IDENTITY.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_E3_5_IDENTITY",
+        "EVID_O1_E3_5_BOUNDARY",
+        "EVID_REC_E4_IDENTITY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E3_5_v1_4_TO_E4_CURRENT_INPUT_BOUNDARY",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_E3_5_TO_E4_2026_10_08",
+      "unknowns": [
+        "coverage complete may still lead to E4 BLOCK"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 01 multi-sided exact-artifact verification 2026-10-08"
+      }
+    }
+  ]
+}
