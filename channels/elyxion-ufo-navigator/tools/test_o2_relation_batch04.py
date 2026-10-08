@@ -31,7 +31,6 @@ def main():
 
     t=T["tensions"][0]
     if t["state"]!="OPEN_TEMPORAL_SCOPE_RECONCILIATION":bad.append("tension-closed")
-    if t["laws"] if False else False: pass
 
     if bad:
         for x in bad:print("FAIL:",x)
