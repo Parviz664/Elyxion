@@ -1,0 +1,59 @@
+{
+  "schema_id": "ELYXION_NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "purpose": "Represent source-bound relation/authority assertions without collapsing local, historical, conditional, and global-route semantics.",
+  "required": [
+    "assertion_id",
+    "source_id",
+    "target_id",
+    "base_kind",
+    "scope_class",
+    "temporal_scope",
+    "conditions",
+    "authority_boundary",
+    "evidence_ids",
+    "materialization_receipt_ids",
+    "verification_state",
+    "global_route_effect",
+    "unknowns"
+  ],
+  "base_kinds": [
+    "HANDS_OFF_TO",
+    "DEPENDS_ON",
+    "PREPARES_FOR",
+    "SUPERSEDES",
+    "DECLARES_INTERFACE_WITH"
+  ],
+  "scope_classes": [
+    "CURRENT_LOCAL_SEAM",
+    "CURRENT_CONDITIONAL_SEAM",
+    "HISTORICAL_SEAM",
+    "ERA_SCOPED_SEAM",
+    "AUTHORITY_BOUNDARY_ONLY"
+  ],
+  "verification_states": [
+    "MATERIALIZED_NOT_RELATION_VERIFIED",
+    "VERIFIED_WITH_LIMITS",
+    "UNRESOLVED",
+    "HISTORICAL_ONLY"
+  ],
+  "global_route_effect_values": [
+    "NONE_LOCAL_ONLY",
+    "CONDITIONAL_ONLY",
+    "UNRESOLVED",
+    "HISTORICAL_ONLY"
+  ],
+  "laws": {
+    "numbering_is_not_relation_evidence": true,
+    "local_seam_is_not_global_route": true,
+    "verified_relation_does_not_grant_canon": true,
+    "conditional_relation_must_preserve_condition": true,
+    "historical_relation_must_not_be_promoted_to_current": true,
+    "target_acceptance_requires_target_side_evidence_when_claimed": true,
+    "relation_composition_requires_separate_evidence": true,
+    "owner_hold_must_not_be_resolved_by_relation_recovery": true,
+    "Global_C0_relation_must_not_be_invented": true
+  }
+}
