@@ -1,0 +1,31 @@
+{
+  "snapshot_id": "ELYXION_NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_6",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_5",
+  "metric": "NORMALIZED_OBJECT_CLAIM_COVERAGE",
+  "claim_index_ref": "NAV_CLAIM_INDEX_V0_6.json",
+  "objects_total": 33,
+  "objects_with_normalized_claims": 32,
+  "objects_without_normalized_claims": 1,
+  "coverage_ratio": 0.9696969696969697,
+  "newly_covered_by_o1_batch_05": [
+    "ELYX_REC_D0",
+    "ELYX_REC_D1",
+    "ELYX_REC_D2",
+    "ELYX_REC_D3",
+    "ELYX_REC_D4"
+  ],
+  "remaining_uncovered_object_ids": [
+    "ELYX_SURFACE_MAIN"
+  ],
+  "interpretation": {
+    "topology_identity_coverage": "33/33 observed objects represented",
+    "normalized_semantic_claim_coverage": "32/33",
+    "D_recovery_sector_O1": "COMPLETE_WITH_LIMITS",
+    "global_semantic_completeness": "NOT_PROVEN",
+    "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+  },
+  "next_requirement": "Recover a narrow source-bound O1 role/boundary claim for main without inventing repository semantics."
+}
