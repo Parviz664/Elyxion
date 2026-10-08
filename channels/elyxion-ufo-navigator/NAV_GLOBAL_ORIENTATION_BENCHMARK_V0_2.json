@@ -30,14 +30,14 @@
       "ratio": 1
     },
     "selected_claim_verification": {
-      "sufficient": 30,
-      "selected": 30,
+      "sufficient": 36,
+      "selected": 36,
       "ratio": 1
     },
     "evidence_identity_pressure": {
-      "selected": 63,
-      "total": 67,
-      "ratio": 0.9402985074626866
+      "selected": 68,
+      "total": 72,
+      "ratio": 0.9444444444444444
     },
     "default_loaded_file_bodies": 0,
     "confirmed_relations": 34,
@@ -46,13 +46,13 @@
     "connected_discovery_targets": 2,
     "ambient_observed_discovery_targets": 1,
     "ambient_unknown_discovery_targets": 3,
-    "materialization_receipts_available": 50,
-    "semantic_verification_receipts_available": 30,
+    "materialization_receipts_available": 61,
+    "semantic_verification_receipts_available": 36,
     "normalized_object_claim_coverage": {
-      "covered": 27,
+      "covered": 33,
       "total": 33,
-      "ratio": 0.8181818181818182,
-      "uncovered": 6
+      "ratio": 1,
+      "uncovered": 0
     }
   },
   "discovery_horizon": {
@@ -71,27 +71,28 @@
   },
   "interpretation": [
     "All currently observed repository branches are represented in the navigation object catalog.",
-    "The broad orientation graph can reach all 33 currently cataloged objects through confirmed navigation observations plus existing core relations.",
-    "All thirty currently selected indexed claims have sufficient verification receipts.",
-    "27 of 33 observed objects currently have normalized OBJECT-level claim coverage; this is PARTIAL semantic coverage, not global semantic completeness.",
-    "Global-orientation metadata breadth is high at approximately 94.0 percent of indexed evidence identities.",
-    "Exact source bodies remain unloaded by default; source-body pressure is separated from metadata pressure.",
-    "O0 sector orientation exists to avoid loading individual evidence identities at cold start."
+    "The broad orientation graph reaches all 33 currently cataloged objects through confirmed navigation observations plus existing core relations.",
+    "All 36 currently selected indexed claims have sufficient verification receipts.",
+    "All 33 observed objects now have normalized OBJECT-level claim coverage.",
+    "33/33 normalized object claim coverage does not prove complete historical, authority, or cross-channel relation knowledge.",
+    "Global-orientation evidence metadata breadth is approximately 94.4 percent of indexed evidence identities.",
+    "Exact source bodies remain unloaded by default; source-body pressure remains separated from metadata pressure.",
+    "O0 sector orientation continues to avoid loading individual evidence identities at cold start."
   ],
   "non_claims": [
-    "Topology readiness does not prove semantic completeness.",
-    "30/30 selected indexed claim verification does not mean 33/33 objects are semantically normalized.",
+    "33/33 normalized object coverage does not prove global semantic completeness.",
+    "O1 normalized object coverage does not prove O2 relation/authority completeness.",
+    "36/36 selected indexed claim verification does not prove every possible Elyxion claim.",
     "This does not prove all Elyxion history has been recovered.",
     "This does not prove sublinear or asymptotic scaling.",
-    "This does not prove that future 10x or 100x growth will preserve current ratios.",
     "This does not benchmark Global C0 internal reasoning performance.",
     "This does not identify the existing Global C0 durable/repository surface.",
     "CI execution PASS is not claimed until observed."
   ],
   "orientation_depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
-  "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_5.json",
+  "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json",
   "readiness_axes": {
     "topology": "READY_TOPOLOGY_ORIENTATION_EXPECTED_AFTER_EXECUTION_CHECKS",
-    "semantics": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+    "semantics": "READY_NORMALIZED_SEMANTIC_COVERAGE"
   }
 }
