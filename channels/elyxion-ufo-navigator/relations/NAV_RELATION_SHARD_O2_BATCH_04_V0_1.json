@@ -1,0 +1,78 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_O2_BATCH_04_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_O2_A0_DECLARES_INTERFACE_WITH_A_ULTRA_V4_1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "target_id": "ELYX_REC_A_ULTRA",
+      "kind": "DECLARES_INTERFACE_WITH",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A0_v4_1_LATEST_KNOWN_PARTIAL",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "target_acceptance": "UNKNOWN_NOT_PROVEN",
+      "o2_verification_id": "VERIFY_O2_A0_INTERFACE_A_ULTRA_V4_1_2026_10_08",
+      "unknowns": [
+        "full exact A0 v4.1 artifact/schema",
+        "target-side transport acceptance details"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 04 A0 source-side exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_A0_DECLARES_INTERFACE_WITH_E0_V4_1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "target_id": "ELYX_REC_E0",
+      "kind": "DECLARES_INTERFACE_WITH",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A0_v4_1_LATEST_KNOWN_PARTIAL",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "target_acceptance": "UNKNOWN_NOT_PROVEN",
+      "relation_tension_ref": "O2_TENSION_A0_V41_A3_E0_TEMPORAL_SCOPE",
+      "o2_verification_id": "VERIFY_O2_A0_INTERFACE_E0_V4_1_2026_10_08",
+      "unknowns": [
+        "full exact A0 v4.1 artifact/schema",
+        "E0-side matching acceptance contract",
+        "temporal/profile reconciliation with A3 v2.2 and E0 v1.5"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 04 A0 source-side exact-artifact verification 2026-10-08"
+      }
+    }
+  ],
+  "laws": {
+    "declared_interface_is_a_fact_about_source_declaration_only": true,
+    "target_acceptance_remains_unknown": true,
+    "no_A0_E0_handoff_relation_is_created": true,
+    "A_route_tension_remains_open": true
+  }
+}
