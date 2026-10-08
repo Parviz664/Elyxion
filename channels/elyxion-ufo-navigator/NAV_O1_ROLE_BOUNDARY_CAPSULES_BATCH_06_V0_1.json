@@ -34,10 +34,11 @@
         "implementation authority beyond observed files",
         "any semantic role not directly documented by repository artifacts"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_MAIN_README_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_MAIN_REPOSITORY_SURFACE_ROLE_BOUNDARY_2026_10_08"
     }
   ],
   "laws": {
