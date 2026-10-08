@@ -34,11 +34,13 @@
         "MAT_O1_A3_IDENTITY_M1_2026_10_08",
         "MAT_O1_A3_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "full A0/A1/A2/A3 global route remains separately evidenced"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_A2_TO_A3_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_A3_HANDS_OFF_TO_E0",
@@ -70,11 +72,13 @@
         "MAT_O1_A3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_E0_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "historical pre-v2.2 A3/E0 topology is not generalized"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_A3_TO_E0_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D1_DEPENDS_ON_D0",
@@ -105,11 +109,13 @@
         "MAT_O1_D1_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D0_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "runtime implementation remains unknown"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_D1_DEPENDS_ON_D0_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D2_DEPENDS_ON_D0",
@@ -138,9 +144,11 @@
         "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D0_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D2_DEPENDS_ON_D0_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D2_DEPENDS_ON_D1",
@@ -168,9 +176,11 @@
         "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D2_DEPENDS_ON_D1_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D3_DEPENDS_ON_D0",
@@ -198,9 +208,11 @@
         "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D0_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D3_DEPENDS_ON_D0_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D3_DEPENDS_ON_D1",
@@ -228,9 +240,11 @@
         "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D3_DEPENDS_ON_D1_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D3_DEPENDS_ON_D2",
@@ -260,9 +274,11 @@
         "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D3_DEPENDS_ON_D2_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D4_DEPENDS_ON_D1",
@@ -290,9 +306,11 @@
         "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D4_DEPENDS_ON_D1_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D4_DEPENDS_ON_D2",
@@ -320,9 +338,11 @@
         "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
-      "unknowns": []
+      "unknowns": [],
+      "relation_verification_id": "VERIFY_O2_D4_DEPENDS_ON_D2_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_D3_HANDS_OFF_TO_D4",
@@ -351,11 +371,13 @@
         "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_D4_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "historical D4 v1.1 E4 baseline route is superseded and not made current"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_D3_TO_D4_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     }
   ],
   "laws": {
