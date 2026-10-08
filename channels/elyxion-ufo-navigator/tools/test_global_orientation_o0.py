@@ -8,7 +8,7 @@ def main():
     if o["topology_readiness"]!="READY_TOPOLOGY_ORIENTATION":bad.append("topology-readiness")
     if o["semantic_readiness"]!="READY_NORMALIZED_SEMANTIC_COVERAGE":bad.append("semantic-readiness")
     if o["global_semantic_completeness"]!="NOT_PROVEN":bad.append("global-semantic")
-    if o["relation_authority_readiness"]!="PARTIAL_NOT_O2_COMPLETE":bad.append("o2-readiness")
+    if o["relation_authority_readiness"]!="PARTIAL_VERIFIED_LOCAL_RELATIONS":bad.append("o2-readiness")
     if len(o["sector_capsules"])!=6:bad.append("sector-count")
     if o["topology_totals"]!={
       "branches":31,"branches_mapped":31,"objects":33,"confirmed_relations":55,
