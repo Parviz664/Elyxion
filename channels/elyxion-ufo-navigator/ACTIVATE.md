@@ -69,12 +69,18 @@ Fresh-read current durable truth, not chat memory.
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_7.json`
+- `NAV_SECTOR_CATALOG_V0_8.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
 - `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json`
 - `NAV_O1_CAPSULE_COVERAGE_V0_5.json`
+- `NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json`
+- `NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json`
+- `NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
+- `NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json`
+- `NAV_O2_RELATION_PROGRESS_V0_1.json`
+- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_1.json`
 
 ### O1 capsule batches
 
@@ -89,6 +95,7 @@ Fresh-read current durable truth, not chat memory.
 ### Current checkpoint
 
 - `NAV_002B_O1_COMPLETE_CHECKPOINT_V0_8.md`
+- `NAV_002B_O2_BATCH_01_CHECKPOINT_V0_9.md`
 
 Then:
 
@@ -114,12 +121,12 @@ Fresh exhaustive recovery observed:
 - observed unmapped branches = **0**
 - objects = **33**
 - discovery targets = **6**
-- confirmed relations = **34**
+- confirmed relations = **41**
 - unresolved relations = **5**
 - open collisions = **1**
 - evidence identities = **72**
 - freshness sources = **31**
-- freshness dependencies = **73**
+- freshness dependencies = **80**
 - indexed claims = **40**
 - materialization receipts = **61**
 - semantic verification receipts = **36**
@@ -320,6 +327,55 @@ Verdict remains:
 
 Technical E-Prime recovery does not automatically resolve the historical archive/scope mismatch.
 
+## O2 Batch 01 current state
+
+Verified assertions:
+
+**8**
+
+Promoted current-local base relations:
+
+**7**
+
+Verified conditional relation not promoted:
+
+**1**
+
+Promoted local seams:
+
+- P2 -> P3
+- P3 -> P4
+- E0 -> E1
+- E1 -> E2
+- E2 -> E3
+- E3 -> E4
+- E3.5 -> E4
+
+Conditional only:
+
+- P4 -> P5 when `enable_p5=true`
+
+Every promoted seam carries:
+
+- `CURRENT_LOCAL_SEAM`
+- `NONE_LOCAL_ONLY`
+- `NO_IMPLICIT_GLOBAL_ROUTE`
+
+Current O2 readiness:
+
+`PARTIAL_VERIFIED_LOCAL_RELATIONS`
+
+Known total relation universe:
+
+`UNKNOWN`
+
+Therefore no O2 completion percentage is permitted.
+
+O0 compact counters now include:
+
+- verified O2 local relations = **7**
+- verified O2 conditional assertions = **1**
+
 ## Current frontier
 
 `O2_RELATION_AUTHORITY_RECOVERY`
@@ -340,30 +396,19 @@ O2 must distinguish:
 - superseded relation vs current relation;
 - confirmed relation vs HOLD/UNKNOWN.
 
-## First O2 candidate set
+## Next O2 candidate set
 
-Start from strongly evidenced local seams:
+Select by evidence strength, not numbering.
 
-1. P2 -> P3
-2. P3 -> P4
-3. P4 -> P5 only as conditional/optional
-4. E0 -> E1 locked-handle boundary
-5. E1 -> E2 skeleton-to-engine-contract boundary
-6. E2 -> E3 translation-to-convergence boundary
-7. E3.5 -> E4 coverage-to-integration boundary
+Inspect next:
 
-Do not add a relation merely because numbering suggests it.
+- A2 -> A3 pre-E0 packaging seam;
+- A3 -> E0 dream-seal/bind ingress seam;
+- current D-line dependency/guard relations;
+- additional E-mainline relations only where both sides support them;
+- A-Ultra / A1 only if exact artifacts directly support it.
 
-Every O2 relation must carry:
-
-- exact evidence;
-- relation kind;
-- direction;
-- scope/era;
-- conditions;
-- authority ceiling;
-- unresolved exceptions;
-- verification state.
+Do not infer A or D pipelines from numeric adjacency.
 
 ## Validation posture
 
