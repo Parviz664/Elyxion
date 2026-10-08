@@ -34,11 +34,13 @@
         "MAT_O1_A1_BOUNDARY_M1_2026_10_08",
         "MAT_O1_A2_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "A1 v3.3 internal compatibility tension remains HOLD"
-      ]
+      ],
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY",
+      "relation_verification_id": "VERIFY_O2_A1_TO_A2_2026_10_08"
     },
     {
       "assertion_id": "O2_A2_HANDS_OFF_EXPORT_TO_E3_5",
@@ -69,11 +71,13 @@
         "MAT_O1_A2_BOUNDARY_M1_2026_10_08",
         "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "exact bundle policy may vary by E3.5 version/active lane"
-      ]
+      ],
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY",
+      "relation_verification_id": "VERIFY_O2_A2_TO_E3_5_2026_10_08"
     },
     {
       "assertion_id": "O2_A_ULTRA_DECLARES_INTERFACE_WITH_A1",
@@ -102,11 +106,13 @@
         "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08",
         "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "exact mandatory transport packet between A-Ultra and A1 is not recovered"
-      ]
+      ],
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY",
+      "relation_verification_id": "VERIFY_O2_A_ULTRA_INTERFACE_A1_2026_10_08"
     },
     {
       "assertion_id": "O2_A0_HANDS_OFF_TO_A1_HISTORICAL_V3_0",
@@ -137,11 +143,13 @@
         "MAT_O1_A0_BOUNDARY_M1_2026_10_08",
         "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "HISTORICAL_ONLY",
       "global_route_effect": "HISTORICAL_ONLY",
       "unknowns": [
         "latest-known v4.1 adult route bypasses A1/A2/A3 as legacy compatibility/recovery"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_A0_TO_A1_HISTORICAL_V3_0_2026_10_08",
+      "promotion_state": "NOT_PROMOTED_HISTORICAL"
     }
   ],
   "laws": {
