@@ -1,0 +1,229 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_O2_A2_TO_A3_2026_10_08",
+      "assertion_id": "O2_A2_HANDS_OFF_TO_A3",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A2 identity names A3 as current default downstream validator.",
+        "A3 current role explicitly begins with A2 verdict intake and preserves A2 lawful judgment rather than overruling it."
+      ],
+      "limits": [
+        "This is a current local A2->A3 seam, not proof of the whole A-family route.",
+        "A3 gains packaging/sealing authority, not truth/admissibility authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_A3_TO_E0_2026_10_08",
+      "assertion_id": "O2_A3_HANDS_OFF_TO_E0",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E0_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A3 identity explicitly packages an E0-readable sealed handoff bundle and hands it to E0.",
+        "E0 current identity independently states that v1.5 binds dream seal material from A3."
+      ],
+      "limits": [
+        "A3 does not gain bind legality authority.",
+        "E0 independently decides bind legality and may block.",
+        "Historical A3/E0 topology is not flattened into current semantics."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D1_DEPENDS_ON_D0_2026_10_08",
+      "assertion_id": "O2_D1_DEPENDS_ON_D0",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D1 current role explicitly checks D0 locked-context consistency.",
+        "D1 boundary identifies D0 as the source of locked D-line context; D0 identifies D1 as downstream guard/applied psych layer."
+      ],
+      "limits": [
+        "Dependency does not transfer D0 truth authority to D1.",
+        "Runtime implementation remains unevidenced."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D2_DEPENDS_ON_D0_2026_10_08",
+      "assertion_id": "O2_D2_DEPENDS_ON_D0",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D2 boundary explicitly assigns locked context, non-mutable constraints and adaptation zones to D0.",
+        "D2 may act only inside D0-permitted space."
+      ],
+      "limits": [
+        "D2 does not own underlying truth or route mutation.",
+        "Dependency is current D-line scope only."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D2_DEPENDS_ON_D1_2026_10_08",
+      "assertion_id": "O2_D2_DEPENDS_ON_D1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D2 boundary explicitly assigns harm/comfort/safety guard envelope to D1.",
+        "D1 boundary independently identifies D2 as downstream optimizer/microdirection function constrained by D1 guards."
+      ],
+      "limits": [
+        "D2 cannot waive D1 guard clearance.",
+        "D1 does not become D2 optimization authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D3_DEPENDS_ON_D0_2026_10_08",
+      "assertion_id": "O2_D3_DEPENDS_ON_D0",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D3 current boundary explicitly requires D0 locked context and allowed adaptation zones.",
+        "D0 current identity owns psychophysical D-stack governance over immutable baseline rather than meaning."
+      ],
+      "limits": [
+        "D3 does not inherit D0 locked-context authority.",
+        "No runtime/canon authority is transferred."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D3_DEPENDS_ON_D1_2026_10_08",
+      "assertion_id": "O2_D3_DEPENDS_ON_D1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D3 boundary explicitly states D1 owns harm/overload/comfort constraints and D3 may not waive them.",
+        "D1 boundary identifies D3 as a downstream telemetry/augmentation neighbor constrained by D1."
+      ],
+      "limits": [
+        "D3 cannot waive D1 safety policy.",
+        "Dependency is not a claim that D1 owns augmentation."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D3_DEPENDS_ON_D2_2026_10_08",
+      "assertion_id": "O2_D3_DEPENDS_ON_D2",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D3 current identity defines D2 as its immutable baseline.",
+        "D3 boundary forbids rewriting/reprioritizing D2, while D2 boundary explicitly allows D3 to observe/process D2 outputs."
+      ],
+      "limits": [
+        "D3 augmentation overlays do not mutate D2 truth.",
+        "Historical E3-based D3 lineage is superseded, not current."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D4_DEPENDS_ON_D1_2026_10_08",
+      "assertion_id": "O2_D4_DEPENDS_ON_D1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D4 boundary explicitly ingests D1 psycho-safety signals and may not waive D1 harm/overload guards.",
+        "D1 boundary independently says D1 constrains experiments while D4 owns experiment/stabilization orchestration."
+      ],
+      "limits": [
+        "D4 does not own D1 safety thresholds.",
+        "This is a dependency, not a D1->D4 global route."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D4_DEPENDS_ON_D2_2026_10_08",
+      "assertion_id": "O2_D4_DEPENDS_ON_D2",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D4 boundary explicitly ingests D2 psycho-safety/player-feel signals.",
+        "D2 boundary independently identifies D4 as downstream experiment orchestrator for candidates."
+      ],
+      "limits": [
+        "D4 does not own D2 feel truth or microdirection semantics.",
+        "No runtime authority is transferred."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_D3_TO_D4_2026_10_08",
+      "assertion_id": "O2_D3_HANDS_OFF_TO_D4",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D3 boundary explicitly names D4 as current primary consumer and says D3 hands off overlays/evidence/rollback/trace.",
+        "D4 boundary independently states it ingests a verified immutable D3 baseline."
+      ],
+      "limits": [
+        "D4 may not mutate or reprioritize D3.",
+        "Historical D4 v1.1 mixed E/D route is superseded and not made current."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    }
+  ],
+  "laws": {
+    "D_dependencies_do_not_form_pipeline_by_composition": true,
+    "A2_A3_E0_local_seams_do_not_prove_full_A_route": true,
+    "no_relation_grants_canon_or_runtime_authority": true,
+    "Global_C0_is_unaffected": true
+  }
+}
