@@ -50,15 +50,22 @@
       "path": "freshness/NAV_FRESHNESS_SHARD_META_RECOVERY_V0_1.json",
       "source_count": 2,
       "dependency_count": 4
+    },
+    {
+      "id": "O2_RELATIONS_BATCH_01",
+      "path": "freshness/NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_01_V0_1.json",
+      "source_count": 0,
+      "dependency_count": 7
     }
   ],
   "total_sources": 31,
-  "total_dependencies": 73,
+  "total_dependencies": 80,
   "laws": {
     "source_ids_must_be_unique_across_core_and_shards": true,
     "freshness_dependencies_are_targeted_not_global": true,
     "shard_change_must_not_invalidate_unrelated_shards": true,
     "self_navigator_head_remains_self_resolved": true,
-    "branch_head_change_requires_subject_specific_recovery": true
+    "branch_head_change_requires_subject_specific_recovery": true,
+    "O2_relation_freshness_is_targeted": true
   }
 }
