@@ -5,17 +5,16 @@ def main():
     s=build_semantic_coverage()
     bad=[]
     if s["objects_total"]!=33:bad.append("objects")
-    if s["objects_with_normalized_claims"]!=32:bad.append("covered")
-    if s["objects_without_normalized_claims"]!=1:bad.append("uncovered")
-    if abs(s["coverage_ratio"]-(32/33))>1e-12:bad.append("ratio")
-    required={"ELYX_REC_D0","ELYX_REC_D1","ELYX_REC_D2","ELYX_REC_D3","ELYX_REC_D4"}
+    if s["objects_with_normalized_claims"]!=33:bad.append("covered")
+    if s["objects_without_normalized_claims"]!=0:bad.append("uncovered")
+    if abs(s["coverage_ratio"]-1.0)>1e-12:bad.append("ratio")
     covered={x["object_id"] for x in s["rows"] if x["normalized_claim_coverage"]=="PRESENT"}
-    if not required.issubset(covered):bad.append("d-sector-not-covered")
-    if "ELYX_SURFACE_MAIN" in covered:bad.append("main-prematurely-covered")
+    if "ELYX_SURFACE_MAIN" not in covered:bad.append("main-not-covered")
+    if len(covered)!=33:bad.append("covered-set-size")
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: normalized semantic object coverage=32/33; D sector O1 covered; main remains the only uncovered object")
+    print("PASS: normalized semantic object coverage=33/33; object coverage READY; global semantic/O2 completeness remains unproven")
     return 0
 
 if __name__=="__main__":
