@@ -8,7 +8,7 @@ def J(name):
     return json.loads((B/name).read_text())
 
 def build_o0():
-    sectors=J("NAV_SECTOR_CATALOG_V0_5.json")
+    sectors=J("NAV_SECTOR_CATALOG_V0_7.json")
     discovery=J("NAV_DISCOVERY_LEDGER_V0_1.json")
     branch=J("NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json")
     collision=J("NAV_COLLISION_REGISTRY_V0_1.json")
@@ -75,7 +75,9 @@ def build_o0():
         "exact_source_only_when_needed":"O4_EXACT_SOURCE",
         "primary_raw_only_when_required":"O5_PRIMARY_RAW"
       },
-      "semantic_readiness":"PARTIAL_NOT_GLOBAL_SEMANTIC_COMPLETENESS",
+      "semantic_readiness":"READY_NORMALIZED_SEMANTIC_COVERAGE",
+      "global_semantic_completeness":"NOT_PROVEN",
+      "relation_authority_readiness":"PARTIAL_NOT_O2_COMPLETE",
       "topology_readiness":"READY_TOPOLOGY_ORIENTATION"
     }
     fp=hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
