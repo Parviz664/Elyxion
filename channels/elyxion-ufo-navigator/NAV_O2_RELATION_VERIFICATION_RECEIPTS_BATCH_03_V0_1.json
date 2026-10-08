@@ -1,0 +1,99 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_O2_A1_TO_A2_2026_10_08",
+      "assertion_id": "O2_A1_HANDS_OFF_TO_A2",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A1 identity explicitly names A2 as current downstream and says A1 hands structured architecture downstream to A2.",
+        "A1 boundary independently identifies A2 as downstream consumer/next agent.",
+        "A2 boundary identifies A1 meaning_lane_view_v1 as semantic input for A2/A3."
+      ],
+      "limits": [
+        "A1 v3.3 internal implementation-lane compatibility tension remains HOLD.",
+        "A2 does not inherit canon sovereignty or A1 architecture authority.",
+        "This local seam does not establish the complete A-family route."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_A2_TO_E3_5_2026_10_08",
+      "assertion_id": "O2_A2_HANDS_OFF_EXPORT_TO_E3_5",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A2 identity explicitly names an E3.5-ready assembler export consumer profile.",
+        "E3.5 boundary independently states A2 produces system map/export material and E3.5 checks the required ref rather than regenerating it."
+      ],
+      "limits": [
+        "E3.5 assembly does not become A2 validation.",
+        "A2->E3.5 does not prove E4 pass/readiness.",
+        "Exact active bundle policy may vary by E3.5 version/lane."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_A_ULTRA_INTERFACE_A1_2026_10_08",
+      "assertion_id": "O2_A_ULTRA_DECLARES_INTERFACE_WITH_A1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A-Ultra boundary explicitly allows downstream A1 use and limits DreamVault contribution to tone-only.",
+        "A1 boundary independently identifies A-Ultra as upstream vision translation / hard guard and explicitly distinguishes it from A1."
+      ],
+      "limits": [
+        "The evidence supports a narrow interface, not a mandatory full-output handoff contract.",
+        "A-Ultra does not gain A1 architecture authority.",
+        "A1 does not gain source-vision authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_A0_TO_A1_HISTORICAL_V3_0_2026_10_08",
+      "assertion_id": "O2_A0_HANDS_OFF_TO_A1_HISTORICAL_V3_0",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A0 v3.0 boundary explicitly routes bound CANON_BINDING_PACKET_V2 to A1.",
+        "A1 boundary independently identifies A0 as routing/ingest gateway.",
+        "A0 latest-known v4.1 changes the adult route and marks A1/A2/A3 as legacy compatibility/recovery."
+      ],
+      "limits": [
+        "This relation is historical/era-scoped to v3.0.",
+        "It must not be promoted as a current relation.",
+        "The earlier A0 Meaning Amplifier lineage remains UNKNOWN and is not part of this assertion."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "NOT_ELIGIBLE"
+    }
+  ],
+  "laws": {
+    "historical_relation_must_not_enter_current_base_graph": true,
+    "narrow_interface_must_not_be_upgraded_to_mandatory_handoff": true,
+    "local_A_relations_do_not_define_global_A_route": true
+  }
+}
