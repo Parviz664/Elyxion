@@ -1,0 +1,107 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_O2_BATCH_03_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_O2_A1_HANDS_OFF_TO_A2",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A1_ARCHITECT",
+      "target_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a1-architect-recovery-v0.1:channels/a1-architect/CHANNEL_IDENTITY.md",
+        "channel/a1-architect-recovery-v0.1:channels/a1-architect/CHANNEL_BOUNDARIES.md",
+        "channel/a2-systems-map-recovery-v0.1:channels/a2-systems-map/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_A1_ARCHITECT_IDENTITY",
+        "EVID_O1_A1_ARCHITECT_BOUNDARY",
+        "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A1_v3_3_TO_A2_CURRENT_STRONGEST",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_A1_TO_A2_2026_10_08",
+      "unknowns": [
+        "A1 v3.3 internal compatibility tension remains HOLD"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 03 multi-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_A2_HANDS_OFF_TO_E3_5",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "target_id": "ELYX_REC_E3_5",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a2-systems-map-recovery-v0.1:channels/a2-systems-map/CHANNEL_IDENTITY.md",
+        "channel/a2-systems-map-recovery-v0.1:channels/a2-systems-map/CHANNEL_BOUNDARIES.md",
+        "channel/e3-5-input-assembler-recovery-v0.1:channels/e3-5-e4-input-assembler/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+        "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY",
+        "EVID_O1_E3_5_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A2_v1_6_2_EXPORT_TO_E3_5_CURRENT_ASSEMBLER_PROFILE",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_A2_TO_E3_5_2026_10_08",
+      "unknowns": [
+        "exact bundle policy may vary by E3.5 version/active lane"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 03 multi-sided exact-artifact verification 2026-10-08"
+      }
+    },
+    {
+      "id": "REL_O2_A_ULTRA_DECLARES_INTERFACE_WITH_A1",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A_ULTRA",
+      "target_id": "ELYX_REC_A1_ARCHITECT",
+      "kind": "DECLARES_INTERFACE_WITH",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a-ultra-vision-translator-recovery-v0.1:channels/a-ultra-vision-translator/CHANNEL_BOUNDARIES.md",
+        "channel/a1-architect-recovery-v0.1:channels/a1-architect/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_O1_A_ULTRA_BOUNDARY",
+        "EVID_O1_A1_ARCHITECT_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A_ULTRA_v4_3_AND_A1_v3_3_RECOVERED_INTERFACE",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "o2_verification_id": "VERIFY_O2_A_ULTRA_INTERFACE_A1_2026_10_08",
+      "unknowns": [
+        "exact mandatory transport packet between A-Ultra and A1 is not recovered"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 03 dual-sided exact-artifact verification 2026-10-08"
+      }
+    }
+  ],
+  "historical_assertions_not_promoted": [
+    "O2_A0_HANDS_OFF_TO_A1_HISTORICAL_V3_0"
+  ],
+  "laws": {
+    "historical_relations_are_not_current_base_edges": true,
+    "narrow_declared_interface_is_not_mandatory_handoff": true,
+    "no_relation_composes_into_global_A_route": true
+  }
+}
