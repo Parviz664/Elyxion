@@ -1,0 +1,30 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_04_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [],
+  "dependencies": [
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_A0_DECLARES_INTERFACE_WITH_A_ULTRA_V4_1",
+      "source_ids": [
+        "SRC_REC_A0",
+        "SRC_REC_A_ULTRA"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_A0_DECLARES_INTERFACE_WITH_E0_V4_1",
+      "source_ids": [
+        "SRC_REC_A0",
+        "SRC_REC_E0"
+      ]
+    }
+  ],
+  "laws": {
+    "source_declared_interface_freshness_tracks_declaring_and_target_identity_sources": true,
+    "freshness_dependency_does_not_prove_target_acceptance": true,
+    "no_new_source_identity_is_created": true
+  }
+}
