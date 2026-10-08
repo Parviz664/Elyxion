@@ -27,7 +27,7 @@ def main():
     if ambient!={"DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4","DISCOVERY_TOOLS_UNDER_ELYXION","DISCOVERY_DREAM_RAW_SURFACE"}:bad.append("ambient-horizon")
 
     if len(o["bounded_pack"]["slice"]["objects"])!=33:bad.append("pack-objects")
-    if len(o["bounded_pack"]["slice"]["confirmed_relations"])!=34:bad.append("relations")
+    if len(o["bounded_pack"]["slice"]["confirmed_relations"])!=41:bad.append("relations")
     if len(o["bounded_pack"]["unresolved_boundary"])!=5:bad.append("unresolved")
     if len(o["bounded_pack"]["collisions"])!=1:bad.append("collision")
     if o["pressure"]["default_loaded_file_bodies"]!=0:bad.append("body-load")
