@@ -1,0 +1,58 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_04_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_O2_A0_INTERFACE_A_ULTRA_V4_1_2026_10_08",
+      "assertion_id": "O2_A0_DECLARES_INTERFACE_WITH_A_ULTRA_V4_1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A0 current identity recovers v4.1 as a post-A-Ultra crystal-carry gate.",
+        "A0 v4.1 route boundary explicitly places A_ULTRA immediately upstream of A0 in the adult route.",
+        "The full exact v4.1 artifact is not recovered."
+      ],
+      "limits": [
+        "This verifies A0's source-side declaration of an A-Ultra interface, not a target-accepted transport contract.",
+        "The exact v4.1 ingress schema is unknown.",
+        "No mandatory whole-output A-Ultra->A0 handoff is claimed."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_A0_INTERFACE_E0_V4_1_2026_10_08",
+      "assertion_id": "O2_A0_DECLARES_INTERFACE_WITH_E0_V4_1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A0 current identity recovers v4.1 as E0-aligned and places E0 as adult downstream.",
+        "A0 v4.1 boundary exposes E0 readiness classes and says adult route goes to E0 after A-Ultra crystal carry.",
+        "The full exact v4.1 artifact and exact object schema are not recovered."
+      ],
+      "limits": [
+        "This verifies A0's source-side declaration of an E0 interface, not E0 target-side acceptance.",
+        "A0 does not gain E0 bind authority.",
+        "The assertion does not replace or invalidate the separately verified A3->E0 local seam.",
+        "Temporal/profile reconciliation with A3 v2.2 and E0 v1.5 remains open."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    }
+  ],
+  "laws": {
+    "source_declared_interface_does_not_prove_target_acceptance": true,
+    "A0_E0_interface_does_not_replace_A3_E0": true,
+    "full_v4_1_gap_remains_open": true,
+    "relation_tension_remains_unresolved": true
+  }
+}
