@@ -13,7 +13,7 @@ OBJECTS=load_objects()
 EVIDENCE=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_7.json").read_text())
 BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
-O2_PROGRESS=json.loads((B/"NAV_O2_RELATION_PROGRESS_V0_2.json").read_text())
+O2_PROGRESS=json.loads((B/"NAV_O2_RELATION_PROGRESS_V0_3.json").read_text())
 
 def topology_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage):
     req=PROFILE["topology_requirements"]
@@ -107,7 +107,7 @@ def build_global_orientation():
         "selected_claim_verification":{"sufficient":sufficient,"selected":selected_claims,"ratio":claim_coverage},
         "normalized_object_claim_coverage":{"covered":semantic["objects_with_normalized_claims"],"total":semantic["objects_total"],"ratio":semantic["coverage_ratio"],"uncovered":semantic["objects_without_normalized_claims"]},
         "evidence_identity":{"selected":len(pack["evidence_manifest"]),"total":len(EVIDENCE["entries"]),"ratio":len(pack["evidence_manifest"])/len(EVIDENCE["entries"]) if EVIDENCE["entries"] else 1.0},
-        "verified_o2_relations":{"local_promoted":O2_PROGRESS["counts"]["promoted_current_local_relations"],"conditional_verified":O2_PROGRESS["counts"]["verified_conditional_relations_not_promoted"],"known_total_relation_universe":O2_PROGRESS["denominator"]["known_total_relation_universe"]}
+        "verified_o2_relations":{"local_promoted":O2_PROGRESS["counts"]["promoted_current_local_relations"],"conditional_verified":O2_PROGRESS["counts"]["verified_conditional_relations_not_promoted"],"historical_verified":O2_PROGRESS["counts"].get("verified_historical_relations_not_promoted",0),"known_total_relation_universe":O2_PROGRESS["denominator"]["known_total_relation_universe"]}
       },
       "bounded_pack":pack,
       "ambient_discovery_horizon":horizon,
