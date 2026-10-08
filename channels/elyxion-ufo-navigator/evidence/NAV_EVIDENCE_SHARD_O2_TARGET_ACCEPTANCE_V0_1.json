@@ -1,0 +1,44 @@
+{
+  "index_id": "ELYXION_NAV_EVIDENCE_SHARD_O2_TARGET_ACCEPTANCE_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "entries": [
+    {
+      "evidence_id": "EVID_O2_A_ULTRA_V43_HANDOFF_TO_A0",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/a-ultra-vision-translator-recovery-v0.1:channels/a-ultra-vision-translator/raw-evidence/EV_AU_002_V4_3_LAW_USER_SUPPLIED.json",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+      "path": "channels/a-ultra-vision-translator/raw-evidence/EV_AU_002_V4_3_LAW_USER_SUPPLIED.json",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "65cc04a47536b073f0f8e3721d4f3c89db521139",
+      "observed_source_head": "b0e1ce60268796bb2de026e05bc0ca3f520c5216",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O2_RELATION_ACCEPTANCE:A_ULTRA_TO_A0"
+      ]
+    },
+    {
+      "evidence_id": "EVID_O2_E0_A3_V22_ACCEPTANCE_GAP",
+      "project_scope": "ELYXION",
+      "source_type": "GITHUB_FILE",
+      "source_role": "SPECIALIZED_CONTRACT",
+      "locator": "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_CONTRACT.md",
+      "repository": "Parviz664/Elyxion",
+      "ref": "channel/e0-intent-lock-handshake-recovery-v0.1",
+      "path": "channels/e0-intent-lock-handshake/CHANNEL_CONTRACT.md",
+      "tracking_mode": "PINNED_BLOB_AND_HEAD",
+      "observed_blob_sha": "d49808ba12d662cbb96fa83441344fe4f9fb7aba",
+      "observed_source_head": "5b37be9cf89b294794fd4b328f451ec1602a424c",
+      "load_policy": "MANIFEST_ONLY_DEFAULT",
+      "can_replace_raw": false,
+      "consumers": [
+        "O2_RELATION_ACCEPTANCE:A3_TO_E0"
+      ]
+    }
+  ]
+}
