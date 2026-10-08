@@ -83,7 +83,7 @@ def build_o0():
       },
       "semantic_readiness":"READY_NORMALIZED_SEMANTIC_COVERAGE",
       "global_semantic_completeness":"NOT_PROVEN",
-      "relation_authority_readiness":"PARTIAL_NOT_O2_COMPLETE",
+      "relation_authority_readiness":"PARTIAL_VERIFIED_LOCAL_RELATIONS",
       "topology_readiness":"READY_TOPOLOGY_ORIENTATION"
     }
     fp=hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
