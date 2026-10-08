@@ -1,0 +1,21 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_05_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [],
+  "dependencies": [
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_A_ULTRA_HANDS_OFF_TO_A0",
+      "source_ids": [
+        "SRC_REC_A_ULTRA",
+        "SRC_REC_A0"
+      ]
+    }
+  ],
+  "laws": {
+    "dual_sided_handoff_freshness_tracks_both_endpoints": true,
+    "relation_staleness_does_not_expand_scope": true
+  }
+}
