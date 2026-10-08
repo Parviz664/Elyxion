@@ -1,0 +1,368 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertions": [
+    {
+      "assertion_id": "O2_A2_HANDS_OFF_TO_A3",
+      "source_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "target_id": "ELYX_REC_A3_PRE_E0_HANDOFF",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_A2_v1_6_2_TO_A3_v2_2",
+      "conditions": [
+        "lawful A2 verdict/export material"
+      ],
+      "authority_boundary": {
+        "source_owns": "systems mapping + lawful/admissibility judgment in current adult A architecture",
+        "target_owns": "packaging/sealing for E0-readable handoff",
+        "does_not_prove": [
+          "A3 truth/admissibility authority",
+          "canon promotion",
+          "implementation authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+        "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
+        "EVID_O1_A3_PRE_E0_HANDOFF_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "full A0/A1/A2/A3 global route remains separately evidenced"
+      ]
+    },
+    {
+      "assertion_id": "O2_A3_HANDS_OFF_TO_E0",
+      "source_id": "ELYX_REC_A3_PRE_E0_HANDOFF",
+      "target_id": "ELYX_REC_E0",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A3_v2_2_TO_E0_v1_5_CURRENT_STRONGEST",
+      "conditions": [
+        "sealed lawful A3 handoff bundle",
+        "E0 independently decides bind legality"
+      ],
+      "authority_boundary": {
+        "source_owns": "pre-E0 packaging/sealing and visibility/ingest preparation",
+        "target_owns": "bind legality + dual-lock verification + constrained dispatch",
+        "does_not_prove": [
+          "A3 bind authority",
+          "E0 source dream authority",
+          "runtime promotion"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
+        "EVID_O1_A3_PRE_E0_HANDOFF_BOUNDARY",
+        "EVID_REC_E0_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E0_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "historical pre-v2.2 A3/E0 topology is not generalized"
+      ]
+    },
+    {
+      "assertion_id": "O2_D1_DEPENDS_ON_D0",
+      "source_id": "ELYX_REC_D1",
+      "target_id": "ELYX_REC_D0",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D1_v2_4_DLINE_CURRENT",
+      "conditions": [
+        "trusted D0 locked context"
+      ],
+      "authority_boundary": {
+        "source_owns": "comfort/harm/boredom guard decisions",
+        "target_owns": "locked D-line context + allowed adaptation zones",
+        "does_not_prove": [
+          "D1 D0 truth authority",
+          "canon mutation",
+          "runtime implementation"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_D1_IDENTITY",
+        "EVID_O1_D1_BOUNDARY",
+        "EVID_O1_D0_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "runtime implementation remains unknown"
+      ]
+    },
+    {
+      "assertion_id": "O2_D2_DEPENDS_ON_D0",
+      "source_id": "ELYX_REC_D2",
+      "target_id": "ELYX_REC_D0",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D2_v1_3_DLINE_CURRENT",
+      "conditions": [
+        "verified D0 locked context/adaptation zones"
+      ],
+      "authority_boundary": {
+        "source_owns": "psychological microdirection inside permitted space",
+        "target_owns": "locked context/non-mutable constraints/adaptation zones",
+        "does_not_prove": [
+          "D2 truth authority",
+          "route mutation",
+          "runtime authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D2_BOUNDARY",
+        "EVID_REC_D0_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D2_DEPENDS_ON_D1",
+      "source_id": "ELYX_REC_D2",
+      "target_id": "ELYX_REC_D1",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D2_v1_3_DLINE_CURRENT",
+      "conditions": [
+        "D1 harm/comfort/safety guard clearance"
+      ],
+      "authority_boundary": {
+        "source_owns": "microdirection candidate selection",
+        "target_owns": "safety/comfort guard envelope",
+        "does_not_prove": [
+          "D2 ability to waive D1 guards",
+          "D1 optimization authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D2_BOUNDARY",
+        "EVID_O1_D1_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D3_DEPENDS_ON_D0",
+      "source_id": "ELYX_REC_D3",
+      "target_id": "ELYX_REC_D0",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D3_v1_3_DLINE_CURRENT",
+      "conditions": [
+        "D0 locked context and allowed adaptation zones"
+      ],
+      "authority_boundary": {
+        "source_owns": "latent augmentation search/selection",
+        "target_owns": "locked context/adaptation zones",
+        "does_not_prove": [
+          "D3 baseline truth authority",
+          "canon mutation"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D3_BOUNDARY",
+        "EVID_REC_D0_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D0_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D3_DEPENDS_ON_D1",
+      "source_id": "ELYX_REC_D3",
+      "target_id": "ELYX_REC_D1",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D3_v1_3_DLINE_CURRENT",
+      "conditions": [
+        "D1 harm/overload/comfort constraints"
+      ],
+      "authority_boundary": {
+        "source_owns": "latent augmentation within safety envelope",
+        "target_owns": "harm/overload/comfort guard constraints",
+        "does_not_prove": [
+          "D3 waiver authority",
+          "D1 augmentation authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D3_BOUNDARY",
+        "EVID_O1_D1_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D3_DEPENDS_ON_D2",
+      "source_id": "ELYX_REC_D3",
+      "target_id": "ELYX_REC_D2",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D3_v1_3_DLINE_CURRENT",
+      "conditions": [
+        "immutable D2 baseline"
+      ],
+      "authority_boundary": {
+        "source_owns": "append-only augmentation overlays",
+        "target_owns": "immutable D2 baseline/microdirection output",
+        "does_not_prove": [
+          "D3 right to rewrite/reprioritize D2",
+          "runtime promotion"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_D3_IDENTITY",
+        "EVID_O1_D3_BOUNDARY",
+        "EVID_O1_D2_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D4_DEPENDS_ON_D1",
+      "source_id": "ELYX_REC_D4",
+      "target_id": "ELYX_REC_D1",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D4_v1_2_DLINE_CURRENT",
+      "conditions": [
+        "verified D1 psycho-safety signals/guards"
+      ],
+      "authority_boundary": {
+        "source_owns": "trajectory stabilization overlays",
+        "target_owns": "guard constraints/safety thresholds",
+        "does_not_prove": [
+          "D4 ability to waive D1 guards",
+          "D4 D1 truth authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D4_BOUNDARY",
+        "EVID_O1_D1_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D4_DEPENDS_ON_D2",
+      "source_id": "ELYX_REC_D4",
+      "target_id": "ELYX_REC_D2",
+      "base_kind": "DEPENDS_ON",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D4_v1_2_DLINE_CURRENT",
+      "conditions": [
+        "D2 psycho-safety/player-feel signals"
+      ],
+      "authority_boundary": {
+        "source_owns": "long-session/trajectory stabilization",
+        "target_owns": "microdirection/player-feel signal generation within guards",
+        "does_not_prove": [
+          "D4 D2 feel-truth ownership",
+          "D2 experiment orchestration"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D4_BOUNDARY",
+        "EVID_O1_D2_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": []
+    },
+    {
+      "assertion_id": "O2_D3_HANDS_OFF_TO_D4",
+      "source_id": "ELYX_REC_D3",
+      "target_id": "ELYX_REC_D4",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "D3_v1_3_TO_D4_v1_2_CURRENT",
+      "conditions": [
+        "verified D3 immutable baseline + overlay/evidence/rollback/trace package"
+      ],
+      "authority_boundary": {
+        "source_owns": "D3 augmentation baseline/overlay package",
+        "target_owns": "trajectory stabilization evaluation and bounded stabilization overlays",
+        "does_not_prove": [
+          "D4 right to mutate D3",
+          "runtime execution",
+          "canonization"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_D3_BOUNDARY",
+        "EVID_O1_D4_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "historical D4 v1.1 E4 baseline route is superseded and not made current"
+      ]
+    }
+  ],
+  "laws": {
+    "dependency_direction_is_consumer_to_required_upstream_authority": true,
+    "D_numbering_is_not_pipeline_evidence": true,
+    "A_numbering_is_not_pipeline_evidence": true,
+    "historical_E_D_routes_are_not_made_current": true,
+    "no_assertion_changes_Global_C0_state": true
+  }
+}
