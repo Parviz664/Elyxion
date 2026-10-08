@@ -44,7 +44,7 @@ def build():
     return {
       "index_id":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3",
       "status":"DERIVED_CACHE","authority":"NAVIGATION_ONLY","project_scope":"ELYXION",
-      "supersedes_candidate":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_2",
+      "supersedes_candidate":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3",
       "source_refs":{"assertion_batches":ASSERTION_FILES,"verification_batches":VERIFICATION_FILES,"promoted_relation_shards":RELATION_FILES},
       "assertion_to_evidence":a2e,
       "assertion_to_materialization_receipts":a2m,
