@@ -1,0 +1,103 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_02_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [],
+  "dependencies": [
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_A2_HANDS_OFF_TO_A3",
+      "source_ids": [
+        "SRC_REC_A2",
+        "SRC_REC_A3"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_A3_HANDS_OFF_TO_E0",
+      "source_ids": [
+        "SRC_REC_A3",
+        "SRC_REC_E0"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D1_DEPENDS_ON_D0",
+      "source_ids": [
+        "SRC_REC_D1",
+        "SRC_REC_D0"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D2_DEPENDS_ON_D0",
+      "source_ids": [
+        "SRC_REC_D2",
+        "SRC_REC_D0"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D2_DEPENDS_ON_D1",
+      "source_ids": [
+        "SRC_REC_D2",
+        "SRC_REC_D1"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D3_DEPENDS_ON_D0",
+      "source_ids": [
+        "SRC_REC_D3",
+        "SRC_REC_D0"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D3_DEPENDS_ON_D1",
+      "source_ids": [
+        "SRC_REC_D3",
+        "SRC_REC_D1"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D3_DEPENDS_ON_D2",
+      "source_ids": [
+        "SRC_REC_D3",
+        "SRC_REC_D2"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D4_DEPENDS_ON_D1",
+      "source_ids": [
+        "SRC_REC_D4",
+        "SRC_REC_D1"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D4_DEPENDS_ON_D2",
+      "source_ids": [
+        "SRC_REC_D4",
+        "SRC_REC_D2"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_D3_HANDS_OFF_TO_D4",
+      "source_ids": [
+        "SRC_REC_D3",
+        "SRC_REC_D4"
+      ]
+    }
+  ],
+  "laws": {
+    "no_new_sources_are_created_for_derived_relations": true,
+    "relation_freshness_is_bound_to_exact_source_and_target_branches": true,
+    "unrelated_branch_change_must_not_invalidate_relation": true,
+    "D_dependency_edges_do_not_imply_pipeline_order": true
+  }
+}
