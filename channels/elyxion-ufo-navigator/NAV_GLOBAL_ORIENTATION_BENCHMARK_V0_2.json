@@ -40,7 +40,7 @@
       "ratio": 0.9444444444444444
     },
     "default_loaded_file_bodies": 0,
-    "confirmed_relations": 34,
+    "confirmed_relations": 41,
     "unresolved_relations": 5,
     "collisions": 1,
     "connected_discovery_targets": 2,
@@ -53,6 +53,11 @@
       "total": 33,
       "ratio": 1,
       "uncovered": 0
+    },
+    "verified_o2_relations": {
+      "local_promoted": 7,
+      "conditional_verified_not_promoted": 1,
+      "known_total_relation_universe": "UNKNOWN"
     }
   },
   "discovery_horizon": {
@@ -77,22 +82,29 @@
     "33/33 normalized object claim coverage does not prove complete historical, authority, or cross-channel relation knowledge.",
     "Global-orientation evidence metadata breadth is approximately 94.4 percent of indexed evidence identities.",
     "Exact source bodies remain unloaded by default; source-body pressure remains separated from metadata pressure.",
-    "O0 sector orientation continues to avoid loading individual evidence identities at cold start."
+    "O0 sector orientation continues to avoid loading individual evidence identities at cold start.",
+    "O2 currently has seven verified current-local relations promoted to the base graph and one verified conditional relation kept outside normal traversal.",
+    "No O2 completion percentage is claimed because the total relation universe is UNKNOWN.",
+    "Verified local seams must not be composed into a global route without separate evidence."
   ],
   "non_claims": [
     "33/33 normalized object coverage does not prove global semantic completeness.",
-    "O1 normalized object coverage does not prove O2 relation/authority completeness.",
     "36/36 selected indexed claim verification does not prove every possible Elyxion claim.",
     "This does not prove all Elyxion history has been recovered.",
     "This does not prove sublinear or asymptotic scaling.",
     "This does not benchmark Global C0 internal reasoning performance.",
     "This does not identify the existing Global C0 durable/repository surface.",
-    "CI execution PASS is not claimed until observed."
+    "CI execution PASS is not claimed until observed.",
+    "Seven promoted O2 local relations do not prove a complete P/E route.",
+    "The conditional P4->P5 relation is not a default traversable edge.",
+    "O2 relation/authority completeness remains unproven."
   ],
   "orientation_depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
   "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json",
   "readiness_axes": {
     "topology": "READY_TOPOLOGY_ORIENTATION_EXPECTED_AFTER_EXECUTION_CHECKS",
-    "semantics": "READY_NORMALIZED_SEMANTIC_COVERAGE"
-  }
+    "semantics": "READY_NORMALIZED_SEMANTIC_COVERAGE",
+    "relations": "PARTIAL_VERIFIED_LOCAL_RELATIONS"
+  },
+  "o2_relation_progress_ref": "NAV_O2_RELATION_PROGRESS_V0_1.json"
 }
