@@ -1,0 +1,280 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertions": [
+    {
+      "assertion_id": "O2_P2_HANDS_OFF_TO_P3",
+      "source_id": "ELYX_REC_P2",
+      "target_id": "ELYX_REC_P3",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_RECOVERED_P2_P3_SEAM",
+      "conditions": [],
+      "authority_boundary": {
+        "source_owns": "source-bound ladder construction / microstep structural semantics",
+        "target_owns": "representation/final-text rendering",
+        "does_not_prove": [
+          "global P-route authority",
+          "canon promotion",
+          "runtime execution"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_P2_LADDER_BUILDER_BOUNDARY",
+        "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_P2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P3_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "current global P route remains HOLD_UNRESOLVED"
+      ]
+    },
+    {
+      "assertion_id": "O2_P3_HANDS_OFF_TO_P4",
+      "source_id": "ELYX_REC_P3",
+      "target_id": "ELYX_REC_P4",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_RECOVERED_P3_P4_SEAM",
+      "conditions": [],
+      "authority_boundary": {
+        "source_owns": "proof-bound rendered candidate text",
+        "target_owns": "feel-potential filtering/final cut under author-selection boundary",
+        "does_not_prove": [
+          "global P-route authority",
+          "canon promotion",
+          "automatic author selection"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_P3_FINAL_TEXT_RENDERER_BOUNDARY",
+        "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_P3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P4_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "current global P route remains HOLD_UNRESOLVED"
+      ]
+    },
+    {
+      "assertion_id": "O2_P4_CONDITIONAL_HANDOFF_TO_P5",
+      "source_id": "ELYX_REC_P4",
+      "target_id": "ELYX_REC_P5",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_CONDITIONAL_SEAM",
+      "temporal_scope": "CURRENT_RECOVERED_P5_v1_3_COMPATIBILITY",
+      "conditions": [
+        "enable_p5=true",
+        "P5 remains disabled_by_default otherwise"
+      ],
+      "authority_boundary": {
+        "source_owns": "selection/filter-cut of candidate material",
+        "target_owns": "optional presentation-layer feel/truth compression after selection",
+        "does_not_prove": [
+          "P5 membership in durable P0..P4 core spine",
+          "P5 causality authority",
+          "implementation authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_P4_FEEL_POTENTIAL_BOUNDARY",
+        "EVID_REC_P5_IDENTITY",
+        "EVID_O1_P5_FEEL_TRUTH_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_P4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P5_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "CONDITIONAL_ONLY",
+      "unknowns": [
+        "whether P5 is enabled for any current concrete production route"
+      ]
+    },
+    {
+      "assertion_id": "O2_E0_HANDS_OFF_LOCKED_HANDLE_TO_E1",
+      "source_id": "ELYX_REC_E0",
+      "target_id": "ELYX_REC_E1",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E1_v1_4_PLUS__E0_DUAL_LOCK_LINEAGE",
+      "conditions": [
+        "valid E0 locked/bound handle"
+      ],
+      "authority_boundary": {
+        "source_owns": "immutable bind/root legality and locked handle",
+        "target_owns": "post-E0 constrained implementation skeleton",
+        "does_not_prove": [
+          "E1 rebinding authority",
+          "runtime promotion",
+          "build/test/release"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_E0_IDENTITY",
+        "EVID_O1_E1_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_E0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "earlier pre-v1.4 E0/E1 topology is not generalized into this current seam"
+      ]
+    },
+    {
+      "assertion_id": "O2_E1_HANDS_OFF_SKELETON_TO_E2",
+      "source_id": "ELYX_REC_E1",
+      "target_id": "ELYX_REC_E2",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "CURRENT_STRONGEST_E1_v1_6_TO_E2_v2_x",
+      "conditions": [
+        "lawful constrained E1 skeleton under E0 context"
+      ],
+      "authority_boundary": {
+        "source_owns": "pre-engine structural skeleton and proof boundaries",
+        "target_owns": "engine-contract translation and bounded route expansion",
+        "does_not_prove": [
+          "E1 engine-contract authority",
+          "E2 build/readiness/runtime authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_E1_BOUNDARY",
+        "EVID_REC_E2_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_E1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E2_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "exact full v2.3 field-level E2 contract remains partially recovered"
+      ]
+    },
+    {
+      "assertion_id": "O2_E2_HANDS_OFF_TRANSLATION_TO_E3",
+      "source_id": "ELYX_REC_E2",
+      "target_id": "ELYX_REC_E3",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E2_v2_2_PLUS_TO_E3_v2_0_CURRENT_STRONGEST",
+      "conditions": [
+        "lawful E2 engine-contract/bounded-route substrate"
+      ],
+      "authority_boundary": {
+        "source_owns": "engine-contract translation and bounded route space",
+        "target_owns": "primary-path convergence/packaging and microstep-ready production bundle",
+        "does_not_prove": [
+          "E2 exact build-sequence authority",
+          "E3 lock authority",
+          "runtime execution"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_E2_BOUNDARY",
+        "EVID_REC_E3_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_E2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E3_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "historical E2 v1.x multi-variant relation is not merged into this current seam"
+      ]
+    },
+    {
+      "assertion_id": "O2_E3_HANDS_OFF_PRODUCTION_BUNDLE_TO_E4",
+      "source_id": "ELYX_REC_E3",
+      "target_id": "ELYX_REC_E4",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E3_v2_0_TO_E4_v2_1_CURRENT_STRONGEST",
+      "conditions": [
+        "selected E3 primary production route/bundle"
+      ],
+      "authority_boundary": {
+        "source_owns": "convergence/packaging of one primary production path",
+        "target_owns": "integration/readiness route compilation and closure/conflict mapping",
+        "does_not_prove": [
+          "E4 build/test/runtime/release authority",
+          "E3 readiness authority"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_E3_IDENTITY",
+        "EVID_O1_E4_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E4_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "E3 historical v1.x superiority-hardener routing is not made current"
+      ]
+    },
+    {
+      "assertion_id": "O2_E3_5_HANDS_OFF_COVERAGE_BUNDLE_TO_E4",
+      "source_id": "ELYX_REC_E3_5",
+      "target_id": "ELYX_REC_E4",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "E3_5_v1_4_TO_E4_CURRENT_INPUT_BOUNDARY",
+      "conditions": [
+        "required refs/types/lanes/roots satisfy active E3.5 coverage policy"
+      ],
+      "authority_boundary": {
+        "source_owns": "ref-only input assembly + no-drop coverage proof",
+        "target_owns": "integration/conflict/readiness reasoning over the full graph",
+        "does_not_prove": [
+          "E4 pass",
+          "CANON readiness",
+          "release readiness",
+          "runtime readiness"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_E3_5_IDENTITY",
+        "EVID_O1_E3_5_BOUNDARY",
+        "EVID_REC_E4_IDENTITY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E4_IDENTITY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "E3.5 coverage complete may still lead to E4 BLOCK"
+      ]
+    }
+  ],
+  "laws": {
+    "no_assertion_is_global_route_authority": true,
+    "P4_P5_must_remain_conditional": true,
+    "owner_P_route_HOLD_remains_unresolved": true,
+    "historical_roles_are_not_flattened_into_current_seams": true,
+    "Global_C0_is_not_part_of_batch_01": true
+  }
+}
