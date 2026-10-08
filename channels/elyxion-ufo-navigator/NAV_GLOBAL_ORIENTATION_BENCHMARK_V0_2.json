@@ -40,7 +40,7 @@
       "ratio": 0.9444444444444444
     },
     "default_loaded_file_bodies": 0,
-    "confirmed_relations": 55,
+    "confirmed_relations": 57,
     "unresolved_relations": 5,
     "collisions": 1,
     "connected_discovery_targets": 2,
@@ -55,9 +55,11 @@
       "uncovered": 0
     },
     "verified_o2_relations": {
-      "local_promoted": 21,
+      "local_promoted": 23,
       "conditional_verified_not_promoted": 1,
       "historical_verified_not_promoted": 1,
+      "open_relation_tensions": 1,
+      "source_declared_interfaces": 2,
       "known_total_relation_universe": "UNKNOWN"
     }
   },
@@ -84,11 +86,11 @@
     "Global-orientation evidence metadata breadth is approximately 94.4 percent of indexed evidence identities.",
     "Exact source bodies remain unloaded by default; source-body pressure remains separated from metadata pressure.",
     "O0 sector orientation continues to avoid loading individual evidence identities at cold start.",
-    "O2 currently has 21 verified current-local relations promoted to the base graph, one verified conditional relation kept outside normal traversal, and one verified historical relation kept outside the current graph.",
-    "Batch 03 adds A1->A2, A2->E3.5, and a narrow A-Ultra/A1 interface while preserving A0->A1 v3.0 as historical-only.",
-    "Current and historical A routes are explicitly separated.",
+    "O2 currently has 23 verified current-local relations promoted to the base graph, one verified conditional relation outside normal traversal, and one verified historical relation outside the current graph.",
+    "Two of the current relations are A0 v4.1 source-declared interfaces; target acceptance remains UNKNOWN.",
+    "One A-route temporal/profile tension remains explicitly open.",
     "No O2 completion percentage is claimed because the total relation universe is UNKNOWN.",
-    "Verified local seams must not be composed into a global route without separate evidence."
+    "Verified local relations must not be composed into a global route without separate evidence."
   ],
   "non_claims": [
     "33/33 normalized object coverage does not prove global semantic completeness.",
@@ -100,10 +102,11 @@
     "CI execution PASS is not claimed until observed.",
     "The conditional P4->P5 relation is not a default traversable edge.",
     "O2 relation/authority completeness remains unproven.",
-    "21 promoted O2 current-local relations do not prove a complete Elyxion route.",
-    "A-Ultra/A1 interface evidence does not prove a mandatory whole-output handoff.",
-    "Historical A0->A1 v3.0 does not establish the current A0 v4.1 route.",
-    "D dependencies do not imply numbered D execution order."
+    "D dependencies do not imply numbered D execution order.",
+    "A0 DECLARES_INTERFACE_WITH E0 does not prove A0 HANDS_OFF_TO E0.",
+    "A0 v4.1 source declaration does not prove E0 target acceptance.",
+    "The open A-route tension is not a proven contradiction.",
+    "23 current-local relations do not prove a complete Elyxion route."
   ],
   "orientation_depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
   "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json",
@@ -112,5 +115,5 @@
     "semantics": "READY_NORMALIZED_SEMANTIC_COVERAGE",
     "relations": "PARTIAL_VERIFIED_LOCAL_RELATIONS"
   },
-  "o2_relation_progress_ref": "NAV_O2_RELATION_PROGRESS_V0_3.json"
+  "o2_relation_progress_ref": "NAV_O2_RELATION_PROGRESS_V0_4.json"
 }
