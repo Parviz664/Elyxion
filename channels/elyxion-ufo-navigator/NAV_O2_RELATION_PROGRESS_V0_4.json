@@ -1,0 +1,72 @@
+{
+  "snapshot_id": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_4",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_3",
+  "assertion_batches": [
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_04_V0_1.json"
+  ],
+  "verification_batches": [
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_04_V0_1.json"
+  ],
+  "promoted_relation_shards": [
+    "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_03_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_04_V0_1.json"
+  ],
+  "tension_registry_ref": "NAV_O2_RELATION_TENSIONS_V0_1.json",
+  "counts": {
+    "assertions": 25,
+    "verified_assertions": 25,
+    "promoted_current_local_relations": 23,
+    "verified_conditional_relations_not_promoted": 1,
+    "verified_historical_relations_not_promoted": 1,
+    "open_relation_tensions": 1,
+    "base_relation_catalog_confirmed_total_after_batches": 57,
+    "base_unresolved_relations": 5
+  },
+  "batch_04": {
+    "promoted_source_declared_interfaces": 2,
+    "target_accepted_handoffs": 0,
+    "open_temporal_scope_tension": 1
+  },
+  "newly_verified_current": [
+    "A0 DECLARES_INTERFACE_WITH A-Ultra under latest-known partial v4.1",
+    "A0 DECLARES_INTERFACE_WITH E0 under latest-known partial v4.1"
+  ],
+  "denominator": {
+    "known_total_relation_universe": "UNKNOWN",
+    "percentage_completion": "NOT_COMPUTABLE_WITHOUT_INVENTING_EXPECTED_EDGES"
+  },
+  "readiness": "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+  "interpretation": [
+    "A0 v4.1 source-side interface declarations are facts at the recovered evidence ceiling.",
+    "DECLARES_INTERFACE_WITH does not prove target acceptance.",
+    "No A0->E0 HANDS_OFF_TO relation has been established.",
+    "A0 v4.1 and A3 v2.2 / E0 v1.5 temporal-profile reconciliation remains open.",
+    "Current, conditional and historical relations remain separate."
+  ],
+  "unresolved_classes": [
+    "E0-side acceptance of the A0 v4.1 carrier/interface",
+    "temporal/profile reconciliation of A0 v4.1 with A3 v2.2 and E0 v1.5",
+    "global P route remains HOLD_UNRESOLVED",
+    "early A0 Meaning Amplifier -> A0_ORCHESTRATOR lineage remains UNKNOWN",
+    "additional cross-family handoffs beyond verified local seams",
+    "Navigator / Eco-Systems handoff to existing Global C0",
+    "Global C0 durable location"
+  ],
+  "laws": {
+    "source_declared_interface_is_not_target_acceptance": true,
+    "no_A0_E0_handoff_without_E0_side_evidence": true,
+    "relation_tension_is_not_proven_contradiction": true,
+    "count_of_verified_edges_is_not_completion_percentage": true
+  }
+}
