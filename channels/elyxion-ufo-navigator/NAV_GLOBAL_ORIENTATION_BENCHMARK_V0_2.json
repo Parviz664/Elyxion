@@ -40,7 +40,7 @@
       "ratio": 0.9444444444444444
     },
     "default_loaded_file_bodies": 0,
-    "confirmed_relations": 41,
+    "confirmed_relations": 52,
     "unresolved_relations": 5,
     "collisions": 1,
     "connected_discovery_targets": 2,
@@ -55,7 +55,7 @@
       "uncovered": 0
     },
     "verified_o2_relations": {
-      "local_promoted": 7,
+      "local_promoted": 18,
       "conditional_verified_not_promoted": 1,
       "known_total_relation_universe": "UNKNOWN"
     }
@@ -83,7 +83,9 @@
     "Global-orientation evidence metadata breadth is approximately 94.4 percent of indexed evidence identities.",
     "Exact source bodies remain unloaded by default; source-body pressure remains separated from metadata pressure.",
     "O0 sector orientation continues to avoid loading individual evidence identities at cold start.",
-    "O2 currently has seven verified current-local relations promoted to the base graph and one verified conditional relation kept outside normal traversal.",
+    "O2 currently has eighteen verified current-local relations promoted to the base graph and one verified conditional relation kept outside normal traversal.",
+    "Batch 02 adds two A/E ingress handoffs, eight D-line dependency edges, and one D3->D4 handoff.",
+    "The D-line evidence is a dependency graph, not a numbered linear pipeline.",
     "No O2 completion percentage is claimed because the total relation universe is UNKNOWN.",
     "Verified local seams must not be composed into a global route without separate evidence."
   ],
@@ -95,9 +97,11 @@
     "This does not benchmark Global C0 internal reasoning performance.",
     "This does not identify the existing Global C0 durable/repository surface.",
     "CI execution PASS is not claimed until observed.",
-    "Seven promoted O2 local relations do not prove a complete P/E route.",
     "The conditional P4->P5 relation is not a default traversable edge.",
-    "O2 relation/authority completeness remains unproven."
+    "O2 relation/authority completeness remains unproven.",
+    "Eighteen promoted O2 local relations do not prove a complete Elyxion route.",
+    "A2->A3->E0 local seams do not prove the full A/E pipeline.",
+    "D dependencies do not imply D0->D1->D2->D3->D4 execution order."
   ],
   "orientation_depth_policy_ref": "NAV_ORIENTATION_DEPTH_POLICY_V0_1.json",
   "semantic_coverage_ref": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json",
@@ -106,5 +110,5 @@
     "semantics": "READY_NORMALIZED_SEMANTIC_COVERAGE",
     "relations": "PARTIAL_VERIFIED_LOCAL_RELATIONS"
   },
-  "o2_relation_progress_ref": "NAV_O2_RELATION_PROGRESS_V0_1.json"
+  "o2_relation_progress_ref": "NAV_O2_RELATION_PROGRESS_V0_2.json"
 }
