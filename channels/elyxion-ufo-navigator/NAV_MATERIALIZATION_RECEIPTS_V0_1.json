@@ -1025,6 +1025,23 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O1_MAIN_README_M1_2026_10_08",
+      "evidence_id": "EVID_MAIN_README",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "main",
+        "path": "README.md",
+        "observed_blob_sha": "022b0d628676325076f505d7e72a440ba4a1bc95"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 909,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
