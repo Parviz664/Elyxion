@@ -11,10 +11,10 @@
       "observed_branches": 31,
       "observed_objects": 33,
       "discovery_targets": 6,
-      "selected_evidence_identities": 63,
-      "total_evidence_identities": 67,
+      "selected_evidence_identities": 68,
+      "total_evidence_identities": 72,
       "default_loaded_source_bodies": 0,
-      "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+      "semantic_readiness": "READY_NORMALIZED_SEMANTIC_COVERAGE"
     },
     "o0_topology_index": {
       "observed_branches_represented": 31,
@@ -23,11 +23,11 @@
       "sector_capsules": 6,
       "individual_evidence_identities_loaded": 0,
       "exact_source_bodies_loaded": 0,
-      "semantic_readiness": "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE"
+      "semantic_readiness": "READY_NORMALIZED_SEMANTIC_COVERAGE"
     }
   },
   "measured_effect": {
-    "cold_start_individual_evidence_identity_load_change": "63 -> 0",
+    "cold_start_individual_evidence_identity_load_change": "68 -> 0",
     "exact_source_body_load_change": "0 -> 0",
     "sector_capsules_added": 6,
     "branch_and_object_count_visibility_preserved": true,
@@ -36,8 +36,8 @@
   "interpretation": [
     "O0 removes individual evidence identities from the default cold-start payload.",
     "Evidence and source bodies are deferred to question-driven descent rather than deleted.",
-    "Topology visibility is preserved through sector counts and discovery horizon.",
-    "Semantic completeness is not improved by O0; it remains explicitly PARTIAL."
+    "Topology visibility and normalized object-coverage readiness are preserved through compact counters.",
+    "O0 does not claim O2 relation/authority completeness or global semantic completeness."
   ],
   "non_claims": [
     "This is not a token-count benchmark.",
