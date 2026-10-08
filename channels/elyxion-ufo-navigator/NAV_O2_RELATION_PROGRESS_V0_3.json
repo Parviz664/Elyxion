@@ -1,0 +1,86 @@
+{
+  "snapshot_id": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_3",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_2",
+  "assertion_batches": [
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json"
+  ],
+  "verification_batches": [
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json"
+  ],
+  "promoted_relation_shards": [
+    "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_03_V0_1.json"
+  ],
+  "counts": {
+    "assertions": 23,
+    "verified_assertions": 23,
+    "promoted_current_local_relations": 21,
+    "verified_conditional_relations_not_promoted": 1,
+    "verified_historical_relations_not_promoted": 1,
+    "base_relation_catalog_confirmed_total_after_batches": 55,
+    "base_unresolved_relations": 5
+  },
+  "batch_01": {
+    "promoted_local": 7,
+    "conditional_not_promoted": 1
+  },
+  "batch_02": {
+    "promoted_local": 11,
+    "A_E_ingress_handoffs": 2,
+    "D_dependencies": 8,
+    "D_handoffs": 1
+  },
+  "batch_03": {
+    "promoted_local": 3,
+    "current_handoffs": 2,
+    "narrow_declared_interfaces": 1,
+    "historical_verified_not_promoted": 1
+  },
+  "newly_verified_current": [
+    "A1 -> A2 HANDS_OFF_TO",
+    "A2 -> E3.5 HANDS_OFF_TO",
+    "A-Ultra DECLARES_INTERFACE_WITH A1"
+  ],
+  "newly_verified_historical": [
+    "A0 -> A1 HANDS_OFF_TO in A0 v3.0 only"
+  ],
+  "denominator": {
+    "known_total_relation_universe": "UNKNOWN",
+    "percentage_completion": "NOT_COMPUTABLE_WITHOUT_INVENTING_EXPECTED_EDGES"
+  },
+  "readiness": "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+  "interpretation": [
+    "Current and historical A routes are stored separately.",
+    "A-Ultra/A1 is a narrow verified interface, not a mandatory whole-output handoff.",
+    "A1->A2 and A2->E3.5 are current local seams; neither proves a complete A/E global route.",
+    "A0->A1 is verified only for v3.0 and is not promoted into the current base graph.",
+    "D-line evidence remains a dependency graph, not a numbered linear pipeline.",
+    "Promoted local edges may be traversed as local facts only; implicit global composition is forbidden."
+  ],
+  "unresolved_classes": [
+    "global P route remains HOLD_UNRESOLVED",
+    "latest-known A0 v4.1 relation to A-Ultra/E0 requires separate direct verification",
+    "early A0 Meaning Amplifier -> A0_ORCHESTRATOR lineage remains UNKNOWN",
+    "historical-vs-current relation lineage beyond verified seams",
+    "additional D-line relations not yet examined",
+    "P/A/E/D cross-family handoffs beyond verified local seams",
+    "Navigator / Eco-Systems handoff to existing Global C0",
+    "Global C0 durable location"
+  ],
+  "laws": {
+    "count_of_verified_edges_is_not_completion_percentage": true,
+    "promoted_local_edges_do_not_compose_into_global_route": true,
+    "conditional_P4_P5_is_not_base_traversable": true,
+    "historical_A0_A1_is_not_current_base_traversable": true,
+    "narrow_interface_is_not_mandatory_handoff": true,
+    "D_dependency_edges_do_not_form_pipeline_by_numbering": true
+  }
+}
