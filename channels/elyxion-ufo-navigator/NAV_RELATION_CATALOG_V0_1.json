@@ -43,15 +43,22 @@
       "id": "META_RECOVERY",
       "path": "relations/NAV_RELATION_SHARD_META_RECOVERY_V0_1.json",
       "confirmed_relation_count": 2
+    },
+    {
+      "id": "O2_BATCH_01",
+      "path": "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+      "confirmed_relation_count": 7
     }
   ],
-  "total_confirmed_relations": 34,
+  "total_confirmed_relations": 41,
   "total_unresolved_relations": 5,
   "laws": {
     "relation_ids_must_be_unique_across_core_and_shards": true,
     "recovery_observes_relations_are_navigation_facts_only": true,
     "semantic_cross_channel_relations_remain_unknown_until_evidenced": true,
     "shard_is_storage_partition_not_authority_partition": true,
-    "consumers_may_load_only_required_relation_shards": true
+    "consumers_may_load_only_required_relation_shards": true,
+    "local_seam_does_not_compose_into_global_route": true,
+    "conditional_O2_assertions_must_not_be_promoted_unconditionally": true
   }
 }
