@@ -1,0 +1,46 @@
+{
+  "registry_id": "ELYXION_NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_06_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json",
+  "capsules": [
+    {
+      "capsule_id": "O1_MAIN_REPOSITORY_SURFACE",
+      "object_id": "ELYX_SURFACE_MAIN",
+      "source_identity_evidence_id": "EVID_MAIN_README",
+      "source_boundary_evidence": [
+        "EVID_MAIN_README"
+      ],
+      "role_summary": "The observed main branch is a durable Elyxion repository/index surface whose current README exposes project entrypoints for Future Research, Elyxion Channels and Governance. It is represented as a repository branch, not as a specialized semantic channel.",
+      "documented_non_authorities": [
+        "README does not establish main as canon authority",
+        "README does not establish main as implementation authority",
+        "README does not establish main as routing authority",
+        "Future Research entry is explicitly future research / not canon",
+        "contained specialized documents retain their own role and authority boundaries"
+      ],
+      "status_and_evidence_ceiling": {
+        "object_type": "BRANCH",
+        "semantic_status": "UNKNOWN",
+        "direct_observation": true,
+        "main_head": "848859284af4d97dafd8dfde1b2a847acdd44cc2",
+        "readme_blob_sha": "022b0d628676325076f505d7e72a440ba4a1bc95",
+        "authority_dimensions": "UNKNOWN_UNLESS_SEPARATELY_EVIDENCED"
+      },
+      "relation_assertions": [],
+      "unknowns": [
+        "canon authority beyond observed files",
+        "implementation authority beyond observed files",
+        "any semantic role not directly documented by repository artifacts"
+      ],
+      "capsule_state": "DRAFT_FROM_EXACT_ARTIFACTS"
+    }
+  ],
+  "laws": {
+    "repository_surface_is_not_automatically_semantic_channel": true,
+    "containment_does_not_transfer_authority": true,
+    "absence_of_authority_evidence_is_not_proof_of_forbidden_authority": true,
+    "capsule_is_navigation_derivation_not_canon": true
+  }
+}
