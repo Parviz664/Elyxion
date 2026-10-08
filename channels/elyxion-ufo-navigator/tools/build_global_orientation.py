@@ -13,6 +13,7 @@ OBJECTS=load_objects()
 EVIDENCE=load_evidence()
 CLAIMS=json.loads((B/"NAV_CLAIM_INDEX_V0_7.json").read_text())
 BRANCH_INVENTORY=json.loads((B/"NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json").read_text())
+O2_PROGRESS=json.loads((B/"NAV_O2_RELATION_PROGRESS_V0_1.json").read_text())
 
 def topology_readiness(fresh_state,branch_mapping_coverage,object_coverage,discovery_coverage):
     req=PROFILE["topology_requirements"]
@@ -97,6 +98,7 @@ def build_global_orientation():
       "readiness":topo_readiness,
       "topology_readiness":topo_readiness,
       "semantic_readiness":sem_readiness,
+      "relation_authority_readiness":O2_PROGRESS["readiness"],
       "freshness":fresh,
       "coverage":{
         "branch_inventory_mapping":{"represented":mapped,"total":branch_total,"ratio":branch_mapping_coverage,"observed_unmapped":BRANCH_INVENTORY["counts"]["observed_unmapped"]},
@@ -104,7 +106,8 @@ def build_global_orientation():
         "discovery_horizon":{"selected":discovery_count,"total":total_discovery,"ratio":discovery_coverage},
         "selected_claim_verification":{"sufficient":sufficient,"selected":selected_claims,"ratio":claim_coverage},
         "normalized_object_claim_coverage":{"covered":semantic["objects_with_normalized_claims"],"total":semantic["objects_total"],"ratio":semantic["coverage_ratio"],"uncovered":semantic["objects_without_normalized_claims"]},
-        "evidence_identity":{"selected":len(pack["evidence_manifest"]),"total":len(EVIDENCE["entries"]),"ratio":len(pack["evidence_manifest"])/len(EVIDENCE["entries"]) if EVIDENCE["entries"] else 1.0}
+        "evidence_identity":{"selected":len(pack["evidence_manifest"]),"total":len(EVIDENCE["entries"]),"ratio":len(pack["evidence_manifest"])/len(EVIDENCE["entries"]) if EVIDENCE["entries"] else 1.0},
+        "verified_o2_relations":{"local_promoted":O2_PROGRESS["counts"]["promoted_current_local_relations"],"conditional_verified":O2_PROGRESS["counts"]["verified_conditional_relations_not_promoted"],"known_total_relation_universe":O2_PROGRESS["denominator"]["known_total_relation_universe"]}
       },
       "bounded_pack":pack,
       "ambient_discovery_horizon":horizon,
@@ -123,7 +126,9 @@ def build_global_orientation():
         "full_history_replay_default":False,
         "global_c0_construction_performed":False,
         "topology_ready_does_not_mean_semantically_complete":True,
-        "selected_claim_verification_does_not_equal_all_surface_semantic_coverage":True
+        "selected_claim_verification_does_not_equal_all_surface_semantic_coverage":True,
+        "verified_local_relations_do_not_compose_into_global_route":True,
+        "relation_completion_percentage_is_not_claimed_without_known_denominator":True
       }
     }
 
