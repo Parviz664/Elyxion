@@ -36,12 +36,14 @@
         "MAT_O1_A0_IDENTITY_M1_2026_10_08",
         "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "full exact A0 v4.1 schema",
         "exact current immediate producer before A-Ultra in aggregate P route"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_A_ULTRA_TO_A0_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     }
   ],
   "laws": {
