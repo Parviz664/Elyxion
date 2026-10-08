@@ -74,10 +74,16 @@
       "path": "freshness/NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_04_V0_1.json",
       "source_count": 0,
       "dependency_count": 2
+    },
+    {
+      "id": "O2_RELATIONS_BATCH_05",
+      "path": "freshness/NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_05_V0_1.json",
+      "source_count": 0,
+      "dependency_count": 1
     }
   ],
   "total_sources": 31,
-  "total_dependencies": 96,
+  "total_dependencies": 97,
   "laws": {
     "source_ids_must_be_unique_across_core_and_shards": true,
     "freshness_dependencies_are_targeted_not_global": true,
@@ -87,6 +93,7 @@
     "O2_relation_freshness_is_targeted": true,
     "D_dependency_graph_is_not_numbered_pipeline": true,
     "historical_assertions_do_not_enter_current_relation_freshness": true,
-    "declared_interface_freshness_does_not_upgrade_target_acceptance": true
+    "declared_interface_freshness_does_not_upgrade_target_acceptance": true,
+    "dual_sided_handoff_freshness_is_targeted": true
   }
 }
