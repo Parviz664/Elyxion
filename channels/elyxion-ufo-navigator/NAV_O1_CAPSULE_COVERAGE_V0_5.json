@@ -1,0 +1,69 @@
+{
+  "coverage_id": "ELYXION_NAV_O1_CAPSULE_COVERAGE_V0_5",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O1_CAPSULE_COVERAGE_V0_4",
+  "current_semantic_snapshot": "NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json",
+  "verified_batches": [
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_02_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_03_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_04_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_05_V0_1.json",
+    "NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_06_V0_1.json"
+  ],
+  "objects_total": 33,
+  "baseline_core_objects_with_preexisting_normalized_claims": 6,
+  "verified_o1_capsule_objects": 27,
+  "current_normalized_claim_objects": 33,
+  "remaining_objects_without_normalized_object_claims": 0,
+  "batch_progress": [
+    {
+      "batch": "01",
+      "objects": 5,
+      "effect": "A-Ultra + E/meta high-value surfaces"
+    },
+    {
+      "batch": "02",
+      "objects": 4,
+      "effect": "A recovery sector O1 complete"
+    },
+    {
+      "batch": "03",
+      "objects": 6,
+      "effect": "P recovery sector O1 complete"
+    },
+    {
+      "batch": "04",
+      "objects": 6,
+      "effect": "operational E objects; E recovery sector O1 complete"
+    },
+    {
+      "batch": "05",
+      "objects": 5,
+      "effect": "D recovery sector O1 complete"
+    },
+    {
+      "batch": "06",
+      "objects": 1,
+      "effect": "main repository surface normalized and verified"
+    }
+  ],
+  "completion": {
+    "normalized_object_claim_coverage": "33/33",
+    "ratio": 1,
+    "readiness": "READY_NORMALIZED_SEMANTIC_COVERAGE",
+    "verified_o1_capsules": "27/27 newly normalized batch objects",
+    "core_legacy_normalized_claim_objects": "6/6",
+    "O2_relation_authority_completeness": "NOT_PROVEN"
+  },
+  "laws": {
+    "O1_metric_completion_does_not_equal_global_semantic_completeness": true,
+    "O1_metric_completion_does_not_equal_O2_relation_complete": true,
+    "verified_capsule_does_not_grant_canon": true,
+    "coverage_completion_does_not_resolve_unknown_lineage": true,
+    "coverage_completion_does_not_locate_or_define_Global_C0": true
+  },
+  "next_frontier": "O2_RELATION_AUTHORITY_RECOVERY"
+}
