@@ -61,8 +61,8 @@
     "local_relation_composition_does_not_create_global_route": true
   },
   "relation_authority_measurement": {
-    "source": "NAV_O2_RELATION_PROGRESS_V0_1.json",
-    "verified_current_local_relations": 7,
+    "source": "NAV_O2_RELATION_PROGRESS_V0_2.json",
+    "verified_current_local_relations": 18,
     "verified_conditional_relations": 1,
     "known_total_relation_universe": "UNKNOWN",
     "current_state": "PARTIAL_VERIFIED_LOCAL_RELATIONS"
