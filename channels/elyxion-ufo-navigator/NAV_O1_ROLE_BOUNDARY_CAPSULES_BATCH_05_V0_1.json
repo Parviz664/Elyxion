@@ -35,11 +35,12 @@
         "runtime implementation",
         "any current authority removed by v2.0 refactor"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_D0_IDENTITY_M1_2026_10_08",
         "MAT_O1_D0_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_D0_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_D1",
@@ -73,11 +74,12 @@
         "direct P/A bridge",
         "any missing/untrusted evidence which must remain BLOCK/UNKNOWN"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_D1_IDENTITY_M1_2026_10_08",
         "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_D1_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_D2",
@@ -109,11 +111,12 @@
         "historical origin before formal v1.1",
         "future P/A relation absent separate evidence"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_D2_IDENTITY_M1_2026_10_08",
         "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_D2_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_D3",
@@ -147,11 +150,12 @@
         "runtime implementation",
         "any active E dependency in current v1.3"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_D3_IDENTITY_M1_2026_10_08",
         "MAT_O1_D3_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_D3_ROLE_BOUNDARY_2026_10_08"
     },
     {
       "capsule_id": "O1_D4",
@@ -185,11 +189,12 @@
         "direct P/A relation",
         "any missing registry/seal inputs which must remain BLOCK"
       ],
-      "capsule_state": "MATERIALIZED_NOT_SEMANTICALLY_VERIFIED",
+      "capsule_state": "VERIFIED_WITH_LIMITS",
       "materialization_receipt_ids": [
         "MAT_O1_D4_IDENTITY_M1_2026_10_08",
         "MAT_O1_D4_BOUNDARY_M1_2026_10_08"
-      ]
+      ],
+      "semantic_verification_id": "VERIFY_O1_D4_ROLE_BOUNDARY_2026_10_08"
     }
   ],
   "laws": {
