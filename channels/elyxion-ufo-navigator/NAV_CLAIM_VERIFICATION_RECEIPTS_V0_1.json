@@ -603,6 +603,109 @@
         "Historical numeric ranking permissions are superseded and not current authority."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_D0_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_D0_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D0 artifacts document D-stack psychophysical quality/safety governance over an opaque baseline.",
+        "v2.0 explicitly removes earlier canon/invariant and E-stack governance responsibilities."
+      ],
+      "limits": [
+        "Historical removed authority is not current authority.",
+        "No direct P/A route is inferred.",
+        "No runtime promotion authority is inferred."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_D1_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_D1_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D1 artifacts document a D-line guard role over comfort/pressure/recovery/boredom and evidence integrity.",
+        "They explicitly require missing/untrusted evidence to remain BLOCK/UNKNOWN.",
+        "Current v2.4 explicitly forbids E-channel integration."
+      ],
+      "limits": [
+        "Historical E relationships remain historical, not current.",
+        "D1 is not medical diagnosis/coercive shaping authority.",
+        "Runtime implementation remains not evidenced."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_D2_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_D2_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D2_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D2 artifacts document perceptual microdirection inside D0/D1 permitted boundaries.",
+        "They explicitly preserve trajectory, canon and locked meaning and stop on missing verified registry/seal inputs."
+      ],
+      "limits": [
+        "No build/test/runtime/release authority is inferred.",
+        "No P/A identity is inferred.",
+        "Runtime implementation is not proved."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_D3_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_D3_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D3 artifacts document non-mutating latent augmentation over an immutable baseline.",
+        "They explicitly deny baseline-truth, runtime/release and canon-mutation authority.",
+        "v1.3 removes historical E dependencies."
+      ],
+      "limits": [
+        "Historical E routes remain historical only.",
+        "No runtime implementation is proved.",
+        "Synthetic values cannot stand in for observed evidence."
+      ],
+      "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_D4_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_D4_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_D4_IDENTITY_M1_2026_10_08",
+        "MAT_O1_D4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "D4 artifacts document bounded psycho-operational trajectory stabilization over inherited D-line truth.",
+        "They separate contract readiness from last strict execution BLOCK and require registry/seal integrity.",
+        "They explicitly forbid hidden autonomy, dark patterns and runtime execution."
+      ],
+      "limits": [
+        "Historical mixed E/D route is superseded not current.",
+        "Missing registry/seal requires BLOCK.",
+        "No runtime/canon authority is inferred."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
