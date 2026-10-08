@@ -1,0 +1,153 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertions": [
+    {
+      "assertion_id": "O2_A1_HANDS_OFF_TO_A2",
+      "source_id": "ELYX_REC_A1_ARCHITECT",
+      "target_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A1_v3_3_TO_A2_CURRENT_STRONGEST",
+      "conditions": [
+        "A1 meaning-cleanroom output preserves source-bound intent and quarantine rules"
+      ],
+      "authority_boundary": {
+        "source_owns": "architecture translation + meaning-cleanroom/implementation-lane split",
+        "target_owns": "systems/dependency/invariant mapping over supplied canon-bearing material",
+        "does_not_prove": [
+          "A2 canon sovereignty",
+          "A1 A2 decisions",
+          "runtime execution"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A1_ARCHITECT_IDENTITY",
+        "EVID_O1_A1_ARCHITECT_BOUNDARY",
+        "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A1_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "A1 v3.3 internal compatibility tension remains HOLD"
+      ]
+    },
+    {
+      "assertion_id": "O2_A2_HANDS_OFF_EXPORT_TO_E3_5",
+      "source_id": "ELYX_REC_A2_SYSTEMS_MAP",
+      "target_id": "ELYX_REC_E3_5",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A2_v1_6_2_EXPORT_TO_E3_5_CURRENT_ASSEMBLER_PROFILE",
+      "conditions": [
+        "required A2 export/system-map ref is present under active E3.5 policy"
+      ],
+      "authority_boundary": {
+        "source_owns": "system-map/export material and source-bound mapping",
+        "target_owns": "ref-only input assembly + type/lane/root/no-drop validation",
+        "does_not_prove": [
+          "E3.5 A2 validation authority",
+          "E4 pass",
+          "runtime readiness"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A2_SYSTEMS_MAP_IDENTITY",
+        "EVID_O1_A2_SYSTEMS_MAP_BOUNDARY",
+        "EVID_O1_E3_5_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A2_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "exact bundle policy may vary by E3.5 version/active lane"
+      ]
+    },
+    {
+      "assertion_id": "O2_A_ULTRA_DECLARES_INTERFACE_WITH_A1",
+      "source_id": "ELYX_REC_A_ULTRA",
+      "target_id": "ELYX_REC_A1_ARCHITECT",
+      "base_kind": "DECLARES_INTERFACE_WITH",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A_ULTRA_v4_3_AND_A1_v3_3_RECOVERED_INTERFACE",
+      "conditions": [
+        "A-Ultra downstream use by A1 is source-bound; DreamVault use is tone-only"
+      ],
+      "authority_boundary": {
+        "source_owns": "vision translation / hard-guard semantics and tone/image/rhythm reinforcement",
+        "target_owns": "architecture translation",
+        "does_not_prove": [
+          "A-Ultra A1 architecture authority",
+          "A1 vision-source authority",
+          "mandatory full-output handoff"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O1_A_ULTRA_BOUNDARY",
+        "EVID_O1_A1_ARCHITECT_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A_ULTRA_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "exact mandatory transport packet between A-Ultra and A1 is not recovered"
+      ]
+    },
+    {
+      "assertion_id": "O2_A0_HANDS_OFF_TO_A1_HISTORICAL_V3_0",
+      "source_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "target_id": "ELYX_REC_A1_ARCHITECT",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "HISTORICAL_SEAM",
+      "temporal_scope": "A0_v3_0_ROUTE_ONLY",
+      "conditions": [
+        "v3.0 CANON_BINDING_PACKET_V2 route"
+      ],
+      "authority_boundary": {
+        "source_owns": "v3.0 routing/ingest gateway behavior",
+        "target_owns": "A1 architecture translation",
+        "does_not_prove": [
+          "current v4.1 route",
+          "A0 meaning/canon authority",
+          "A1 current mandatory position"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY",
+        "EVID_O1_A1_ARCHITECT_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_A1_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "HISTORICAL_ONLY",
+      "unknowns": [
+        "latest-known v4.1 adult route bypasses A1/A2/A3 as legacy compatibility/recovery"
+      ]
+    }
+  ],
+  "laws": {
+    "current_and_historical_A_routes_must_not_be_flattened": true,
+    "narrow_interface_is_not_mandatory_handoff": true,
+    "A_numbering_is_not_pipeline_evidence": true,
+    "A2_E3_5_interface_does_not_transfer_validation_authority": true
+  }
+}
