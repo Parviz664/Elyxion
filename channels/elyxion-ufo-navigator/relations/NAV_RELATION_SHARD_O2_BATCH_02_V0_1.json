@@ -46,12 +46,14 @@
       "evidence": [
         "channel/a3-pre-e0-handoff-recovery-v0.1:channels/a3-pre-e0-handoff/CHANNEL_IDENTITY.md",
         "channel/a3-pre-e0-handoff-recovery-v0.1:channels/a3-pre-e0-handoff/CHANNEL_BOUNDARIES.md",
-        "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md"
+        "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_IDENTITY.md",
+        "channel/e0-intent-lock-handshake-recovery-v0.1:channels/e0-intent-lock-handshake/CHANNEL_CONTRACT.md"
       ],
       "evidence_ids": [
         "EVID_REC_A3_PRE_E0_HANDOFF_IDENTITY",
         "EVID_O1_A3_PRE_E0_HANDOFF_BOUNDARY",
-        "EVID_REC_E0_IDENTITY"
+        "EVID_REC_E0_IDENTITY",
+        "EVID_O2_E0_A3_V22_ACCEPTANCE_GAP"
       ],
       "traversal": "ALLOWED_AS_FACT",
       "scope_class": "CURRENT_LOCAL_SEAM",
@@ -60,11 +62,17 @@
       "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
       "o2_verification_id": "VERIFY_O2_A3_TO_E0_2026_10_08",
       "unknowns": [
-        "historical pre-v2.2 A3/E0 topology is not generalized"
+        "historical pre-v2.2 A3/E0 topology is not generalized",
+        "whether E0 will adopt/recognize A3 v2.2 bundle type under a future or missing spec"
       ],
       "last_verified": {
-        "basis": "O2 Batch 02 multi-sided exact-artifact verification 2026-10-08"
-      }
+        "basis": "O2 targeted repair with E0 v1.5 acceptance evidence 2026-10-08"
+      },
+      "target_acceptance": "VERSIONED_CONSTRAINED",
+      "compatibility_state": "A3_PRE_E0_RELEASE_BUNDLE_V2_2_OBSERVED_BLOCKED_AS_UNACCEPTED_TYPE",
+      "conditions": [
+        "E0 accepted artifact-type contract must be satisfied"
+      ]
     },
     {
       "id": "REL_O2_D1_DEPENDS_ON_D0",
