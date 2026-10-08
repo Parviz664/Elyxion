@@ -1,0 +1,86 @@
+{
+  "snapshot_id": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_2",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_1",
+  "assertion_batches": [
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json"
+  ],
+  "verification_batches": [
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json"
+  ],
+  "promoted_relation_shards": [
+    "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json"
+  ],
+  "counts": {
+    "assertions": 19,
+    "verified_assertions": 19,
+    "promoted_current_local_relations": 18,
+    "verified_conditional_relations_not_promoted": 1,
+    "base_relation_catalog_confirmed_total_after_batches": 52,
+    "base_unresolved_relations": 5
+  },
+  "batch_01": {
+    "promoted_local": 7,
+    "conditional_not_promoted": 1
+  },
+  "batch_02": {
+    "promoted_local": 11,
+    "A_E_ingress_handoffs": 2,
+    "D_dependencies": 8,
+    "D_handoffs": 1
+  },
+  "verified_current_local_seams": [
+    "P2 -> P3 HANDS_OFF_TO",
+    "P3 -> P4 HANDS_OFF_TO",
+    "E0 -> E1 HANDS_OFF_TO",
+    "E1 -> E2 HANDS_OFF_TO",
+    "E2 -> E3 HANDS_OFF_TO",
+    "E3 -> E4 HANDS_OFF_TO",
+    "E3.5 -> E4 HANDS_OFF_TO",
+    "A2 -> A3 HANDS_OFF_TO",
+    "A3 -> E0 HANDS_OFF_TO",
+    "D1 DEPENDS_ON D0",
+    "D2 DEPENDS_ON D0",
+    "D2 DEPENDS_ON D1",
+    "D3 DEPENDS_ON D0",
+    "D3 DEPENDS_ON D1",
+    "D3 DEPENDS_ON D2",
+    "D4 DEPENDS_ON D1",
+    "D4 DEPENDS_ON D2",
+    "D3 -> D4 HANDS_OFF_TO"
+  ],
+  "verified_conditional_seams": [
+    "P4 -> P5 HANDS_OFF_TO only when enable_p5=true"
+  ],
+  "denominator": {
+    "known_total_relation_universe": "UNKNOWN",
+    "percentage_completion": "NOT_COMPUTABLE_WITHOUT_INVENTING_EXPECTED_EDGES"
+  },
+  "readiness": "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+  "interpretation": [
+    "D-line evidence forms a dependency graph, not a numbered linear pipeline.",
+    "A2->A3->E0 are verified local seams and do not prove the entire A/E global route.",
+    "Promoted local edges may be traversed as those local facts only; implicit composition into a global route is forbidden."
+  ],
+  "unresolved_classes": [
+    "global P route remains HOLD_UNRESOLVED",
+    "A0/A1/A-Ultra relation topology not yet fully verified",
+    "historical-vs-current relation lineage beyond verified seams",
+    "additional D-line relations not yet examined",
+    "P/A/E/D cross-family handoffs beyond verified local seams",
+    "Navigator / Eco-Systems handoff to existing Global C0",
+    "Global C0 durable location"
+  ],
+  "laws": {
+    "count_of_verified_edges_is_not_completion_percentage": true,
+    "promoted_local_edges_do_not_compose_into_global_route": true,
+    "conditional_P4_P5_is_not_base_traversable": true,
+    "D_dependency_edges_do_not_form_pipeline_by_numbering": true,
+    "O1_33_of_33_does_not_change_O2_denominator_unknown": true
+  }
+}
