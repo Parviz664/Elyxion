@@ -1042,6 +1042,40 @@
         "durably_duplicated": false
       },
       "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O2_A_ULTRA_V43_HANDOFF_TO_A0_M1_2026_10_08",
+      "evidence_id": "EVID_O2_A_ULTRA_V43_HANDOFF_TO_A0",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/a-ultra-vision-translator-recovery-v0.1",
+        "path": "channels/a-ultra-vision-translator/raw-evidence/EV_AU_002_V4_3_LAW_USER_SUPPLIED.json",
+        "observed_blob_sha": "65cc04a47536b073f0f8e3721d4f3c89db521139"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 22106,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
+    },
+    {
+      "receipt_id": "MAT_O2_E0_A3_V22_ACCEPTANCE_GAP_M1_2026_10_08",
+      "evidence_id": "EVID_O2_E0_A3_V22_ACCEPTANCE_GAP",
+      "requested_level": "M1_EXACT_ARTIFACT",
+      "result": "MATERIALIZED",
+      "source_identity": {
+        "ref": "channel/e0-intent-lock-handshake-recovery-v0.1",
+        "path": "channels/e0-intent-lock-handshake/CHANNEL_CONTRACT.md",
+        "observed_blob_sha": "d49808ba12d662cbb96fa83441344fe4f9fb7aba"
+      },
+      "integrity": "MATCH",
+      "body_handling": {
+        "characters_read": 1675,
+        "durably_duplicated": false
+      },
+      "semantic_status": "SEPARATE_VERIFICATION_RECEIPT"
     }
   ]
 }
