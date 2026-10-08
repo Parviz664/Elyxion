@@ -69,7 +69,7 @@ Fresh-read current durable truth, not chat memory.
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_10.json`
+- `NAV_SECTOR_CATALOG_V0_11.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
@@ -79,12 +79,15 @@ Fresh-read current durable truth, not chat memory.
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json`
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json`
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json`
+- `NAV_O2_RELATION_ASSERTIONS_BATCH_04_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json`
-- `NAV_O2_RELATION_PROGRESS_V0_3.json`
-- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3.json`
+- `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_04_V0_1.json`
+- `NAV_O2_RELATION_TENSIONS_V0_1.json`
+- `NAV_O2_RELATION_PROGRESS_V0_4.json`
+- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_4.json`
 
 ### O1 capsule batches
 
@@ -102,6 +105,7 @@ Fresh-read current durable truth, not chat memory.
 - `NAV_002B_O2_BATCH_01_CHECKPOINT_V0_9.md`
 - `NAV_002B_O2_BATCH_02_CHECKPOINT_V0_10.md`
 - `NAV_002B_O2_BATCH_03_CHECKPOINT_V0_11.md`
+- `NAV_002B_O2_BATCH_04_CHECKPOINT_V0_12.md`
 
 Then:
 
@@ -127,12 +131,12 @@ Fresh exhaustive recovery observed:
 - observed unmapped branches = **0**
 - objects = **33**
 - discovery targets = **6**
-- confirmed relations = **55**
+- confirmed relations = **57**
 - unresolved relations = **5**
 - open collisions = **1**
 - evidence identities = **72**
 - freshness sources = **31**
-- freshness dependencies = **94**
+- freshness dependencies = **96**
 - indexed claims = **40**
 - materialization receipts = **61**
 - semantic verification receipts = **36**
@@ -438,9 +442,9 @@ Current O2 totals:
 - promoted current-local relations = **21**
 - conditional verified/not promoted = **1**
 - historical verified/not promoted = **1**
-- base confirmed relations = **55**
+- base confirmed relations = **57**
 - unresolved base relations = **5**
-- freshness dependencies = **94**
+- freshness dependencies = **96**
 
 Critical laws:
 
@@ -468,6 +472,42 @@ Therefore current status is:
 
 Do not replace this with a guessed global route.
 
+## O2 Batch 04 current state
+
+New current source-declared interfaces:
+
+- A0 DECLARES_INTERFACE_WITH A-Ultra under latest-known partial v4.1
+- A0 DECLARES_INTERFACE_WITH E0 under latest-known partial v4.1
+
+These relations prove the A0 source declaration only.
+
+They do **not** prove:
+
+- A-Ultra target-side acceptance;
+- E0 target-side acceptance;
+- A0 HANDS_OFF_TO E0;
+- replacement of A3 -> E0;
+- a complete timeless A route.
+
+Current O2 totals:
+
+- verified assertions = **25**
+- promoted current-local relations = **23**
+- conditional verified/not promoted = **1**
+- historical verified/not promoted = **1**
+- open relation tensions = **1**
+- base confirmed relations = **57**
+- unresolved base relations = **5**
+- freshness dependencies = **96**
+
+Current open tension:
+
+`O2_TENSION_A0_V41_A3_E0_TEMPORAL_SCOPE`
+
+State:
+
+`OPEN_TEMPORAL_SCOPE_RECONCILIATION`
+
 ## Current frontier
 
 `O2_RELATION_AUTHORITY_RECOVERY`
@@ -494,11 +534,13 @@ Select by evidence strength, not numbering.
 
 Inspect next:
 
-- A0 v4.1 source-side interfaces with A-Ultra and E0;
-- reconcile their temporal scope against A3 v2.2 / E0 v1.5;
-- promote only relation kinds supported by the evidence ceiling;
-- keep target acceptance UNKNOWN when only A0 declares the interface;
-- preserve the early A0 Meaning Amplifier lineage as UNKNOWN.
+- E0-side evidence for A0 / crystal-carry / READY_FOR_E0 acceptance;
+- A-Ultra-side evidence for explicit A0 transport/downstream semantics;
+- any stronger/full A0 v4.1 artifact outside the current recovery body;
+- temporal/profile markers reconciling A0 v4.1, A3 v2.2 and E0 v1.5.
+
+Until target-side evidence exists:
+`A0 DECLARES_INTERFACE_WITH E0 != A0 HANDS_OFF_TO E0`.
 
 Do not infer a single timeless A pipeline.
 
