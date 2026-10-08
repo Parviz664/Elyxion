@@ -1,0 +1,70 @@
+{
+  "policy_id": "ELYXION_NAV_FRESHNESS_SHARD_O2_RELATIONS_BATCH_01_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "sources": [],
+  "dependencies": [
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_P2_HANDS_OFF_TO_P3",
+      "source_ids": [
+        "SRC_REC_P2",
+        "SRC_REC_P3"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_P3_HANDS_OFF_TO_P4",
+      "source_ids": [
+        "SRC_REC_P3",
+        "SRC_REC_P4"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_E0_HANDS_OFF_TO_E1",
+      "source_ids": [
+        "SRC_REC_E0",
+        "SRC_REC_E1"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_E1_HANDS_OFF_TO_E2",
+      "source_ids": [
+        "SRC_REC_E1",
+        "SRC_REC_E2"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_E2_HANDS_OFF_TO_E3",
+      "source_ids": [
+        "SRC_REC_E2",
+        "SRC_REC_E3"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_E3_HANDS_OFF_TO_E4",
+      "source_ids": [
+        "SRC_REC_E3",
+        "SRC_REC_E4"
+      ]
+    },
+    {
+      "subject_kind": "RELATION",
+      "subject_id": "REL_O2_E3_5_HANDS_OFF_TO_E4",
+      "source_ids": [
+        "SRC_REC_E3_5",
+        "SRC_REC_E4"
+      ]
+    }
+  ],
+  "laws": {
+    "no_new_sources_are_created_for_derived_relations": true,
+    "relation_freshness_is_bound_to_exact_source_and_target_branches": true,
+    "unrelated_branch_change_must_not_invalidate_relation": true
+  }
+}
