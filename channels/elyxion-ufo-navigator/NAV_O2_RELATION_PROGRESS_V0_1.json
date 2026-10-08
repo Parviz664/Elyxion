@@ -1,0 +1,51 @@
+{
+  "snapshot_id": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_1",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "assertion_schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertion_batch_ref": "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
+  "verification_receipts_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
+  "promoted_relation_shard_ref": "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+  "counts": {
+    "assertions": 8,
+    "verified_assertions": 8,
+    "promoted_current_local_relations": 7,
+    "verified_conditional_relations_not_promoted": 1,
+    "base_relation_catalog_confirmed_total_after_batch": 41,
+    "base_unresolved_relations": 5
+  },
+  "verified_current_local_seams": [
+    "P2 -> P3",
+    "P3 -> P4",
+    "E0 -> E1",
+    "E1 -> E2",
+    "E2 -> E3",
+    "E3 -> E4",
+    "E3.5 -> E4"
+  ],
+  "verified_conditional_seams": [
+    "P4 -> P5 only when enable_p5=true"
+  ],
+  "denominator": {
+    "known_total_relation_universe": "UNKNOWN",
+    "percentage_completion": "NOT_COMPUTABLE_WITHOUT_INVENTING_EXPECTED_EDGES"
+  },
+  "readiness": "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+  "unresolved_classes": [
+    "global P route remains HOLD_UNRESOLVED",
+    "historical-vs-current relation lineage beyond verified seams",
+    "A-family cross-channel route topology",
+    "D-family current inter-channel route topology",
+    "broader E-mainline relations not yet verified",
+    "P/A/E/D cross-family handoffs",
+    "Navigator / Eco-Systems handoff to existing Global C0",
+    "Global C0 durable location"
+  ],
+  "laws": {
+    "count_of_verified_edges_is_not_completion_percentage": true,
+    "promoted_local_edges_do_not_compose_into_global_route": true,
+    "conditional_P4_P5_is_not_base_traversable": true,
+    "O1_33_of_33_does_not_change_O2_denominator_unknown": true
+  }
+}
