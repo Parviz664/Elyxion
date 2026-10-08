@@ -36,6 +36,11 @@
       "READY_NORMALIZED_SEMANTIC_COVERAGE",
       "PARTIAL_NORMALIZED_SEMANTIC_COVERAGE",
       "UNKNOWN_SEMANTIC_COVERAGE"
+    ],
+    "relations": [
+      "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+      "READY_RELATION_AUTHORITY_SCOPE",
+      "UNKNOWN_RELATION_AUTHORITY_SCOPE"
     ]
   },
   "context_policy": {
@@ -51,6 +56,15 @@
     "disconnected_unknowns_must_not_disappear": true,
     "recovery_identity_presence_does_not_prove_cross_channel_relations": true,
     "semantic_readiness_must_be_reported_separately": true,
-    "global_c0_is_not_built_or_defined": true
+    "global_c0_is_not_built_or_defined": true,
+    "relation_count_without_known_denominator_is_not_completion_percentage": true,
+    "local_relation_composition_does_not_create_global_route": true
+  },
+  "relation_authority_measurement": {
+    "source": "NAV_O2_RELATION_PROGRESS_V0_1.json",
+    "verified_current_local_relations": 7,
+    "verified_conditional_relations": 1,
+    "known_total_relation_universe": "UNKNOWN",
+    "current_state": "PARTIAL_VERIFIED_LOCAL_RELATIONS"
   }
 }
