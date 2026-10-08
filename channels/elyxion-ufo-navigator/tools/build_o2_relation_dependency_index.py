@@ -17,8 +17,8 @@ def build():
     a2e={}; a2m={}; a2v={}; a2r={}; e2a={}
     for a in A:
         aid=a["assertion_id"]
-        a2e[aid]=sorted(set(a["evidence_ids"]))
-        a2m[aid]=sorted(set(a["materialization_receipt_ids"]))
+        a2e[aid]=list(dict.fromkeys(a["evidence_ids"]))
+        a2m[aid]=list(dict.fromkeys(a["materialization_receipt_ids"]))
         v=by_assertion_v[aid]
         a2v[aid]=v["verification_id"]
         rel=by_verification_relation.get(v["verification_id"])
