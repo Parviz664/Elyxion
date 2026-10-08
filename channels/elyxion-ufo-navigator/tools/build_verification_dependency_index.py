@@ -36,7 +36,7 @@ def build_index():
             mapping[key]=sorted(set(mapping[key]))
 
     return {
-      "index_id":"ELYXION_NAV_VERIFICATION_DEPENDENCY_INDEX_V0_7",
+      "index_id":"ELYXION_NAV_VERIFICATION_DEPENDENCY_INDEX_V0_8",
       "status":"DERIVED_CACHE",
       "authority":"NAVIGATION_ONLY",
       "project_scope":"ELYXION",
