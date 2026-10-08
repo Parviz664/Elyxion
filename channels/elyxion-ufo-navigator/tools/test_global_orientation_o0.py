@@ -11,9 +11,10 @@ def main():
     if o["relation_authority_readiness"]!="PARTIAL_NOT_O2_COMPLETE":bad.append("o2-readiness")
     if len(o["sector_capsules"])!=6:bad.append("sector-count")
     if o["topology_totals"]!={
-      "branches":31,"branches_mapped":31,"objects":33,"confirmed_relations":34,
+      "branches":31,"branches_mapped":31,"objects":33,"confirmed_relations":41,
       "unresolved_relations":5,"collisions":1,"discovery_targets":6,
-      "verified_o1_capsules":27,"normalized_object_claims_present":33
+      "verified_o1_capsules":27,"normalized_object_claims_present":33,
+      "verified_o2_local_relations":7,"verified_o2_conditional_assertions":1
     }:bad.append("totals")
     if o["pressure"]["individual_evidence_identities_loaded"]!=0:bad.append("evidence-load")
     if o["pressure"]["exact_source_bodies_loaded"]!=0:bad.append("body-load")
@@ -24,7 +25,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: O0 sectors=6 branches=31 objects=33 O1_verified=27 normalized_claim_objects=33 evidence_ids_loaded=0 bodies=0 semantic=READY_OBJECT_COVERAGE O2=PARTIAL")
+    print("PASS: O0 sectors=6 branches=31 objects=33 O1_verified=27 normalized_claim_objects=33 O2_local=7 O2_conditional=1 evidence_ids_loaded=0 bodies=0 semantic=READY_OBJECT_COVERAGE O2=PARTIAL")
     return 0
 
 if __name__=="__main__":
