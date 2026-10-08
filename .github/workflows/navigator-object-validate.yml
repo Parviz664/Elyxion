@@ -59,6 +59,10 @@ jobs:
         run: python channels/elyxion-ufo-navigator/tools/test_o1_role_boundary_capsules_batch03.py
       - name: Test O1 role-boundary capsules batch 04
         run: python channels/elyxion-ufo-navigator/tools/test_o1_role_boundary_capsules_batch04.py
+      - name: Test O1 role-boundary capsules batch 05
+        run: python channels/elyxion-ufo-navigator/tools/test_o1_role_boundary_capsules_batch05.py
+      - name: Test O1 role-boundary capsules batch 06
+        run: python channels/elyxion-ufo-navigator/tools/test_o1_role_boundary_capsules_batch06.py
       - name: Test expanded global orientation
         run: python channels/elyxion-ufo-navigator/tools/test_global_orientation.py
       - name: Falsify global orientation blocking states
