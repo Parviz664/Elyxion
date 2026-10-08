@@ -1,0 +1,52 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_ASSERTIONS_BATCH_05_V0_1",
+  "status": "CANDIDATE_NAVIGATION_DERIVATION",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json",
+  "assertions": [
+    {
+      "assertion_id": "O2_A_ULTRA_HANDS_OFF_TO_A0_V4_3_V4_1",
+      "source_id": "ELYX_REC_A_ULTRA",
+      "target_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "base_kind": "HANDS_OFF_TO",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A_ULTRA_v4_3_TO_A0_v4_1_LATEST_KNOWN",
+      "conditions": [
+        "A-Ultra release gate allows handoff",
+        "transport-safe envelope points to A0"
+      ],
+      "authority_boundary": {
+        "source_owns": "vision translation/crystallization and transport-safe outbound packet",
+        "target_owns": "structural crystal-carry validation and routing",
+        "does_not_prove": [
+          "A0 meaning authority",
+          "A-Ultra structural routing authority after handoff",
+          "A0->E0 target acceptance",
+          "a complete timeless A route"
+        ]
+      },
+      "evidence_ids": [
+        "EVID_O2_A_ULTRA_V43_HANDOFF_TO_A0",
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "materialization_receipt_ids": [
+        "MAT_O2_A_ULTRA_V43_HANDOFF_TO_A0_M1_2026_10_08",
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "unknowns": [
+        "full exact A0 v4.1 schema",
+        "exact current immediate producer before A-Ultra in aggregate P route"
+      ]
+    }
+  ],
+  "laws": {
+    "handoff_requires_dual_sided_support": true,
+    "A_ULTRA_A0_handoff_does_not_prove_A0_E0_acceptance": true,
+    "local_handoff_does_not_compose_global_route": true
+  }
+}
