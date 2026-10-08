@@ -1,0 +1,36 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_05_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_O2_A_ULTRA_TO_A0_2026_10_08",
+      "assertion_id": "O2_A_ULTRA_HANDS_OFF_TO_A0_V4_3_V4_1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O2_A_ULTRA_V43_HANDOFF_TO_A0_M1_2026_10_08",
+        "MAT_O1_A0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "A-Ultra v4.3 raw law explicitly defines handoff_to_A0_policy with next_step_default=A0 and routing_to_A0 default_next_agent=A0.",
+        "A-Ultra route history marks A_ULTRA -> A0 as ACTIVE CONTRACT.",
+        "A0 latest-known v4.1 recovery independently places A_ULTRA immediately upstream of A0 in the adult route."
+      ],
+      "limits": [
+        "This verifies only the current local A-Ultra->A0 handoff.",
+        "It does not prove A0->E0 target acceptance.",
+        "It does not prove the exact immediate producer before A-Ultra in aggregate P.",
+        "The full exact A0 v4.1 schema remains unrecovered."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    }
+  ],
+  "laws": {
+    "dual_sided_support_required_for_handoff": true,
+    "A_ULTRA_A0_handoff_does_not_close_A0_E0_tension": true
+  }
+}
