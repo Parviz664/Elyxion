@@ -48,9 +48,14 @@
       "id": "O2_BATCH_01",
       "path": "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
       "confirmed_relation_count": 7
+    },
+    {
+      "id": "O2_BATCH_02",
+      "path": "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json",
+      "confirmed_relation_count": 11
     }
   ],
-  "total_confirmed_relations": 41,
+  "total_confirmed_relations": 52,
   "total_unresolved_relations": 5,
   "laws": {
     "relation_ids_must_be_unique_across_core_and_shards": true,
@@ -59,6 +64,7 @@
     "shard_is_storage_partition_not_authority_partition": true,
     "consumers_may_load_only_required_relation_shards": true,
     "local_seam_does_not_compose_into_global_route": true,
-    "conditional_O2_assertions_must_not_be_promoted_unconditionally": true
+    "conditional_O2_assertions_must_not_be_promoted_unconditionally": true,
+    "dependency_graph_must_not_be_rewritten_as_numbered_pipeline": true
   }
 }
