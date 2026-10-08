@@ -69,6 +69,8 @@ jobs:
         run: python channels/elyxion-ufo-navigator/tools/test_o2_relation_batch02.py
       - name: Test O2 relation batch 03
         run: python channels/elyxion-ufo-navigator/tools/test_o2_relation_batch03.py
+      - name: Test O2 relation batch 04
+        run: python channels/elyxion-ufo-navigator/tools/test_o2_relation_batch04.py
       - name: Test O2 relation dependency index
         run: python channels/elyxion-ufo-navigator/tools/test_o2_relation_dependency_index.py
       - name: Test expanded global orientation
