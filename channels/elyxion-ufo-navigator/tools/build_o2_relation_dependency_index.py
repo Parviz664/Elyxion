@@ -8,17 +8,20 @@ def J(p): return json.loads((B/p).read_text())
 ASSERTION_FILES=[
   "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
   "NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json",
-  "NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json"
+  "NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json",
+  "NAV_O2_RELATION_ASSERTIONS_BATCH_04_V0_1.json"
 ]
 VERIFICATION_FILES=[
   "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
   "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json",
-  "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json"
+  "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json",
+  "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_04_V0_1.json"
 ]
 RELATION_FILES=[
   "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
   "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json",
-  "relations/NAV_RELATION_SHARD_O2_BATCH_03_V0_1.json"
+  "relations/NAV_RELATION_SHARD_O2_BATCH_03_V0_1.json",
+  "relations/NAV_RELATION_SHARD_O2_BATCH_04_V0_1.json"
 ]
 
 def build():
@@ -42,9 +45,9 @@ def build():
         for eid in a2e[aid]: e2a.setdefault(eid,[]).append(aid)
     for eid in e2a:e2a[eid]=sorted(set(e2a[eid]))
     return {
-      "index_id":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3",
+      "index_id":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_4",
       "status":"DERIVED_CACHE","authority":"NAVIGATION_ONLY","project_scope":"ELYXION",
-      "supersedes_candidate":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3",
+      "supersedes_candidate":"ELYXION_NAV_O2_RELATION_DEPENDENCY_INDEX_V0_4",
       "source_refs":{"assertion_batches":ASSERTION_FILES,"verification_batches":VERIFICATION_FILES,"promoted_relation_shards":RELATION_FILES},
       "assertion_to_evidence":a2e,
       "assertion_to_materialization_receipts":a2m,
@@ -56,6 +59,7 @@ def build():
         "changed_evidence_must_invalidate_only_dependent_assertions":True,
         "conditional_assertion_has_no_promoted_relation":True,
         "historical_assertion_has_no_current_promoted_relation":True,
+        "source_declared_interface_must_not_be_upgraded_to_handoff_during_repair":True,
         "promoted_relation_must_not_survive_failed_reverification":True,
         "repair_does_not_expand_relation_scope":True,
         "cross_batch_dependency_regeneration_is_required":True
