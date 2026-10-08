@@ -32,7 +32,7 @@ Read first:
 
 ## Fresh activation procedure
 
-Fresh-read these current navigation contracts and checkpoints:
+Fresh-read current durable truth, not chat memory.
 
 ### Core laws / schemas
 
@@ -56,315 +56,209 @@ Fresh-read these current navigation contracts and checkpoints:
 
 ### Claim / verification substrate
 
-- `NAV_CLAIM_INDEX_V0_2.json`
+- `NAV_CLAIM_INDEX_V0_7.json`
 - `NAV_MATERIALIZATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_MATERIALIZATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_CLAIM_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_CLAIM_EVIDENCE_SUFFICIENCY_POLICY_V0_1.json`
-- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_3.json`
+- `NAV_VERIFICATION_DEPENDENCY_INDEX_V0_8.json`
 - `NAV_CONTEXT_PACK_REPAIR_POLICY_V0_1.json`
 
 ### Orientation / scale control
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_2.json`
+- `NAV_SECTOR_CATALOG_V0_7.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
-- `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_2.json`
+- `NAV_SEMANTIC_COVERAGE_SNAPSHOT_V0_7.json`
+- `NAV_O1_CAPSULE_COVERAGE_V0_5.json`
+
+### O1 capsule batches
+
 - `NAV_O1_ROLE_BOUNDARY_CAPSULE_SCHEMA_V0_1.json`
 - `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_01_V0_1.json`
 - `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_02_V0_1.json`
 - `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_03_V0_1.json`
-- `NAV_O1_CAPSULE_COVERAGE_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_04_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_05_V0_1.json`
+- `NAV_O1_ROLE_BOUNDARY_CAPSULES_BATCH_06_V0_1.json`
 
 ### Current checkpoint
 
-- `NAV_002B_SHARDED_ORIENTATION_DEPTH_CHECKPOINT_V0_5.md`
-- `NAV_002B_O1_BATCH_01_VERIFIED_CHECKPOINT_V0_6.md`
-- `NAV_002B_O1_P_SECTOR_COMPLETE_CHECKPOINT_V0_7.md`
+- `NAV_002B_O1_COMPLETE_CHECKPOINT_V0_8.md`
 
 Then:
 
 1. Fresh-recover current branch/source heads before high-confidence use.
-2. Load merged catalogs through the shard catalog, not only old monolithic core registries.
+2. Load merged catalogs through the shard catalog, not only old core registries.
 3. Preserve lifecycle status, evidence state, authority, readiness, relation state, collision state, claim epistemics, semantic coverage, and freshness as separate axes.
 4. Never promote RAW/CANDIDATE to CANON without explicit evidenced authority.
 5. Never traverse unresolved relations as facts.
 6. Never infer cross-channel routing from branch names, numbering, adjacency, or similar function.
 7. Never auto-resolve collisions.
 8. Never treat an author declaration as independent implementation evidence.
-9. Never promote an AUTHOR_DECLARED claim above `SUPPORTED_AT_DECLARED_LEVEL` without independent evidence.
-10. Never fill the existing Global C0 durable location without evidence.
-11. Never equate topology coverage with semantic completeness.
+9. Never fill the existing Global C0 durable location without evidence.
+10. Never equate normalized object coverage with global semantic completeness.
+11. Never equate O1 completion with O2 relation/authority completion.
 12. Never build Global C0.
 
-## Current frontier
+## Current observed topology
 
-`NAV-002B — Evidence Index + Context Pack Assembly`
-
-State:
-
-`ACTIVE_CANDIDATE / SHARDED TOPOLOGY READY CANDIDATE / SEMANTIC COVERAGE PARTIAL`
-
-## Current observed repository topology
-
-Fresh exhaustive branch recovery observed:
+Fresh exhaustive recovery observed:
 
 - branches = **31**
-- branches represented in Object Catalog = **31**
+- branches represented = **31/31**
 - observed unmapped branches = **0**
-
-The old five-branch topology is historical and must not be presented as current.
-
-Current merged navigation substrate:
-
 - objects = **33**
 - discovery targets = **6**
 - confirmed relations = **34**
 - unresolved relations = **5**
 - open collisions = **1**
-- evidence identities = **61**
+- evidence identities = **72**
 - freshness sources = **31**
 - freshness dependencies = **73**
-- claims = **28**
-- materialization receipts = **38**
-- semantic verification receipts = **24**
+- indexed claims = **40**
+- materialization receipts = **61**
+- semantic verification receipts = **36**
 
-## Recovery surfaces now observed
+## O1 current state
 
-The repository currently contains directly observed recovery surfaces for:
+O1 stop metric:
 
-- A0 / A1 / A2 / A3 / A-Ultra;
-- D0 / D1 / D2 / D3 / D4;
-- E0 / E1 / E2 / E3.5 / E3 / E4;
-- E-chain research;
-- E-Prime canonical-truth-kernel recovery;
-- P0 / P1 / P2 / P3 / P4 / P5;
-- Elyxion Dispatcher;
-- PAE Archaeology / History Navigator.
+`NORMALIZED_OBJECT_CLAIM_COVERAGE`
 
-Their presence is a fact of current GitHub topology.
+Result:
 
-Their exact cross-channel relations, authority chains, supersession, and runtime routes are **not** inferred from their names.
+`33/33 = 100%`
 
-Current recovery relation law:
+Readiness:
 
-`Navigator OBSERVES recovery surface`
+`READY_NORMALIZED_SEMANTIC_COVERAGE`
 
-is confirmed.
+Accounting:
 
-No automatic:
+- six core objects had normalized claims before the O1 batch program;
+- 27 objects received verified O1 role/boundary capsules;
+- total normalized object coverage = 33/33.
 
-- `ROUTES_TO`
-- `HANDS_OFF_TO`
-- `DEPENDS_ON`
+This does **not** prove:
 
-is created without evidence.
+- every fact about all 33 objects;
+- complete history;
+- complete authority topology;
+- complete handoff topology;
+- complete supersession topology;
+- O2 completion;
+- Global C0 location or internals.
 
-## Discovery horizon
+## Verified O1 sectors
 
-### Now observed at repository-surface level
+### A recovery
 
-`DISCOVERY_A_CHANNEL`
+O1-complete for all 5 observed A surfaces.
 
-→ multiple A recovery surfaces observed.
+Critical unresolved lineage preserved:
 
-`DISCOVERY_E_CHANNELS_BEYOND_E_PRIME`
+`early A0 Meaning Amplifier -> A0_ORCHESTRATOR = UNKNOWN LINEAGE RELATION`
 
-→ multiple E recovery surfaces observed.
+### P recovery
 
-### Still unresolved
+O1-complete for P0–P5.
 
-`DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4`
+Critical guards:
 
-→ not located in current GitHub scan; existence elsewhere UNKNOWN.
+- global route = `HOLD_UNRESOLVED`
+- historical -P1 is not silently deleted
+- P1 PASS != CANON
+- local P2->P3->P4 seam != global route authority
+- P5 = `disabled_by_default=true`
 
-`DISCOVERY_GLOBAL_C0`
+### E recovery
 
-→ AUTHOR_DECLARED_EXISTS; durable/repository location UNKNOWN.
+O1-complete for:
 
-`DISCOVERY_TOOLS_UNDER_ELYXION`
+- E0
+- E1
+- E2
+- E3.5
+- E3
+- E4
+- E-chain research
+- E-Prime technical kernel
 
-→ dedicated surface not located.
+Critical guards:
 
-`DISCOVERY_DREAM_RAW_SURFACE`
+- E numbering does not prove a global route;
+- E0 bind != execution;
+- E1 skeleton != E2 translation;
+- E2 translation != E3 convergence;
+- E3.5 coverage proof != E4 readiness;
+- E4 readiness != build/test/runtime/release;
+- archive E-Prime != technical E-Prime kernel.
 
-→ dedicated durable surface not located.
+### D recovery
 
-Specialist `raw-evidence/` folders do not automatically equal the global Dream/RAW durable surface.
+O1-complete for D0–D4.
 
-## Topology vs semantic readiness
+D contracts are project architecture roles, not medical authority.
 
-This distinction is mandatory.
+Historical E/D relations must not be made current without evidence.
 
-### Topology / identity coverage
+### Meta recovery
 
-- branch mapping = **31/31**
-- observed objects = **33/33**
-- discovery horizon = **6/6**
+Dispatcher and PAE History Navigator O1 roles are verified-with-limits.
 
-Candidate readiness:
+Neither is Global C0.
 
-`READY_TOPOLOGY_ORIENTATION`
+### Main
 
-subject to fresh execution checks.
+Main is verified narrowly as a durable repository/index surface.
 
-### Normalized semantic coverage
+Containment does not transfer canon, implementation, or routing authority.
 
-Current OBJECT-level normalized claim coverage:
+## Broad orientation
 
-- covered objects = **21**
-- total objects = **33**
-- uncovered = **12**
-- ratio ≈ **63.6%**
+Current expected broad pack:
 
-Current semantic readiness:
+- objects = **33/33**
+- selected claims = **36/36 sufficient**
+- normalized object claims = **33/33**
+- selected evidence identities = **68/72 ≈ 94.4%**
+- exact source bodies loaded by default = **0**
 
-`PARTIAL_NORMALIZED_SEMANTIC_COVERAGE`
+Broad metadata pressure remains high.
 
-Therefore:
+## O0 cold start
 
-`topology ready != semantic comprehension complete`
-
-Also:
-
-`9/9 selected indexed claims verified != 33/33 objects semantically understood`
-
-## Hierarchical orientation depth
-
-Current law:
-
-`NAV_ORIENTATION_DEPTH_POLICY_V0_1`
-
-Use:
+Preferred cold-start level:
 
 `O0_TOPOLOGY_INDEX`
 
-→ global sector map only
-
-`O1_ROLE_BOUNDARY`
-
-→ selected surface role/status/non-authority capsule
-
-`O2_RELATION_AUTHORITY`
-
-→ verified cross-surface relation / handoff / authority semantics
-
-`O3_CLAIM_EVIDENCE`
-
-→ question-specific claims + receipts + sufficiency
-
-`O4_EXACT_SOURCE`
-
-→ targeted exact source bodies
-
-`O5_PRIMARY_RAW`
-
-→ primary RAW only when fidelity requires it
-
-Depth is not authority.
-
-## O0 cold-start rule
-
-Current O0 sectors:
-
-1. CORE
-2. A recovery
-3. D recovery
-4. E recovery
-5. P recovery
-6. meta recovery
-
-O0 payload preserves:
-
-- 31 branch visibility;
-- 33 object visibility through sector counts;
-- all 6 discovery targets;
-- unresolved/collision counts;
-- Global C0 existence/location boundary.
-
-O0 default pressure:
+Current O0:
 
 - sector capsules = **6**
+- branches visible = **31**
+- objects represented = **33**
+- normalized object claims present = **33**
+- verified O1 capsules = **27**
 - individual evidence identities loaded = **0**
 - exact source bodies loaded = **0**
 - full history replay = **false**
 
-Broad orientation still measures:
+O0 normalized semantic readiness:
 
-- selected evidence identities = **57/61 ≈ 93.4%**
-- exact source bodies = **0**
+`READY_NORMALIZED_SEMANTIC_COVERAGE`
 
-Therefore O0 is the preferred cold-start layer.
+Global semantic completeness:
 
-It defers evidence depth; it does not delete evidence or create semantic completeness.
+`NOT_PROVEN`
 
-## O1 Batch 01
+O2 relation/authority readiness:
 
-Verified-with-limits role/boundary capsules now exist for:
-
-- E-Prime canonical truth kernel;
-- E-chain research;
-- Elyxion Dispatcher;
-- PAE Archaeology / History Navigator;
-- A-Ultra.
-
-Batch 01 properties:
-
-- 5 capsules;
-- 10 exact M1 materialization receipts;
-- 5 DIRECTLY_DOCUMENTED O1 claims;
-- 5 semantic verification receipts;
-- all verdicts = `SUPPORTED_WITH_LIMITS`;
-- authority effect = `NONE`;
-- inferred cross-channel relation assertions = **0**.
-
-Normalized OBJECT-level semantic coverage advanced:
-
-`6/33 → 11/33`
-
-Current remaining gap:
-
-`22 objects`
-
-Next candidate batch:
-
-`A0 / A1 / A2 / A3`
-
-## O1 Batch 03
-
-P-sector role/boundary coverage is now verified-with-limits for:
-
-- P0
-- P1
-- P2
-- P3
-- P4
-- P5
-
-Critical preserved constraints:
-
-- current global P route = `HOLD_UNRESOLVED`;
-- historical -P1 route is not silently deleted;
-- P1 PASS != CANON;
-- local `P2 -> P3 -> P4` seam does not establish global route authority;
-- P5 is `disabled_by_default=true`;
-- P5 is presentation-only and is not implementation-logic authority.
-
-Normalized OBJECT-level semantic coverage advanced:
-
-`15/33 -> 21/33`
-
-Remaining gap:
-
-`12 objects`
-
-Next candidate batch:
-
-`E0 / E1 / E2 / E3.5 / E3 / E4`
+`PARTIAL_NOT_O2_COMPLETE`
 
 ## Materialization / verification law
 
@@ -372,20 +266,11 @@ Next candidate batch:
 
 Materialization proves exact source identity/read.
 
-Semantic verification is a separate receipt.
+Semantic verification is separate.
 
-Current indexed claim controls include:
+`verified claim != canon promotion`
 
-- Global C0 exists → `SUPPORTED_AT_DECLARED_LEVEL`
-- Navigator must not build Global C0 → `SUPPORTED_AT_DECLARED_LEVEL`
-- Eco role → `SUPPORTED_WITH_LIMITS`
-- E-Prime chat-transcript-only role → `SUPPORTED_WITH_LIMITS`
-- Eco/E-Prime scope collision → `SUPPORTED_WITH_LIMITS`
-- Reality Stabilizer scope → `SUPPORTED_WITH_LIMITS`
-- P route hold → `SUPPORTED_WITH_LIMITS`
-- Phase1 experimental boundary → `SUPPORTED_WITH_LIMITS`
-
-Do not generalize these verified claims into full recovery-surface semantics.
+`verified local seam != global route`
 
 ## Targeted repair law
 
@@ -403,57 +288,89 @@ If:
 
 then:
 
-`rematerialize changed evidence → reverify dependent claims → reuse fresh support → new fingerprint`
+`rematerialize changed evidence -> reverify dependent claims -> reuse unaffected support -> new fingerprint`
 
 Do not replay unrelated Elyxion history.
 
-Freshness is sharded and targeted across current branch sources.
+## Discovery horizon still unresolved
+
+`DISCOVERY_RAW_0_0_1_0_TO_0_0_1_4`
+
+→ current GitHub scan did not locate it; existence elsewhere UNKNOWN.
+
+`DISCOVERY_GLOBAL_C0`
+
+→ AUTHOR_DECLARED_EXISTS; durable/repository location UNKNOWN.
+
+`DISCOVERY_TOOLS_UNDER_ELYXION`
+
+→ dedicated surface not located.
+
+`DISCOVERY_DREAM_RAW_SURFACE`
+
+→ dedicated durable surface not located.
 
 ## Open collision
 
 `COL_ECOSYS_EPRIME_SCOPE_001`
 
-Current verdict:
+Verdict remains:
 
 `SUPPORTED_WITH_LIMITS`
 
-Observed terrain now includes both:
+Technical E-Prime recovery does not automatically resolve the historical archive/scope mismatch.
 
-- historical E-Prime chat-archive surface;
-- E-Prime canonical-truth-kernel recovery surface.
+## Current frontier
 
-This new terrain is relevant.
+`O2_RELATION_AUTHORITY_RECOVERY`
 
-It does not automatically resolve historical scope precedence.
+O1 is frozen at its current stop metric.
 
-## Current validation state
+O2 mission:
 
-Synchronous structural checks currently support:
+recover directly evidenced cross-object relations and authority boundaries without inventing a single global pipeline.
 
-- Object/branch topology: **PASS**
-- Relation integrity: **PASS**
-- Evidence/freshness integrity: **PASS**
+O2 must distinguish:
 
-GitHub Actions workflow is configured for the sharded V0.4 substrate and current regression gates.
+- local relation vs global route;
+- current relation vs historical relation;
+- unconditional vs conditional handoff;
+- dependency vs authority;
+- bind authority vs translation vs readiness vs runtime;
+- superseded relation vs current relation;
+- confirmed relation vs HOLD/UNKNOWN.
 
-Do **not** claim GitHub Actions PASS until an execution result is directly observed.
+## First O2 candidate set
 
-## Immediate next candidate work
+Start from strongly evidenced local seams:
 
-Build **O1 role/boundary capsules** for the 27 objects without normalized OBJECT-level claim coverage.
+1. P2 -> P3
+2. P3 -> P4
+3. P4 -> P5 only as conditional/optional
+4. E0 -> E1 locked-handle boundary
+5. E1 -> E2 skeleton-to-engine-contract boundary
+6. E2 -> E3 translation-to-convergence boundary
+7. E3.5 -> E4 coverage-to-integration boundary
 
-Rules:
+Do not add a relation merely because numbering suggests it.
 
-- use each surface's own recovered identity/boundary artifacts;
-- preserve provenance and evidence ceiling;
-- role != authority;
-- identity != canon;
-- do not infer P→A→E/D routes from numbering;
-- write small claim-addressable capsules;
-- verify high-value capsules before expanding deeper;
-- improve semantic coverage gradually;
-- keep O0 cold start small.
+Every O2 relation must carry:
+
+- exact evidence;
+- relation kind;
+- direction;
+- scope/era;
+- conditions;
+- authority ceiling;
+- unresolved exceptions;
+- verification state.
+
+## Validation posture
+
+GitHub workflow is configured to gate current substrate and all six O1 batches.
+
+Do not claim GitHub Actions PASS until a run result is directly observed.
 
 ## Fresh-chat activation phrase
 
-> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md`, preserve the existing Global C0 non-duplication boundary, use the sharded catalogs and O0→O5 orientation-depth law, and continue from the current Navigator frontier without inventing missing state.
+> Activate Elyxion UFO Navigator. Fresh-recover `Parviz664/Elyxion`, branch `channel/elyxion-ufo-navigator-v0.1`, read `ACTIVATE.md`, preserve the existing Global C0 non-duplication boundary, treat O1 normalized object coverage as complete at 33/33, and continue from `O2_RELATION_AUTHORITY_RECOVERY` without inventing missing routes or authority.
