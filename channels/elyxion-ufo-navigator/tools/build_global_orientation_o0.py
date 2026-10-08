@@ -8,7 +8,7 @@ def J(name):
     return json.loads((B/name).read_text())
 
 def build_o0():
-    sectors=J("NAV_SECTOR_CATALOG_V0_9.json")
+    sectors=J("NAV_SECTOR_CATALOG_V0_10.json")
     discovery=J("NAV_DISCOVERY_LEDGER_V0_1.json")
     branch=J("NAV_REPOSITORY_BRANCH_INVENTORY_V0_4.json")
     collision=J("NAV_COLLISION_REGISTRY_V0_1.json")
@@ -48,6 +48,7 @@ def build_o0():
           "normalized_object_claims_present":x.get("normalized_object_claims_present",0),
           "verified_o2_local_relations":x.get("verified_o2_local_relations",0),
           "verified_o2_conditional_assertions":x.get("verified_o2_conditional_assertions",0),
+          "verified_o2_historical_assertions":x.get("verified_o2_historical_assertions",0),
           "semantic_completeness":x["semantic_completeness"]
         }
         for x in sectors["sectors"]
@@ -63,7 +64,8 @@ def build_o0():
         "verified_o1_capsules":sectors["totals"].get("verified_o1_capsules",0),
         "normalized_object_claims_present":sectors["totals"].get("normalized_object_claims_present",0),
         "verified_o2_local_relations":sectors["totals"].get("verified_o2_local_relations",0),
-        "verified_o2_conditional_assertions":sectors["totals"].get("verified_o2_conditional_assertions",0)
+        "verified_o2_conditional_assertions":sectors["totals"].get("verified_o2_conditional_assertions",0),
+        "verified_o2_historical_assertions":sectors["totals"].get("verified_o2_historical_assertions",0)
       },
       "discovery_horizon":horizon,
       "pressure":{
