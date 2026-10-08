@@ -18,8 +18,8 @@
       "id": "INDIVIDUAL_EVIDENCE_IDENTITY_LOAD",
       "meaning": "How many individual evidence identities are injected into the current reasoning payload.",
       "broad_orientation": {
-        "selected": 63,
-        "total": 67
+        "selected": 68,
+        "total": 72
       },
       "O0_default": {
         "selected": 0,
@@ -37,9 +37,9 @@
       "id": "NORMALIZED_SEMANTIC_OBJECT_COVERAGE",
       "meaning": "Fraction of observed objects represented by normalized OBJECT-level claims.",
       "current": {
-        "covered": 27,
+        "covered": 33,
         "total": 33,
-        "ratio": 0.8181818181818182
+        "ratio": 1
       },
       "full_semantic_readiness_target": 1
     },
@@ -84,6 +84,7 @@
     "semantic_coverage_is_independent_from_topology_coverage": true,
     "unknowns_must_not_be_dropped_to_reduce_payload": true,
     "lower_payload_is_not_evidence_of_higher_truth": true,
-    "no_scaling_claim_without_multi_size_measurements": true
+    "no_scaling_claim_without_multi_size_measurements": true,
+    "normalized_object_coverage_complete_does_not_imply_relation_authority_complete": true
   }
 }
