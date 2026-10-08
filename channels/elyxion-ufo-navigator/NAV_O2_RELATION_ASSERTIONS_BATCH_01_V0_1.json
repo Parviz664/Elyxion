@@ -30,11 +30,13 @@
         "MAT_O1_P2_BOUNDARY_M1_2026_10_08",
         "MAT_O1_P3_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "current global P route remains HOLD_UNRESOLVED"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_P2_TO_P3_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_P3_HANDS_OFF_TO_P4",
@@ -61,11 +63,13 @@
         "MAT_O1_P3_BOUNDARY_M1_2026_10_08",
         "MAT_O1_P4_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "current global P route remains HOLD_UNRESOLVED"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_P3_TO_P4_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_P4_CONDITIONAL_HANDOFF_TO_P5",
@@ -97,11 +101,13 @@
         "MAT_O1_P5_IDENTITY_M1_2026_10_08",
         "MAT_O1_P5_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "CONDITIONAL_ONLY",
       "unknowns": [
         "whether P5 is enabled for any current concrete production route"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_P4_TO_P5_CONDITIONAL_2026_10_08",
+      "promotion_state": "NOT_PROMOTED_CONDITIONAL"
     },
     {
       "assertion_id": "O2_E0_HANDS_OFF_LOCKED_HANDLE_TO_E1",
@@ -130,11 +136,13 @@
         "MAT_O1_E0_IDENTITY_M1_2026_10_08",
         "MAT_O1_E1_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "earlier pre-v1.4 E0/E1 topology is not generalized into this current seam"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_E0_TO_E1_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_E1_HANDS_OFF_SKELETON_TO_E2",
@@ -162,11 +170,13 @@
         "MAT_O1_E1_BOUNDARY_M1_2026_10_08",
         "MAT_O1_E2_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "exact full v2.3 field-level E2 contract remains partially recovered"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_E1_TO_E2_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_E2_HANDS_OFF_TRANSLATION_TO_E3",
@@ -195,11 +205,13 @@
         "MAT_O1_E2_BOUNDARY_M1_2026_10_08",
         "MAT_O1_E3_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "historical E2 v1.x multi-variant relation is not merged into this current seam"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_E2_TO_E3_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_E3_HANDS_OFF_PRODUCTION_BUNDLE_TO_E4",
@@ -227,11 +239,13 @@
         "MAT_O1_E3_IDENTITY_M1_2026_10_08",
         "MAT_O1_E4_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "E3 historical v1.x superiority-hardener routing is not made current"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_E3_TO_E4_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     },
     {
       "assertion_id": "O2_E3_5_HANDS_OFF_COVERAGE_BUNDLE_TO_E4",
@@ -263,11 +277,13 @@
         "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08",
         "MAT_O1_E4_IDENTITY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "E3.5 coverage complete may still lead to E4 BLOCK"
-      ]
+      ],
+      "relation_verification_id": "VERIFY_O2_E3_5_TO_E4_2026_10_08",
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY"
     }
   ],
   "laws": {
