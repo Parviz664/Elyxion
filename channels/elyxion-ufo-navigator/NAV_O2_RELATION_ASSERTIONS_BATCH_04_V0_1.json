@@ -34,12 +34,14 @@
         "MAT_O1_A0_IDENTITY_M1_2026_10_08",
         "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "full exact A0 v4.1 artifact/schema",
         "target-side transport acceptance details"
-      ]
+      ],
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY",
+      "relation_verification_id": "VERIFY_O2_A0_INTERFACE_A_ULTRA_V4_1_2026_10_08"
     },
     {
       "assertion_id": "O2_A0_DECLARES_INTERFACE_WITH_E0_V4_1",
@@ -70,13 +72,15 @@
         "MAT_O1_A0_IDENTITY_M1_2026_10_08",
         "MAT_O1_A0_BOUNDARY_M1_2026_10_08"
       ],
-      "verification_state": "MATERIALIZED_NOT_RELATION_VERIFIED",
+      "verification_state": "VERIFIED_WITH_LIMITS",
       "global_route_effect": "NONE_LOCAL_ONLY",
       "unknowns": [
         "full exact A0 v4.1 artifact/schema",
         "E0-side matching acceptance contract",
         "temporal/profile reconciliation with A3 v2.2 and E0 v1.5"
-      ]
+      ],
+      "promotion_state": "ELIGIBLE_FOR_BASE_RELATION_LOCAL_ONLY",
+      "relation_verification_id": "VERIFY_O2_A0_INTERFACE_E0_V4_1_2026_10_08"
     }
   ],
   "relation_tension_ref": "NAV_O2_RELATION_TENSIONS_V0_1.json",
