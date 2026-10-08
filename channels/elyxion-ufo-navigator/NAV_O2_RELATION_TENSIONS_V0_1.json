@@ -24,7 +24,9 @@
       "observed_statements": [
         "Latest-known partially recovered A0 v4.1 declares adult route P -> A_ULTRA -> A0 -> E0 and relegates A1/A2/A3 to legacy compatibility/recovery.",
         "A3 v2.2 current-strongest recovery describes A2 verdict intake -> sealed handoff bundle -> E0 handoff.",
-        "E0 v1.5 current-strongest recovery describes dual ingest binding kernel truth with dream seal from A3."
+        "E0 v1.5 current-strongest recovery describes dual ingest binding kernel truth with dream seal from A3.",
+        "A-Ultra v4.3 independently routes its default handoff to A0, matching A0 v4.1's recovered A-Ultra upstream boundary.",
+        "E0 v1.5 recovery records A3 v2.2 bundle compatibility as OPEN/BLOCKED for the observed unaccepted artifact type."
       ],
       "not_yet_known": [
         "Whether A0 v4.1 and A3 v2.2/E0 v1.5 are the same operating era/profile.",
@@ -42,6 +44,20 @@
         "full or stronger A0 v4.1 source artifact",
         "matching E0-side acceptance/interface evidence",
         "temporal/profile markers connecting or separating A0 v4.1, A3 v2.2 and E0 v1.5"
+      ],
+      "resolved_subfacts": {
+        "A_ULTRA_TO_A0_HANDOFF": "VERIFIED_DUAL_SIDED",
+        "evidence_ids": [
+          "EVID_O2_A_ULTRA_V43_HANDOFF_TO_A0",
+          "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+          "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+        ],
+        "relation_id": "REL_O2_A_ULTRA_HANDS_OFF_TO_A0"
+      },
+      "focus_now": [
+        "E0-side acceptance of the A0 v4.1 carrier remains unproven.",
+        "A3->E0 exists as a handoff but current A3 v2.2 artifact acceptance is version-constrained/BLOCKed in recovered E0 v1.5 evaluation.",
+        "Temporal/profile relationship among A0 v4.1, A3 v2.2 and E0 v1.5 remains unresolved."
       ]
     }
   ],
