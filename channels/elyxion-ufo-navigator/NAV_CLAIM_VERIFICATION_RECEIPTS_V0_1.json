@@ -706,6 +706,26 @@
         "No runtime/canon authority is inferred."
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "verification_id": "VERIFY_O1_MAIN_REPOSITORY_SURFACE_ROLE_BOUNDARY_2026_10_08",
+      "claim_id": "CLAIM_O1_MAIN_REPOSITORY_SURFACE_ROLE_BOUNDARY",
+      "claim_epistemic_state": "DIRECTLY_DOCUMENTED",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_MAIN_README_M1_2026_10_08"
+      ],
+      "observations": [
+        "The exact main README exposes Future Research Questions, Elyxion Channels, and Governance entrypoint groups.",
+        "The Future Research item is explicitly labeled future research / not canon.",
+        "The README does not itself declare main to be canon, implementation, or routing authority."
+      ],
+      "limits": [
+        "The verdict is bounded to the exact observed README and branch identity.",
+        "Contained documents retain their own authority/status semantics.",
+        "Absence of an authority declaration in README is not proof that such authority can never exist elsewhere."
+      ],
+      "authority_effect": "NONE"
     }
   ]
 }
