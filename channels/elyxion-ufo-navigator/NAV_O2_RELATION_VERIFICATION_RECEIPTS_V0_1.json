@@ -1,0 +1,179 @@
+{
+  "registry_id": "ELYXION_NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1",
+  "status": "CANDIDATE_NAVIGATION_EVIDENCE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "schema_ref": "NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json",
+  "verifications": [
+    {
+      "verification_id": "VERIFY_O2_P2_TO_P3_2026_10_08",
+      "assertion_id": "O2_P2_HANDS_OFF_TO_P3",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P3_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P2 boundary explicitly states that P2 hands structural semantics to P3.",
+        "P3 boundary independently states P2 owns ladder construction and P3 receives/render semantics."
+      ],
+      "limits": [
+        "This verifies a local P2->P3 seam only.",
+        "Current global P route remains HOLD_UNRESOLVED.",
+        "No canon or runtime authority is transferred."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_P3_TO_P4_2026_10_08",
+      "assertion_id": "O2_P3_HANDS_OFF_TO_P4",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_P3_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P3 boundary explicitly identifies rendered candidates flowing toward P4 selection/cut.",
+        "P4 boundary independently states P3 owns rendered candidate text and P4 must preserve its meaning."
+      ],
+      "limits": [
+        "This verifies a local P3->P4 seam only.",
+        "Author-selection control remains outside automatic P4 authority.",
+        "Current global P route remains HOLD_UNRESOLVED."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_P4_TO_P5_CONDITIONAL_2026_10_08",
+      "assertion_id": "O2_P4_CONDITIONAL_HANDOFF_TO_P5",
+      "verdict": "SUPPORTED_CONDITIONAL",
+      "materialization_receipt_ids": [
+        "MAT_O1_P4_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_P5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_P5_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "P4 boundary states P5 is not default and ready_for_p5 is legacy compatibility unless explicitly enabled upstream.",
+        "P5 identity states disabled_by_default=true and requires enable_p5=true.",
+        "P5 boundary states it operates only after P4 selection."
+      ],
+      "limits": [
+        "The handoff is conditional, not a default route.",
+        "P5 is not proved to belong to the durable P0..P4 core spine.",
+        "P5 has no causality or implementation authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "NOT_BASE_TRAVERSABLE_CONDITIONAL"
+    },
+    {
+      "verification_id": "VERIFY_O2_E0_TO_E1_2026_10_08",
+      "assertion_id": "O2_E0_HANDS_OFF_LOCKED_HANDLE_TO_E1",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E0_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E1_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E0 current identity emits a locked handle and separates planning from runtime promotion.",
+        "E1 boundary independently states that from v1.4 onward E1 receives the locked handle from E0 rather than rebinding upstream sources."
+      ],
+      "limits": [
+        "The verified seam is scoped to the v1.4+ / current strongest recovered lineage.",
+        "Earlier E0/E1 topology is not generalized into this seam.",
+        "E1 does not inherit E0 bind authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_E1_TO_E2_2026_10_08",
+      "assertion_id": "O2_E1_HANDS_OFF_SKELETON_TO_E2",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E1_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E2_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E1 boundary explicitly identifies E2 as downstream owner of engine-contract translation and bounded path expansion.",
+        "E2 identity independently states it receives a lawful constrained skeleton from E1 under E0 context."
+      ],
+      "limits": [
+        "E1 skeleton authority does not become engine-contract authority.",
+        "E2 receives translation authority, not build/readiness/runtime authority.",
+        "Exact E2 v2.3 field-level contract remains partially recovered."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_E2_TO_E3_2026_10_08",
+      "assertion_id": "O2_E2_HANDS_OFF_TRANSLATION_TO_E3",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E2_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E3_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E2 boundary explicitly sends exact build-sequence ownership to E3.",
+        "E3 current identity independently states it receives E2 engine-contract and microstep-affordance maps as part of its convergence/packaging inputs."
+      ],
+      "limits": [
+        "This is the current v2.x-style seam, not historical E2 v1.x portfolio behavior.",
+        "E2 does not gain build-sequence authority.",
+        "E3 does not gain E0 lock or runtime execution authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_E3_TO_E4_2026_10_08",
+      "assertion_id": "O2_E3_HANDS_OFF_PRODUCTION_BUNDLE_TO_E4",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E4_BOUNDARY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E3 current identity packages a primary production bundle for E4/E5/E6.",
+        "E4 boundary independently states E4 compiles the selected E3 primary route and must not redo E3 selection."
+      ],
+      "limits": [
+        "The relation is scoped to current strongest E3 v2.0 / E4 v2.1 semantics.",
+        "Historical E3 v1.x superiority-hardener behavior is not made current.",
+        "E4 still has no build/test/runtime/release authority."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    },
+    {
+      "verification_id": "VERIFY_O2_E3_5_TO_E4_2026_10_08",
+      "assertion_id": "O2_E3_5_HANDS_OFF_COVERAGE_BUNDLE_TO_E4",
+      "verdict": "SUPPORTED_WITH_LIMITS",
+      "materialization_receipt_ids": [
+        "MAT_O1_E3_5_IDENTITY_M1_2026_10_08",
+        "MAT_O1_E3_5_BOUNDARY_M1_2026_10_08",
+        "MAT_O1_E4_IDENTITY_M1_2026_10_08"
+      ],
+      "observations": [
+        "E3.5 identity explicitly defines a bounded integration checkpoint between upstream fan-in and E4.",
+        "E3.5 boundary explicitly states coverage complete does not mean E4 complete.",
+        "E4 identity independently includes no-drop proof among its v2.1 input/readiness concerns."
+      ],
+      "limits": [
+        "E3.5 proves input coverage, not E4 pass/readiness.",
+        "E3.5 has no CANON/release/runtime readiness authority.",
+        "E4 remains responsible for downstream integration/conflict/readiness reasoning."
+      ],
+      "authority_effect": "NONE",
+      "promotion_eligibility": "BASE_RELATION_LOCAL_ONLY"
+    }
+  ],
+  "laws": {
+    "receipts_verify_only_the_named_relation_assertion": true,
+    "local_relation_does_not_compose_into_global_route_automatically": true,
+    "conditional_P4_P5_must_remain_non_traversable_by_default": true,
+    "Global_C0_is_unaffected": true
+  }
+}
