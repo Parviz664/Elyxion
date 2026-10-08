@@ -69,7 +69,7 @@ Fresh-read current durable truth, not chat memory.
 
 - `NAV_GLOBAL_ORIENTATION_PROFILE_V0_2.json`
 - `NAV_ORIENTATION_DEPTH_POLICY_V0_1.json`
-- `NAV_SECTOR_CATALOG_V0_9.json`
+- `NAV_SECTOR_CATALOG_V0_10.json`
 - `NAV_CONTEXT_PRESSURE_POLICY_V0_2.json`
 - `NAV_GLOBAL_ORIENTATION_BENCHMARK_V0_2.json`
 - `NAV_O0_COLD_START_PRESSURE_BENCHMARK_V0_1.json`
@@ -78,11 +78,13 @@ Fresh-read current durable truth, not chat memory.
 - `NAV_O2_RELATION_ASSERTION_SCHEMA_V0_1.json`
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json`
 - `NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json`
+- `NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPT_SCHEMA_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json`
 - `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json`
-- `NAV_O2_RELATION_PROGRESS_V0_2.json`
-- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_2.json`
+- `NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json`
+- `NAV_O2_RELATION_PROGRESS_V0_3.json`
+- `NAV_O2_RELATION_DEPENDENCY_INDEX_V0_3.json`
 
 ### O1 capsule batches
 
@@ -99,6 +101,7 @@ Fresh-read current durable truth, not chat memory.
 - `NAV_002B_O1_COMPLETE_CHECKPOINT_V0_8.md`
 - `NAV_002B_O2_BATCH_01_CHECKPOINT_V0_9.md`
 - `NAV_002B_O2_BATCH_02_CHECKPOINT_V0_10.md`
+- `NAV_002B_O2_BATCH_03_CHECKPOINT_V0_11.md`
 
 Then:
 
@@ -124,12 +127,12 @@ Fresh exhaustive recovery observed:
 - observed unmapped branches = **0**
 - objects = **33**
 - discovery targets = **6**
-- confirmed relations = **52**
+- confirmed relations = **55**
 - unresolved relations = **5**
 - open collisions = **1**
 - evidence identities = **72**
 - freshness sources = **31**
-- freshness dependencies = **91**
+- freshness dependencies = **94**
 - indexed claims = **40**
 - materialization receipts = **61**
 - semantic verification receipts = **36**
@@ -268,7 +271,7 @@ Global semantic completeness:
 
 O2 relation/authority readiness:
 
-`PARTIAL_NOT_O2_COMPLETE`
+`PARTIAL_VERIFIED_LOCAL_RELATIONS`
 
 ## Materialization / verification law
 
@@ -334,11 +337,11 @@ Technical E-Prime recovery does not automatically resolve the historical archive
 
 Verified assertions:
 
-**19**
+**23**
 
 Promoted current-local base relations:
 
-**18**
+**21**
 
 Verified conditional relation not promoted:
 
@@ -376,7 +379,7 @@ Therefore no O2 completion percentage is permitted.
 
 O0 compact counters now include:
 
-- verified O2 local relations = **18**
+- verified O2 local relations = **21**
 - verified O2 conditional assertions = **1**
 
 ## O2 Batch 02 current state
@@ -417,6 +420,54 @@ Known total relation universe remains `UNKNOWN`.
 
 No O2 percentage is permitted.
 
+## O2 Batch 03 current state
+
+New current promoted relations:
+
+- A1 -> A2 HANDS_OFF_TO
+- A2 -> E3.5 HANDS_OFF_TO
+- A-Ultra DECLARES_INTERFACE_WITH A1
+
+Verified historical relation not promoted:
+
+- A0 -> A1 HANDS_OFF_TO under A0 v3.0 only
+
+Current O2 totals:
+
+- verified assertions = **23**
+- promoted current-local relations = **21**
+- conditional verified/not promoted = **1**
+- historical verified/not promoted = **1**
+- base confirmed relations = **55**
+- unresolved base relations = **5**
+- freshness dependencies = **94**
+
+Critical laws:
+
+- narrow A-Ultra/A1 interface != mandatory whole-output handoff
+- historical A0 v3.0 route != current A0 v4.1 route
+- current/historical A routes must not be flattened
+- O2 denominator remains UNKNOWN
+
+### Open A-route era tension
+
+Latest-known A0 v4.1 recovery declares:
+
+`P -> A_ULTRA -> A0 -> E0`
+
+while current-strongest A3/E0 recovery also preserves:
+
+- A3 sealed handoff -> E0
+- E0 dual ingest including A3 dream seal
+
+The full exact A0 v4.1 artifact is not recovered.
+
+Therefore current status is:
+
+`OPEN_TEMPORAL_SCOPE_RECONCILIATION`
+
+Do not replace this with a guessed global route.
+
 ## Current frontier
 
 `O2_RELATION_AUTHORITY_RECOVERY`
@@ -443,13 +494,13 @@ Select by evidence strength, not numbering.
 
 Inspect next:
 
-- A2 -> A3 pre-E0 packaging seam;
-- A3 -> E0 dream-seal/bind ingress seam;
-- current D-line dependency/guard relations;
-- additional E-mainline relations only where both sides support them;
-- A-Ultra / A1 only if exact artifacts directly support it.
+- A0 v4.1 source-side interfaces with A-Ultra and E0;
+- reconcile their temporal scope against A3 v2.2 / E0 v1.5;
+- promote only relation kinds supported by the evidence ceiling;
+- keep target acceptance UNKNOWN when only A0 declares the interface;
+- preserve the early A0 Meaning Amplifier lineage as UNKNOWN.
 
-Do not infer A or D pipelines from numeric adjacency.
+Do not infer a single timeless A pipeline.
 
 ## Validation posture
 
