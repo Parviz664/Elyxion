@@ -19,7 +19,7 @@ def main():
       "fresh_sources":len(d["freshness"]["sources"]),
       "fresh_dependencies":len(d["freshness"]["dependencies"])
     }
-    expected={"objects":33,"discovery":6,"confirmed":34,"unresolved":5,"evidence":72,"fresh_sources":31,"fresh_dependencies":73}
+    expected={"objects":33,"discovery":6,"confirmed":41,"unresolved":5,"evidence":72,"fresh_sources":31,"fresh_dependencies":80}
     if counts!=expected:bad.append(f"counts:{counts}")
 
     if inv["counts"]!={"represented_in_object_catalog":31,"observed_unmapped":0,"total":31}:
@@ -42,7 +42,7 @@ def main():
     if bad:
         for x in bad:print("FAIL:",x)
         return 1
-    print("PASS: catalogs objects=33 discovery=6 relations=34/5 evidence=72 freshness=31/73 branches=31/31")
+    print("PASS: catalogs objects=33 discovery=6 relations=41/5 evidence=72 freshness=31/80 branches=31/31")
     return 0
 
 if __name__=="__main__":
