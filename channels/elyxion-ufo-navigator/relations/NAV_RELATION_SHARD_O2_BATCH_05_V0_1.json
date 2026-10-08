@@ -1,0 +1,47 @@
+{
+  "registry_id": "ELYXION_NAV_RELATION_SHARD_O2_BATCH_05_V0_1",
+  "status": "CANDIDATE",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "confirmed_relations": [
+    {
+      "id": "REL_O2_A_ULTRA_HANDS_OFF_TO_A0",
+      "project_scope": "ELYXION",
+      "source_id": "ELYX_REC_A_ULTRA",
+      "target_id": "ELYX_REC_A0_ORCHESTRATOR",
+      "kind": "HANDS_OFF_TO",
+      "state": "CONFIRMED",
+      "origin": "NAVIGATOR_ASSESSMENT",
+      "evidence": [
+        "channel/a-ultra-vision-translator-recovery-v0.1:channels/a-ultra-vision-translator/raw-evidence/EV_AU_002_V4_3_LAW_USER_SUPPLIED.json",
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_IDENTITY.md",
+        "channel/a0-orchestrator-recovery-v0.1:channels/a0-orchestrator/CHANNEL_BOUNDARIES.md"
+      ],
+      "evidence_ids": [
+        "EVID_O2_A_ULTRA_V43_HANDOFF_TO_A0",
+        "EVID_REC_A0_ORCHESTRATOR_IDENTITY",
+        "EVID_O1_A0_ORCHESTRATOR_BOUNDARY"
+      ],
+      "traversal": "ALLOWED_AS_FACT",
+      "scope_class": "CURRENT_LOCAL_SEAM",
+      "temporal_scope": "A_ULTRA_v4_3_TO_A0_v4_1_LATEST_KNOWN",
+      "global_route_effect": "NONE_LOCAL_ONLY",
+      "composition_policy": "NO_IMPLICIT_GLOBAL_ROUTE",
+      "target_acceptance": "DUAL_SIDED_SUPPORTED",
+      "o2_verification_id": "VERIFY_O2_A_ULTRA_TO_A0_2026_10_08",
+      "unknowns": [
+        "full exact A0 v4.1 schema",
+        "exact immediate producer before A-Ultra in aggregate P route",
+        "A0->E0 target acceptance remains unresolved"
+      ],
+      "last_verified": {
+        "basis": "O2 Batch 05 dual-sided exact-artifact verification 2026-10-08"
+      }
+    }
+  ],
+  "laws": {
+    "A_ULTRA_A0_handoff_is_local_only": true,
+    "no_A0_E0_handoff_is_implied": true,
+    "global_route_composition_requires_separate_evidence": true
+  }
+}
