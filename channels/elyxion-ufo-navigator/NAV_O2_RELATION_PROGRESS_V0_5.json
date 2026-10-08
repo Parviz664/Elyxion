@@ -1,0 +1,80 @@
+{
+  "snapshot_id": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_5",
+  "status": "DERIVED_MEASUREMENT",
+  "authority": "NAVIGATION_ONLY",
+  "project_scope": "ELYXION",
+  "supersedes_candidate": "ELYXION_NAV_O2_RELATION_PROGRESS_V0_4",
+  "assertion_batches": [
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_01_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_03_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_04_V0_1.json",
+    "NAV_O2_RELATION_ASSERTIONS_BATCH_05_V0_1.json"
+  ],
+  "verification_batches": [
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_02_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_03_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_04_V0_1.json",
+    "NAV_O2_RELATION_VERIFICATION_RECEIPTS_BATCH_05_V0_1.json"
+  ],
+  "promoted_relation_shards": [
+    "relations/NAV_RELATION_SHARD_O2_BATCH_01_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_02_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_03_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_04_V0_1.json",
+    "relations/NAV_RELATION_SHARD_O2_BATCH_05_V0_1.json"
+  ],
+  "tension_registry_ref": "NAV_O2_RELATION_TENSIONS_V0_1.json",
+  "counts": {
+    "assertions": 26,
+    "verified_assertions": 26,
+    "promoted_current_local_relations": 24,
+    "verified_conditional_relations_not_promoted": 1,
+    "verified_historical_relations_not_promoted": 1,
+    "dual_sided_current_handoffs_newly_confirmed": 1,
+    "source_declared_interfaces": 2,
+    "open_relation_tensions": 1,
+    "base_relation_catalog_confirmed_total_after_batches": 58,
+    "base_unresolved_relations": 5
+  },
+  "batch_05": {
+    "promoted_dual_sided_handoffs": 1,
+    "relation": "A-Ultra -> A0",
+    "A0_to_E0_target_acceptance": "UNKNOWN_NOT_PROVEN"
+  },
+  "repaired_relations": [
+    {
+      "relation": "A3 -> E0",
+      "state": "CURRENT_LOCAL_HANDOFF_WITH_VERSIONED_TARGET_ACCEPTANCE_CONSTRAINT",
+      "detail": "A3 v2.2 bundle type observed BLOCKed/unaccepted in recovered E0 v1.5 evaluation"
+    }
+  ],
+  "denominator": {
+    "known_total_relation_universe": "UNKNOWN",
+    "percentage_completion": "NOT_COMPUTABLE_WITHOUT_INVENTING_EXPECTED_EDGES"
+  },
+  "readiness": "PARTIAL_VERIFIED_LOCAL_RELATIONS",
+  "interpretation": [
+    "A-Ultra->A0 is now dual-sided verified as a current local handoff.",
+    "A0->E0 remains source-declared only; E0 target acceptance is not proven.",
+    "A3->E0 remains a handoff relation but target acceptance is version-constrained for the recovered A3 v2.2 artifact.",
+    "The open A-route tension is narrower but not resolved.",
+    "Current, conditional and historical relations remain separate."
+  ],
+  "unresolved_classes": [
+    "E0-side acceptance of the A0 v4.1 carrier/interface",
+    "temporal/profile reconciliation of A0 v4.1 with A3 v2.2 and E0 v1.5",
+    "future/updated E0 acceptance of A3 v2.2 bundle type",
+    "global P route remains HOLD_UNRESOLVED",
+    "early A0 Meaning Amplifier -> A0_ORCHESTRATOR lineage remains UNKNOWN",
+    "Navigator / Eco-Systems handoff to existing Global C0",
+    "Global C0 durable location"
+  ],
+  "laws": {
+    "dual_sided_handoff_does_not_close_downstream_acceptance_unknowns": true,
+    "source_declared_interface_is_not_target_acceptance": true,
+    "versioned_acceptance_constraint_must_not_be_hidden": true,
+    "count_of_verified_edges_is_not_completion_percentage": true
+  }
+}
