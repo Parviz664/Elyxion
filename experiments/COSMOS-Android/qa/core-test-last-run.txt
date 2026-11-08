@@ -1,0 +1,12 @@
+PASS neutral center
+PASS clamped full right
+PASS normalized diagonal
+PASS 8.5 percent dead zone
+PASS bus clamps and transfers axis
+PASS A and B event counters
+PASS bus reset
+PASS p50 interpolation
+PASS p95 interpolation
+PASS consecutive variation
+PASS no fake samples
+CORE TESTS COMPLETE
