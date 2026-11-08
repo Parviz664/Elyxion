@@ -33,8 +33,9 @@ jobs:
       - name: Ensure Android SDK 35 on hosted runner
         run: |
           echo "ANDROID_HOME=$ANDROID_HOME"
-          command -v sdkmanager
-          sdkmanager --install 'platforms;android-35' 'build-tools;35.0.0'
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -n "$SDKMANAGER"
+          "$SDKMANAGER" --install 'platforms;android-35' 'build-tools;35.0.0'
           test -f "$ANDROID_HOME/platforms/android-35/android.jar"
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
