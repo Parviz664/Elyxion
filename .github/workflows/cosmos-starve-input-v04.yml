@@ -72,3 +72,19 @@ jobs:
               --notes "Experimental Android APK for manually testing Starve.io WebView input. This does not guarantee control compatibility with Starve.io or improve its network latency. Compiled from an isolated experiment branch; not an official Starve.io app. Debug-signed, not tested on the user's Samsung." \
               --prerelease
           fi
+
+      - name: Publish raw APK for Android Chrome
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          cp app/build/outputs/apk/debug/app-debug.apk downloads/elyxion-cosmos-starve-v041.apk
+          sha256sum downloads/elyxion-cosmos-starve-v041.apk > downloads/elyxion-cosmos-starve-v041.apk.sha256
+          git config user.name "elyxion-build-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/elyxion-cosmos-starve-v041.apk downloads/elyxion-cosmos-starve-v041.apk.sha256
+          if git diff --cached --quiet; then
+            echo "APK file already current"
+          else
+            git commit -m "build(cosmos): publish directly downloadable APK from verified CI"
+            git push origin "HEAD:refs/heads/experiment/elyxion-cosmos-starve-webview-v04"
+          fi
