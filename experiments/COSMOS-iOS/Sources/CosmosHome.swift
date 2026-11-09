@@ -25,7 +25,6 @@ struct CosmosHome: View {
                 } else { networkPanel }
             }
             .foregroundStyle(.white)
-            .fontDesign(.rounded)
         }
         .statusBarHidden()
         .onDisappear { game.releaseAll() }
