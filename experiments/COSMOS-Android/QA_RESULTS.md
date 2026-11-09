@@ -1,25 +1,10 @@
-# ELYXION COSMOS Android v0.3 · QA
+# ELYXION COSMOS Android v0.5 — verification
 
-Дата: 2026-11-08
-
-## PASS — реально выполнено в этой среде
-
-- `javac` компиляция чистых Java `AxisMath`, `InputBus`, `ProbeMath` + `NativeCoreTest`.
-- 11 тестов: центр, полное отклонение, диагональ, мёртвая зона, диапазон передачи, A/B, сброс, P50, P95, последовательная вариация и NaN при отсутствии замеров.
-- Python XML проверка манифеста и проверка структуры Gradle.
-- Отсутствие паролей, API ключей и попыток отправить команды в стороннюю игру.
-- SHA-256 исходников зафиксированы отдельным манифестом.
-
-## UNVERIFIED — нельзя засчитывать
-
-- Gradle sync / создание APK (Android SDK и Gradle отсутствуют в среде).
-- Android overlay permission и foreground service на Samsung.
-- Одновременные касания джойстика и кнопки на физическом телефоне.
-- Работа первого Android игрового демо на реальном устройстве.
-- Живые HTTP измерения с Samsung по Wi-Fi и мобильному интернету.
-- Разрешённое управление оригинальной Starve.io.
-- Oracle probe, сопоставимая маршрутизация и ускорение соединения.
-
-## Общий проект
-
-Сохраняем прежнюю **60/100%** шкалу: 20 п.п. Oracle HTTPS, 10 п.п. физический Android, 10 п.п. Starve.io остаются незачтёнными. Android v0.3 — новый проверяемый исходный прототип, а не 10 баллов за физический телефон.
+- Local pure Java logic tests: 11 core checks and 14 directional tests PASS.
+- Source changes: one-tap official-site launch without startup permission requests, native A mouse/touch toggle, WebView renderer crash cleanup.
+- Android Gradle build: pending this version's GitHub Actions result.
+- Physical Samsung Galaxy A37 installation: NOT TESTED.
+- Original Starve.io character movement: NOT CONFIRMED.
+- Oracle game route optimization: NOT IMPLEMENTED.
+- Security: isolated app ID, user-only manual input, no JS injection, root, bots, or cross-app AccessibilityService injection.
+- Official game permission to use third-party input tooling remains unconfirmed; no claim of authorization.
