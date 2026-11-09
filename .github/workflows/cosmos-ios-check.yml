@@ -1,0 +1,27 @@
+name: COSMOS iPhone · iOS simulator compile
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/elyxion-cosmos-ios-v01
+    paths:
+      - 'experiments/COSMOS-iOS/**'
+      - '.github/workflows/cosmos-ios-check.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: macos-15
+    defaults:
+      run:
+        working-directory: experiments/COSMOS-iOS
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pure Swift logic tests
+        run: swiftc Sources/InputMath.swift Tests/InputMathCheck.swift -o /tmp/cosmos-input-tests && /tmp/cosmos-input-tests
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+      - name: Compile for iOS Simulator (unsigned)
+        run: xcodebuild -project ElyxionCOSMOS.xcodeproj -scheme ElyxionCOSMOS -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
