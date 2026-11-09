@@ -76,15 +76,17 @@ jobs:
       - name: Publish raw APK for Android Chrome
         run: |
           set -euo pipefail
-          mkdir -p downloads
-          cp app/build/outputs/apk/debug/app-debug.apk downloads/elyxion-cosmos-starve-v041.apk
-          sha256sum downloads/elyxion-cosmos-starve-v041.apk > downloads/elyxion-cosmos-starve-v041.apk.sha256
+          mkdir -p ../../downloads
+          cp app/build/outputs/apk/debug/app-debug.apk ../../downloads/elyxion-starve.apk
+          cd ../..
+          sha256sum downloads/elyxion-starve.apk > downloads/elyxion-starve.apk.sha256
           git config user.name "elyxion-build-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add downloads/elyxion-cosmos-starve-v041.apk downloads/elyxion-cosmos-starve-v041.apk.sha256
+          git add -f downloads/elyxion-starve.apk
+          git add -f downloads/elyxion-starve.apk.sha256
           if git diff --cached --quiet; then
-            echo "APK file already current"
+            echo "APK already published"
           else
-            git commit -m "build(cosmos): publish directly downloadable APK from verified CI"
+            git commit -m "build(cosmos): publish browser-downloadable APK"
             git push origin "HEAD:refs/heads/experiment/elyxion-cosmos-starve-webview-v04"
           fi
