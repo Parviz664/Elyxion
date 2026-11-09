@@ -1,18 +1,24 @@
-# Elyxion COSMOS Starve Input Probe v0.4.1
+# ELYXION COSMOS Android v0.5 — Starve Input Probe
 
-Experimental **real Starve.io page** in a **native Android WebView**, with a minimal native joystick and two buttons. No game copies, no fake Starve scene, no game code injection.
+Experimental Android build for Samsung Galaxy A37 and similar devices. Opens the genuine https://starve.io/ website in an Android WebView with native manual controls. It does not contain Starve.io assets.
 
-- `STARVE.IO · открыть с нашим Lite-геймпадом`: launches the official HTTPS site, no Play Store required.
-- Left native joystick maps manual touch continuously to balanced WASD keydown/keyup **inside the app's own WebView**. 8-way direction/hysteresis; no automation, no global keyboard events.
-- Native A action sends tap-down/up to the crosshair's position within that WebView. The draggable crosshair selects the target point. B sends E key; Starve binding must be verified in its settings.
-- Fullscreen landscape, small translucent joystick/buttons; size/opacity settings reused from 0.3.
-- `CHROME` opens the unmodified official Starve.io site in the system browser as fallback.
-- No accessibility permissions, no VPN, no rooting, no cross-app input injection; existing v0.3 overlay remains for the local test only.
-- CI: compile with Android SDK 35, AGP 8.7.3, Java 17; run pure Java core test and direction mapping test, then upload debug APK.
+## One-tap start
 
-**PROOF BOUNDARY:** This release tests a promising Android mechanism but HAS NOT proved the live game responds to WebView-generated key events or clicks. The Starve.io website might block WebView, ignore these events, or require more mouse semantics. Do not assert compatibility or any latency improvement until tested on physical Samsung. Avoid using an account if its third-party-software policy may apply: https://starve.io/terms.html.
+1. Open ELYXION COSMOS and press **▶ ИГРАТЬ В STARVE.IO**.
+2. The genuine website loads in landscape. WASD movement is available through the left joystick. No overlay or notification permission is needed for in-app play.
+3. **A: МЫШЬ** switches button A between native primary-button mouse events (default) and touchscreen taps. **B** sends E. Adjust bindings in the site's own settings.
+4. **CHROME** opens the unmodified official site outside Elyxion; the controller cannot operate that separate tab.
 
-**Important:** Starve.io terms prohibit automated systems and unauthorized scripts/software. This is human-initiated input only, but the operator must review policy before live use. Do not claim the developers authorize it. Oracle is not connected and network probes do not measure Starve.io game ping.
+## v0.5 changes
 
-## Installation identity
-This is an isolated debug probe with applicationId `com.elyxion.cosmos.starveprobe`. It installs alongside the v0.3 COSMOS debug APK, avoiding update-signature collisions caused by separate GitHub runners. The main Elyxion app is unchanged.
+- One-tap launch as the first action, with no startup permission prompts.
+- Native mouse/touch A modes; WebView receives physical-style KeyEvents for WASD.
+- Key and button release on navigation and app pause; cleanup when WebView renderer fails.
+- Optional OS-wide overlay retained only for our separate local test scene.
+- 12 HTTPS requests to the Frankfurt diagnostic service remain separate. This is NOT Starve.io ping, game traffic routing, or Oracle acceleration.
+
+## Verification boundary
+
+Compiling and running unit tests does not establish whether the live third-party game accepts these native WebView events. No automated play, JS injection, rooting, AccessibilityService injection, or game modification. Check https://starve.io/terms.html for third-party software limitations. Compatibility and developer authorization are NOT confirmed.
+
+Build requires Android SDK 35, Java 17, Gradle 8.9. GitHub Actions produces a debug APK with applicationId com.elyxion.cosmos.starveprobe. Samsung Auto Blocker may block installing debug APKs; do not weaken phone security without understanding the risk. Independent security review and app-store signing are not complete.
