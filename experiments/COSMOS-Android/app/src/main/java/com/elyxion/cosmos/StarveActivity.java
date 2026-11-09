@@ -30,6 +30,8 @@ public final class StarveActivity extends Activity {
     private long[] keyDownTimes = new long[4];
     private long tapDownTime;
     private boolean tapping, actionEHeld;
+    private boolean mouseAction = true;
+    private TextView inputMode;
     private long eDownTime;
     private float aimX = .54f, aimY = .50f;
     private final int[] codes = {KeyEvent.KEYCODE_W, KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_S, KeyEvent.KEYCODE_D};
@@ -71,7 +73,7 @@ public final class StarveActivity extends Activity {
                 releaseKeys(); status.setText("STARVE.IO · ЗАГРУЗКА");
             }
             @Override public void onPageFinished(WebView v,String url) {
-                status.setText("STARVE.IO · WEBVIEW · ВВОД НЕ ПРОВЕРЕН");
+                status.setText("STARVE.IO · САЙТ ЗАГРУЖЕН · ВВОД НЕ ПРОВЕРЕН");
                 v.requestFocus();
             }
             @Override public void onReceivedError(WebView v,WebResourceRequest request,WebResourceError error) {
@@ -79,12 +81,17 @@ public final class StarveActivity extends Activity {
             }
             @Override public boolean onRenderProcessGone(WebView view,RenderProcessGoneDetail detail) {
                 releaseKeys();
-                status.setText("WEBVIEW ОСТАНОВЛЕН · ВЫЙТИ И ЗАПУСТИТЬ СНОВА");
+                status.setText("WEBVIEW ОСТАНОВЛЕН · ОТКРОЙ CHROME ИЛИ ЗАПУСТИ ЗАНОВО");
+                if (web != null) {
+                    root.removeView(web);
+                    web.destroy();
+                    web = null;
+                }
                 return true;
             }
         });
         root.addView(web,new FrameLayout.LayoutParams(-1,-1));
-        int sizePct = getSharedPreferences("cosmos",MODE_PRIVATE).getInt("size",85);
+        int sizePct = getSharedPreferences("cosmos",MODE_PRIVATE).getInt("size",80);
         float opacity = getSharedPreferences("cosmos",MODE_PRIVATE).getInt("opacity",65)/100f;
         boolean left = getSharedPreferences("cosmos",MODE_PRIVATE).getBoolean("left",true);
         int size = dp(Math.round(150*sizePct/100f));
@@ -122,6 +129,14 @@ public final class StarveActivity extends Activity {
         tools.setPadding(dp(6),0,dp(6),0);tools.setBackgroundColor(0xcc07181e);
         status = new TextView(this);status.setText("STARVE.IO · НАЧАЛО");status.setTextColor(accent);status.setTextSize(10);
         tools.addView(status,new LinearLayout.LayoutParams(0,dp(32),1));
+        inputMode = smallTool("A: МЫШЬ");
+        inputMode.setOnClickListener(v -> {
+            sendAimTap(false);
+            mouseAction = !mouseAction;
+            inputMode.setText(mouseAction ? "A: МЫШЬ" : "A: КАСАНИЕ");
+            status.setText("РЕЖИМ A ИЗМЕНЁН · ПРИЁМ ИГРОЙ НЕ ПОДТВЕРЖДЁН");
+        });
+        tools.addView(inputMode);
         TextView browser = smallTool("CHROME"); browser.setOnClickListener(v->openChrome());tools.addView(browser);
         TextView reload=smallTool("↻");reload.setOnClickListener(v->{releaseKeys();web.reload();});tools.addView(reload);
         TextView close=smallTool("✕");close.setOnClickListener(v->finish());tools.addView(close);
@@ -168,6 +183,7 @@ public final class StarveActivity extends Activity {
         else start=now;
         KeyEvent event=new KeyEvent(start,now,down?KeyEvent.ACTION_DOWN:KeyEvent.ACTION_UP,code,0,0,KeyCharacterMap.VIRTUAL_KEYBOARD,0,0,InputDevice.SOURCE_KEYBOARD);
         web.requestFocus();web.dispatchKeyEvent(event);
+        if (status != null) status.setText("WASD → WEBVIEW · РЕАКЦИЯ ИГРЫ НЕИЗВЕСТНА");
     }
     private void setEKey(boolean down) {
         if(web==null || down==actionEHeld) return;
@@ -183,9 +199,28 @@ public final class StarveActivity extends Activity {
         if(down)tapDownTime=SystemClock.uptimeMillis();
         if(!down&&!tapping)return;
         long now=SystemClock.uptimeMillis();
-        MotionEvent event=MotionEvent.obtain(tapDownTime,now,down?MotionEvent.ACTION_DOWN:MotionEvent.ACTION_UP,web.getWidth()*aimX,web.getHeight()*aimY,0);
-        event.setSource(InputDevice.SOURCE_TOUCHSCREEN);
-        web.dispatchTouchEvent(event);event.recycle();tapping=down;
+        MotionEvent event;
+        if (mouseAction) {
+            MotionEvent.PointerProperties pp = new MotionEvent.PointerProperties();
+            pp.id = 0; pp.toolType = MotionEvent.TOOL_TYPE_MOUSE;
+            MotionEvent.PointerCoords pc = new MotionEvent.PointerCoords();
+            pc.x = web.getWidth()*aimX; pc.y = web.getHeight()*aimY;
+            pc.pressure = down ? 1f : 0f; pc.size = 1f;
+            event = MotionEvent.obtain(tapDownTime, now,
+                down ? MotionEvent.ACTION_DOWN : MotionEvent.ACTION_UP,
+                1, new MotionEvent.PointerProperties[]{pp},
+                new MotionEvent.PointerCoords[]{pc}, 0,
+                down ? MotionEvent.BUTTON_PRIMARY : 0, 1f, 1f,
+                0, 0, InputDevice.SOURCE_MOUSE, 0);
+        } else {
+            event = MotionEvent.obtain(tapDownTime, now,
+                down ? MotionEvent.ACTION_DOWN : MotionEvent.ACTION_UP,
+                web.getWidth()*aimX, web.getHeight()*aimY, 0);
+            event.setSource(InputDevice.SOURCE_TOUCHSCREEN);
+        }
+        web.dispatchTouchEvent(event);
+        event.recycle(); tapping=down;
+        if (status != null) status.setText("A → WEBVIEW · РЕАКЦИЯ ИГРЫ НЕИЗВЕСТНА");
     }
     private void placeAim() {
         if(aim==null||web==null)return;
