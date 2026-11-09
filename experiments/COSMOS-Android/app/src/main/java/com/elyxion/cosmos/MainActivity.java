@@ -38,7 +38,7 @@ public final class MainActivity extends Activity {
         screen.setPadding(dp(22), dp(24), dp(22), dp(36));
         scroll.addView(screen); setContentView(scroll);
         title("ELYXION · COSMOS LITE");
-        subtitle("Android overlay · эксперимент 0.3");
+        subtitle("Android · Starve Input Probe 0.4");
         text("НАШ НАТИВНЫЙ ГЕЙМПАД", 14, green);
         text("Наложение рисуется поверх других приложений. Джойстик и кнопки реагируют на касания, но пока НЕ передают команды персонажу Starve.io.", 13, white);
         status = text("", 12, 0xffbdcacc);
@@ -51,10 +51,16 @@ public final class MainActivity extends Activity {
             startOverlay();
             startActivity(new Intent(this, DemoActivity.class));
         });
+        button("STARVE.IO · открыть с нашим Lite-геймпадом (эксперимент)", () -> {
+            // Built-in WebView controller, not an OS-wide overlay or an external-game injection.
+            stopOverlay();
+            startActivity(new Intent(this, StarveActivity.class));
+        });
         button("Открыть оригинальную Starve.io", () -> {
             try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://starve.io/"))); }
             catch (Exception e) { Toast.makeText(this, "Нет браузера для открытия ссылки", Toast.LENGTH_SHORT).show(); }
         });
+        text("Режим Starve.io: сайт открывается внутри Elyxion. Джойстик передаёт нативные клавиши WASD в наш WebView; действие A отправляет касание в точку прицела. Работа на реальном сервере и соответствие правилам игры НЕ подтверждены. Это ручной эксперимент, без ботов и модификации сайта.", 12, white);
         subtitle("РАЗМЕР И ПРОЗРАЧНОСТЬ");
         text("Размер 65–125%", 12, 0xffa9ccbf);
         SeekBar sizeBar = new SeekBar(this); sizeBar.setMax(60);

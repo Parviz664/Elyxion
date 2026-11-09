@@ -14,6 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DemoActivity" android:exported="false" />
+        <activity android:name=".StarveActivity" android:exported="false" android:screenOrientation="sensorLandscape" />
         <service android:name=".OverlayService" android:exported="false" android:foregroundServiceType="specialUse" android:stopWithTask="false">
             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Visible user-controlled touch overlay for manual UI testing; never injects into another app" />
         </service>

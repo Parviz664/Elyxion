@@ -1,0 +1,50 @@
+name: COSMOS Lite v0.4 Starve Input Probe APK (isolated)
+
+on:
+  push:
+    branches: [experiment/elyxion-cosmos-starve-webview-v04]
+    paths:
+      - 'experiments/COSMOS-Android/**'
+      - '.github/workflows/cosmos-starve-input-v04.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Java QA and Android debug APK
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/COSMOS-Android
+    steps:
+      - name: Checkout isolated branch
+        uses: actions/checkout@v4
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Run independent input/core unit tests
+        run: |
+          bash qa/run-core-tests.sh
+          bash qa/run-direction-tests.sh
+      - name: Verify Android source manifest
+        run: python3 qa/verify_package.py
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Android API 35
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Set up Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Build debug APK
+        run: gradle --no-daemon :app:assembleDebug
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ELYXION-COSMOS-Starve-Input-v0.4-debug-APK
+          path: experiments/COSMOS-Android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
