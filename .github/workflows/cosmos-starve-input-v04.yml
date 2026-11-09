@@ -1,5 +1,4 @@
 name: COSMOS Lite v0.4 Starve Input Probe APK (isolated)
-
 on:
   push:
     branches: [experiment/elyxion-cosmos-starve-webview-v04]
@@ -7,10 +6,8 @@ on:
       - 'experiments/COSMOS-Android/**'
       - '.github/workflows/cosmos-starve-input-v04.yml'
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   build:
     name: Java QA and Android debug APK
@@ -32,10 +29,14 @@ jobs:
           bash qa/run-direction-tests.sh
       - name: Verify Android source manifest
         run: python3 qa/verify_package.py
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Install Android API 35
-        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Install Android API 35 using runner SDK
+        run: |
+          SDK_ROOT="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          test -d "$SDK_ROOT/cmdline-tools"
+          SDKMANAGER="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager | sort -r | head -n 1)"
+          test -x "$SDKMANAGER"
+          "$SDKMANAGER" --sdk_root="$SDK_ROOT" 'platforms;android-35' 'build-tools;35.0.0'
+          printf 'sdk.dir=%s\n' "$SDK_ROOT" > local.properties
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
