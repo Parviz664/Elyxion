@@ -1,4 +1,5 @@
-name: COSMOS Lite v0.4 Starve Input Probe APK (isolated)
+name: COSMOS Lite v0.4.1 Starve Input Probe APK (isolated)
+
 on:
   push:
     branches: [experiment/elyxion-cosmos-starve-webview-v04]
@@ -6,8 +7,10 @@ on:
       - 'experiments/COSMOS-Android/**'
       - '.github/workflows/cosmos-starve-input-v04.yml'
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   build:
     name: Java QA and Android debug APK
@@ -46,6 +49,6 @@ jobs:
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: ELYXION-COSMOS-Starve-Input-v0.4-debug-APK
+          name: ELYXION-COSMOS-Starve-Input-v0.4.1-debug-APK
           path: experiments/COSMOS-Android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error

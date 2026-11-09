@@ -4,11 +4,11 @@ android {
     namespace 'com.elyxion.cosmos'
     compileSdk 35
     defaultConfig {
-        applicationId 'com.elyxion.cosmos'
+        applicationId 'com.elyxion.cosmos.starveprobe'
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName '0.4.0-alpha'
+        versionCode 5
+        versionName '0.4.1-alpha'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
