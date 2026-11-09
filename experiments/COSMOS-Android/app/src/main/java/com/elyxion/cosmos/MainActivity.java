@@ -1,12 +1,10 @@
 package com.elyxion.cosmos;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.*;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.*;
@@ -27,47 +25,29 @@ public final class MainActivity extends Activity {
         getWindow().setStatusBarColor(0xff071116);
         getWindow().setNavigationBarColor(0xff071116);
         build();
-        if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(new String[]{ Manifest.permission.POST_NOTIFICATIONS }, 7);
-        }
     }
     private void build() {
         ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true);
         scroll.setBackgroundColor(0xff071116);
         screen = new LinearLayout(this); screen.setOrientation(LinearLayout.VERTICAL);
-        screen.setPadding(dp(22), dp(24), dp(22), dp(36));
+        screen.setPadding(dp(20), dp(18), dp(20), dp(30));
         scroll.addView(screen); setContentView(scroll);
         title("ELYXION · COSMOS LITE");
-        subtitle("Android · Starve Input Probe 0.4");
-        text("НАШ НАТИВНЫЙ ГЕЙМПАД", 14, green);
-        text("Наложение рисуется поверх других приложений. Джойстик и кнопки реагируют на касания, но пока НЕ передают команды персонажу Starve.io.", 13, white);
-        status = text("", 12, 0xffbdcacc);
-        button("Разрешить плавающее окно", this::askOverlayPermission);
-        button("Показать наш геймпад поверх приложений", this::startOverlay);
-        button("Скрыть геймпад", this::stopOverlay);
-        button("Играть в наш Android-тест", () -> {
-            if (!Settings.canDrawOverlays(this)) { askOverlayPermission(); return; }
-            InputBus.reset();
-            startOverlay();
-            startActivity(new Intent(this, DemoActivity.class));
-        });
-        button("STARVE.IO · открыть с нашим Lite-геймпадом (эксперимент)", () -> {
-            // Built-in WebView controller, not an OS-wide overlay or an external-game injection.
-            stopOverlay();
+        subtitle("ANDROID v0.5 · НАСТОЯЩИЙ САЙТ STARVE.IO");
+        text("Твой лёгкий геймпад: WASD + действие A + клавиша B. Откроется оригинальная игра внутри Elyxion.", 14, white);
+        button("▶  ИГРАТЬ В STARVE.IO", () -> {
+            // The in-app WebView does not require overlay or notification permissions.
+            stopService(new Intent(this, OverlayService.class));
             startActivity(new Intent(this, StarveActivity.class));
         });
-        button("Открыть оригинальную Starve.io", () -> {
-            try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://starve.io/"))); }
-            catch (Exception e) { Toast.makeText(this, "Нет браузера для открытия ссылки", Toast.LENGTH_SHORT).show(); }
-        });
-        text("Режим Starve.io: сайт открывается внутри Elyxion. Джойстик передаёт нативные клавиши WASD в наш WebView; действие A отправляет касание в точку прицела. Работа на реальном сервере и соответствие правилам игры НЕ подтверждены. Это ручной эксперимент, без ботов и модификации сайта.", 12, white);
-        subtitle("РАЗМЕР И ПРОЗРАЧНОСТЬ");
-        text("Размер 65–125%", 12, 0xffa9ccbf);
+        text("Не требуется разрешение на плавающие окна. Первое нажатие открывает официальный сайт; реакция игры на наш ввод ещё не подтверждена.", 11, 0xffa6b8b1);
+        subtitle("УДОБСТВО УПРАВЛЕНИЯ");
+        text("Размер джойстика: 65–125%", 12, 0xffa9ccbf);
         SeekBar sizeBar = new SeekBar(this); sizeBar.setMax(60);
-        sizeBar.setProgress(getSharedPreferences("cosmos", MODE_PRIVATE).getInt("size",85) - 65);
+        sizeBar.setProgress(getSharedPreferences("cosmos", MODE_PRIVATE).getInt("size",80)-65);
         screen.addView(sizeBar);
         sizeBar.setOnSeekBarChangeListener(listener(p -> putInt("size",65+p)));
-        text("Прозрачность 30–100%", 12, 0xffa9ccbf);
+        text("Прозрачность: 30–100%", 12, 0xffa9ccbf);
         SeekBar alphaBar = new SeekBar(this); alphaBar.setMax(70);
         alphaBar.setProgress(getSharedPreferences("cosmos", MODE_PRIVATE).getInt("opacity",65)-30);
         screen.addView(alphaBar);
@@ -76,17 +56,28 @@ public final class MainActivity extends Activity {
         hand.setChecked(getSharedPreferences("cosmos", MODE_PRIVATE).getBoolean("left",true));
         hand.setOnCheckedChangeListener((b,checked)->getSharedPreferences("cosmos",MODE_PRIVATE).edit().putBoolean("left",checked).apply());
         screen.addView(hand);
-        text("Если наложение уже включено, нажми «Показать» ещё раз, чтобы применить новые настройки.", 11, 0xffa6b8b1);
         subtitle("COSMOS NETWORK · FRANKFURT");
-        text("Ручной тест HTTPS: 12 запросов к нашему серверу во Франкфурте. Это НЕ пинг игровых серверов Starve.io и НЕ доказательство ускорения через Oracle.",12,white);
+        text("12 HTTPS-измерений P50 / P95 до нашего тестового узла. Не пинг Starve.io и не доказательство ускорения через Oracle.",12,white);
         networkLabel = new Spinner(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
                 new String[]{"Wi-Fi (выбрал вручную)", "Мобильный интернет (вручную)", "Неизвестно"});
         networkLabel.setAdapter(adapter); screen.addView(networkLabel);
-        button("Измерить HTTP P50 / P95", this::startProbe);
+        button("Измерить соединение", this::startProbe);
         networkResult = text("Нет измерений", 13, green);
-        button("Поделиться последним JSON-отчётом", this::shareLast);
-        text("Управление настоящей Starve.io: не подключено. Oracle: нет выделенного пробника и проверенного маршрута. Данные измерений остаются на устройстве до отправки отчёта пользователем.",11,0xff8ca9aa);
+        button("Поделиться JSON-отчётом", this::shareLast);
+        subtitle("ДОПОЛНИТЕЛЬНО · ТОЛЬКО ДЛЯ ТЕСТОВ");
+        text("Плавающее окно поверх чужих приложений не может само передавать им управление. Этот режим нужен только для нашей локальной тестовой сцены.", 11, 0xffa6b8b1);
+        status = text("", 11, 0xffbdcacc);
+        button("Тест нашего Android-джойстика", () -> {
+            if (!Settings.canDrawOverlays(this)) { askOverlayPermission(); return; }
+            InputBus.reset(); startOverlay();
+            startActivity(new Intent(this, DemoActivity.class));
+        });
+        button("Скрыть тестовый геймпад", this::stopOverlay);
+        button("Открыть Starve.io в Chrome (без Elyxion)", () -> {
+            try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://starve.io/"))); }
+            catch (Exception e) { Toast.makeText(this, "Нет браузера для открытия ссылки", Toast.LENGTH_SHORT).show(); }
+        });
         updateStatus();
     }
     private void startProbe() {
