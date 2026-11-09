@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -52,3 +52,23 @@ jobs:
           name: ELYXION-COSMOS-Starve-Input-v0.4.1-debug-APK
           path: experiments/COSMOS-Android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+
+      - name: Publish directly downloadable preview APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          ARTIFACT="ELYXION-COSMOS-Starve-v0.4.1-debug.apk"
+          TAG="cosmos-starve-input-v0.4.1-preview"
+          cp app/build/outputs/apk/debug/app-debug.apk "$ARTIFACT"
+          sha256sum "$ARTIFACT" > "$ARTIFACT.sha256"
+          if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$ARTIFACT" "$ARTIFACT.sha256" --repo "${GITHUB_REPOSITORY}" --clobber
+          else
+            gh release create "$TAG" "$ARTIFACT" "$ARTIFACT.sha256" \
+              --repo "${GITHUB_REPOSITORY}" \
+              --target "${GITHUB_SHA}" \
+              --title "ELYXION COSMOS Starve Input v0.4.1 (Android experiment)" \
+              --notes "Experimental Android APK for manually testing Starve.io WebView input. This does not guarantee control compatibility with Starve.io or improve its network latency. Compiled from an isolated experiment branch; not an official Starve.io app. Debug-signed, not tested on the user's Samsung." \
+              --prerelease
+          fi
