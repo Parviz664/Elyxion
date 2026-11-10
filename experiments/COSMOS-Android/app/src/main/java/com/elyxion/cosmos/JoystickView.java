@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
+import android.os.SystemClock;
 import android.view.View;
 import java.util.Locale;
 
@@ -13,6 +14,8 @@ public final class JoystickView extends View {
     public interface Listener { void onVector(float x, float y); }
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private float x = 0, y = 0;
+    private float visualX = 0, visualY = 0;
+    private long lastVisualFrameMs;
     private int trackedPointer = -1;
     private final Listener listener;
 
@@ -26,6 +29,14 @@ public final class JoystickView extends View {
         super.onDraw(canvas);
         float cx = getWidth() / 2f, cy = getHeight() / 2f;
         float radius = Math.min(getWidth(), getHeight()) * .44f;
+        // Smooth the DRAWING only: input callbacks remain immediate for responsive gameplay.
+        long now = SystemClock.uptimeMillis();
+        long elapsed = lastVisualFrameMs == 0 ? 16 : Math.min(48,Math.max(1, now-lastVisualFrameMs));
+        lastVisualFrameMs = now;
+        float blend = 1f - (float)Math.exp(-elapsed / 55.0);
+        visualX += (x - visualX) * blend;
+        visualY += (y - visualY) * blend;
+        if (Math.abs(x-visualX)>0.003f || Math.abs(y-visualY)>0.003f)postInvalidateOnAnimation();
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.rgb(11, 37, 44));
         canvas.drawCircle(cx, cy, radius, paint);
@@ -35,7 +46,7 @@ public final class JoystickView extends View {
         canvas.drawCircle(cx, cy, radius * .65f, paint);
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.rgb(80, 160, 149));
-        canvas.drawCircle(cx + x * radius * .52f, cy + y * radius * .52f, radius * .32f, paint);
+        canvas.drawCircle(cx + visualX * radius * .52f, cy + visualY * radius * .52f, radius * .32f, paint);
         paint.setColor(Color.rgb(220, 255, 241)); paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(dp(9));
         canvas.drawText("COSMOS", cx, cy + radius * .9f, paint);
