@@ -22,8 +22,8 @@ public final class AssistantHud {
     private final SurvivalAdvisor advisor = new SurvivalAdvisor();
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final TextView trigger;
-    private final TextView hint;
-    private final LinearLayout panel;
+    private TextView hint;
+    private LinearLayout panel;
     private TextView cold, hunger, predator, mute;
     private boolean playing = true;
     private final Runnable hide = () -> hint.setVisibility(View.GONE);
