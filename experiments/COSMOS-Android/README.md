@@ -1,32 +1,23 @@
-# ELYXION COSMOS Android v0.6 · Playability Research Preview
+# ELYXION COSMOS · Android v0.7 — Smooth Survival
 
-Experimental manual controller for opening the **original** https://starve.io/ in Android WebView. This is NOT an official Starve.io app, and game acceptance of synthetic native KeyEvents/MouseEvents has not been verified. Do not assume authorization for third-party tools.
+This version opens **the original** https://starve.io/ in our own WebView. Player-driven input only.
 
-## Community-grounded changes
+## How to use it
 
-Older Starve.io Android Play Store reviews repeatedly mention clunky D-pad movement, inability to attack while moving, missing handedness controls, and high perceived lag. [Archived public reviews](https://play.google.com/store/apps/details?id=com.addictinggames.starveio), [r/starveio mobile requests](https://www.reddit.com/r/starveio/comments/krw32o). These are historically reported pain points, not controlled performance measurements.
+1. Press **ИГРАТЬ В STARVE.IO** in the app.
+2. Use the **left joystick** to move; the knob now eases smoothly for appearance **without delaying WASD input**.
+3. **БОЙ** shows a second aim joystick; **ПОХОД** simplifies; **ЭКРАН** hides the game controls for in-game menus.
+4. If you need a hint, tap **◇** (right near top), then **ХОЛОД**, **ЕДА**, or **ХИЩНИКИ**. Select more than one to prioritize predators, then cold, then hunger.
+5. The suggestion appears for 5 seconds, then fades away. With a risk still marked, it may repeat at most once per minute. **СПОКОЙНО** clears all marks; **ПОДСКАЗКИ: ВЫКЛ** mutes them.
+6. The game hotbar slots 1–4 are still manual; the assistant NEVER equips, clicks, attacks, moves or acts for the user.
 
-- **БОЙ**: two independent native touch joysticks. Left/right handed preference from Home applies. Left moves via WASD; right directs the mouse aim; A holds attack/harvest; B generates E as an experimental mapping.
-- **ПОХОД**: one movement joystick, smaller A/B buttons, free touches on the visible game web page.
-- **ЭКРАН**: hides all gameplay controls except the minimal top bar, for navigating menus, crafting and chat by ordinary touches.
-- **Hotbar**: explicit item keys 1, 2, 3, 4 on the top strip; no auto hotkeys.
-- **Input styles**: A switches between manually dispatched mouse-primary click and touch, without injecting JavaScript into the site.
-- **Two-finger handling**: game view splits motion pointers, movement and aim can be held simultaneously, key release is enforced when app pauses or mode changes.
-- **QA**: event counter and user-shareable JSON; counts dispatched WebView events, NOT accepted commands/game latency.
-- **COSMOS Network Lab**: 12 HTTP requests to a separate Frankfurt test endpoint, not Starve.io ping, not Oracle route optimization.
+### Important limitations
+- The assistant **does not read** player health, hunger, temperature, enemies or any other game data. **The player marks conditions manually**. There is no automatic condition detection in v0.7.
+- Input is sent as Android-native events to an in-app WebView. Whether the live Starve.io game accepts them is NOT confirmed on a Samsung. WebView page load is not game success.
+- There is no Starve.io authorization for this third-party experimental app. Official Terms of Use restrict unauthorized software and automation: https://starve.io/terms.html. No botting, injecting JavaScript into the game, screen-scraping, modification or reverse engineering is implemented.
+- Oracle network acceleration is not present. The network lab probes OUR endpoint, not Starve.io.
+- The APK is debug-signed, independently unaudited, and Android/Samsung may block sideloading. Do not bypass device protection without understanding the risk.
 
-## Install and first test
-
-Use the GitHub prerelease's direct debug APK, if personally comfortable sideloading developer builds and obeying your device's security warnings. This app is not independently audited or store signed. Samsung Auto Blocker may prevent sideloading; there is no requirement to disable safeguards solely to run an unverified preview.
-
-1. Open Elyxion. Tap **ИГРАТЬ В STARVE.IO**.
-2. Try **ЭКРАН** to navigate original menus and join a server manually, then **БОЙ** for movement and combat.
-3. Test moving diagonally while turning the right aim joystick and holding A. Compare **A: МЫШЬ** vs **A: КАСАНИЕ** only if needed.
-4. Test rapid item selection 1–4, open inventory, switch to **ПОХОД**, and check the experience.
-5. Open **QA** to share counts and note which actual in-game actions succeeded. There is no automatic server integration or proof that the game accepted input.
-
-## Engineering and safety
-
-No bots, no root, no AccessibilityService, no injection into other installed apps, no websocket interception, no reverse engineering. Source code here only synthesizes Android input events to our own embedded WebView. Starve.io's content and servers remain third-party. Compatibility and permissions unknown.
-
-Build: Java 17 + Android SDK 35 + Gradle 8.9; GitHub Actions builds a debug APK from isolated branch. Physical Samsung hardware and real online play remain separate acceptance gates.
+## Verify
+Run `bash qa/run-core-tests.sh`, `bash qa/run-direction-tests.sh`, `bash qa/run-aim-tests.sh`, `bash qa/run-survival-tests.sh`, and `python3 qa/verify_package.py`.
+Android build: Java 17, SDK 35, Gradle 8.9.
