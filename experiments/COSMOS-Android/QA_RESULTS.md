@@ -1,25 +1,10 @@
-# ELYXION COSMOS Android v0.6 · QA Evidence
+# COSMOS Android v0.7 QA
 
-## Local pure-Java checks
-- 11 original neutral/clamp/bus/latency tests: PASS
-- 14 original direction-state transitions + 2500 randomized transitions + 3 neutral-release assertions: PASS
-- 16 independent AimMath geometry and bounds assertions: PASS
-- Release hashes: SHA-256 manifest to be verified after file packaging.
-
-## Android build
-- GitHub Actions compilation: PENDING for v0.6.
-- Android emulator/runtime multi-touch and WebView keyboard/mouse acceptance: NOT TESTED.
-- Real Samsung installation and original Starve.io character movement: NOT CONFIRMED.
-- Original game compatibility with HUD, mouse events, and mobile browser login: UNKNOWN.
-- Network tests are separate HTTP probes, not proof of game RTT or acceleration via Oracle.
-
-## Required real-device acceptance
-1. Original public website loads, player can join and move without external peripherals.
-2. Continuous diagonal movement + independent aim joystick + held A (kiting test).
-3. No stuck WASD or pressed A after app pause, navigation, screen mode switch or crash.
-4. Hotbar slots 1–4 and crafting/inventory taps do not interfere.
-5. Test both left/right-handed layout, Lite and Combat layouts, plus error/recovery.
-6. Obtain signed/reviewed distribution method before mass use.
-
-## Safety boundary
-No automated gameplay, game code manipulation, or claimed authorization from Starve.io. This is an experimental third-party WebView client. Test results will separate successful app compilation from actual in-game compatibility.
+- v0.6 Java mapping, aim, and core tests are retained.
+- New independently executable `SurvivalAdvisorTest`: flags, priorities, quiet 60-second cooldown, mute, reset and combined threats.
+- v0.7 changes: visual-only joystick smoothing; WASD inputs NOT smoothed/delayed; single compact optional player-marked survival helper; prompt hidden after 5 sec; prompt offers at most once per minute for lingering user-marked risks.
+- Source SHA256SUMS verified during CI; actual Android Gradle compile required before reporting release success.
+- **Not tested on physical Samsung**. The page can load while game input still fails.
+- **Does not read the real game state**. User chooses cold/hunger/predator marks. No autonomous gameplay or unauthorized data extraction.
+- v0.7 APK is NOT approved by Starve.io and not independently security audited.
+- No measured game ping or acceleration via Oracle.
