@@ -1,0 +1,93 @@
+name: ELYXION COSMOS Android v0.7 · one-tap Starve probe
+
+on:
+  push:
+    branches:
+      - experiment/elyxion-cosmos-android-v07
+    paths:
+      - 'experiments/COSMOS-Android/**'
+      - '.github/workflows/cosmos-starve-v07.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  android:
+    name: Verify and build Android v0.7
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/COSMOS-Android
+    steps:
+      - name: Checkout isolated source
+        uses: actions/checkout@v4
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Test pure Java input core
+        run: |
+          bash qa/run-core-tests.sh
+          bash qa/run-direction-tests.sh
+          bash qa/run-aim-tests.sh
+          bash qa/run-survival-tests.sh
+      - name: Verify pinned release file hashes
+        run: |
+          python3 qa/verify_package.py
+          grep -q 'ИГРАТЬ В STARVE.IO' app/src/main/java/com/elyxion/cosmos/MainActivity.java
+          grep -q 'MotionEvent.TOOL_TYPE_MOUSE' app/src/main/java/com/elyxion/cosmos/StarveActivity.java
+          grep -q 'setMotionEventSplittingEnabled(true)' app/src/main/java/com/elyxion/cosmos/StarveActivity.java
+          grep -q 'sendHotbar' app/src/main/java/com/elyxion/cosmos/StarveActivity.java
+          grep -q 'new AssistantHud' app/src/main/java/com/elyxion/cosmos/StarveActivity.java
+          grep -q 'visualX' app/src/main/java/com/elyxion/cosmos/JoystickView.java
+          grep -q 'private void showQa' app/src/main/java/com/elyxion/cosmos/StarveActivity.java
+          ! grep -q 'requestPermissions' app/src/main/java/com/elyxion/cosmos/MainActivity.java
+      - name: Install Android 35
+        run: |
+          SDK_ROOT="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          test -d "$SDK_ROOT/cmdline-tools"
+          SDKMANAGER="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager | sort -r | head -n 1)"
+          test -x "$SDKMANAGER"
+          "$SDKMANAGER" --sdk_root="$SDK_ROOT" 'platforms;android-35' 'build-tools;35.0.0'
+          printf 'sdk.dir=%s\n' "$SDK_ROOT" > local.properties
+      - name: Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Compile real Android APK
+        run: gradle --no-daemon :app:assembleDebug
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ELYXION-COSMOS-Starve-v0.7-debug
+          path: experiments/COSMOS-Android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Publish direct APK with SHA256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="cosmos-starve-input-v0.7-preview"
+          mkdir -p ../../downloads
+          cp app/build/outputs/apk/debug/app-debug.apk ../../downloads/elyxion-cosmos-v07.apk
+          cd ../..
+          sha256sum downloads/elyxion-cosmos-v07.apk > downloads/elyxion-cosmos-v07.apk.sha256
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f downloads/elyxion-cosmos-v07.apk downloads/elyxion-cosmos-v07.apk.sha256
+          if ! git diff --cached --quiet; then
+            git commit -m "build(cosmos): direct Android v0.7 APK"
+            git push origin "HEAD:refs/heads/experiment/elyxion-cosmos-android-v07"
+          fi
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" downloads/elyxion-cosmos-v07.apk downloads/elyxion-cosmos-v07.apk.sha256 --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$TAG" downloads/elyxion-cosmos-v07.apk downloads/elyxion-cosmos-v07.apk.sha256 \
+              --repo "$GITHUB_REPOSITORY" \
+              --target "experiment/elyxion-cosmos-android-v07" \
+              --title "ELYXION COSMOS Android v0.7 · experimental Starve input" \
+              --notes "Debug-signed Android preview with smooth-looking joystick and optional player-marked survival helper. It does NOT read actual game stats and it never plays for the user. Input acceptance by real Starve.io is still unverified. Not approved by Starve.io. Samsung Auto Blocker may reject sideloading. No Oracle optimization is claimed." \
+              --prerelease
+          fi
