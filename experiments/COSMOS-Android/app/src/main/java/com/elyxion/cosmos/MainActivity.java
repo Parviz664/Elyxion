@@ -33,14 +33,14 @@ public final class MainActivity extends Activity {
         screen.setPadding(dp(20), dp(18), dp(20), dp(30));
         scroll.addView(screen); setContentView(scroll);
         title("ELYXION · COSMOS LITE");
-        subtitle("ANDROID v0.5 · НАСТОЯЩИЙ САЙТ STARVE.IO");
-        text("Твой лёгкий геймпад: WASD + действие A + клавиша B. Откроется оригинальная игра внутри Elyxion.", 14, white);
+        subtitle("ANDROID v0.7 · РЕДКАЯ УМНАЯ ПОМОЩЬ");
+        text("Играй на настоящем сайте Starve.io с нашим геймпадом. Кнопка ◇ в игре предлагает редкие подсказки, только если ты сам отметил холод, голод или хищников.", 14, white);
         button("▶  ИГРАТЬ В STARVE.IO", () -> {
             // The in-app WebView does not require overlay or notification permissions.
             stopService(new Intent(this, OverlayService.class));
             startActivity(new Intent(this, StarveActivity.class));
         });
-        text("Не требуется разрешение на плавающие окна. Первое нажатие открывает официальный сайт; реакция игры на наш ввод ещё не подтверждена.", 11, 0xffa6b8b1);
+        text("Управление проверяется на телефоне. Помощник не считывает здоровье, температуру или голод с сайта и не играет вместо тебя.", 11, 0xffa6b8b1);
         subtitle("УДОБСТВО УПРАВЛЕНИЯ");
         text("Размер джойстика: 65–125%", 12, 0xffa9ccbf);
         SeekBar sizeBar = new SeekBar(this); sizeBar.setMax(60);
