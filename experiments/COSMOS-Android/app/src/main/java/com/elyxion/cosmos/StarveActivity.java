@@ -39,6 +39,7 @@ public final class StarveActivity extends Activity {
     private long lastAimDispatchMs;
     private int inputEvents;
     private boolean pageLoaded;
+    private AssistantHud survivalHud;
 
 
     private long eDownTime;
@@ -179,6 +180,7 @@ public final class StarveActivity extends Activity {
         }
         FrameLayout.LayoutParams quickP=new FrameLayout.LayoutParams(-2,dp(34),Gravity.TOP|Gravity.CENTER_HORIZONTAL);
         quickP.topMargin=dp(37);root.addView(quickSlots,quickP);
+        survivalHud = new AssistantHud(this,root);
         setLayoutMode(0);
         // User navigates to and joins the genuine site, never an automatic login.
         web.loadUrl(URL);
@@ -222,13 +224,16 @@ public final class StarveActivity extends Activity {
     private void shareQa() {
         try {
             org.json.JSONObject data=new org.json.JSONObject();
-            data.put("app","ELYXION COSMOS v0.6");
+            data.put("app","ELYXION COSMOS v0.7");
             data.put("testedUrl",URL);
             data.put("pageLoaded",pageLoaded);
             data.put("webViewEventsDispatched",inputEvents);
             data.put("layoutMode",layoutMode==0?"combat":layoutMode==1?"explore":"screen");
             data.put("buttonAMode",mouseAction?"mouse":"touch");
             data.put("gameAcceptedEvents",org.json.JSONObject.NULL);
+            data.put("assistantReadsGameState",false);
+            data.put("assistantManuallyMarkedRiskCount",survivalHud==null?0:survivalHud.markedRiskCount());
+            data.put("assistantEnabled",survivalHud!=null&&survivalHud.hintsEnabled());
             data.put("note","Browser event counts are not end-to-end game confirmation");
             Intent send=new Intent(Intent.ACTION_SEND);send.setType("application/json");
             send.putExtra(Intent.EXTRA_TEXT,data.toString(2));
@@ -245,6 +250,7 @@ public final class StarveActivity extends Activity {
         buttons.setVisibility(playing?View.VISIBLE:View.GONE);
         quickSlots.setVisibility(playing?View.VISIBLE:View.GONE);
         if(aim!=null)aim.setVisibility(playing?View.VISIBLE:View.GONE);
+        if(survivalHud!=null)survivalHud.setPlaying(playing);
         combatControl.setTextColor(mode==0?accent:Color.WHITE);
         exploreControl.setTextColor(mode==1?accent:Color.WHITE);
         screenControl.setTextColor(mode==2?accent:Color.WHITE);
@@ -363,8 +369,8 @@ public final class StarveActivity extends Activity {
         releaseKeys();
         if(web!=null && web.canGoBack())web.goBack();else super.onBackPressed();
     }
-    @Override protected void onPause(){releaseKeys();if(web!=null)web.onPause();super.onPause();}
-    @Override protected void onResume(){super.onResume();if(web!=null)web.onResume();}
-    @Override protected void onDestroy(){releaseKeys();if(web!=null){root.removeView(web);web.destroy();web=null;}super.onDestroy();}
+    @Override protected void onPause(){if(survivalHud!=null)survivalHud.pause();releaseKeys();if(web!=null)web.onPause();super.onPause();}
+    @Override protected void onResume(){super.onResume();if(web!=null)web.onResume();if(survivalHud!=null)survivalHud.resume();}
+    @Override protected void onDestroy(){if(survivalHud!=null)survivalHud.destroy();releaseKeys();if(web!=null){root.removeView(web);web.destroy();web=null;}super.onDestroy();}
     private int dp(float x){return Math.round(x*getResources().getDisplayMetrics().density);}
 }
