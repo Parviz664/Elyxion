@@ -2,7 +2,7 @@
 c611c6951d4d6809b132264be4d9318f325715e65aa1b31b8ac2d87d5c864132  app/build.gradle
 01e9eb98adcf697ba7580e4ed4e39fd0b32c5b6e79bbf1d3effbbaf99e80657d  app/src/main/AndroidManifest.xml
 94693630647b2e1966f98bec18ce7d2d8c7419f2a5ece25c89a12daa783d5f8d  app/src/main/java/com/elyxion/cosmos/AimMath.java
-67074b517f31c5bf797ecadc6c563bfa9d31eb03e1b9103ed47d97dbf64ea557  app/src/main/java/com/elyxion/cosmos/AssistantHud.java
+e8497d5e74f1889d8c18c55f3174b08b3a17c20c93213aa0d82be1ea1e28244e  app/src/main/java/com/elyxion/cosmos/AssistantHud.java
 af1b64b1b052f8952f626c96f0b5c282dbcbe74ea70265dc988b6af33d26458f  app/src/main/java/com/elyxion/cosmos/AxisMath.java
 c9b57e1e22fd06cacec3886e1e5756814f2afef18d4f38ef07aee5f6656f95ab  app/src/main/java/com/elyxion/cosmos/DemoActivity.java
 65a7ba5241f9169b2a92af2b09410a5bec74f4d051d6d3a683d549aea90a390e  app/src/main/java/com/elyxion/cosmos/DirectionKeyState.java
